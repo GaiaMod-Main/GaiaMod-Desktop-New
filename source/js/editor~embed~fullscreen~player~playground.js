@@ -13433,8 +13433,8 @@ class UserProfileButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Com
     return null;
   }
   loadUserProfile() {
-    const username = "ark";
-    // const username = this.getCookie('arkide_username');
+    // const username = "ark"
+    const username = this.getCookie('arkide_username');
     console.log('Fetched cookie username:', username); // 🔍 logging
 
     if (username) {
