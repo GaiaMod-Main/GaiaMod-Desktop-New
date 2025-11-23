@@ -372,7 +372,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.button_outlined-button_1bS__ {\n    cursor: pointer;\n    border-radius: 1rem;\n    font-weight: bold;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding-left: .75rem;\n    padding-right: .75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.button_icon_77d8G {\n    height: 1.5rem;\n}\n\n[dir=\"ltr\"] .button_icon_77d8G {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .button_icon_77d8G {\n    margin-left: .5rem;\n}\n\n.button_content_3jdgj {\n    white-space: nowrap;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.button_outlined-button_1bS__ {\n    cursor: pointer;\n    border-radius: 1rem;\n    font-weight: bold;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding-left: .75rem;\n    padding-right: .75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transition: all 0.3s ease;\n}\n\n.button_outlined-button_1bS__:hover {\n  box-shadow: 0 0 10px rgba(255, 255, 255, 0.356),\n              0 0 20px rgba(255, 255, 255, 0.08);\n}\n\n.button_icon_77d8G {\n    height: 1.5rem;\n}\n\n[dir=\"ltr\"] .button_icon_77d8G {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .button_icon_77d8G {\n    margin-left: .5rem;\n}\n\n.button_content_3jdgj {\n    white-space: nowrap;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1515,7 +1515,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ @keyframes share-button_iconSpin_3meM- {\n    0% {\n        rotate: 0deg;\n    }\n    50% {\n        rotate: 180deg;\n    }\n    100% {\n        rotate: 360deg;\n    }\n} .share-button_share-button_Nxxf0 {\n    background: hsla(261, 100%, 50%, 1);\n    color: hsla(0, 100%, 100%, 1);\n    box-shadow: 0 0 0 1px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n} .share-button_disabled_3xIlk {\n    cursor: not-allowed;\n} .share-button_share-content_6V4Qf {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n} [theme=\"dark\"] .share-button_share-button_Nxxf0 {\n    background: transparent;\n    color: hsla(0, 100%, 100%, 1);\n    box-shadow: 0 0 0 1px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n} .share-button_share-button-is-shared_1tjKq {\n    background: var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n    cursor: default;\n} .share-button_icon_3-l8i {\n    height: 1.5rem;\n    margin-left: 4px;\n    animation-name: share-button_iconSpin_3meM-;\n    animation-timing-function: linear;\n    animation-duration: 1s;\n    animation-iteration-count: infinite;\n}", ""]);
+exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ @keyframes share-button_iconSpin_3meM- {\n    0% {\n        rotate: 0deg;\n    }\n    50% {\n        rotate: 180deg;\n    }\n    100% {\n        rotate: 360deg;\n    }\n} .share-button_share-button_Nxxf0 {\n    background: #4634eb;\n    color: hsla(0, 100%, 100%, 1);\n    box-shadow: 0 0 0 1px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n    transition: all 0.3s ease;\n} .share-button_disabled_3xIlk {\n    cursor: not-allowed;\n} .share-button_share-content_6V4Qf {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.3s ease;\n    background-color: #4634eb; /* Solid background to block shadow */\n    border-radius: inherit; /* Match parent border radius */\n} .share-button_share-button_Nxxf0:hover {\n    background-color: #4634eb; /* Ensure solid background on hover */\n    box-shadow: 0 0 10px rgba(255, 255, 255, 0.356),\n                0 0 20px rgba(255, 255, 255, 0.08); /* Only outer shadows */\n} [theme=\"dark\"] .share-button_share-button_Nxxf0 {\n    background: transparent;\n    color: hsla(0, 100%, 100%, 1);\n} [theme=\"dark\"] .share-button_share-content_6V4Qf {\n    background-color: transparent;\n} [theme=\"dark\"] .share-button_share-content_6V4Qf:hover {\n    background-color: rgba(70, 52, 235, 0.2);\n} .share-button_share-button-is-shared_1tjKq {\n    background: var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n    cursor: default;\n} .share-button_share-button-is-shared_1tjKq .share-button_share-content_6V4Qf {\n    background: var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n} .share-button_icon_3-l8i {\n    height: 1.5rem;\n    margin-left: 4px;\n    animation-name: share-button_iconSpin_3meM-;\n    animation-timing-function: linear;\n    animation-duration: 1s;\n    animation-iteration-count: infinite;\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1590,15 +1590,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.user-profile-button_outlined-button_ypG9c {\n    cursor: pointer;\n    border-radius: 1rem;\n    font-weight: bold;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding: 0 0.75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    height: 34px;\n    background-color: white;\n    color: #4634eb;\n    margin-right: 0.5rem;\n}\n\n.user-profile-button_icon_1gHYq {\n    height: 1.5rem;\n    width: 1.5rem;\n    flex-shrink: 0;\n}\n\n[dir=\"ltr\"] .user-profile-button_icon_1gHYq {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .user-profile-button_icon_1gHYq {\n    margin-left: .5rem;\n}\n\n.user-profile-button_icon_1gHYq {\n    margin-right: .5rem;\n}\n\n.user-profile-button_content_2t33z {\n    white-space: nowrap;\n    line-height: 34px;\n}\n\n.user-profile-button_userProfilePic_3pRb1 {\n    border-radius: 50%;\n    object-fit: cover;\n}", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.user-profile-button_outlined-button_ypG9c {\n  cursor: pointer;\n  border-radius: 0.1rem;\n  font-weight: bold;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 0.25rem 0.75rem; /* Reduced vertical padding */\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  min-height: 34px; /* Changed from height to min-height */\n  background-color: rgba(255, 255, 255, 0);\n  color: #ffffff;\n  min-width: 0;\n  flex-shrink: 1;\n  box-sizing: border-box;\n  transition: background-color 0.3s ease;\n}\n\n.user-profile-button_outlined-button_ypG9c:hover {\n  background-color: rgba(35, 37, 48, 0.288);\n}\n\n.user-profile-button_outlined-button_ypG9c:hover .user-profile-button_userProfilePic_3pRb1 {\n  box-shadow: 0 0 15px rgba(255, 255, 255, 0.274), \n              0 0 25px rgba(255, 255, 255, 0.055);\n}\n\n.user-profile-button_icon_1gHYq {\n  height: 2.5rem;\n  width: 2.5rem;\n  flex-shrink: 0;\n  min-width: 2.5rem;\n  display: flex; /* Ensure proper sizing */\n  align-items: center;\n  justify-content: center;\n}\n\n[dir=\"ltr\"] .user-profile-button_icon_1gHYq {\n  margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .user-profile-button_icon_1gHYq {\n  margin-left: .5rem;\n}\n\n.user-profile-button_icon_1gHYq {\n  margin-right: .5rem;\n}\n\n.user-profile-button_content_2t33z {\n  white-space: nowrap;\n  line-height: 34px;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  min-width: 0;\n}\n\n.user-profile-button_userProfilePic_3pRb1 {\n  border-radius: 20%;\n  object-fit: cover;\n  height: 2.5rem;\n  width: 2.5rem;\n  transition: box-shadow 0.3s ease;\n}\n\n/* Hide text on very small screens, show only icon */\n\n@media (max-width: 480px) {\n  .user-profile-button_content_2t33z {\n    display: none;\n  }\n  \n  .user-profile-button_outlined-button_ypG9c {\n    padding: 0.25rem 0.5rem;\n    margin-right: 0.1rem;\n  }\n  \n  .user-profile-button_icon_1gHYq {\n    margin-right: 0;\n  }\n}", ""]);
 
 // exports
 exports.locals = {
 	"outlined-button": "user-profile-button_outlined-button_ypG9c",
 	"outlinedButton": "user-profile-button_outlined-button_ypG9c",
+	"userProfilePic": "user-profile-button_userProfilePic_3pRb1",
 	"icon": "user-profile-button_icon_1gHYq",
-	"content": "user-profile-button_content_2t33z",
-	"userProfilePic": "user-profile-button_userProfilePic_3pRb1"
+	"content": "user-profile-button_content_2t33z"
 };
 
 /***/ }),
@@ -13433,7 +13433,8 @@ class UserProfileButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Com
     return null;
   }
   loadUserProfile() {
-    const username = this.getCookie('arkide_username');
+    const username = "ark";
+    // const username = this.getCookie('arkide_username');
     console.log('Fetched cookie username:', username); // 🔍 logging
 
     if (username) {
@@ -15117,7 +15118,7 @@ const PromptComponent = props => props.isCustom ? /*#__PURE__*/react__WEBPACK_IM
   defaultMessage: "Although you can create cloud variables, they won't work until this project is uploaded or until this project is converted using a tool like the {packager}.",
   values: {
     packager: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-      href: "https://arkide.penguinmod.com/PenguinMod-Packager",
+      href: "https://packager.arkide.site/",
       target: "_blank",
       rel: "noopener noreferrer"
     }, 'PenguinMod Packager')
@@ -27242,9 +27243,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_vm_manager_hoc_jsx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../lib/vm-manager-hoc.jsx */ "./src/lib/vm-manager-hoc.jsx");
 /* harmony import */ var _lib_cloud_manager_hoc_jsx__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../lib/cloud-manager-hoc.jsx */ "./src/lib/cloud-manager-hoc.jsx");
 /* harmony import */ var _lib_tw_fullscreen_resizer_hoc_jsx__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../lib/tw-fullscreen-resizer-hoc.jsx */ "./src/lib/tw-fullscreen-resizer-hoc.jsx");
-/* harmony import */ var _components_gui_gui_jsx__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/gui/gui.jsx */ "./src/components/gui/gui.jsx");
-/* harmony import */ var _home_communication_jsx__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./home-communication.jsx */ "./src/containers/home-communication.jsx");
-/* harmony import */ var _lib_isScratchDesktop_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../lib/isScratchDesktop.js */ "./src/lib/isScratchDesktop.js");
+/* harmony import */ var _lib_block_search__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../lib/block-search */ "./src/lib/block-search.js");
+/* harmony import */ var _components_gui_gui_jsx__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/gui/gui.jsx */ "./src/components/gui/gui.jsx");
+/* harmony import */ var _home_communication_jsx__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./home-communication.jsx */ "./src/containers/home-communication.jsx");
+/* harmony import */ var _lib_isScratchDesktop_js__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../lib/isScratchDesktop.js */ "./src/lib/isScratchDesktop.js");
 const _excluded = ["assetHost", "cloudHost", "error", "isError", "isScratchDesktop", "isShowingProject", "onProjectLoaded", "onStorageInit", "onUpdateProjectId", "onVmInit", "projectHost", "projectId", "children", "fetchingProject", "isLoading", "loadingStateVisible", "isPlayground"];
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
@@ -27275,20 +27277,55 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 
+
 class GUI extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   componentDidMount() {
-    Object(_lib_isScratchDesktop_js__WEBPACK_IMPORTED_MODULE_25__["setIsScratchDesktop"])(this.props.isScratchDesktop);
+    Object(_lib_isScratchDesktop_js__WEBPACK_IMPORTED_MODULE_26__["setIsScratchDesktop"])(this.props.isScratchDesktop);
     this.props.onStorageInit(_lib_storage__WEBPACK_IMPORTED_MODULE_18__["default"]);
     this.props.onVmInit(this.props.vm);
+
+    // Initialize block search immediately
+    this.initializeBlockSearch();
   }
   componentDidUpdate(prevProps) {
     if (this.props.projectId !== prevProps.projectId && this.props.projectId !== null) {
       this.props.onUpdateProjectId(this.props.projectId);
     }
     if (this.props.isShowingProject && !prevProps.isShowingProject) {
-      // this only notifies container when a project changes from not yet loaded to loaded
-      // At this time the project view in www doesn't need to know when a project is unloaded
       this.props.onProjectLoaded();
+    }
+  }
+  initializeBlockSearch() {
+    console.log('Attempting to initialize block search...');
+    const tryInit = () => {
+      console.log('tryInit called');
+      console.log('VM:', this.props.vm);
+      console.log('Blockly:', window.Blockly);
+      try {
+        var _this$props$vm, _this$props$vm$runtim, _this$props$vm$runtim2, _this$props$vm$runtim3, _this$props$vm$runtim4, _window$Blockly, _window$Blockly$getMa;
+        const workspace = ((_this$props$vm = this.props.vm) === null || _this$props$vm === void 0 ? void 0 : (_this$props$vm$runtim = _this$props$vm.runtime) === null || _this$props$vm$runtim === void 0 ? void 0 : (_this$props$vm$runtim2 = _this$props$vm$runtim.getEditingTarget) === null || _this$props$vm$runtim2 === void 0 ? void 0 : (_this$props$vm$runtim3 = _this$props$vm$runtim2.call(_this$props$vm$runtim)) === null || _this$props$vm$runtim3 === void 0 ? void 0 : (_this$props$vm$runtim4 = _this$props$vm$runtim3.blocks) === null || _this$props$vm$runtim4 === void 0 ? void 0 : _this$props$vm$runtim4._workspace) || ((_window$Blockly = window.Blockly) === null || _window$Blockly === void 0 ? void 0 : (_window$Blockly$getMa = _window$Blockly.getMainWorkspace) === null || _window$Blockly$getMa === void 0 ? void 0 : _window$Blockly$getMa.call(_window$Blockly));
+        console.log('Workspace found:', workspace);
+        if (workspace) {
+          console.log('Calling BlockSearch.init...');
+          _lib_block_search__WEBPACK_IMPORTED_MODULE_23__["default"].init(workspace, vm);
+          console.log('BlockSearch initialized successfully');
+          return true;
+        }
+      } catch (err) {
+        console.error('Block search init error:', err);
+      }
+      return false;
+    };
+    if (!tryInit()) {
+      console.log('Initial attempt failed, will retry...');
+      let attempts = 0;
+      const retry = setInterval(() => {
+        console.log('Retry attempt:', attempts);
+        if (tryInit() || attempts++ > 10) {
+          clearInterval(retry);
+          console.log('Stopped retrying');
+        }
+      }, 200);
     }
   }
   render() {
@@ -27319,10 +27356,10 @@ class GUI extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         isPlayground
       } = _this$props,
       componentProps = _objectWithoutProperties(_this$props, _excluded);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_gui_gui_jsx__WEBPACK_IMPORTED_MODULE_23__["default"], _extends({
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_gui_gui_jsx__WEBPACK_IMPORTED_MODULE_24__["default"], _extends({
       loading: fetchingProject || isLoading || loadingStateVisible,
       isPlayground: isPlayground
-    }, componentProps), children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_home_communication_jsx__WEBPACK_IMPORTED_MODULE_24__["default"], {
+    }, componentProps), children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_home_communication_jsx__WEBPACK_IMPORTED_MODULE_25__["default"], {
       projectId: projectId,
       isPlayground: isPlayground
     }));
@@ -35797,10 +35834,17 @@ class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
       valueValid: !this.props.usernameInvalid
     };
   }
+  getCookie(name) {
+    const value = "; ".concat(document.cookie);
+    const parts = value.split("; ".concat(name, "="));
+    if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+    return null;
+  }
   componentDidUpdate(prevProps) {
     if (prevProps.usernameLoggedIn !== this.props.usernameLoggedIn) {
+      const cookieName = this.getCookie('arkide_username');
       this.setState({
-        value: this.props.username,
+        value: cookieName || this.props.username,
         valueValid: true
       });
     }
@@ -35816,7 +35860,8 @@ class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
   }
   handleOk() {
     if (this.props.usernameLoggedIn) return; // user is logged in
-    this.props.onSetUsername(this.state.value);
+    const cookieName = this.getCookie('arkide_username');
+    this.props.onSetUsername(cookieName || this.state.value);
     this.props.onCloseUsernameModal();
   }
   handleCancel() {
@@ -35830,10 +35875,13 @@ class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
     });
   }
   handleReset() {
-    if (this.props.usernameLoggedIn) return; // user is logged in
-    const randomUsername = Object(_lib_isScratchDesktop__WEBPACK_IMPORTED_MODULE_8__["default"])() ? 'player' : Object(_lib_tw_username__WEBPACK_IMPORTED_MODULE_7__["generateRandomUsername"])();
+    if (this.props.usernameLoggedIn) return;
+    const cookieName = this.getCookie('arkide_username');
+
+    // If cookie missing → default to "player"
+    const username = cookieName || 'player';
     this.props.onCloseUsernameModal();
-    this.props.onSetUsername(randomUsername);
+    this.props.onSetUsername(username);
   }
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_tw_username_modal_username_modal_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -38128,6 +38176,1532 @@ const jpegThumbnail = dataUrl => new Promise((resolve, reject) => {
   image.src = dataUrl;
 });
 /* harmony default export */ __webpack_exports__["default"] = (jpegThumbnail);
+
+/***/ }),
+
+/***/ "./src/lib/block-search.js":
+/*!*********************************!*\
+  !*** ./src/lib/block-search.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tw-lazy-scratch-blocks */ "./src/lib/tw-lazy-scratch-blocks.js");
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+
+// Block metadata for search
+const BLOCK_METADATA = {
+  // Motion
+  motion_movesteps: {
+    name: 'move steps',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  motion_turnright: {
+    name: 'turn right',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  motion_turnleft: {
+    name: 'turn left',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  motion_goto: {
+    name: 'go to',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  motion_gotoxy: {
+    name: 'go to x y',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  motion_pointindirection: {
+    name: 'point in direction',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  motion_xposition: {
+    name: 'x position',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  motion_yposition: {
+    name: 'y position',
+    category: 'motion',
+    color: '#4C97FF'
+  },
+  // Looks
+  looks_say: {
+    name: 'say',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_sayforsecs: {
+    name: 'say for seconds',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_think: {
+    name: 'think',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_thinkforsecs: {
+    name: 'think for seconds',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_show: {
+    name: 'show',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_hide: {
+    name: 'hide',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_switchcostumeto: {
+    name: 'switch costume',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_nextcostume: {
+    name: 'next costume',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_switchbackdropto: {
+    name: 'switch backdrop',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_changesizeby: {
+    name: 'change size',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  looks_setsizeto: {
+    name: 'set size',
+    category: 'looks',
+    color: '#9966FF'
+  },
+  // Sound
+  sound_play: {
+    name: 'start sound',
+    category: 'sound',
+    color: '#D65CD6'
+  },
+  sound_playuntildone: {
+    name: 'play sound until done',
+    category: 'sound',
+    color: '#D65CD6'
+  },
+  sound_stopallsounds: {
+    name: 'stop all sounds',
+    category: 'sound',
+    color: '#D65CD6'
+  },
+  sound_setvolumeto: {
+    name: 'set volume',
+    category: 'sound',
+    color: '#D65CD6'
+  },
+  sound_changevolumeby: {
+    name: 'change volume',
+    category: 'sound',
+    color: '#D65CD6'
+  },
+  // Events
+  event_whenflagclicked: {
+    name: 'when flag clicked',
+    category: 'events',
+    color: '#FFD500'
+  },
+  event_whenkeypressed: {
+    name: 'when key pressed',
+    category: 'events',
+    color: '#FFD500'
+  },
+  event_whenthisspriteclicked: {
+    name: 'when sprite clicked',
+    category: 'events',
+    color: '#FFD500'
+  },
+  event_whenbackdropswitchesto: {
+    name: 'when backdrop switches',
+    category: 'events',
+    color: '#FFD500'
+  },
+  event_broadcast: {
+    name: 'broadcast',
+    category: 'events',
+    color: '#FFD500'
+  },
+  event_broadcastandwait: {
+    name: 'broadcast and wait',
+    category: 'events',
+    color: '#FFD500'
+  },
+  event_whenbroadcastreceived: {
+    name: 'when I receive',
+    category: 'events',
+    color: '#FFD500'
+  },
+  // Control
+  control_wait: {
+    name: 'wait',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_repeat: {
+    name: 'repeat',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_forever: {
+    name: 'forever',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_if: {
+    name: 'if then',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_if_else: {
+    name: 'if else',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_wait_until: {
+    name: 'wait until',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_repeat_until: {
+    name: 'repeat until',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_stop: {
+    name: 'stop',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_create_clone_of: {
+    name: 'create clone',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  control_delete_this_clone: {
+    name: 'delete this clone',
+    category: 'control',
+    color: '#FFAB19'
+  },
+  // Sensing
+  sensing_touchingobject: {
+    name: 'touching',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_touchingcolor: {
+    name: 'touching color',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_distanceto: {
+    name: 'distance to',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_askandwait: {
+    name: 'ask and wait',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_answer: {
+    name: 'answer',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_keypressed: {
+    name: 'key pressed',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_mousedown: {
+    name: 'mouse down',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_mousex: {
+    name: 'mouse x',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_mousey: {
+    name: 'mouse y',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_timer: {
+    name: 'timer',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_resettimer: {
+    name: 'reset timer',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_of: {
+    name: 'of',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_current: {
+    name: 'current',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  sensing_username: {
+    name: 'username',
+    category: 'sensing',
+    color: '#4CBFE6'
+  },
+  // Operators
+  operator_add: {
+    name: 'add',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_subtract: {
+    name: 'subtract',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_multiply: {
+    name: 'multiply',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_divide: {
+    name: 'divide',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_random: {
+    name: 'pick random',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_gt: {
+    name: 'greater than',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_lt: {
+    name: 'less than',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_equals: {
+    name: 'equals',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_and: {
+    name: 'and',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_or: {
+    name: 'or',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_not: {
+    name: 'not',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_join: {
+    name: 'join',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_letter_of: {
+    name: 'letter of',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_length: {
+    name: 'length of',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_contains: {
+    name: 'contains',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_mod: {
+    name: 'mod',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_round: {
+    name: 'round',
+    category: 'operators',
+    color: '#40BF4A'
+  },
+  operator_mathop: {
+    name: 'math operation',
+    category: 'operators',
+    color: '#40BF4A'
+  }
+};
+class BlockSearch {
+  constructor() {
+    this.searchContainer = null;
+    this.searchInput = null;
+    this.resultsContainer = null;
+    this.workspace = null;
+    this.vm = null;
+    this.isSearchVisible = false;
+    this.currentCategory = null;
+    this.dynamicBlockMetadata = {};
+  }
+  init(workspace, vm) {
+    this.workspace = workspace;
+    this.vm = vm;
+
+    // Initialize metadata with static blocks
+    this.dynamicBlockMetadata = _objectSpread({}, BLOCK_METADATA);
+    this.workspace.addChangeListener(event => {
+      const SB = window.ScratchBlocks || _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].get();
+      if (event.type === SB.Events.UI && event.element === "category") {
+        this.handleCategorySwitch(event.newValue);
+      }
+    });
+    this.createSearchUI();
+    this.attachToToolbox();
+    this.addSearchCategory();
+
+    // CRITICAL: Listen to VM's EXTENSION_ADDED event
+    this.setupVMExtensionListener();
+
+    // Initial metadata build
+    setTimeout(() => {
+      this.buildExtensionMetadata();
+    }, 1000);
+    document.addEventListener("click", e => {
+      const item = e.target.closest(".scratchCategoryMenuItem");
+      if (!item) return;
+      const text = item.textContent.trim().toLowerCase();
+      this.handleCategorySwitch(text);
+    });
+  }
+  setupVMExtensionListener() {
+    if (!this.vm || !this.vm.runtime) {
+      console.warn('VM not available for extension listener');
+      return;
+    }
+
+    // Listen to the EXTENSION_ADDED event from VM runtime
+    this.vm.runtime.on('EXTENSION_ADDED', categoryInfo => {
+      console.log('🎉 EXTENSION_ADDED event fired:', categoryInfo);
+
+      // Wait for blocks to be registered, then rebuild
+      setTimeout(() => {
+        console.log('⚡ Rebuilding metadata after extension added...');
+        this.buildExtensionMetadata();
+      }, 500);
+    });
+
+    // Also listen for BLOCKSINFO_UPDATE
+    this.vm.runtime.on('BLOCKSINFO_UPDATE', () => {
+      console.log('📦 BLOCKSINFO_UPDATE event fired');
+      setTimeout(() => {
+        this.buildExtensionMetadata();
+      }, 300);
+    });
+    console.log('✅ VM extension listeners set up');
+  }
+  buildExtensionMetadata() {
+    if (!this.workspace || !_tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].isLoaded()) {
+      return;
+    }
+    const ScratchBlocks = _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].get();
+    try {
+      const toolbox = this.workspace.getToolbox();
+      const blockTypes = Object.keys(ScratchBlocks.Blocks);
+      let newBlocksFound = 0;
+      console.log("\uD83D\uDD0D Scanning ".concat(blockTypes.length, " block types..."));
+
+      // DEFINE HELPER FUNCTIONS FIRST, BEFORE USING THEM
+
+      // Helper to get actual color from a rendered block in the flyout
+      const getBlockColorFromFlyout = blockType => {
+        if (!toolbox || !toolbox.flyout_ || !toolbox.flyout_.workspace_) {
+          return null;
+        }
+        try {
+          const flyoutBlocks = toolbox.flyout_.workspace_.getAllBlocks(false);
+          const block = flyoutBlocks.find(b => {
+            // Accept both shadow and non-shadow blocks for reporters/booleans
+            const isShadow = typeof b.isShadow === 'function' ? b.isShadow() : b.isShadow;
+            const isReporter = b.outputConnection !== undefined && b.outputConnection !== null;
+
+            // For reporter/boolean blocks, accept shadows too
+            if (isReporter) {
+              return b.type === blockType;
+            }
+            return b.type === blockType && !isShadow;
+          });
+          if (!block) return null;
+
+          // Method 1: Get color from the block's colour_ property
+          if (block.colour_) {
+            return block.colour_;
+          }
+
+          // Method 2: Get color from the block's getColour method
+          if (block.getColour && typeof block.getColour === 'function') {
+            return block.getColour();
+          }
+
+          // Method 3: Get color from the SVG element directly
+          if (block.svgPath_) {
+            const fill = block.svgPath_.getAttribute('fill');
+            if (fill && fill !== 'none') {
+              return fill;
+            }
+          }
+
+          // Method 4: Get from SVG group
+          if (block.svgGroup_) {
+            const pathElements = block.svgGroup_.getElementsByTagName('path');
+            if (pathElements.length > 0) {
+              const fill = pathElements[0].getAttribute('fill');
+              if (fill && fill !== 'none') {
+                return fill;
+              }
+            }
+          }
+          return null;
+        } catch (e) {
+          console.warn('Error getting color from flyout block:', e);
+          return null;
+        }
+      };
+
+      // Get block names from the flyout workspace where they're properly formatted
+      const getBlockNameFromFlyout = blockType => {
+        if (!toolbox || !toolbox.flyout_ || !toolbox.flyout_.workspace_) {
+          return null;
+        }
+        try {
+          const flyoutBlocks = toolbox.flyout_.workspace_.getAllBlocks(false);
+          const block = flyoutBlocks.find(b => {
+            const isShadow = typeof b.isShadow === 'function' ? b.isShadow() : b.isShadow;
+            return b.type === blockType && !isShadow;
+          });
+          if (!block) return null;
+
+          // Method 1: Try to get from the SVG text content
+          if (block.svgGroup_) {
+            const svgTexts = block.svgGroup_.getElementsByTagName('text');
+            const textParts = [];
+            for (let i = 0; i < svgTexts.length; i++) {
+              const textElement = svgTexts[i];
+              const text = textElement.textContent || textElement.innerText;
+              if (text && text.trim()) {
+                var _textElement$parentEl;
+                // Skip dropdown arrows
+                if (text.trim() === '▼') continue;
+
+                // Check if this is a text field (not a value)
+                const parentClass = ((_textElement$parentEl = textElement.parentElement) === null || _textElement$parentEl === void 0 ? void 0 : _textElement$parentEl.getAttribute('class')) || '';
+                if (!parentClass.includes('blocklyEditableText')) {
+                  textParts.push(text.trim());
+                }
+              }
+            }
+
+            // Add placeholders for inputs
+            if (block.inputList) {
+              const inputTexts = [];
+              block.inputList.forEach(input => {
+                // Handle explicit dropdown fields here
+                if (input.fieldRow && input.fieldRow.length > 0) {
+                  input.fieldRow.forEach(field => {
+                    if (field instanceof ScratchBlocks.FieldDropdown) {
+                      // Always show [] for dropdowns (your requested behavior)
+                      inputTexts.push('[]');
+                    } else if (field.getText && typeof field.getText === 'function') {
+                      const fieldText = field.getText();
+                      if (fieldText && fieldText.trim() && fieldText !== '▼') {
+                        // Skip editable text fields
+                        if (!field.EDITABLE) {
+                          inputTexts.push(fieldText.trim());
+                        }
+                      }
+                    }
+                  });
+                }
+
+                // Add placeholders for value/statement connections
+                if (input.connection) {
+                  if (input.type === ScratchBlocks.INPUT_VALUE) {
+                    inputTexts.push('()');
+                  } else if (input.type === ScratchBlocks.NEXT_STATEMENT) {
+                    inputTexts.push('[]');
+                  }
+                }
+              });
+              if (inputTexts.length > 0) {
+                return inputTexts.join(' ').toLowerCase().trim();
+              }
+            }
+            if (textParts.length > 0) {
+              return textParts.join(' ').toLowerCase().trim();
+            }
+          }
+
+          // Method 2: Try from block's toString or custom rendering
+          if (block.toString) {
+            const blockStr = block.toString();
+            if (blockStr && blockStr.length > 0 && blockStr.length < 100) {
+              return blockStr.toLowerCase().trim();
+            }
+          }
+          return null;
+        } catch (e) {
+          console.warn('Error extracting block name from flyout:', e);
+          return null;
+        }
+      };
+
+      // NOW ITERATE THROUGH BLOCKS
+      blockTypes.forEach(blockType => {
+        // Skip if already in metadata
+        if (this.dynamicBlockMetadata[blockType]) return;
+
+        // Skip invalid/internal block types - BUT ALLOW reporter/boolean blocks!
+        if (blockType.startsWith('extension_') || blockType === 'procedures_prototype' || blockType === 'text' || blockType === 'math_number') {
+          return;
+        }
+
+        // IMPORTANT: Keep argument reporters as they are real blocks
+        // (argument_reporter_string_number, argument_reporter_boolean)
+
+        const blockDefinition = ScratchBlocks.Blocks[blockType];
+        if (!blockDefinition) return;
+        newBlocksFound++;
+
+        // Get category
+        let category = 'extension';
+        let color = '#0FBD8C'; // Default fallback
+
+        // FIRST: Try to get color from the actual rendered block (most accurate!)
+        const flyoutColor = getBlockColorFromFlyout(blockType);
+        if (flyoutColor) {
+          color = flyoutColor;
+        } else {
+          // SECOND: Try to get from VM runtime blockInfo
+          if (this.vm && this.vm.runtime && this.vm.runtime._blockInfo) {
+            const extensionId = blockType.split('_')[0];
+            const extInfo = this.vm.runtime._blockInfo.find(info => info.id === extensionId);
+            if (extInfo) {
+              color = extInfo.color1 || extInfo.colour || color;
+            }
+          }
+
+          // THIRD: Fallback to prefix matching for built-in categories
+          const prefixMap = {
+            'motion_': {
+              category: 'motion',
+              color: '#4C97FF'
+            },
+            'looks_': {
+              category: 'looks',
+              color: '#9966FF'
+            },
+            'sound_': {
+              category: 'sound',
+              color: '#D65CD6'
+            },
+            'event_': {
+              category: 'events',
+              color: '#FFD500'
+            },
+            'control_': {
+              category: 'control',
+              color: '#FFAB19'
+            },
+            'sensing_': {
+              category: 'sensing',
+              color: '#4CBFE6'
+            },
+            'operator_': {
+              category: 'operators',
+              color: '#40BF4A'
+            },
+            'data_': {
+              category: 'variables',
+              color: '#FF8C1A'
+            },
+            'procedures_': {
+              category: 'myblocks',
+              color: '#FF6680'
+            }
+          };
+          for (const [prefix, info] of Object.entries(prefixMap)) {
+            if (blockType.startsWith(prefix)) {
+              category = info.category;
+              color = info.color;
+              break;
+            }
+          }
+        }
+
+        // Get VM category if available (for proper category name)
+        if (this.vm && this.vm.runtime && this.vm.runtime._blockInfo) {
+          const extensionId = blockType.split('_')[0];
+          const extInfo = this.vm.runtime._blockInfo.find(info => info.id === extensionId);
+          if (extInfo) {
+            category = extInfo.id;
+          }
+        }
+
+        // Extract category from block type if still 'extension'
+        if (category === 'extension' && blockType.includes('_')) {
+          category = blockType.split('_')[0];
+        }
+
+        // Get block name - FIRST try from flyout (best quality)
+        let name = getBlockNameFromFlyout(blockType);
+
+        // Fallback 1: Try from json message0 with proper placeholder replacement
+        if (!name && blockDefinition.json && blockDefinition.json.message0) {
+          let message = blockDefinition.json.message0;
+          const args = blockDefinition.json.args0 || [];
+
+          // Replace %1, %2, etc with appropriate placeholders
+          args.forEach((arg, index) => {
+            const placeholder = index + 1;
+            if (arg.type === 'input_value') {
+              message = message.replace("%".concat(placeholder), '()');
+            } else if (arg.type === 'input_statement') {
+              message = message.replace("%".concat(placeholder), '[]');
+            } else if (arg.type === 'field_dropdown' || arg.type === 'field_variable') {
+              message = message.replace("%".concat(placeholder), '[]');
+            } else {
+              // For other field types, just remove the placeholder
+              message = message.replace("%".concat(placeholder), '');
+            }
+          });
+          message = message.replace(/\s+/g, ' ').trim().toLowerCase();
+          if (message && message.length > 0 && message.length < 100) {
+            name = message;
+          }
+        }
+
+        // Fallback 2: Generate from block type
+        if (!name) {
+          name = blockType.replace(/^[a-z]+_/, '').replace(/([A-Z])/g, ' $1').replace(/_/g, ' ').toLowerCase().trim();
+        }
+        this.dynamicBlockMetadata[blockType] = {
+          name: name,
+          category: category,
+          color: color
+        };
+      });
+      if (newBlocksFound > 0) {
+        console.log("\uD83D\uDCDA Added ".concat(newBlocksFound, " new blocks. Total: ").concat(Object.keys(this.dynamicBlockMetadata).length));
+      }
+    } catch (err) {
+      console.error('Error building extension metadata:', err);
+    }
+  }
+  startMetadataRefresh() {
+    // Initial build after a delay
+    setTimeout(() => {
+      this.buildExtensionMetadata();
+    }, 1000);
+
+    // Moderate refresh every 8 seconds (since we now have URL monitoring)
+    this.metadataRefreshInterval = setInterval(() => {
+      this.buildExtensionMetadata();
+    }, 8000);
+  }
+  stopMetadataRefresh() {
+    if (this.metadataRefreshInterval) {
+      clearInterval(this.metadataRefreshInterval);
+      this.metadataRefreshInterval = null;
+    }
+  }
+  stopMetadataRefresh() {
+    if (this.metadataRefreshInterval) {
+      clearInterval(this.metadataRefreshInterval);
+      this.metadataRefreshInterval = null;
+    }
+  }
+  setupExtensionListener() {
+    // Listen for when extensions are loaded
+    if (this.workspace && this.workspace.getToolbox()) {
+      const toolbox = this.workspace.getToolbox();
+
+      // Watch for toolbox updates (happens when extensions load)
+      const originalRefresh = toolbox.refreshSelection;
+      if (originalRefresh) {
+        toolbox.refreshSelection = () => {
+          originalRefresh.call(toolbox);
+          // Rebuild metadata after toolbox updates
+          setTimeout(() => {
+            console.log('Toolbox refreshed, rebuilding metadata...');
+            this.buildExtensionMetadata();
+          }, 500);
+        };
+      }
+    }
+
+    // Also listen for VM extension loading if available
+    if (window.vm) {
+      const vm = window.vm;
+      const extensionManager = vm.extensionManager;
+      if (extensionManager) {
+        // Store original loadExtensionURL
+        const originalLoadExtension = extensionManager.loadExtensionURL;
+        if (originalLoadExtension) {
+          extensionManager.loadExtensionURL = function () {
+            for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+            const result = originalLoadExtension.apply(this, args);
+
+            // Wait for extension to fully load, then rebuild metadata
+            if (result && result.then) {
+              result.then(() => {
+                setTimeout(() => {
+                  var _window$BlockSearch;
+                  console.log('Extension loaded, rebuilding metadata...');
+                  (_window$BlockSearch = window.BlockSearch) === null || _window$BlockSearch === void 0 ? void 0 : _window$BlockSearch.buildExtensionMetadata();
+                }, 1000);
+              });
+            }
+            return result;
+          };
+        }
+      }
+    }
+  }
+  setupExtensionURLMonitoring() {
+    const trustedExtensionOrigins = ['https://extensions.turbowarp.org/', 'https://extensions.penguinmod.com/', 'https://extensions.arkide.site/', 'https://penguinmod-extensions-gallery.vercel.app/', 'https://arkfs.arc360hub.com/', 'https://sharkpools-extensions.vercel.app/', 'https://sharkpool-sp.github.io/SharkPools-Extensions/', 'https://pen-group.github.io/', 'http://localhost:8000', 'http://localhost:6000', 'http://localhost:6001', 'http://localhost:5173', 'http://localhost:5174'];
+    const isTrustedExtensionOrigin = url => {
+      return trustedExtensionOrigins.some(origin => url.startsWith(origin));
+    };
+
+    // Monitor console messages
+    const originalConsoleLog = console.log;
+    const originalConsoleInfo = console.info;
+    const checkForExtensionLoad = message => {
+      if (typeof message === 'string') {
+        // Check for arkide-additons specifically
+        if (message.includes('arkide-additons') || message.includes('arkide')) {
+          console.log('🔍 Detected ArkIDE extension!');
+          setTimeout(() => {
+            console.log('⚡ Rebuilding metadata for ArkIDE...');
+            this.buildExtensionMetadata();
+          }, 2000); // Longer delay for complex extensions
+          return;
+        }
+
+        // Check if message contains extension URL
+        for (const origin of trustedExtensionOrigins) {
+          if (message.includes(origin)) {
+            console.log('🔍 Detected extension from:', origin);
+            setTimeout(() => {
+              console.log('⚡ Rebuilding metadata...');
+              this.buildExtensionMetadata();
+            }, 1500);
+            break;
+          }
+        }
+
+        // Check for extension loading patterns
+        if (message.includes('Loading extension') || message.includes('extension loaded') || message.includes('.js unsandboxed')) {
+          console.log('🔍 Extension loading detected');
+          setTimeout(() => {
+            this.buildExtensionMetadata();
+          }, 1500);
+        }
+      }
+    };
+    console.log = function () {
+      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+      checkForExtensionLoad(args[0]);
+      return originalConsoleLog.apply(console, args);
+    };
+    console.info = function () {
+      for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+        args[_key3] = arguments[_key3];
+      }
+      checkForExtensionLoad(args[0]);
+      return originalConsoleInfo.apply(console, args);
+    };
+
+    // Monitor fetch requests
+    const originalFetch = window.fetch;
+    window.fetch = function (url) {
+      for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+        args[_key4 - 1] = arguments[_key4];
+      }
+      if (typeof url === 'string' && isTrustedExtensionOrigin(url) && url.endsWith('.js')) {
+        console.log('🌐 Fetching extension:', url);
+        const fetchPromise = originalFetch.call(this, url, ...args);
+        fetchPromise.then(() => {
+          setTimeout(() => {
+            var _window$BlockSearch2;
+            console.log('✅ Extension fetch complete, rebuilding...');
+            (_window$BlockSearch2 = window.BlockSearch) === null || _window$BlockSearch2 === void 0 ? void 0 : _window$BlockSearch2.buildExtensionMetadata();
+          }, 2500); // Even longer for fetch
+        }).catch(err => {
+          console.warn('❌ Extension fetch failed:', err);
+          setTimeout(() => {
+            var _window$BlockSearch3;
+            (_window$BlockSearch3 = window.BlockSearch) === null || _window$BlockSearch3 === void 0 ? void 0 : _window$BlockSearch3.buildExtensionMetadata();
+          }, 2500);
+        });
+        return fetchPromise;
+      }
+      return originalFetch.call(this, url, ...args);
+    };
+    console.log('🔍 Extension URL monitoring active');
+  }
+  stopMetadataRefresh() {
+    if (this.metadataRefreshInterval) {
+      clearInterval(this.metadataRefreshInterval);
+      this.metadataRefreshInterval = null;
+    }
+  }
+
+  // Add cleanup method
+  stopMetadataRefresh() {
+    if (this.metadataRefreshInterval) {
+      clearInterval(this.metadataRefreshInterval);
+      this.metadataRefreshInterval = null;
+    }
+  }
+  init(workspace) {
+    this.workspace = workspace;
+    this.workspace.addChangeListener(event => {
+      const SB = window.ScratchBlocks || ScratchBlocks;
+      if (event.type === SB.Events.UI && event.element === "category") {
+        this.handleCategorySwitch(event.newValue);
+      }
+    });
+    this.createSearchUI();
+    this.attachToToolbox();
+    this.addSearchCategory();
+
+    // Initialize metadata with static blocks
+    this.dynamicBlockMetadata = _objectSpread({}, BLOCK_METADATA);
+
+    // Build extension metadata periodically to catch newly loaded extensions
+    this.startMetadataRefresh();
+
+    // Setup extension loading listener
+    this.setupExtensionListener();
+
+    // NEW: Setup extension URL monitoring
+    this.setupExtensionURLMonitoring();
+    const checkExtensionLibrary = setInterval(() => {
+      const extensionLibrary = document.querySelector('[class*="extension-library"]') || document.querySelector('[class*="extensionLibrary"]');
+      if (extensionLibrary && !this._extensionLibraryWasOpen) {
+        this._extensionLibraryWasOpen = true;
+        console.log('📚 Extension library opened, will rebuild after close');
+      } else if (!extensionLibrary && this._extensionLibraryWasOpen) {
+        this._extensionLibraryWasOpen = false;
+        console.log('📚 Extension library closed, rebuilding metadata...');
+        setTimeout(() => {
+          this.buildExtensionMetadata();
+        }, 1000);
+      }
+    }, 500);
+
+    // Make BlockSearch globally accessible for extension listener
+    window.BlockSearch = this;
+    document.addEventListener("click", e => {
+      const item = e.target.closest(".scratchCategoryMenuItem");
+      if (!item) return;
+      const text = item.textContent.trim().toLowerCase();
+      this.handleCategorySwitch(text);
+    });
+  }
+  handleCategorySwitch(categoryName) {
+    this.currentCategory = (categoryName === null || categoryName === void 0 ? void 0 : categoryName.toLowerCase()) || "";
+
+    // If switching AWAY from "search", hide it
+    if (this.currentCategory !== "search") {
+      if (this.isSearchVisible) {
+        this.searchContainer.style.display = "none";
+        this.resultsContainer.style.display = "none";
+        this.searchInput.value = "";
+        this.isSearchVisible = false;
+      }
+
+      // Rebuild metadata when switching categories to catch newly visible blocks
+      setTimeout(() => {
+        this.buildExtensionMetadata();
+      }, 300);
+    }
+  }
+  addSearchCategory() {
+    console.log('Adding search category (super robust version)...');
+
+    // Cleanup any existing observers/intervals
+    if (this._searchCategoryObserver) {
+      this._searchCategoryObserver.disconnect();
+      this._searchCategoryObserver = null;
+    }
+    if (this._searchCategoryInterval) {
+      clearInterval(this._searchCategoryInterval);
+      this._searchCategoryInterval = null;
+    }
+    const ensureSearchCategory = () => {
+      try {
+        const targetMenu = document.querySelector('.scratchCategoryMenu');
+        if (!targetMenu || !targetMenu.isConnected) {
+          return false;
+        }
+
+        // Check if already exists AND is still in DOM
+        let existing = targetMenu.querySelector('.scratch-search-category');
+        if (existing && existing.isConnected) {
+          return true;
+        }
+
+        // Remove any orphaned search categories
+        document.querySelectorAll('.scratch-search-category').forEach(el => el.remove());
+
+        // Create new search category
+        const searchCategory = document.createElement('div');
+        searchCategory.className = 'scratchCategoryMenuItem scratch-search-category';
+        searchCategory.setAttribute('role', 'treeitem');
+        searchCategory.setAttribute('data-search-injected', 'true');
+        searchCategory.style.cssText = "\n                padding: 8px 1px;\n                cursor: pointer;\n                display: flex;\n                flex-direction: column;\n                align-items: center;\n                justify-content: center;\n                gap: 3px;\n                background: transparent;\n                color: white;\n                font-weight: bold;\n                user-select: none;\n                text-align: center;\n                border-bottom: 1px solid rgba(0,0,0,0.08);\n                height: 64px;\n                transition: all 0.2s;\n            ";
+        searchCategory.addEventListener('mouseenter', () => {
+          searchCategory.style.backgroundColor = 'rgba(255,255,255,0.1)';
+        });
+        searchCategory.addEventListener('mouseleave', () => {
+          searchCategory.style.backgroundColor = 'transparent';
+        });
+        const icon = document.createElement('span');
+        icon.textContent = '🔍';
+        icon.style.cssText = 'font-size: 20px; line-height: 20px; margin: 0;';
+        const label = document.createElement('span');
+        label.textContent = 'Search';
+        label.style.cssText = 'font-size: 12px; margin: 0; display: block;';
+        searchCategory.appendChild(icon);
+        searchCategory.appendChild(label);
+        searchCategory.addEventListener('click', e => {
+          e.stopPropagation();
+          this.currentCategory = 'search';
+          this.handleCategorySwitch('search');
+          this.toggleSearchBar();
+        });
+        targetMenu.insertBefore(searchCategory, targetMenu.firstChild);
+        console.log('✅ Search category injected');
+        return true;
+      } catch (err) {
+        console.error('Error in ensureSearchCategory:', err);
+        return false;
+      }
+    };
+
+    // Initial injection with retry
+    const _tryInject = function tryInject() {
+      let attempts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      if (attempts > 10) {
+        console.warn('Failed to inject search category after 10 attempts');
+        return;
+      }
+      if (!ensureSearchCategory()) {
+        setTimeout(() => _tryInject(attempts + 1), 200);
+      }
+    };
+    _tryInject();
+
+    // Watch for toolbox changes using MutationObserver
+    const observeToolbox = () => {
+      const toolboxContainer = document.querySelector('.blocklyToolboxDiv') || document.querySelector('[class*="blocks_blocks"]') || document.body;
+      const observer = new MutationObserver(mutations => {
+        for (const mutation of mutations) {
+          // Check if category menu was added/modified
+          if (mutation.addedNodes.length > 0) {
+            for (const node of mutation.addedNodes) {
+              if (node.classList && (node.classList.contains('scratchCategoryMenu') || node.querySelector && node.querySelector('.scratchCategoryMenu'))) {
+                setTimeout(() => ensureSearchCategory(), 100);
+                break;
+              }
+            }
+          }
+        }
+      });
+      observer.observe(toolboxContainer, {
+        childList: true,
+        subtree: true
+      });
+      this._searchCategoryObserver = observer;
+    };
+    observeToolbox();
+
+    // Safety interval to catch any missed injections
+    this._searchCategoryInterval = setInterval(() => {
+      const menu = document.querySelector('.scratchCategoryMenu');
+      if (menu && !menu.querySelector('.scratch-search-category')) {
+        console.log('🔧 Re-injecting missing search category...');
+        ensureSearchCategory();
+      }
+    }, 1000);
+
+    // Hide search UI initially
+    if (this.searchContainer) {
+      this.searchContainer.style.display = 'none';
+      this.isSearchVisible = false;
+    }
+  }
+  toggleSearchBar() {
+    this.isSearchVisible = !this.isSearchVisible;
+    if (this.isSearchVisible) {
+      this.searchContainer.style.display = 'block';
+      // Focus the input
+      setTimeout(() => this.searchInput.focus(), 100);
+    } else {
+      this.searchContainer.style.display = 'none';
+      this.resultsContainer.style.display = 'none';
+      this.searchInput.value = '';
+    }
+  }
+  createSearchUI() {
+    // Create search container
+    this.searchContainer = document.createElement('div');
+    this.searchContainer.className = 'block-search-container';
+    this.searchContainer.style.cssText = "\n            position: absolute;\n            top: 10px;\n            left: 10px;\n            right: 10px;\n            z-index: 10000;\n            padding: 8px;\n            background: #2d2d2d;\n            border-radius: 6px;\n            box-shadow: 0 2px 8px rgba(0,0,0,0.3);\n        ";
+
+    // Create search input
+    this.searchInput = document.createElement('input');
+    this.searchInput.type = 'text';
+    this.searchInput.placeholder = 'Search blocks...';
+    this.searchInput.className = 'block-search-input';
+    this.searchInput.style.cssText = "\n            width: 100%;\n            padding: 6px 10px;\n            border: 1px solid #444;\n            border-radius: 4px;\n            font-size: 13px;\n            box-sizing: border-box;\n            background: #1e1e1e;\n            color: #fff;\n        ";
+
+    // Create results container
+    this.resultsContainer = document.createElement('div');
+    this.resultsContainer.className = 'block-search-results';
+    this.resultsContainer.style.cssText = "\n            max-height: 300px;\n            overflow-y: auto;\n            margin-top: 8px;\n            display: none;\n            background: #1e1e1e;\n            border-radius: 4px;\n        ";
+    this.searchContainer.appendChild(this.searchInput);
+    this.searchContainer.appendChild(this.resultsContainer);
+
+    // Event listeners
+    this.searchInput.addEventListener('input', e => this.handleSearch(e.target.value));
+    this.searchInput.addEventListener('focus', () => {
+      if (this.searchInput.value.trim()) {
+        this.resultsContainer.style.display = 'block';
+      }
+    });
+
+    // Close results when clicking outside
+    document.addEventListener('click', e => {
+      if (!this.searchContainer.contains(e.target)) {
+        this.resultsContainer.style.display = 'none';
+      }
+    });
+  }
+  attachToToolbox() {
+    console.log('Attempting to attach to toolbox...');
+
+    // Find the blocks wrapper specifically
+    let targetDiv = document.querySelector('[class*="blocks_blocks"]') || document.querySelector('.injectionDiv');
+    console.log('Target div:', targetDiv);
+    if (targetDiv) {
+      console.log('Attaching search to:', targetDiv);
+
+      // Make sure parent can contain positioned elements
+      const currentPosition = window.getComputedStyle(targetDiv).position;
+      if (currentPosition === 'static') {
+        targetDiv.style.position = 'relative';
+      }
+
+      // Position at top-left of blocks area, below tabs
+      this.searchContainer.style.cssText = "\n                margin-left: 60px;\n                position: absolute;\n                top: 5px;\n                left: 5px;\n                width: 240px;\n                z-index: 99999;\n                padding: 8px;\n                background: #2d2d2d;\n                border: 2px solid #4C97FF;\n                border-radius: 6px;\n                box-shadow: 0 4px 12px rgba(0,0,0,0.5);\n                pointer-events: auto;\n            ";
+      targetDiv.appendChild(this.searchContainer);
+      console.log('Search bar attached!');
+    }
+  }
+  handleSearch(query) {
+    if (!query.trim()) {
+      this.resultsContainer.style.display = 'none';
+      this.resultsContainer.innerHTML = '';
+      return;
+    }
+    const results = this.searchBlocks(query);
+    this.displayResults(results);
+  }
+  searchBlocks(query) {
+    query = query.toLowerCase();
+    const results = [];
+    const metadata = this.dynamicBlockMetadata;
+    for (const [blockType, meta] of Object.entries(metadata)) {
+      // Search by name
+      if (meta.name.toLowerCase().includes(query)) {
+        results.push(_objectSpread({
+          blockType
+        }, meta));
+        continue;
+      }
+
+      // Search by block type
+      if (blockType.toLowerCase().includes(query)) {
+        results.push(_objectSpread({
+          blockType
+        }, meta));
+        continue;
+      }
+
+      // Search by category
+      if (meta.category.toLowerCase().includes(query)) {
+        results.push(_objectSpread({
+          blockType
+        }, meta));
+      }
+    }
+    console.log("Found ".concat(results.length, " blocks matching \"").concat(query, "\""));
+    return results.slice(0, 10);
+  }
+  displayResults(results) {
+    if (results.length === 0) {
+      this.resultsContainer.innerHTML = '<div style="padding:8px;color:#999;">No blocks found</div>';
+      this.resultsContainer.style.display = 'block';
+      return;
+    }
+    this.resultsContainer.innerHTML = '';
+    this.resultsContainer.style.display = 'block';
+    results.forEach(result => {
+      const resultItem = document.createElement('div');
+      resultItem.className = 'block-search-result-item';
+      resultItem.style.cssText = "\n                padding: 8px 12px;\n                cursor: pointer;\n                display: flex;\n                align-items: center;\n                gap: 8px;\n                border-radius: 4px;\n            ";
+
+      // Category color circle
+      const colorCircle = document.createElement('div');
+      colorCircle.style.cssText = "\n                width: 16px;\n                height: 16px;\n                border-radius: 50%;\n                background-color: ".concat(result.color, ";\n                flex-shrink: 0;\n            ");
+
+      // Block name
+      const blockName = document.createElement('span');
+      blockName.textContent = result.name;
+      blockName.style.cssText = "\n                flex: 1;\n                font-size: 13px;\n            ";
+      resultItem.appendChild(colorCircle);
+      resultItem.appendChild(blockName);
+
+      // Hover effect
+      resultItem.addEventListener('mouseenter', () => {
+        resultItem.style.backgroundColor = '#f0f0f054';
+      });
+      resultItem.addEventListener('mouseleave', () => {
+        resultItem.style.backgroundColor = 'transparent';
+      });
+
+      // Click to add block
+      resultItem.addEventListener('click', () => {
+        this.addBlockToWorkspace(result.blockType);
+        this.searchInput.value = '';
+        this.resultsContainer.style.display = 'none';
+      });
+      this.resultsContainer.appendChild(resultItem);
+    });
+  }
+  addBlockToWorkspace(blockType) {
+    if (!this.workspace || !_tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].isLoaded()) return;
+    const ScratchBlocks = _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].get();
+    const metadata = this.dynamicBlockMetadata[blockType] || BLOCK_METADATA[blockType];
+    if (!metadata) {
+      console.warn('No metadata for block:', blockType);
+      return;
+    }
+    if (blockType.startsWith('extension_')) {
+      console.warn('Invalid block type (extension_ prefix):', blockType);
+      return;
+    }
+
+    // Helper to get safe center position
+    const getSafeCenterPosition = () => {
+      try {
+        const metrics = this.workspace.getMetrics();
+        const scale = this.workspace.scale || 1;
+
+        // Calculate visible center
+        const viewLeft = metrics.viewLeft || 0;
+        const viewTop = metrics.viewTop || 0;
+        const viewWidth = metrics.viewWidth || 400;
+        const viewHeight = metrics.viewHeight || 300;
+
+        // Position in center of visible area
+        const centerX = viewLeft + viewWidth / 2 / scale;
+        const centerY = viewTop + viewHeight / 2 / scale;
+
+        // Clamp to reasonable bounds
+        const safeX = Math.max(50, Math.min(centerX, 5000));
+        const safeY = Math.max(50, Math.min(centerY, 5000));
+        return {
+          x: safeX,
+          y: safeY
+        };
+      } catch (e) {
+        console.warn('Error getting center position, using defaults:', e);
+        return {
+          x: 200,
+          y: 200
+        };
+      }
+    };
+    try {
+      const toolbox = this.workspace.getToolbox();
+      if (!toolbox || !toolbox.flyout_) {
+        console.warn('No toolbox or flyout available');
+        return;
+      }
+      const flyout = toolbox.flyout_;
+      const switchToCategory = () => {
+        if (!toolbox.tree_) return false;
+        const findCategory = (node, targetName) => {
+          if (!node || !node.getChildren) return null;
+          const children = node.getChildren();
+          for (const child of children) {
+            var _child$rowDiv_, _child$rowDiv_$textCo;
+            const name = (_child$rowDiv_ = child.rowDiv_) === null || _child$rowDiv_ === void 0 ? void 0 : (_child$rowDiv_$textCo = _child$rowDiv_.textContent) === null || _child$rowDiv_$textCo === void 0 ? void 0 : _child$rowDiv_$textCo.trim().toLowerCase();
+            if (name === targetName) {
+              return child;
+            }
+            const found = findCategory(child, targetName);
+            if (found) return found;
+          }
+          return null;
+        };
+        const category = findCategory(toolbox.tree_, metadata.category);
+        if (category && category.onClick) {
+          category.onClick();
+          return true;
+        }
+        return false;
+      };
+      const createFromFlyout = () => {
+        try {
+          if (!flyout.workspace_) {
+            return false;
+          }
+          const flyoutBlocks = flyout.workspace_.getTopBlocks(false);
+          let sourceBlock = null;
+          for (const block of flyoutBlocks) {
+            if (block.type === blockType) {
+              const isShadow = typeof block.isShadow === 'function' ? block.isShadow() : block.isShadow;
+              const isMarker = typeof block.isInsertionMarker === 'function' ? block.isInsertionMarker() : block.isInsertionMarker;
+              if (!isShadow && !isMarker) {
+                sourceBlock = block;
+                break;
+              }
+            }
+          }
+          if (!sourceBlock) {
+            console.warn("Block ".concat(blockType, " not found in flyout"));
+            return false;
+          }
+          const newBlock = flyout.createBlock(sourceBlock);
+          if (!newBlock) {
+            return false;
+          }
+          setTimeout(() => {
+            try {
+              const position = getSafeCenterPosition();
+
+              // Get block's current position
+              const currentPos = newBlock.getRelativeToSurfaceXY();
+
+              // Calculate offset to center
+              const offsetX = position.x - currentPos.x;
+              const offsetY = position.y - currentPos.y;
+
+              // Move block to center
+              newBlock.moveBy(offsetX, offsetY);
+
+              // Ensure block is rendered
+              if (newBlock.render) {
+                newBlock.render();
+              }
+
+              // Select and bring to front
+              if (newBlock.select) {
+                newBlock.select();
+              }
+
+              // Scroll to block if needed
+              this.workspace.centerOnBlock(newBlock.id);
+              console.log("\u2705 Block positioned at (".concat(position.x, ", ").concat(position.y, ")"));
+            } catch (e) {
+              console.warn('Error positioning block:', e);
+            }
+          }, 50);
+          return true;
+        } catch (err) {
+          console.error('Error in createFromFlyout:', err);
+          return false;
+        }
+      };
+      switchToCategory();
+      setTimeout(() => {
+        createFromFlyout();
+        this.searchInput.value = '';
+        this.resultsContainer.style.display = 'none';
+      }, 200);
+    } catch (err) {
+      console.error('Error adding block:', err);
+    }
+  }
+
+  // Helper method to remove all IDs from XML tree
+  removeAllIds(xmlElement) {
+    xmlElement.removeAttribute('id');
+    xmlElement.removeAttribute('disabled');
+
+    // Recursively remove from children
+    const children = xmlElement.children;
+    for (let i = 0; i < children.length; i++) {
+      this.removeAllIds(children[i]);
+    }
+  }
+
+  // Helper to clone a block's full structure including shadows
+  cloneBlockWithShadows(sourceBlock) {
+    const ScratchBlocks = _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].get();
+    try {
+      // Get the block's XML representation with all children
+      const blockXml = ScratchBlocks.Xml.blockToDom(sourceBlock);
+
+      // Deep clone the XML
+      const clonedXml = blockXml.cloneNode(true);
+
+      // Remove all IDs so new blocks are created
+      this.removeAllIds(clonedXml);
+      return clonedXml;
+    } catch (e) {
+      console.error('Error cloning block:', e);
+      return null;
+    }
+  }
+
+  // Add fallback method to create blocks directly when flyout method fails
+  createBlockDirectly(blockType) {
+    try {
+      const ScratchBlocks = _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].get();
+
+      // Check if block definition exists
+      if (!ScratchBlocks.Blocks[blockType]) {
+        console.warn('Block definition not found:', blockType);
+        return;
+      }
+
+      // Disable events temporarily to prevent unwanted side effects
+      const eventsEnabled = ScratchBlocks.Events.isEnabled();
+      ScratchBlocks.Events.disable();
+      try {
+        // Create basic XML
+        const blockXml = ScratchBlocks.Xml.textToDom("<block type=\"".concat(blockType, "\"></block>"));
+
+        // Create the block
+        const newBlock = ScratchBlocks.Xml.domToBlock(blockXml, this.workspace);
+        if (!newBlock) {
+          console.error('Failed to create block directly');
+          return;
+        }
+
+        // Initialize the block properly
+        if (newBlock.initSvg) newBlock.initSvg();
+        if (newBlock.render) newBlock.render(false);
+
+        // Position in center using safe positioning
+        const position = getSafeCenterPosition();
+        const currentPos = newBlock.getRelativeToSurfaceXY();
+        const offsetX = position.x - currentPos.x;
+        const offsetY = position.y - currentPos.y;
+        newBlock.moveBy(offsetX, offsetY);
+
+        // Scroll to make sure it's visible
+        this.workspace.centerOnBlock(newBlock.id);
+
+        // Select the block
+        if (newBlock.select) {
+          newBlock.select();
+        }
+        console.log('Block created directly:', blockType);
+      } finally {
+        // Re-enable events
+        if (eventsEnabled) {
+          ScratchBlocks.Events.enable();
+        }
+      }
+    } catch (err) {
+      console.error('Error creating block directly:', err);
+    }
+  }
+
+  // Fallback method to show block in toolbox
+  showBlockInToolbox(blockType) {
+    console.log('Block selected:', blockType);
+    const result = this.dynamicBlockMetadata[blockType] || BLOCK_METADATA[blockType];
+    if (!result) return;
+
+    // Try to switch to the appropriate category
+    try {
+      const toolbox = this.workspace.getToolbox();
+      if (toolbox && toolbox.tree_) {
+        const findCategory = (node, targetName) => {
+          if (!node || !node.getChildren) return null;
+          const children = node.getChildren();
+          for (const child of children) {
+            var _child$rowDiv_2, _child$rowDiv_2$textC;
+            const name = (_child$rowDiv_2 = child.rowDiv_) === null || _child$rowDiv_2 === void 0 ? void 0 : (_child$rowDiv_2$textC = _child$rowDiv_2.textContent) === null || _child$rowDiv_2$textC === void 0 ? void 0 : _child$rowDiv_2$textC.trim().toLowerCase();
+            if (name === targetName) {
+              return child;
+            }
+            const found = findCategory(child, targetName);
+            if (found) return found;
+          }
+          return null;
+        };
+        const category = findCategory(toolbox.tree_, result.category);
+        if (category && category.onClick) {
+          category.onClick();
+        }
+      }
+    } catch (e) {
+      console.warn('Could not switch category:', e);
+    }
+  }
+}
+/* harmony default export */ __webpack_exports__["default"] = (new BlockSearch());
 
 /***/ }),
 
