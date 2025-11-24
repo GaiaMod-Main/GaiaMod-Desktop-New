@@ -28,10 +28,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
+      - name: Import GPG key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import --batch --yes
+          
+          # Get the key ID
+          GPG_KEY_ID=$(gpg --list-secret-keys --keyid-format=long | grep sec | awk '{print $2}' | cut -d'/' -f2 | head -n1)
+          echo "GPG_KEY_ID=$GPG_KEY_ID" >> $GITHUB_ENV
+          echo "Using GPG Key ID: $GPG_KEY_ID"
+      
       - name: Install flatpak and dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y flatpak flatpak-builder squashfs-tools
+          sudo apt-get install -y flatpak flatpak-builder squashfs-tools gnupg2
       
       - name: Add flathub remote
         run: |
@@ -142,7 +151,7 @@ jobs:
             echo "Repository already exists, skipping initialization"
           fi
           
-          ostree summary -u --repo=. --gpg-sign= || echo "No refs yet, that's okay for first build"
+          ostree summary -u --repo=. --gpg-sign=$GPG_KEY_ID 2>/dev/null || echo "No refs yet, that's okay for first build"
 
       - name: Set up QEMU for ARM64 cross-compilation
         if: matrix.arch.name == 'aarch64'
@@ -162,29 +171,36 @@ jobs:
           
           # Verify qemu-aarch64-static is registered
           cat /proc/sys/fs/binfmt_misc/qemu-aarch64 || echo "Registering qemu-aarch64..."
-      
 
       - name: Build Flatpak for ${{ matrix.arch.name }}
         run: |
           echo "Building Flatpak for ${{ matrix.arch.name }}..."
-          flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} build-dir .flatpak/com.arkide.desktop.json
           
-          echo "Flatpak built for ${{ matrix.arch.name }} and added to repository!"
+          # Build and sign with GPG
+          flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} \
+            --gpg-sign=$GPG_KEY_ID build-dir .flatpak/com.arkide.desktop.json
+          
+          echo "Flatpak built and signed for ${{ matrix.arch.name }}!"
       
-      - name: Update repo metadata
+      - name: Update repo metadata with GPG signature
         run: |
           cd gh-pages/repo
           
           if ostree refs --repo=. 2>/dev/null | grep -q .; then
-            echo "Updating summary for existing refs..."
-            ostree summary -u --repo=. --gpg-sign=
+            echo "Updating summary with GPG signature..."
+            ostree summary -u --repo=. --gpg-sign=$GPG_KEY_ID
           else
             echo "No refs found yet, creating empty summary..."
-            ostree summary -u --repo=. --gpg-sign= || true
+            ostree summary -u --repo=. --gpg-sign=$GPG_KEY_ID || true
           fi
           
-          touch summary
-          echo "Repository metadata updated for ${{ matrix.arch.name }}!"
+          echo "Repository metadata signed with GPG!"
+      
+      - name: Export public GPG key
+        run: |
+          mkdir -p gh-pages
+          gpg --export --armor $GPG_KEY_ID > gh-pages/arkide-gpg-key.asc
+          echo "Public GPG key exported!"
       
       - name: Create flatpakrepo file
         run: |
@@ -195,17 +211,17 @@ jobs:
           Title=ArkIDE Repository
           Url=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
           Homepage=https://github.com/${{ github.repository }}
-          Comment=Official ArkIDE Flatpak repository (x86_64 and ARM64)
+          Comment=Official ArkIDE Flatpak repository (GPG signed, x86_64 and ARM64)
           Description=Install ArkIDE directly from our repository
           Icon=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/icon.png
-          GPGVerify=false
+          GPGKey=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/arkide-gpg-key.asc
           EOF
       
       - name: Create installation instructions page
         run: |
           OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
           
-          cat > gh-pages/index.html <<EOF
+          cat > gh-pages/index.html <<'EOF'
           <!DOCTYPE html>
           <html lang="en">
           <head>
@@ -247,15 +263,15 @@ jobs:
                       margin: 10px 5px;
                   }
                   .button:hover { background: #45a049; }
-                  .warning {
-                      background: #ff9800;
-                      color: #000;
+                  .info {
+                      background: #2196F3;
+                      color: white;
                       padding: 10px;
                       border-radius: 5px;
                       margin: 20px 0;
                   }
-                  .info {
-                      background: #2196F3;
+                  .success {
+                      background: #4CAF50;
                       color: white;
                       padding: 10px;
                       border-radius: 5px;
@@ -267,23 +283,25 @@ jobs:
               <h1>🚀 ArkIDE Flatpak Repository</h1>
               <p>Install ArkIDE directly from our official Flatpak repository.</p>
               
+              <div class="success">
+                  <strong>🔒 Secure:</strong> This repository is GPG-signed for your security!
+              </div>
+              
               <div class="info">
                   <strong>✨ Multi-Architecture Support:</strong> Available for x86_64 and ARM64 (aarch64) systems!
               </div>
               
-              <div class="warning">
-                  <strong>⚠️ Important:</strong> This repository is not GPG-signed. Only install if you trust this source.
-              </div>
-              
               <h2>Quick Install (Recommended)</h2>
-              <p>Add the repository and install in one command:</p>
-              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
-          flatpak install --user arkide com.arkide.desktop</code></pre>
+              <p><strong>Step 1:</strong> Import the GPG key and add repository (one-time setup)</p>
+              <pre><code>wget -O - https://OWNER_LOWER.github.io/REPO_NAME/arkide-gpg-key.asc | flatpak remote-add --user --gpg-import=- arkide https://OWNER_LOWER.github.io/REPO_NAME/repo</code></pre>
+              
+              <p><strong>Step 2:</strong> Install ArkIDE</p>
+              <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
               
               <p><em>Flatpak will automatically install the correct version for your architecture (x86_64 or ARM64).</em></p>
               
               <h2>Alternative: Use .flatpakrepo file</h2>
-              <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/arkide.flatpakrepo</code></pre>
+              <pre><code>flatpak install --user https://OWNER_LOWER.github.io/REPO_NAME/arkide.flatpakrepo</code></pre>
               
               <h2>Run ArkIDE</h2>
               <pre><code>flatpak run com.arkide.desktop</code></pre>
@@ -298,7 +316,8 @@ jobs:
               
               <div style="margin-top: 40px;">
                   <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
-                  <a href="https://github.com/${{ github.repository }}" class="button">View on GitHub</a>
+                  <a href="arkide-gpg-key.asc" class="button">Download GPG Key</a>
+                  <a href="https://github.com/GITHUB_REPO" class="button">View on GitHub</a>
               </div>
               
               <h2>Supported Architectures</h2>
@@ -307,15 +326,30 @@ jobs:
                   <li><strong>ARM64 (aarch64)</strong> - ARM-based systems (Raspberry Pi 4/5, Apple Silicon via Asahi Linux, etc.)</li>
               </ul>
               
-              <h2>Manual Installation Steps</h2>
-              <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
-              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo</code></pre>
+              <h2>Verify GPG Signature</h2>
+              <p>You can verify the repository is authentic:</p>
+              <pre><code>wget https://OWNER_LOWER.github.io/REPO_NAME/arkide-gpg-key.asc
+          gpg --import arkide-gpg-key.asc
+          flatpak remote-ls arkide --show-details</code></pre>
               
-              <p><strong>Step 2:</strong> Install ArkIDE</p>
+              <h2>Manual Installation Steps</h2>
+              <p><strong>Step 1:</strong> Download and import the GPG key</p>
+              <pre><code>wget https://OWNER_LOWER.github.io/REPO_NAME/arkide-gpg-key.asc
+          gpg --import arkide-gpg-key.asc</code></pre>
+              
+              <p><strong>Step 2:</strong> Add the repository</p>
+              <pre><code>flatpak remote-add --user --gpg-import=arkide-gpg-key.asc arkide https://OWNER_LOWER.github.io/REPO_NAME/repo</code></pre>
+              
+              <p><strong>Step 3:</strong> Install ArkIDE</p>
               <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
           </body>
           </html>
           EOF
+          
+          # Replace placeholders with actual values
+          sed -i "s|OWNER_LOWER|${OWNER_LOWER}|g" gh-pages/index.html
+          sed -i "s|REPO_NAME|${{ github.event.repository.name }}|g" gh-pages/index.html
+          sed -i "s|GITHUB_REPO|${{ github.repository }}|g" gh-pages/index.html
           
           echo "Installation page created!"
       
@@ -336,7 +370,7 @@ jobs:
       
       - name: Create bundle as backup
         run: |
-          flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }}
+          flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }} --gpg-sign=$GPG_KEY_ID
       
       - name: Upload to Release
         uses: softprops/action-gh-release@v1
