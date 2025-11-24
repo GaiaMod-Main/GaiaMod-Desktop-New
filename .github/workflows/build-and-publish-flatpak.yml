@@ -1,0 +1,228 @@
+name: Build and Publish Flatpak
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build (e.g., 1.0.0 - without the v prefix)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Install flatpak and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y flatpak flatpak-builder
+      
+      - name: Add flathub remote
+        run: |
+          flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+      
+      - name: Install runtimes and SDK
+        run: |
+          flatpak install -y --user flathub org.freedesktop.Platform//23.08
+          flatpak install -y --user flathub org.freedesktop.Sdk//23.08
+          flatpak install -y --user flathub org.electronjs.Electron2.BaseApp//23.08
+      
+      - name: Download and extract AppImage
+        run: |
+          mkdir -p build-input
+          cd build-input
+          
+          echo "Downloading AppImage for version ${{ github.event.inputs.version }}..."
+          
+          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}.AppImage"
+          DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
+          
+          echo "Attempting to download from: ${DOWNLOAD_URL}"
+          
+          if ! wget "${DOWNLOAD_URL}" -O arkide.AppImage; then
+            echo "Failed to download AppImage. Checking available assets..."
+            gh release view "v${{ github.event.inputs.version }}" --json assets -q '.assets[].name'
+            exit 1
+          fi
+          
+          echo "AppImage downloaded successfully!"
+          chmod +x arkide.AppImage
+          ./arkide.AppImage --appimage-extract
+          
+          mv squashfs-root/* .
+          rm -rf squashfs-root arkide.AppImage
+          
+          if [ ! -f "ark-ide" ]; then
+            echo "ERROR: ark-ide executable not found!"
+            ls -la
+            exit 1
+          fi
+          
+          chmod +x ark-ide
+          echo "Build input prepared successfully!"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+      
+      - name: Setup repo directory
+        run: |
+          mkdir -p gh-pages/repo
+          # If repo doesn't exist yet, initialize it
+          if [ ! -f "gh-pages/repo/config" ]; then
+            ostree init --mode=archive-z2 --repo=gh-pages/repo
+          fi
+      
+      - name: Build Flatpak and update repo
+        run: |
+          echo "Building Flatpak..."
+          flatpak-builder --user --force-clean --repo=gh-pages/repo build-dir .flatpak/com.arkide.desktop.json
+          
+          echo "Flatpak built and added to repository!"
+      
+      - name: Update repo metadata
+        run: |
+          cd gh-pages/repo
+          
+          # Update the summary file (required for flatpak remotes)
+          ostree summary -u --repo=.
+          
+          echo "Repository metadata updated!"
+      
+      - name: Create flatpakrepo file
+        run: |
+          cat > gh-pages/arkide.flatpakrepo <<EOF
+          [Flatpak Repo]
+          Title=Ark.IDE Repository
+          Url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/repo
+          Homepage=https://github.com/${{ github.repository }}
+          Comment=Official Ark.IDE Flatpak repository
+          Description=Install Ark.IDE directly from our repository
+          Icon=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/icon.png
+          GPGVerify=false
+          EOF
+          
+          echo "Flatpakrepo file created!"
+      
+      - name: Create installation instructions page
+        run: |
+          cat > gh-pages/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Ark.IDE Flatpak Repository</title>
+              <style>
+                  body {
+                      font-family: system-ui, -apple-system, sans-serif;
+                      max-width: 800px;
+                      margin: 50px auto;
+                      padding: 20px;
+                      line-height: 1.6;
+                      background: #1a1a1a;
+                      color: #e0e0e0;
+                  }
+                  h1 { color: #4CAF50; }
+                  h2 { color: #81C784; margin-top: 30px; }
+                  code {
+                      background: #2d2d2d;
+                      padding: 2px 6px;
+                      border-radius: 3px;
+                      font-family: 'Courier New', monospace;
+                  }
+                  pre {
+                      background: #2d2d2d;
+                      padding: 15px;
+                      border-radius: 5px;
+                      overflow-x: auto;
+                      border-left: 3px solid #4CAF50;
+                  }
+                  .button {
+                      display: inline-block;
+                      background: #4CAF50;
+                      color: white;
+                      padding: 10px 20px;
+                      text-decoration: none;
+                      border-radius: 5px;
+                      margin: 10px 5px;
+                  }
+                  .button:hover { background: #45a049; }
+              </style>
+          </head>
+          <body>
+              <h1>🚀 Ark.IDE Flatpak Repository</h1>
+              <p>Install Ark.IDE directly from our official Flatpak repository.</p>
+              
+              <h2>Quick Install</h2>
+              <p>Add the repository and install in one command:</p>
+              <pre><code>flatpak install --user https://OWNER.github.io/REPO/arkide.flatpakrepo</code></pre>
+              
+              <h2>Manual Installation</h2>
+              <p><strong>Step 1:</strong> Add the repository</p>
+              <pre><code>flatpak remote-add --user --if-not-exists arkide https://OWNER.github.io/REPO/repo</code></pre>
+              
+              <p><strong>Step 2:</strong> Install Ark.IDE</p>
+              <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
+              
+              <h2>Run Ark.IDE</h2>
+              <pre><code>flatpak run com.arkide.desktop</code></pre>
+              
+              <h2>Update</h2>
+              <p>Get the latest version:</p>
+              <pre><code>flatpak update com.arkide.desktop</code></pre>
+              
+              <h2>Uninstall</h2>
+              <pre><code>flatpak uninstall com.arkide.desktop</code></pre>
+              
+              <div style="margin-top: 40px;">
+                  <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
+                  <a href="https://github.com/OWNER/REPO" class="button">View on GitHub</a>
+              </div>
+          </body>
+          </html>
+          EOF
+          
+          # Replace placeholders
+          sed -i "s|OWNER|${{ github.repository_owner }}|g" gh-pages/index.html
+          sed -i "s|REPO|${{ github.event.repository.name }}|g" gh-pages/index.html
+      
+      - name: Copy icon for repo
+        run: |
+          cp assets/icons/icon.png gh-pages/icon.png || echo "No icon found, skipping"
+      
+      - name: Commit and push to gh-pages
+        run: |
+          cd gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update Flatpak repository for version ${{ github.event.inputs.version }}" || echo "No changes to commit"
+          git push origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Create bundle as backup
+        run: |
+          flatpak build-bundle gh-pages/repo com.arkide.desktop.flatpak com.arkide.desktop
+      
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: com.arkide.desktop.flatpak
+          tag_name: v${{ github.event.inputs.version }}
+          fail_on_unmatched_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
