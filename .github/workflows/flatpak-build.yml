@@ -39,8 +39,8 @@ jobs:
           
           echo "Downloading AppImage for version ${{ github.event.inputs.version }}..."
           
-          # Try different possible AppImage names
-          APPIMAGE_NAME="ArkIDE-Desktop-${{ github.event.inputs.version }}.AppImage"
+          # Correct AppImage name format: Ark.IDE-x.x.x.AppImage
+          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}.AppImage"
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
           
           echo "Attempting to download from: ${DOWNLOAD_URL}"
