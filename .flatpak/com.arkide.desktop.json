@@ -3,40 +3,53 @@
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "23.08",
   "sdk": "org.freedesktop.Sdk",
-  "command": "arkide",
+  "base": "org.electronjs.Electron2.BaseApp",
+  "base-version": "23.08",
+  "command": "arkide-wrapper",
+  "separate-locales": false,
   "finish-args": [
     "--share=network",
     "--share=ipc",
     "--socket=x11",
     "--socket=wayland",
-    "--device=dri"
+    "--socket=pulseaudio",
+    "--device=dri",
+    "--filesystem=xdg-download",
+    "--filesystem=xdg-run/discord-ipc-0:ro",
+    "--filesystem=xdg-run/discord-ipc-1:ro",
+    "--filesystem=xdg-run/app/com.discordapp.Discord:ro"
   ],
   "modules": [
     {
       "name": "arkide",
       "buildsystem": "simple",
       "build-commands": [
-        "mkdir -p /app/bin /app/share/arkide",
-        "cp -r ./* /app/share/arkide/",
-        "cat > /app/bin/arkide <<'EOF'\n#!/bin/bash\ncd /app/share/arkide\n/app/share/arkide/ArkIDE-Desktop \"$@\"\nEOF",
-        "chmod +x /app/bin/arkide"
+        "mkdir -p /app/arkide",
+        "cp -r * /app/arkide/ || true",
+        "chmod +x /app/arkide/ark-ide",
+        "install -Dm755 arkide-wrapper.sh /app/bin/arkide-wrapper",
+        "install -Dm644 ark-ide.png /app/share/icons/hicolor/512x512/apps/com.arkide.desktop.png || install -Dm644 usr/share/icons/hicolor/512x512/apps/ark-ide.png /app/share/icons/hicolor/512x512/apps/com.arkide.desktop.png || true",
+        "install -Dm644 com.arkide.desktop.desktop /app/share/applications/com.arkide.desktop.desktop"
       ],
       "sources": [
         {
           "type": "dir",
           "path": "../build-input"
+        },
+        {
+          "type": "file",
+          "path": "com.arkide.desktop.desktop"
+        },
+        {
+          "type": "script",
+          "dest-filename": "arkide-wrapper.sh",
+          "commands": [
+            "#!/bin/bash",
+            "cd /app/arkide",
+            "exec /app/arkide/ark-ide --no-sandbox \"$@\""
+          ]
         }
       ]
-    },
-    {
-      "name": "arkide-metadata",
-      "buildsystem": "simple",
-      "build-commands": [
-        "mkdir -p /app/share/applications /app/share/icons/hicolor/512x512/apps",
-        "cat > /app/share/applications/com.arkide.desktop.desktop <<'EOF'\n[Desktop Entry]\nVersion=1.0\nType=Application\nName=ArkIDE\nComment=The completely offline desktop version of ArkIDE\nExec=arkide %U\nIcon=com.arkide.desktop\nCategories=Development;IDE;\nTerminal=false\nStartupNotify=true\nEOF",
-        "cp /app/share/arkide/assets/icons/icon.png /app/share/icons/hicolor/512x512/apps/com.arkide.desktop.png || true"
-      ],
-      "sources": []
     }
   ]
 }

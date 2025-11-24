@@ -1,3 +1,25 @@
-node_modules
-.flatpak-builder
-repo
+# Flatpak build artifacts (these are generated)
+build-dir/
+build-input/
+repo/
+.flatpak-builder/
+
+# Keep .flatpak/ directory but ignore any build artifacts inside it
+.flatpak/build-dir/
+.flatpak/repo/
+
+# Electron build artifacts
+dist/
+out/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

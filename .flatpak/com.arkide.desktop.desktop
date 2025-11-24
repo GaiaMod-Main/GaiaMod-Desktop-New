@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=2.2.0
+Type=Application
+Name=ArkIDE
+Comment=The completely offline desktop version of ArkIDE
+Exec=arkide %U
+Icon=com.arkide.desktop
+Categories=Development;IDE;
+Terminal=false
+StartupNotify=true
