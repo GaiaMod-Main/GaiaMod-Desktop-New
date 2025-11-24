@@ -140,8 +140,6 @@ jobs:
       
       - name: Create installation instructions page
         run: |
-          # Convert to lowercase for URLs
-          REPO_LOWER=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')
           OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
           
           cat > gh-pages/index.html <<EOF
@@ -205,11 +203,11 @@ jobs:
               
               <h2>Quick Install (Recommended)</h2>
               <p>Add the repository and install in one command:</p>
-              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo
+              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
           flatpak install --user arkide com.arkide.desktop</code></pre>
               
               <h2>Alternative: Use .flatpakrepo file</h2>
-              <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${REPO_LOWER}/arkide.flatpakrepo</code></pre>
+              <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/arkide.flatpakrepo</code></pre>
               
               <h2>Run Ark.IDE</h2>
               <pre><code>flatpak run com.arkide.desktop</code></pre>
@@ -229,7 +227,7 @@ jobs:
               
               <h2>Manual Installation Steps</h2>
               <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
-              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo</code></pre>
+              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo</code></pre>
               
               <p><strong>Step 2:</strong> Install Ark.IDE</p>
               <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
