@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ark IDE - Settings</title>
+  <title>ArkIDE - Settings</title>
   <style>
     * {
       margin: 0;
@@ -214,11 +214,17 @@
       font-size: 12px;
       margin-top: 20px;
     }
+
+    p {
+      color:white;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>⚙️ Ark IDE Settings</h1>
+    <h1>⚙️ ArkIDE Settings</h1>
     <p class="subtitle">Manage your application settings and updates</p>
 
     <div class="section">
@@ -266,8 +272,17 @@
       </button>
     </div>
 
+      <div class="section">
+      <h2>❔ ArkIDE Feedback</h2>
+      <p>Please give us feedback on our editor here on our Github page:</p>
+    <button id="check-update-btn" class="btn-primary"
+            onclick="window.open('https://github.com/The-ArkIDE-Project/arkide-new', '_blank')">
+      ➕ Give us feedback
+    </button>
+    </div>
+
     <div class="footer">
-      Ark IDE Desktop © 2024 | Made with ❤️
+      Made with <3 by the ArkIDE Team
     </div>
   </div>
 
