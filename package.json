@@ -27,24 +27,33 @@
       "owner": "arc360alt",
       "repo": "ArkIDE-Desktop"
     },
-    "icon": "assets/icons/icon.png", 
+    "icon": "assets/icons/icon.png",
     "linux": {
       "icon": "assets/icons/icon.png",
-      "target": ["AppImage"],
+      "target": [
+        "AppImage"
+      ],
       "category": "Development"
     },
     "win": {
       "icon": "assets/icons/icon.ico",
-      "target": ["nsis"]
+      "target": [
+        "nsis"
+      ]
     },
     "mac": {
       "icon": "assets/icons/icon.icns",
-      "target": ["dmg"],
+      "target": [
+        "dmg"
+      ],
       "category": "public.app-category.developer-tools"
     }
   },
   "devDependencies": {
     "electron": "^33.0.0",
     "electron-builder": "^25.0.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
   }
 }

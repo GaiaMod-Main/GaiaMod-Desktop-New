@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ark IDE - Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: rgb(41, 41, 41);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgb(44, 44, 44);
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #c0c0c0;
+      margin-bottom: 10px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: #c5c5c5;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: #3a3a3a;
+      border-radius: 8px;
+      border-left: 4px solid #4c00ff;
+    }
+
+    .section h2 {
+      color: #ffffff;
+      font-size: 18px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .version-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: white;
+      border-radius: 6px;
+    }
+
+    .discord-status {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: white;
+      border-radius: 6px;
+    }
+
+    .status-label {
+      color: #666;
+      font-weight: 500;
+    }
+
+    .status-value {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .status-value.connected {
+      color: #2e7d32;
+    }
+
+    .status-value.disconnected {
+      color: #c62828;
+    }
+
+    .version-label {
+      color: #999999;
+      font-weight: 500;
+    }
+
+    .version-value {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .update-status {
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .update-status.checking {
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+
+    .update-status.up-to-date {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .update-status.update-available {
+      background: #fff3e0;
+      color: #f57c00;
+    }
+
+    .update-status.error {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .release-notes {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      max-height: 150px;
+      overflow-y: auto;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background: #3700ff;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #741dff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background: #d0d0d0;
+    }
+
+    .btn-success {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .btn-success:hover {
+      background: #45a049;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-right: 8px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .footer {
+      text-align: center;
+      color: #999;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Ark IDE Settings</h1>
+    <p class="subtitle">Manage your application settings and updates</p>
+
+    <div class="section">
+      <h2>🎮 Discord Rich Presence</h2>
+      
+      <div class="discord-status" id="discord-status">
+        <span class="status-label">Status:</span>
+        <span class="status-value" id="discord-status-text">Disconnected</span>
+      </div>
+
+      <button id="discord-toggle-btn" class="btn-primary" onclick="toggleDiscord()">
+        Enable Discord Presence
+      </button>
+      
+      <p style="margin-top: 10px; font-size: 13px; color: #929292;">
+        Show "Making projects on ArkIDE" on your Discord profile
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>📦 Version Information</h2>
+      
+      <div class="version-info">
+        <span class="version-label">Current Version:</span>
+        <span class="version-value" id="current-version">v1.13.0</span>
+      </div>
+
+      <div class="version-info">
+        <span class="version-label">Latest Version:</span>
+        <span class="version-value" id="latest-version">—</span>
+      </div>
+
+      <div id="update-status" class="update-status checking" style="display: none;">
+        Checking for updates...
+      </div>
+
+      <div id="release-notes" class="release-notes" style="display: none;"></div>
+
+      <button id="check-update-btn" class="btn-primary" onclick="checkForUpdates()">
+        🔄 Check for Updates
+      </button>
+
+      <button id="download-btn" class="btn-success" style="display: none;" onclick="downloadUpdate()">
+        ⬇️ Download Latest Version
+      </button>
+    </div>
+
+    <div class="footer">
+      Ark IDE Desktop © 2024 | Made with ❤️
+    </div>
+  </div>
+
+  <script>
+    let discordEnabled = false;
+
+    async function toggleDiscord() {
+      const btn = document.getElementById('discord-toggle-btn');
+      const statusText = document.getElementById('discord-status-text');
+
+      btn.disabled = true;
+
+      if (discordEnabled) {
+        // Disable Discord
+        window.electronAPI.disableDiscord();
+        discordEnabled = false;
+        btn.textContent = 'Enable Discord Presence';
+        btn.className = 'btn-primary';
+        statusText.textContent = 'Disconnected';
+        statusText.className = 'status-value disconnected';
+      } else {
+        // Enable Discord
+        window.electronAPI.enableDiscord();
+        discordEnabled = true;
+        btn.textContent = 'Disable Discord Presence';
+        btn.className = 'btn-secondary';
+        statusText.textContent = 'Connected';
+        statusText.className = 'status-value connected';
+      }
+
+      btn.disabled = false;
+    }
+
+    async function checkDiscordStatus() {
+      const status = await window.electronAPI.getDiscordStatus();
+      const statusText = document.getElementById('discord-status-text');
+      const btn = document.getElementById('discord-toggle-btn');
+
+      if (status) {
+        discordEnabled = true;
+        statusText.textContent = 'Connected';
+        statusText.className = 'status-value connected';
+        btn.textContent = 'Disable Discord Presence';
+        btn.className = 'btn-secondary';
+      } else {
+        discordEnabled = false;
+        statusText.textContent = 'Disconnected';
+        statusText.className = 'status-value disconnected';
+        btn.textContent = 'Enable Discord Presence';
+        btn.className = 'btn-primary';
+      }
+    }
+
+    async function checkForUpdates() {
+      const statusEl = document.getElementById('update-status');
+      const latestVersionEl = document.getElementById('latest-version');
+      const checkBtn = document.getElementById('check-update-btn');
+      const downloadBtn = document.getElementById('download-btn');
+      const releaseNotesEl = document.getElementById('release-notes');
+
+      statusEl.style.display = 'block';
+      statusEl.className = 'update-status checking';
+      statusEl.innerHTML = '<span class="spinner"></span> Checking for updates...';
+      checkBtn.disabled = true;
+      downloadBtn.style.display = 'none';
+      releaseNotesEl.style.display = 'none';
+
+      try {
+        const result = await window.electronAPI.checkUpdates();
+
+        if (result.error) {
+          statusEl.className = 'update-status error';
+          statusEl.textContent = `❌ Error: ${result.error}`;
+          latestVersionEl.textContent = 'Error';
+        } else {
+          latestVersionEl.textContent = `v${result.latestVersion}`;
+
+          if (result.isUpToDate) {
+            statusEl.className = 'update-status up-to-date';
+            statusEl.textContent = '✅ You are running the latest version!';
+          } else {
+            statusEl.className = 'update-status update-available';
+            statusEl.textContent = `🎉 New version available: v${result.latestVersion}`;
+            downloadBtn.style.display = 'block';
+            downloadBtn.setAttribute('data-url', result.downloadUrl);
+
+            if (typeof result.releaseNotes === "string" && result.releaseNotes.trim() !== "") {
+            releaseNotesEl.style.display = 'block';
+            releaseNotesEl.innerHTML =
+                `<strong>Release Notes:</strong><br>${result.releaseNotes.replace(/\n/g, '<br>')}`;
+            } else {
+            releaseNotesEl.style.display = 'block';
+            releaseNotesEl.innerHTML =
+                `<strong>Release Notes:</strong><br>No release notes provided.`;
+            }
+
+          }
+        }
+      } catch (error) {
+        statusEl.className = 'update-status error';
+        statusEl.textContent = `❌ Failed to check for updates: ${error.message}`;
+        latestVersionEl.textContent = 'Error';
+      }
+
+      checkBtn.disabled = false;
+    }
+
+    function downloadUpdate() {
+      const downloadBtn = document.getElementById('download-btn');
+      const url = downloadBtn.getAttribute('data-url');
+      if (url) {
+        window.electronAPI.openUrl(url);
+      }
+    }
+
+    // Auto-check on load
+    window.addEventListener('DOMContentLoaded', () => {
+      checkDiscordStatus();
+      setTimeout(checkForUpdates, 500);
+    });
+  </script>
+</body>
+</html>
