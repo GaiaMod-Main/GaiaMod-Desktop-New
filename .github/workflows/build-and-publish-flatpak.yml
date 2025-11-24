@@ -36,6 +36,20 @@ jobs:
           GPG_KEY_ID=$(gpg --list-secret-keys --keyid-format=long | grep sec | awk '{print $2}' | cut -d'/' -f2 | head -n1)
           echo "GPG_KEY_ID=$GPG_KEY_ID" >> $GITHUB_ENV
           echo "Using GPG Key ID: $GPG_KEY_ID"
+          
+          # Configure GPG for non-interactive use
+          echo "allow-loopback-pinentry" > ~/.gnupg/gpg-agent.conf
+          echo "pinentry-mode loopback" > ~/.gnupg/gpg.conf
+          gpgconf --kill gpg-agent
+          
+          # If passphrase exists, configure it
+          if [ -n "${{ secrets.GPG_PASSPHRASE }}" ]; then
+            echo "GPG passphrase detected, will use for signing"
+            # Test the key works
+            echo "test" | gpg --batch --yes --passphrase "${{ secrets.GPG_PASSPHRASE }}" --pinentry-mode loopback --clearsign --local-user $GPG_KEY_ID >/dev/null 2>&1
+          else
+            echo "No GPG passphrase, assuming key has no passphrase"
+          fi
       
       - name: Install flatpak and dependencies
         run: |
@@ -177,10 +191,17 @@ jobs:
           echo "Building Flatpak for ${{ matrix.arch.name }}..."
           
           # Build and sign with GPG
-          flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} \
-            --gpg-sign=$GPG_KEY_ID build-dir .flatpak/com.arkide.desktop.json
+          if [ -n "${{ secrets.GPG_PASSPHRASE }}" ]; then
+            echo "${{ secrets.GPG_PASSPHRASE }}" | flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} \
+              --gpg-sign=$GPG_KEY_ID --gpg-homedir=$HOME/.gnupg build-dir .flatpak/com.arkide.desktop.json
+          else
+            flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} \
+              --gpg-sign=$GPG_KEY_ID --gpg-homedir=$HOME/.gnupg build-dir .flatpak/com.arkide.desktop.json
+          fi
           
           echo "Flatpak built and signed for ${{ matrix.arch.name }}!"
+        env:
+          GPG_TTY: $(tty)
       
       - name: Update repo metadata with GPG signature
         run: |
@@ -370,7 +391,11 @@ jobs:
       
       - name: Create bundle as backup
         run: |
-          flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }} --gpg-sign=$GPG_KEY_ID
+          if [ -n "${{ secrets.GPG_PASSPHRASE }}" ]; then
+            echo "${{ secrets.GPG_PASSPHRASE }}" | flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }} --gpg-sign=$GPG_KEY_ID --gpg-homedir=$HOME/.gnupg
+          else
+            flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }} --gpg-sign=$GPG_KEY_ID --gpg-homedir=$HOME/.gnupg
+          fi
       
       - name: Upload to Release
         uses: softprops/action-gh-release@v1
