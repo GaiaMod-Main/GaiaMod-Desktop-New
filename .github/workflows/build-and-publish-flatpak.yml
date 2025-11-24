@@ -143,7 +143,27 @@ jobs:
           fi
           
           ostree summary -u --repo=. --gpg-sign= || echo "No refs yet, that's okay for first build"
+
+      - name: Set up QEMU for ARM64 cross-compilation
+        if: matrix.arch.name == 'aarch64'
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
       
+      - name: Enable binfmt support for ARM64
+        if: matrix.arch.name == 'aarch64'
+        run: |
+          sudo apt-get install -y qemu-user-static binfmt-support
+          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+          
+          # Verify ARM64 emulation is working
+          echo "Testing ARM64 emulation..."
+          docker run --rm --platform linux/arm64 alpine uname -m
+          
+          # Verify qemu-aarch64-static is registered
+          cat /proc/sys/fs/binfmt_misc/qemu-aarch64 || echo "Registering qemu-aarch64..."
+      
+
       - name: Build Flatpak for ${{ matrix.arch.name }}
         run: |
           echo "Building Flatpak for ${{ matrix.arch.name }}..."
