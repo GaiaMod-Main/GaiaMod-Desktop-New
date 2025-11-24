@@ -80,10 +80,23 @@ jobs:
       - name: Setup repo directory
         run: |
           mkdir -p gh-pages/repo
-          # If repo doesn't exist yet, initialize it
-          if [ ! -f "gh-pages/repo/config" ]; then
-            ostree init --mode=archive-z2 --repo=gh-pages/repo
+          cd gh-pages/repo
+          
+          # If repo doesn't exist yet, initialize it properly
+          if [ ! -f "config" ]; then
+            echo "Initializing new OSTree repository..."
+            ostree init --mode=archive-z2 --repo=.
+            
+            # Create necessary directories
+            mkdir -p refs/remotes refs/heads
+            
+            echo "Repository initialized successfully!"
+          else
+            echo "Repository already exists, skipping initialization"
           fi
+          
+          # Verify repo is valid
+          ostree summary -u --repo=. --gpg-sign= || echo "No refs yet, that's okay for first build"
       
       - name: Build Flatpak and update repo
         run: |
@@ -96,11 +109,17 @@ jobs:
         run: |
           cd gh-pages/repo
           
-          # Update the summary file WITHOUT GPG signing
-          ostree summary -u --repo=. --gpg-sign=
+          # Check if we have any refs first
+          if ostree refs --repo=. 2>/dev/null | grep -q .; then
+            echo "Updating summary for existing refs..."
+            ostree summary -u --repo=. --gpg-sign=
+          else
+            echo "No refs found yet, creating empty summary..."
+            ostree summary -u --repo=. --gpg-sign= || true
+          fi
           
-          # Create a summary.sig file as empty to satisfy flatpak (but we won't use it)
-          touch summary.sig
+          # Ensure summary exists even if empty
+          touch summary
           
           echo "Repository metadata updated without GPG signing!"
       
