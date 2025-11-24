@@ -25,11 +25,11 @@
       "buildsystem": "simple",
       "build-commands": [
         "mkdir -p /app/arkide",
-        "cp -r * /app/arkide/ || true",
+        "cp -r * /app/arkide/",
         "chmod +x /app/arkide/ark-ide",
         "install -Dm755 arkide-wrapper.sh /app/bin/arkide-wrapper",
-        "install -Dm644 ark-ide.png /app/share/icons/hicolor/512x512/apps/com.arkide.desktop.png || install -Dm644 usr/share/icons/hicolor/512x512/apps/ark-ide.png /app/share/icons/hicolor/512x512/apps/com.arkide.desktop.png || true",
-        "install -Dm644 com.arkide.desktop.desktop /app/share/applications/com.arkide.desktop.desktop"
+        "install -Dm644 com.arkide.desktop.desktop /app/share/applications/com.arkide.desktop.desktop",
+        "install -Dm644 icon.png /app/share/icons/hicolor/512x512/apps/com.arkide.desktop.png"
       ],
       "sources": [
         {
@@ -39,6 +39,11 @@
         {
           "type": "file",
           "path": "com.arkide.desktop.desktop"
+        },
+        {
+          "type": "file",
+          "path": "../assets/icons/icon.png",
+          "dest-filename": "icon.png"
         },
         {
           "type": "script",
