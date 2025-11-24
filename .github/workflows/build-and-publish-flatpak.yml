@@ -124,24 +124,19 @@ jobs:
           echo "Repository metadata updated without GPG signing!"
       
       - name: Create flatpakrepo file
-        run: |
-          # Convert repository name to lowercase for URL
-          REPO_LOWER=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')
-          OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          
-          cat > gh-pages/arkide.flatpakrepo <<EOF
-          [Flatpak Repo]
-          Title=Ark.IDE Repository
-          Url=https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo
-          Homepage=https://github.com/${{ github.repository }}
-          Comment=Official Ark.IDE Flatpak repository
-          Description=Install Ark.IDE directly from our repository
-          Icon=https://${OWNER_LOWER}.github.io/${REPO_LOWER}/icon.png
-          GPGVerify=false
-          EOF
-          
-          echo "Flatpakrepo file created with URL: https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo"
-          cat gh-pages/arkide.flatpakrepo
+              run: |
+                OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+                
+                cat > gh-pages/arkide.flatpakrepo <<EOF
+                [Flatpak Repo]
+                Title=Ark.IDE Repository
+                Url=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
+                Homepage=https://github.com/${{ github.repository }}
+                Comment=Official Ark.IDE Flatpak repository
+                Description=Install Ark.IDE directly from our repository
+                Icon=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/icon.png
+                GPGVerify=false
+                EOF
       
       - name: Create installation instructions page
         run: |
