@@ -192,11 +192,11 @@ jobs:
           
           cat > gh-pages/arkide.flatpakrepo <<EOF
           [Flatpak Repo]
-          Title=Ark.IDE Repository
+          Title=ArkIDE Repository
           Url=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
           Homepage=https://github.com/${{ github.repository }}
-          Comment=Official Ark.IDE Flatpak repository (x86_64 and ARM64)
-          Description=Install Ark.IDE directly from our repository
+          Comment=Official ArkIDE Flatpak repository (x86_64 and ARM64)
+          Description=Install ArkIDE directly from our repository
           Icon=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/icon.png
           GPGVerify=false
           EOF
@@ -211,7 +211,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Ark.IDE Flatpak Repository</title>
+              <title>ArkIDE Flatpak Repository</title>
               <style>
                   body {
                       font-family: system-ui, -apple-system, sans-serif;
@@ -264,8 +264,8 @@ jobs:
               </style>
           </head>
           <body>
-              <h1>🚀 Ark.IDE Flatpak Repository</h1>
-              <p>Install Ark.IDE directly from our official Flatpak repository.</p>
+              <h1>🚀 ArkIDE Flatpak Repository</h1>
+              <p>Install ArkIDE directly from our official Flatpak repository.</p>
               
               <div class="info">
                   <strong>✨ Multi-Architecture Support:</strong> Available for x86_64 and ARM64 (aarch64) systems!
@@ -285,7 +285,7 @@ jobs:
               <h2>Alternative: Use .flatpakrepo file</h2>
               <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/arkide.flatpakrepo</code></pre>
               
-              <h2>Run Ark.IDE</h2>
+              <h2>Run ArkIDE</h2>
               <pre><code>flatpak run com.arkide.desktop</code></pre>
               
               <h2>Update</h2>
@@ -311,7 +311,7 @@ jobs:
               <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
               <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo</code></pre>
               
-              <p><strong>Step 2:</strong> Install Ark.IDE</p>
+              <p><strong>Step 2:</strong> Install ArkIDE</p>
               <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
           </body>
           </html>

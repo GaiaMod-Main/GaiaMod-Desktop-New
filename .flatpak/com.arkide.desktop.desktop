@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=2.2.0
 Type=Application
-Name=Ark.IDE
+Name=ArkIDE
 GenericName=IDE
 Comment=The completely offline desktop version of ArkIDE
 Exec=arkide-wrapper
