@@ -8,7 +8,7 @@ let settingsWindow;
 let discordClient = null;
 let discordConnected = false;
 
-const APP_VERSION = '1.13.0';
+const APP_VERSION = '2.1.0';
 const DISCORD_CLIENT_ID = '1442337181208281239'; // Replace with your Discord Application ID
 
 // Initialize Discord RPC
@@ -177,10 +177,10 @@ function createWindow() {
       message: 'Are you sure you want to close?',
       detail: 'Make sure you saved your work.'
     }).then((response) => {
-      if (response.response === 0) {
-        mainWindow.readyToClose = true; // Mark as ready to close
-        mainWindow.close(); // Trigger close again, this time it will proceed
-      }
+    if (response.response === 0) {
+      mainWindow.readyToClose = true;
+      mainWindow.destroy(); // avoids close-loop freeze
+    }
     });
   });
 }

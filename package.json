@@ -20,7 +20,8 @@
       "preload.js",
       "source/**/*",
       "package.json",
-      "assets/**/*"
+      "assets/**/*",
+      "settings.html"
     ],
     "publish": {
       "provider": "github",
