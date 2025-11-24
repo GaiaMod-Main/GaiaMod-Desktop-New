@@ -14,7 +14,17 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch:
+          - name: x86_64
+            appimage-suffix: ""
+            runner: ubuntu-latest
+          - name: aarch64
+            appimage-suffix: "-arm64"
+            runner: ubuntu-latest
+    
+    runs-on: ${{ matrix.arch.runner }}
     
     steps:
       - name: Checkout code
@@ -31,18 +41,18 @@ jobs:
       
       - name: Install runtimes and SDK
         run: |
-          flatpak install -y --user flathub org.freedesktop.Platform//23.08
-          flatpak install -y --user flathub org.freedesktop.Sdk//23.08
-          flatpak install -y --user flathub org.electronjs.Electron2.BaseApp//23.08
+          flatpak install -y --user flathub org.freedesktop.Platform/${{ matrix.arch.name }}/23.08
+          flatpak install -y --user flathub org.freedesktop.Sdk/${{ matrix.arch.name }}/23.08
+          flatpak install -y --user flathub org.electronjs.Electron2.BaseApp/${{ matrix.arch.name }}/23.08
       
       - name: Download and extract AppImage
         run: |
           mkdir -p build-input
           cd build-input
           
-          echo "Downloading AppImage for version ${{ github.event.inputs.version }}..."
+          echo "Downloading ${{ matrix.arch.name }} AppImage for version ${{ github.event.inputs.version }}..."
           
-          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}.AppImage"
+          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}${{ matrix.arch.appimage-suffix }}.AppImage"
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
           
           echo "Attempting to download from: ${DOWNLOAD_URL}"
@@ -67,7 +77,7 @@ jobs:
           fi
           
           chmod +x ark-ide
-          echo "Build input prepared successfully!"
+          echo "Build input prepared successfully for ${{ matrix.arch.name }}!"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -82,34 +92,28 @@ jobs:
           mkdir -p gh-pages/repo
           cd gh-pages/repo
           
-          # If repo doesn't exist yet, initialize it properly
           if [ ! -f "config" ]; then
             echo "Initializing new OSTree repository..."
             ostree init --mode=archive-z2 --repo=.
-            
-            # Create necessary directories
             mkdir -p refs/remotes refs/heads
-            
             echo "Repository initialized successfully!"
           else
             echo "Repository already exists, skipping initialization"
           fi
           
-          # Verify repo is valid
           ostree summary -u --repo=. --gpg-sign= || echo "No refs yet, that's okay for first build"
       
-      - name: Build Flatpak and update repo
+      - name: Build Flatpak for ${{ matrix.arch.name }}
         run: |
-          echo "Building Flatpak..."
-          flatpak-builder --user --force-clean --repo=gh-pages/repo build-dir .flatpak/com.arkide.desktop.json
+          echo "Building Flatpak for ${{ matrix.arch.name }}..."
+          flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} build-dir .flatpak/com.arkide.desktop.json
           
-          echo "Flatpak built and added to repository!"
+          echo "Flatpak built for ${{ matrix.arch.name }} and added to repository!"
       
-      - name: Update repo metadata (without GPG)
+      - name: Update repo metadata
         run: |
           cd gh-pages/repo
           
-          # Check if we have any refs first
           if ostree refs --repo=. 2>/dev/null | grep -q .; then
             echo "Updating summary for existing refs..."
             ostree summary -u --repo=. --gpg-sign=
@@ -118,10 +122,8 @@ jobs:
             ostree summary -u --repo=. --gpg-sign= || true
           fi
           
-          # Ensure summary exists even if empty
           touch summary
-          
-          echo "Repository metadata updated without GPG signing!"
+          echo "Repository metadata updated for ${{ matrix.arch.name }}!"
       
       - name: Create flatpakrepo file
         run: |
@@ -132,7 +134,7 @@ jobs:
           Title=Ark.IDE Repository
           Url=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
           Homepage=https://github.com/${{ github.repository }}
-          Comment=Official Ark.IDE Flatpak repository
+          Comment=Official Ark.IDE Flatpak repository (x86_64 and ARM64)
           Description=Install Ark.IDE directly from our repository
           Icon=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/icon.png
           GPGVerify=false
@@ -191,11 +193,22 @@ jobs:
                       border-radius: 5px;
                       margin: 20px 0;
                   }
+                  .info {
+                      background: #2196F3;
+                      color: white;
+                      padding: 10px;
+                      border-radius: 5px;
+                      margin: 20px 0;
+                  }
               </style>
           </head>
           <body>
               <h1>🚀 Ark.IDE Flatpak Repository</h1>
               <p>Install Ark.IDE directly from our official Flatpak repository.</p>
+              
+              <div class="info">
+                  <strong>✨ Multi-Architecture Support:</strong> Available for x86_64 and ARM64 (aarch64) systems!
+              </div>
               
               <div class="warning">
                   <strong>⚠️ Important:</strong> This repository is not GPG-signed. Only install if you trust this source.
@@ -205,6 +218,8 @@ jobs:
               <p>Add the repository and install in one command:</p>
               <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
           flatpak install --user arkide com.arkide.desktop</code></pre>
+              
+              <p><em>Flatpak will automatically install the correct version for your architecture (x86_64 or ARM64).</em></p>
               
               <h2>Alternative: Use .flatpakrepo file</h2>
               <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/arkide.flatpakrepo</code></pre>
@@ -224,6 +239,12 @@ jobs:
                   <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
                   <a href="https://github.com/${{ github.repository }}" class="button">View on GitHub</a>
               </div>
+              
+              <h2>Supported Architectures</h2>
+              <ul>
+                  <li><strong>x86_64</strong> - Standard Intel/AMD processors</li>
+                  <li><strong>ARM64 (aarch64)</strong> - ARM-based systems (Raspberry Pi 4/5, Apple Silicon via Asahi Linux, etc.)</li>
+              </ul>
               
               <h2>Manual Installation Steps</h2>
               <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
@@ -247,19 +268,19 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Update Flatpak repository for version ${{ github.event.inputs.version }}" || echo "No changes to commit"
+          git commit -m "Update Flatpak repository for version ${{ github.event.inputs.version }} (${{ matrix.arch.name }})" || echo "No changes to commit"
           git push origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Create bundle as backup
         run: |
-          flatpak build-bundle gh-pages/repo com.arkide.desktop.flatpak com.arkide.desktop
+          flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }}
       
       - name: Upload to Release
         uses: softprops/action-gh-release@v1
         with:
-          files: com.arkide.desktop.flatpak
+          files: com.arkide.desktop-${{ matrix.arch.name }}.flatpak
           tag_name: v${{ github.event.inputs.version }}
           fail_on_unmatched_files: true
         env:
