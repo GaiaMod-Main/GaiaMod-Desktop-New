@@ -1,6 +1,6 @@
 {
   "name": "ark-ide",
-  "version": "1.0.0",
+  "version": "1.13.0",
   "main": "main.js",
   "description": "Ark IDE Desktop Application",
   "author": "arc",
@@ -9,7 +9,8 @@
     "update": "bash update-source.sh",
     "build": "electron-builder",
     "build:linux": "electron-builder --linux",
-    "build:win": "electron-builder --windows"
+    "build:win": "electron-builder --windows",
+    "build:mac": "electron-builder --mac"
   },
   "build": {
     "appId": "com.arc.arkide",
@@ -35,6 +36,11 @@
     "win": {
       "icon": "assets/icons/icon.ico",
       "target": ["nsis"]
+    },
+    "mac": {
+      "icon": "assets/icons/icon.icns",
+      "target": ["dmg"],
+      "category": "public.app-category.developer-tools"
     }
   },
   "devDependencies": {
