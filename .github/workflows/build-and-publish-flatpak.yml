@@ -64,34 +64,41 @@ jobs:
           echo "AppImage downloaded successfully!"
           ls -lh arkide.AppImage
           
-          echo "Extracting AppImage using unsquashfs (works for all architectures)..."
-          
-          # Extract AppImage without running it
+          echo "Extracting AppImage..."
           chmod +x arkide.AppImage
           
-          # Try the --appimage-extract method first (if same architecture)
           if [ "${{ matrix.arch.name }}" = "x86_64" ]; then
-            ./arkide.AppImage --appimage-extract || {
-              echo "Direct extraction failed, using offset method..."
-              # Extract using offset method
-              OFFSET=$(./arkide.AppImage --appimage-offset 2>/dev/null || echo "188")
-              unsquashfs -offset $OFFSET -dest squashfs-root arkide.AppImage
-            }
+            # For x86_64, we can run it directly
+            ./arkide.AppImage --appimage-extract
           else
-            # For ARM64, we need to manually extract
+            # For ARM64, extract manually without execution
             echo "Extracting ARM64 AppImage manually..."
             
-            # AppImages have the squashfs at a specific offset
-            # Try to get the offset, or use a common default
-            OFFSET=$(strings arkide.AppImage | grep -a "^OFFSET=" | head -n1 | cut -d= -f2)
+            # Find the ELF offset where squashfs starts
+            # Look for the squashfs magic bytes (hsqs or sqsh)
+            OFFSET=$(LC_ALL=C grep -aboP '\x68\x73\x71\x73|\x73\x71\x73\x68' arkide.AppImage | head -n1 | cut -d: -f1)
+            
             if [ -z "$OFFSET" ]; then
-              OFFSET=188  # Common default offset
+              echo "Could not find squashfs magic, trying alternative method..."
+              # Try using binwalk-like approach - look for common offset
+              OFFSET=$(strings arkide.AppImage | grep -a "^[0-9]*$" | head -n1)
+              
+              if [ -z "$OFFSET" ]; then
+                echo "Trying to extract entire AppImage as squashfs..."
+                # Last resort: use unsquashfs with scan
+                unsquashfs -dest squashfs-root arkide.AppImage 2>/dev/null || {
+                  echo "ERROR: Could not extract AppImage"
+                  exit 1
+                }
+              fi
             fi
             
-            echo "Using offset: $OFFSET"
-            dd if=arkide.AppImage of=arkide.squashfs bs=1 skip=$OFFSET 2>/dev/null
-            unsquashfs -dest squashfs-root arkide.squashfs
-            rm arkide.squashfs
+            if [ -n "$OFFSET" ] && [ ! -d "squashfs-root" ]; then
+              echo "Found squashfs at offset: $OFFSET"
+              dd if=arkide.AppImage of=arkide.squashfs bs=1 skip=$OFFSET 2>/dev/null
+              unsquashfs -dest squashfs-root arkide.squashfs
+              rm -f arkide.squashfs
+            fi
           fi
           
           if [ ! -d "squashfs-root" ]; then
