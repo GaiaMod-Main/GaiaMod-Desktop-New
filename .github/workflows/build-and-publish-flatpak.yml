@@ -19,12 +19,10 @@ jobs:
         arch:
           - name: x86_64
             appimage-suffix: ""
-            runner: ubuntu-latest
           - name: aarch64
             appimage-suffix: "-arm64"
-            runner: ubuntu-latest
     
-    runs-on: ${{ matrix.arch.runner }}
+    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout code
@@ -33,7 +31,7 @@ jobs:
       - name: Install flatpak and dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y flatpak flatpak-builder
+          sudo apt-get install -y flatpak flatpak-builder squashfs-tools
       
       - name: Add flathub remote
         run: |
@@ -64,9 +62,44 @@ jobs:
           fi
           
           echo "AppImage downloaded successfully!"
-          chmod +x arkide.AppImage
-          ./arkide.AppImage --appimage-extract
+          ls -lh arkide.AppImage
           
+          echo "Extracting AppImage using unsquashfs (works for all architectures)..."
+          
+          # Extract AppImage without running it
+          chmod +x arkide.AppImage
+          
+          # Try the --appimage-extract method first (if same architecture)
+          if [ "${{ matrix.arch.name }}" = "x86_64" ]; then
+            ./arkide.AppImage --appimage-extract || {
+              echo "Direct extraction failed, using offset method..."
+              # Extract using offset method
+              OFFSET=$(./arkide.AppImage --appimage-offset 2>/dev/null || echo "188")
+              unsquashfs -offset $OFFSET -dest squashfs-root arkide.AppImage
+            }
+          else
+            # For ARM64, we need to manually extract
+            echo "Extracting ARM64 AppImage manually..."
+            
+            # AppImages have the squashfs at a specific offset
+            # Try to get the offset, or use a common default
+            OFFSET=$(strings arkide.AppImage | grep -a "^OFFSET=" | head -n1 | cut -d= -f2)
+            if [ -z "$OFFSET" ]; then
+              OFFSET=188  # Common default offset
+            fi
+            
+            echo "Using offset: $OFFSET"
+            dd if=arkide.AppImage of=arkide.squashfs bs=1 skip=$OFFSET 2>/dev/null
+            unsquashfs -dest squashfs-root arkide.squashfs
+            rm arkide.squashfs
+          fi
+          
+          if [ ! -d "squashfs-root" ]; then
+            echo "ERROR: Failed to extract AppImage!"
+            exit 1
+          fi
+          
+          echo "Moving contents..."
           mv squashfs-root/* .
           rm -rf squashfs-root arkide.AppImage
           
@@ -78,6 +111,7 @@ jobs:
           
           chmod +x ark-ide
           echo "Build input prepared successfully for ${{ matrix.arch.name }}!"
+          ls -la | head -20
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
