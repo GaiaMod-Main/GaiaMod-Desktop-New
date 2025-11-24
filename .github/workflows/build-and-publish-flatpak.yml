@@ -92,33 +92,45 @@ jobs:
           
           echo "Flatpak built and added to repository!"
       
-      - name: Update repo metadata
+      - name: Update repo metadata (without GPG)
         run: |
           cd gh-pages/repo
           
-          # Update the summary file (required for flatpak remotes)
-          ostree summary -u --repo=.
+          # Update the summary file WITHOUT GPG signing
+          ostree summary -u --repo=. --gpg-sign=
           
-          echo "Repository metadata updated!"
+          # Create a summary.sig file as empty to satisfy flatpak (but we won't use it)
+          touch summary.sig
+          
+          echo "Repository metadata updated without GPG signing!"
       
       - name: Create flatpakrepo file
         run: |
+          # Convert repository name to lowercase for URL
+          REPO_LOWER=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')
+          OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          
           cat > gh-pages/arkide.flatpakrepo <<EOF
           [Flatpak Repo]
           Title=Ark.IDE Repository
-          Url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/repo
+          Url=https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo
           Homepage=https://github.com/${{ github.repository }}
           Comment=Official Ark.IDE Flatpak repository
           Description=Install Ark.IDE directly from our repository
-          Icon=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/icon.png
+          Icon=https://${OWNER_LOWER}.github.io/${REPO_LOWER}/icon.png
           GPGVerify=false
           EOF
           
-          echo "Flatpakrepo file created!"
+          echo "Flatpakrepo file created with URL: https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo"
+          cat gh-pages/arkide.flatpakrepo
       
       - name: Create installation instructions page
         run: |
-          cat > gh-pages/index.html <<'EOF'
+          # Convert to lowercase for URLs
+          REPO_LOWER=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')
+          OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          
+          cat > gh-pages/index.html <<EOF
           <!DOCTYPE html>
           <html lang="en">
           <head>
@@ -160,22 +172,30 @@ jobs:
                       margin: 10px 5px;
                   }
                   .button:hover { background: #45a049; }
+                  .warning {
+                      background: #ff9800;
+                      color: #000;
+                      padding: 10px;
+                      border-radius: 5px;
+                      margin: 20px 0;
+                  }
               </style>
           </head>
           <body>
               <h1>🚀 Ark.IDE Flatpak Repository</h1>
               <p>Install Ark.IDE directly from our official Flatpak repository.</p>
               
-              <h2>Quick Install</h2>
+              <div class="warning">
+                  <strong>⚠️ Important:</strong> This repository is not GPG-signed. Only install if you trust this source.
+              </div>
+              
+              <h2>Quick Install (Recommended)</h2>
               <p>Add the repository and install in one command:</p>
-              <pre><code>flatpak install --user https://OWNER.github.io/REPO/arkide.flatpakrepo</code></pre>
+              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo
+          flatpak install --user arkide com.arkide.desktop</code></pre>
               
-              <h2>Manual Installation</h2>
-              <p><strong>Step 1:</strong> Add the repository</p>
-              <pre><code>flatpak remote-add --user --if-not-exists arkide https://OWNER.github.io/REPO/repo</code></pre>
-              
-              <p><strong>Step 2:</strong> Install Ark.IDE</p>
-              <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
+              <h2>Alternative: Use .flatpakrepo file</h2>
+              <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${REPO_LOWER}/arkide.flatpakrepo</code></pre>
               
               <h2>Run Ark.IDE</h2>
               <pre><code>flatpak run com.arkide.desktop</code></pre>
@@ -185,19 +205,25 @@ jobs:
               <pre><code>flatpak update com.arkide.desktop</code></pre>
               
               <h2>Uninstall</h2>
-              <pre><code>flatpak uninstall com.arkide.desktop</code></pre>
+              <pre><code>flatpak uninstall com.arkide.desktop
+          flatpak remote-delete arkide</code></pre>
               
               <div style="margin-top: 40px;">
                   <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
-                  <a href="https://github.com/OWNER/REPO" class="button">View on GitHub</a>
+                  <a href="https://github.com/${{ github.repository }}" class="button">View on GitHub</a>
               </div>
+              
+              <h2>Manual Installation Steps</h2>
+              <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
+              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${REPO_LOWER}/repo</code></pre>
+              
+              <p><strong>Step 2:</strong> Install Ark.IDE</p>
+              <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
           </body>
           </html>
           EOF
           
-          # Replace placeholders
-          sed -i "s|OWNER|${{ github.repository_owner }}|g" gh-pages/index.html
-          sed -i "s|REPO|${{ github.event.repository.name }}|g" gh-pages/index.html
+          echo "Installation page created!"
       
       - name: Copy icon for repo
         run: |
