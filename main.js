@@ -8,7 +8,7 @@ let settingsWindow;
 let discordClient = null;
 let discordConnected = false;
 
-const APP_VERSION = '2.3.0';
+const APP_VERSION = '2.4.0';
 const DISCORD_CLIENT_ID = '1442337181208281239'; // Replace with your Discord Application ID
 
 // Initialize Discord RPC
