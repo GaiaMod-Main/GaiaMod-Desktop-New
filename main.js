@@ -8,7 +8,7 @@ let settingsWindow;
 let discordClient = null;
 let discordConnected = false;
 
-const APP_VERSION = '2.4.0';
+const APP_VERSION = '2.5.0';
 const DISCORD_CLIENT_ID = '1442337181208281239'; // Replace with your Discord Application ID
 
 // Initialize Discord RPC
@@ -59,6 +59,7 @@ function createWindow() {
     width: 1280,
     height: 800,
     frame: true,
+    title: 'ArkIDE Desktop v' + APP_VERSION, 
     icon: path.join(__dirname, 'assets/icons/icon.png'),
     webPreferences: {
       nodeIntegration: false,
@@ -69,6 +70,11 @@ function createWindow() {
 
   Menu.setApplicationMenu(null);
   mainWindow.loadFile('source/editor.html');
+
+  // Force title to stay as app title
+  mainWindow.on('page-title-updated', (event) => {
+    event.preventDefault();
+  });
 
   // Remove unwanted buttons - FIXED VERSION
   mainWindow.webContents.on('did-finish-load', () => {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArkIDE - Settings</title>
+  <title>Icarus - Settings</title>
   <style>
     * {
       margin: 0;
@@ -212,7 +212,6 @@
       text-align: center;
       color: #999;
       font-size: 12px;
-      margin-top: 20px;
     }
 
     p {
@@ -224,7 +223,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>⚙️ ArkIDE Settings</h1>
+    <h1>⚙️ Icarus Settings</h1>
     <p class="subtitle">Manage your application settings and updates</p>
 
     <div class="section">
@@ -249,7 +248,7 @@
       
       <div class="version-info">
         <span class="version-label">Current Version:</span>
-        <span class="version-value" id="current-version">v2.4.0</span>
+        <span class="version-value" id="current-version">v2.5.0</span>
       </div>
 
       <div class="version-info">
@@ -280,9 +279,14 @@
       ➕ Give us feedback
     </button>
     </div>
+          <div class="section">
+      <h2>❔ What is Icarus</h2>
+      <p>Icarus is our custom coded desktop app for ArkIDE. We gave it this name becuase it sounds cool. And thats it.</p>
+    </div>
 
     <div class="footer">
-      Made with <3 by the ArkIDE Team
+      <p class="footer">Made with <3 by the ArkIDE Team </p>
+      <p class="footer">Icarus Version: 2.5.0 | Kronos Version: <span id="kronos-version">[GHCOMMIT]</span></p>
     </div>
   </div>
 
@@ -360,7 +364,18 @@
         } else {
           latestVersionEl.textContent = `v${result.latestVersion}`;
 
-          if (result.isUpToDate) {
+          // Compare versions
+          const currentVersion = result.currentVersion;
+          const latestVersion = result.latestVersion;
+          
+          // Simple version comparison (works for semantic versioning like 2.5.0)
+          const isAhead = currentVersion.localeCompare(latestVersion, undefined, { numeric: true, sensitivity: 'base' }) > 0;
+
+          if (isAhead) {
+            // User is on a newer version than what's released
+            statusEl.className = 'update-status update-available';
+            statusEl.textContent = '🤔 It seems you\'re somehow on a later version. You\'re either a developer or someone who stole our in-development code.';
+          } else if (result.isUpToDate) {
             statusEl.className = 'update-status up-to-date';
             statusEl.textContent = '✅ You are running the latest version!';
           } else {
@@ -370,15 +385,14 @@
             downloadBtn.setAttribute('data-url', result.downloadUrl);
 
             if (typeof result.releaseNotes === "string" && result.releaseNotes.trim() !== "") {
-            releaseNotesEl.style.display = 'block';
-            releaseNotesEl.innerHTML =
-                `<strong>Release Notes:</strong><br>${result.releaseNotes.replace(/\n/g, '<br>')}`;
+              releaseNotesEl.style.display = 'block';
+              releaseNotesEl.innerHTML =
+                  `<strong>Release Notes:</strong><br>${result.releaseNotes.replace(/\n/g, '<br>')}`;
             } else {
-            releaseNotesEl.style.display = 'block';
-            releaseNotesEl.innerHTML =
-                `<strong>Release Notes:</strong><br>No release notes provided.`;
+              releaseNotesEl.style.display = 'block';
+              releaseNotesEl.innerHTML =
+                  `<strong>Release Notes:</strong><br>No release notes provided.`;
             }
-
           }
         }
       } catch (error) {
@@ -403,6 +417,39 @@
       checkDiscordStatus();
       setTimeout(checkForUpdates, 500);
     });
+    async function fetchLatestCommit() {
+  const kronosVersionEl = document.getElementById('kronos-version');
+  
+  try {
+    const response = await fetch('https://api.github.com/repos/The-ArkIDE-Project/arkide-new/commits/main', {
+      headers: {
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch commit');
+    }
+    
+    const data = await response.json();
+    const shortHash = data.sha.substring(0, 7); // First 7 characters of commit hash
+    const commitMessage = data.commit.message.split('\n')[0]; // First line of commit message
+    
+    kronosVersionEl.textContent = shortHash;
+    kronosVersionEl.title = commitMessage; // Shows full message on hover
+    
+  } catch (error) {
+    console.error('Error fetching commit:', error);
+    kronosVersionEl.textContent = 'Unknown';
+  }
+}
+
+// Update the DOMContentLoaded listener to include this:
+window.addEventListener('DOMContentLoaded', () => {
+  checkDiscordStatus();
+  setTimeout(checkForUpdates, 500);
+  fetchLatestCommit(); // Add this line
+});
   </script>
 </body>
 </html>
