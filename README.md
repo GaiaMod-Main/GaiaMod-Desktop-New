@@ -1,4 +1,5 @@
 ![Icarus Frontend](/art/frontend.png)
+### Icarus Client: A Custom coded client for ArkIDE
 ## How to build:
 - Needed prerequisites
     #### npm
@@ -11,5 +12,3 @@ npm install
 ```
 npm start
 ```
-
-### Icarus Frontend: A Custom coded frontend for ArkIDE!
