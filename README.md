@@ -1,8 +1,8 @@
 ![Icarus Frontend](/art/frontend.png)
 ## How to build:
 - Needed prerequisites
-#### npm
-#### Electron
+    #### npm
+    #### Electron
 - Install Packages
 ```
 npm install
