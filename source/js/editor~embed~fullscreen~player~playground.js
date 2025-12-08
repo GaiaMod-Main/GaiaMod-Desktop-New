@@ -1590,15 +1590,22 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.user-profile-button_outlined-button_ypG9c {\n  cursor: pointer;\n  border-radius: 0.1rem;\n  font-weight: bold;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 0.25rem 0.75rem; /* Reduced vertical padding */\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  min-height: 34px; /* Changed from height to min-height */\n  background-color: rgba(255, 255, 255, 0);\n  color: #ffffff;\n  min-width: 0;\n  flex-shrink: 1;\n  box-sizing: border-box;\n  transition: background-color 0.3s ease;\n}\n\n.user-profile-button_outlined-button_ypG9c:hover {\n  background-color: rgba(35, 37, 48, 0.288);\n}\n\n.user-profile-button_outlined-button_ypG9c:hover .user-profile-button_userProfilePic_3pRb1 {\n  box-shadow: 0 0 15px rgba(255, 255, 255, 0.274), \n              0 0 25px rgba(255, 255, 255, 0.055);\n}\n\n.user-profile-button_icon_1gHYq {\n  height: 2.5rem;\n  width: 2.5rem;\n  flex-shrink: 0;\n  min-width: 2.5rem;\n  display: flex; /* Ensure proper sizing */\n  align-items: center;\n  justify-content: center;\n}\n\n[dir=\"ltr\"] .user-profile-button_icon_1gHYq {\n  margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .user-profile-button_icon_1gHYq {\n  margin-left: .5rem;\n}\n\n.user-profile-button_icon_1gHYq {\n  margin-right: .5rem;\n}\n\n.user-profile-button_content_2t33z {\n  white-space: nowrap;\n  line-height: 34px;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  min-width: 0;\n}\n\n.user-profile-button_userProfilePic_3pRb1 {\n  border-radius: 20%;\n  object-fit: cover;\n  height: 2.5rem;\n  width: 2.5rem;\n  transition: box-shadow 0.3s ease;\n}\n\n/* Hide text on very small screens, show only icon */\n\n@media (max-width: 480px) {\n  .user-profile-button_content_2t33z {\n    display: none;\n  }\n  \n  .user-profile-button_outlined-button_ypG9c {\n    padding: 0.25rem 0.5rem;\n    margin-right: 0.1rem;\n  }\n  \n  .user-profile-button_icon_1gHYq {\n    margin-right: 0;\n  }\n}", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.user-profile-button_dropdown-container_24puk {\n    position: relative;\n    display: inline-block;\n}\n\n.user-profile-button_outlined-button_ypG9c {\n    cursor: pointer;\n    border-radius: 0.1rem;\n    font-weight: bold;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding: 0.25rem 0.75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    min-height: 34px;\n    background-color: rgba(255, 255, 255, 0);\n    color: #ffffff;\n    min-width: 0;\n    flex-shrink: 1;\n    box-sizing: border-box;\n    transition: background-color 0.3s ease;\n}\n\n.user-profile-button_outlined-button_ypG9c:hover {\n    background-color: rgba(35, 37, 48, 0.288);\n}\n\n.user-profile-button_outlined-button_ypG9c:hover .user-profile-button_userProfilePic_3pRb1 {\n    box-shadow: 0 0 15px rgba(255, 255, 255, 0.274), \n                0 0 25px rgba(255, 255, 255, 0.055);\n}\n\n.user-profile-button_icon_1gHYq {\n    height: 2.5rem;\n    width: 2.5rem;\n    flex-shrink: 0;\n    min-width: 2.5rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n[dir=\"ltr\"] .user-profile-button_icon_1gHYq {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .user-profile-button_icon_1gHYq {\n    margin-left: .5rem;\n}\n\n.user-profile-button_icon_1gHYq {\n    margin-right: .5rem;\n}\n\n.user-profile-button_content_2t33z {\n    white-space: nowrap;\n    line-height: 34px;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    min-width: 0;\n}\n\n.user-profile-button_userProfilePic_3pRb1 {\n    border-radius: 20%;\n    object-fit: cover;\n    height: 2.5rem;\n    width: 2.5rem;\n    transition: box-shadow 0.3s ease;\n}\n\n.user-profile-button_dropdown-menu_3xm-u {\n    position: absolute;\n    top: calc(100% + 0.5rem);\n    right: 0;\n    background-color: rgba(40, 44, 52, 0.95);\n    backdrop-filter: blur(10px);\n    -webkit-backdrop-filter: blur(10px);\n    border-radius: 0.5rem;\n    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);\n    overflow: hidden;\n    min-width: 180px;\n    z-index: 1000;\n    animation: user-profile-button_dropdownFadeIn_398zk 0.2s ease;\n}\n\n@keyframes user-profile-button_dropdownFadeIn_398zk {\n    from {\n        opacity: 0;\n        transform: translateY(-10px);\n    }\n    to {\n        opacity: 1;\n        transform: translateY(0);\n    }\n}\n\n.user-profile-button_dropdown-item_GO3Z9 {\n    padding: 0.75rem 1rem;\n    color: #ffffff;\n    cursor: pointer;\n    font-size: 14px;\n    transition: background-color 0.2s ease;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.user-profile-button_dropdown-item_GO3Z9:hover {\n    background-color: rgba(255, 255, 255, 0.1);\n}\n\n.user-profile-button_dropdown-item_GO3Z9:active {\n    background-color: rgba(255, 255, 255, 0.15);\n}\n\n/* Hide text on very small screens, show only icon */\n\n@media (max-width: 480px) {\n    .user-profile-button_content_2t33z {\n        display: none;\n    }\n    .user-profile-button_outlined-button_ypG9c {\n        padding: 0.25rem 0.5rem;\n        margin-right: 0.1rem;\n    }\n    .user-profile-button_icon_1gHYq {\n        margin-right: 0;\n    }\n    .user-profile-button_dropdown-menu_3xm-u {\n        right: -0.5rem;\n    }\n}", ""]);
 
 // exports
 exports.locals = {
+	"dropdown-container": "user-profile-button_dropdown-container_24puk",
+	"dropdownContainer": "user-profile-button_dropdown-container_24puk",
 	"outlined-button": "user-profile-button_outlined-button_ypG9c",
 	"outlinedButton": "user-profile-button_outlined-button_ypG9c",
 	"userProfilePic": "user-profile-button_userProfilePic_3pRb1",
 	"icon": "user-profile-button_icon_1gHYq",
-	"content": "user-profile-button_content_2t33z"
+	"content": "user-profile-button_content_2t33z",
+	"dropdown-menu": "user-profile-button_dropdown-menu_3xm-u",
+	"dropdownMenu": "user-profile-button_dropdown-menu_3xm-u",
+	"dropdownFadeIn": "user-profile-button_dropdownFadeIn_398zk",
+	"dropdown-item": "user-profile-button_dropdown-item_GO3Z9",
+	"dropdownItem": "user-profile-button_dropdown-item_GO3Z9"
 };
 
 /***/ }),
@@ -13408,35 +13415,59 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
 class UserProfileButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(props) {
     super(props);
-    _defineProperty(this, "handleProfileClick", () => {
-      if (this.state.username) {
-        window.open("https://arkide.site/profile/?user=".concat(encodeURIComponent(this.state.username)), "_blank");
+    _defineProperty(this, "handleClickOutside", event => {
+      if (this.dropdownRef.current && !this.dropdownRef.current.contains(event.target)) {
+        this.setState({
+          dropdownOpen: false
+        });
       }
+    });
+    _defineProperty(this, "handleProfileClick", () => {
+      this.setState(prevState => ({
+        dropdownOpen: !prevState.dropdownOpen
+      }));
+    });
+    _defineProperty(this, "handleMenuItemClick", url => {
+      window.open(url, "_blank");
+      this.setState({
+        dropdownOpen: false
+      });
     });
     _defineProperty(this, "handleLoginClick", () => {
       window.open('https://arkide.site/signin', "_blank");
     });
     this.state = {
       username: null,
-      profilePicUrl: null
+      profilePicUrl: null,
+      dropdownOpen: false
     };
+    this.dropdownRef = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
   }
   componentDidMount() {
     this.loadUserProfile();
+    document.addEventListener('mousedown', this.handleClickOutside);
   }
-
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
   // Helper to read a cookie by name
   getCookie(name) {
-    const value = "; ".concat(document.cookie);
-    const parts = value.split("; ".concat(name, "="));
-    if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+      cookie = cookie.trim();
+      if (cookie.startsWith(name)) {
+        // Get everything after the cookie name
+        const value = cookie.substring(name.length).trim();
+        // Remove the first character (= or :) and any quotes
+        return value.substring(1).replace(/^"|"$/g, '');
+      }
+    }
     return null;
   }
   loadUserProfile() {
     // const username = "ark"
     const username = this.getCookie('arkide_username');
     console.log('Fetched cookie username:', username); // 🔍 logging
-
     if (username) {
       // Update state so render shows profile instead of login
       this.setState({
@@ -13450,7 +13481,8 @@ class UserProfileButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Com
   render() {
     const {
       username,
-      profilePicUrl
+      profilePicUrl,
+      dropdownOpen
     } = this.state;
     if (!username) {
       // Show login button if not logged in
@@ -13464,7 +13496,10 @@ class UserProfileButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Com
     }
 
     // Show user profile if logged in
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _user_profile_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.dropdownContainer,
+      ref: this.dropdownRef
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: _user_profile_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.outlinedButton,
       role: "button",
       onClick: this.handleProfileClick
@@ -13477,7 +13512,18 @@ class UserProfileButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Com
       alt: username
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: _user_profile_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.content
-    }, username));
+    }, username)), dropdownOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _user_profile_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.dropdownMenu
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _user_profile_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.dropdownItem,
+      onClick: () => this.handleMenuItemClick("https://arkide.site/profile/?user=".concat(encodeURIComponent(username)))
+    }, "Go to Profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _user_profile_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.dropdownItem,
+      onClick: () => this.handleMenuItemClick('https://arkide.site/mystuff/')
+    }, "My Stuff"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: _user_profile_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.dropdownItem,
+      onClick: () => this.handleMenuItemClick('https://arkide.site/settings/')
+    }, "Settings")));
   }
 }
 UserProfileButton.propTypes = {};
