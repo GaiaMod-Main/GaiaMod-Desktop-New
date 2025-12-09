@@ -888,6 +888,79 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/files-tab/files-tab.css":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/files-tab/files-tab.css ***!
+  \*******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ /* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */ /* layout contants from `layout-constants.js` */ .files-tab_editor-wrapper_3v6YQ {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n} .files-tab_editor-container_2nl_- {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    overflow: auto;\n    background: white;\n    border-top-right-radius: 0.5rem;\n    border-bottom-right-radius: 0.5rem;\n    border: 1px solid var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n    padding: calc(2 * 0.5rem);\n} [theme=\"dark\"] .files-tab_editor-container_2nl_- {\n    background: var(--ui-primary, hsla(261, 100%, 50%, 1));\n} .files-tab_header_Yc-_A {\n    margin-bottom: 16px;\n} .files-tab_scope-buttons_2LM6l {\n    display: flex;\n    gap: 8px;\n    margin-bottom: 12px;\n} .files-tab_scope-button_3dZ_M {\n    flex: 1;\n    padding: 10px 16px;\n    border: 2px solid rgba(0, 0, 0, 0.15);\n    border-radius: 6px;\n    background: white;\n    cursor: pointer;\n    font-size: 0.875rem;\n    font-weight: 500;\n    transition: all 0.2s;\n} [theme=\"dark\"] .files-tab_scope-button_3dZ_M {\n    background: var(--ui-secondary, hsl(261 100% 99%));\n    border-color: #333;\n    color: white;\n} .files-tab_scope-button_3dZ_M:hover {\n    background: #f0f0f0;\n    transform: translateY(-1px);\n} [theme=\"dark\"] .files-tab_scope-button_3dZ_M:hover {\n    background: var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .files-tab_scope-button-active_Y3RfD {\n    background: #584cff !important;\n    color: white !important;\n    border-color: #584cff !important;\n    box-shadow: 0 2px 8px rgba(76, 151, 255, 0.3);\n} .files-tab_search-bar_pr1m5 {\n    background-image: url(" + escape(__webpack_require__(/*! ../variables-tab/icon--search.svg */ "./src/components/variables-tab/icon--search.svg")) + ");\n    width: 100%;\n    margin-bottom: 12px;\n    padding: 8px;\n    padding-right: 32px;\n    border-radius: 4px;\n    background-repeat: no-repeat;\n    background-size: 18px 18px;\n    background-position: calc(100% - 7px) center;\n    font-size: 0.75rem;\n} .files-tab_filter-buttons_1XqOr {\n    display: flex;\n    gap: 8px;\n    margin-bottom: 8px;\n} .files-tab_filter-button_1jOWO {\n    padding: 6px 14px;\n    border: 1px solid rgba(0, 0, 0, 0.15);\n    border-radius: 4px;\n    background: white;\n    cursor: pointer;\n    font-size: 0.75rem;\n    transition: all 0.2s;\n} [theme=\"dark\"] .files-tab_filter-button_1jOWO {\n    background: var(--ui-secondary, hsl(261 100% 99%));\n    border-color: #333;\n    color: white;\n} .files-tab_filter-button_1jOWO:hover {\n    background: #f0f0f0;\n} [theme=\"dark\"] .files-tab_filter-button_1jOWO:hover {\n    background: var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .files-tab_filter-button-active_3LAJE {\n    background: #584cff !important;\n    color: white !important;\n    border-color: #584cff !important;\n} .files-tab_summary_mEyWk {\n    display: flex;\n    justify-content: space-between;\n    margin-bottom: 12px;\n    padding: 8px 0;\n    font-size: 0.875rem;\n    color: #575E75;\n    border-top: 1px solid rgba(0, 0, 0, 0.1);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n} [theme=\"dark\"] .files-tab_summary_mEyWk {\n    color: #ccc;\n    border-color: #333;\n} .files-tab_asset-count_3S6Ew {\n    font-weight: bold;\n} .files-tab_total-size_SsX5P {\n    font-style: italic;\n} .files-tab_assets-table_Acbxo {\n    width: 100%;\n    border-collapse: collapse;\n    border-radius: 5px;\n} .files-tab_assets-table_Acbxo thead th {\n    text-align: left;\n    padding: 10px 8px;\n    background: #f5f5f5;\n    font-weight: bold;\n    font-size: 0.75rem;\n    text-transform: uppercase;\n    border: 1px solid rgba(0, 0, 0, 0.15);\n} [theme=\"dark\"] .files-tab_assets-table_Acbxo thead th {\n    background: var(--ui-secondary, hsl(261 100% 99%));\n    border-color: #333;\n} .files-tab_assets-table_Acbxo tbody td {\n    padding: 8px;\n    border: 1px solid rgba(0, 0, 0, 0.15);\n    vertical-align: middle;\n} [theme=\"dark\"] .files-tab_assets-table_Acbxo tbody td {\n    border-color: #333;\n} .files-tab_assets-table_Acbxo tbody tr:hover {\n    background: rgba(76, 151, 255, 0.05);\n} [theme=\"dark\"] .files-tab_assets-table_Acbxo tbody tr:hover {\n    background: rgba(76, 151, 255, 0.1);\n} .files-tab_preview-column_3QtQ2 {\n    width: 100px;\n} .files-tab_asset-preview_3_AwZ {\n    width: 100px;\n    text-align: center;\n} .files-tab_asset-thumbnail_2BOO_ {\n    max-width: 80px;\n    max-height: 80px;\n    object-fit: contain;\n    border-radius: 4px;\n    border: 1px solid rgba(0, 0, 0, 0.1);\n} [theme=\"dark\"] .files-tab_asset-thumbnail_2BOO_ {\n    border-color: #333;\n} .files-tab_sound-icon_1cOHN,\n.files-tab_unknown-icon_1iX4f {\n    font-size: 2.5rem;\n    width: 80px;\n    height: 80px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background: #f0f0f0;\n    border-radius: 4px;\n    margin: 0 auto;\n    border: 1px solid rgba(0, 0, 0, 0.1);\n} [theme=\"dark\"] .files-tab_sound-icon_1cOHN,\n[theme=\"dark\"] .files-tab_unknown-icon_1iX4f {\n    background: var(--ui-secondary, hsl(261 100% 99%));\n    border-color: #333;\n} .files-tab_asset-name_t4fSz {\n    font-weight: 500;\n    word-break: break-word;\n    max-width: 200px;\n} .files-tab_asset-owner_3qPLn {\n    font-size: 0.7rem;\n    color: #888;\n    font-weight: normal;\n    font-style: italic;\n    margin-top: 2px;\n} [theme=\"dark\"] .files-tab_asset-owner_3qPLn {\n    color: #999;\n} .files-tab_asset-type_1aVUt {\n    font-size: 0.75rem;\n    color: #575E75;\n    font-family: monospace;\n    text-transform: uppercase;\n} [theme=\"dark\"] .files-tab_asset-type_1aVUt {\n    color: #aaa;\n} .files-tab_asset-size_3AQvz {\n    font-size: 0.75rem;\n    color: #575E75;\n    white-space: nowrap;\n} [theme=\"dark\"] .files-tab_asset-size_3AQvz {\n    color: #aaa;\n} .files-tab_asset-dimensions_25JdW {\n    font-size: 0.75rem;\n    color: #575E75;\n    white-space: nowrap;\n} [theme=\"dark\"] .files-tab_asset-dimensions_25JdW {\n    color: #aaa;\n} .files-tab_asset-actions_G3-V6 {\n    white-space: nowrap;\n    text-align: center;\n} .files-tab_action-button_1HDol {\n    background: none;\n    border: none;\n    cursor: pointer;\n    font-size: 1.2rem;\n    padding: 4px 8px;\n    opacity: 0.7;\n    transition: all 0.2s;\n} .files-tab_action-button_1HDol:hover {\n    opacity: 1;\n    transform: scale(1.15);\n} .files-tab_no-assets_3qsTI {\n    text-align: center;\n    padding: 48px 24px;\n    color: #575E75;\n    font-style: italic;\n    background: #f9f9f9;\n    border-radius: 8px;\n    margin: 16px 0;\n} [theme=\"dark\"] .files-tab_no-assets_3qsTI {\n    color: #aaa;\n    background: var(--ui-secondary, hsl(261 100% 99%));\n}", ""]);
+
+// exports
+exports.locals = {
+	"editor-wrapper": "files-tab_editor-wrapper_3v6YQ",
+	"editorWrapper": "files-tab_editor-wrapper_3v6YQ",
+	"editor-container": "files-tab_editor-container_2nl_-",
+	"editorContainer": "files-tab_editor-container_2nl_-",
+	"header": "files-tab_header_Yc-_A",
+	"scope-buttons": "files-tab_scope-buttons_2LM6l",
+	"scopeButtons": "files-tab_scope-buttons_2LM6l",
+	"scope-button": "files-tab_scope-button_3dZ_M",
+	"scopeButton": "files-tab_scope-button_3dZ_M",
+	"scope-button-active": "files-tab_scope-button-active_Y3RfD",
+	"scopeButtonActive": "files-tab_scope-button-active_Y3RfD",
+	"search-bar": "files-tab_search-bar_pr1m5",
+	"searchBar": "files-tab_search-bar_pr1m5",
+	"filter-buttons": "files-tab_filter-buttons_1XqOr",
+	"filterButtons": "files-tab_filter-buttons_1XqOr",
+	"filter-button": "files-tab_filter-button_1jOWO",
+	"filterButton": "files-tab_filter-button_1jOWO",
+	"filter-button-active": "files-tab_filter-button-active_3LAJE",
+	"filterButtonActive": "files-tab_filter-button-active_3LAJE",
+	"summary": "files-tab_summary_mEyWk",
+	"asset-count": "files-tab_asset-count_3S6Ew",
+	"assetCount": "files-tab_asset-count_3S6Ew",
+	"total-size": "files-tab_total-size_SsX5P",
+	"totalSize": "files-tab_total-size_SsX5P",
+	"assets-table": "files-tab_assets-table_Acbxo",
+	"assetsTable": "files-tab_assets-table_Acbxo",
+	"preview-column": "files-tab_preview-column_3QtQ2",
+	"previewColumn": "files-tab_preview-column_3QtQ2",
+	"asset-preview": "files-tab_asset-preview_3_AwZ",
+	"assetPreview": "files-tab_asset-preview_3_AwZ",
+	"asset-thumbnail": "files-tab_asset-thumbnail_2BOO_",
+	"assetThumbnail": "files-tab_asset-thumbnail_2BOO_",
+	"sound-icon": "files-tab_sound-icon_1cOHN",
+	"soundIcon": "files-tab_sound-icon_1cOHN",
+	"unknown-icon": "files-tab_unknown-icon_1iX4f",
+	"unknownIcon": "files-tab_unknown-icon_1iX4f",
+	"asset-name": "files-tab_asset-name_t4fSz",
+	"assetName": "files-tab_asset-name_t4fSz",
+	"asset-owner": "files-tab_asset-owner_3qPLn",
+	"assetOwner": "files-tab_asset-owner_3qPLn",
+	"asset-type": "files-tab_asset-type_1aVUt",
+	"assetType": "files-tab_asset-type_1aVUt",
+	"asset-size": "files-tab_asset-size_3AQvz",
+	"assetSize": "files-tab_asset-size_3AQvz",
+	"asset-dimensions": "files-tab_asset-dimensions_25JdW",
+	"assetDimensions": "files-tab_asset-dimensions_25JdW",
+	"asset-actions": "files-tab_asset-actions_G3-V6",
+	"assetActions": "files-tab_asset-actions_G3-V6",
+	"action-button": "files-tab_action-button_1HDol",
+	"actionButton": "files-tab_action-button_1HDol",
+	"no-assets": "files-tab_no-assets_3qsTI",
+	"noAssets": "files-tab_no-assets_3qsTI"
+};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/filter/filter.css":
 /*!*************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/filter/filter.css ***!
@@ -4059,17 +4132,6 @@ module.exports = __webpack_require__.p + "static/assets/35c6867250ec4f430624bc9e
 
 /***/ }),
 
-/***/ "./src/components/asset-panel/icon--files-placeholder.svg":
-/*!****************************************************************!*\
-  !*** ./src/components/asset-panel/icon--files-placeholder.svg ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/assets/44e4859e354c81d66c73f741df2e5ec7.svg";
-
-/***/ }),
-
 /***/ "./src/components/asset-panel/icon--sound-rtl.svg":
 /*!********************************************************!*\
   !*** ./src/components/asset-panel/icon--sound-rtl.svg ***!
@@ -4089,17 +4151,6 @@ module.exports = __webpack_require__.p + "static/assets/3c3142e814ff1652338af92a
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/assets/63e5827c1506216bd7c9927a4e5eb558.svg";
-
-/***/ }),
-
-/***/ "./src/components/asset-panel/nord.png":
-/*!*********************************************!*\
-  !*** ./src/components/asset-panel/nord.png ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/assets/18dada8a9aabcfc157e051d2e33aa7fd.png";
 
 /***/ }),
 
@@ -8569,6 +8620,284 @@ DragLayer.propTypes = {
 
 /***/ }),
 
+/***/ "./src/components/files-tab/files-tab.css":
+/*!************************************************!*\
+  !*** ./src/components/files-tab/files-tab.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./files-tab.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/files-tab/files-tab.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/files-tab/files-tab.jsx":
+/*!************************************************!*\
+  !*** ./src/components/files-tab/files-tab.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash.bindall */ "./node_modules/lodash.bindall/index.js");
+/* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_bindall__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _forms_input_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../forms/input.jsx */ "./src/components/forms/input.jsx");
+/* harmony import */ var _box_box_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../box/box.jsx */ "./src/components/box/box.jsx");
+/* harmony import */ var _files_tab_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./files-tab.css */ "./src/components/files-tab/files-tab.css");
+/* harmony import */ var _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_files_tab_css__WEBPACK_IMPORTED_MODULE_7__);
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+
+
+
+
+
+
+
+class FilesTab extends react__WEBPACK_IMPORTED_MODULE_3___default.a.Component {
+  constructor(props) {
+    super(props);
+    lodash_bindall__WEBPACK_IMPORTED_MODULE_4___default()(this, ["handleSearch", "handleTypeFilter", "handleScopeChange", "renderAsset", "getAssetPreview", "formatFileSize"]);
+    this.state = {
+      query: '',
+      selectedType: 'all',
+      // 'all', 'costume', 'sound', 'backdrop'
+      scope: 'current' // 'current' or 'global'
+    };
+  }
+  handleSearch(event) {
+    this.setState({
+      query: String(event.target.value).toLowerCase()
+    });
+  }
+  handleTypeFilter(type) {
+    this.setState({
+      selectedType: type
+    });
+  }
+  handleScopeChange(scope) {
+    this.setState({
+      scope: scope
+    });
+  }
+  formatFileSize(bytes) {
+    // Handle invalid inputs
+    if (bytes === null || bytes === undefined || isNaN(bytes)) return 'Unknown';
+    const numBytes = Number(bytes);
+    if (numBytes === 0) return '0 B';
+    if (numBytes < 1024) return "".concat(numBytes, " B");
+    if (numBytes < 1024 * 1024) return "".concat((numBytes / 1024).toFixed(2), " KB");
+    return "".concat((numBytes / (1024 * 1024)).toFixed(2), " MB");
+  }
+  getAssetPreview(asset) {
+    // For images (costumes/backdrops)
+    if (asset.dataFormat === 'svg' || asset.dataFormat === 'png' || asset.dataFormat === 'jpg' || asset.dataFormat === 'jpeg') {
+      var _asset$asset, _asset$asset$encodeDa;
+      const assetData = ((_asset$asset = asset.asset) === null || _asset$asset === void 0 ? void 0 : (_asset$asset$encodeDa = _asset$asset.encodeDataURI) === null || _asset$asset$encodeDa === void 0 ? void 0 : _asset$asset$encodeDa.call(_asset$asset)) || asset.md5;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
+        src: assetData,
+        alt: asset.name,
+        className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetThumbnail
+      });
+    }
+
+    // For sounds
+    if (asset.dataFormat === 'wav' || asset.dataFormat === 'mp3') {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+        className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.soundIcon
+      }, "\uD83D\uDD0A");
+    }
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.unknownIcon
+    }, "\uD83D\uDCC4");
+  }
+  renderAsset(asset, index) {
+    var _asset$dataFormat;
+    // Try multiple ways to get the asset size
+    let assetSize = 0;
+    if (asset.asset) {
+      if (asset.asset.size) {
+        assetSize = asset.asset.size;
+      } else if (asset.asset.data) {
+        assetSize = asset.asset.data.length || asset.asset.data.byteLength || 0;
+      }
+    } else if (asset.size) {
+      assetSize = asset.size;
+    }
+    const formattedSize = this.formatFileSize(assetSize);
+
+    // Create a unique key combining type, owner, and ID/index to prevent duplicates
+    const uniqueKey = "".concat(asset.assetType, "-").concat(asset.owner || 'current', "-").concat(asset.assetId || asset.md5 || index);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("tr", {
+      key: uniqueKey
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetPreview
+    }, this.getAssetPreview(asset)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetName
+    }, asset.name, asset.owner && this.state.scope === 'global' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetOwner
+    }, "from: ", asset.owner)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetType
+    }, asset.assetType || ((_asset$dataFormat = asset.dataFormat) === null || _asset$dataFormat === void 0 ? void 0 : _asset$dataFormat.toUpperCase())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetSize
+    }, formattedSize), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetDimensions
+    }, asset.bitmapResolution || asset.rotationCenterX ? "".concat(Math.round(asset.bitmapResolution || 1), "x") : asset.sampleCount ? "".concat((asset.sampleCount / asset.rate).toFixed(2), "s") : '-'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetActions
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      onClick: () => {
+        var _this$props$onExportA, _this$props;
+        return (_this$props$onExportA = (_this$props = this.props).onExportAsset) === null || _this$props$onExportA === void 0 ? void 0 : _this$props$onExportA.call(_this$props, asset, index);
+      },
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.actionButton,
+      title: "Export"
+    }, "\u2B07\uFE0F")));
+  }
+  filterAssets(assets) {
+    if (!assets) return [];
+    return assets.filter(asset => {
+      const matchesSearch = asset.name.toLowerCase().includes(this.state.query);
+      if (!matchesSearch) return false;
+      if (this.state.selectedType === 'all') return true;
+      return asset.assetType === this.state.selectedType;
+    });
+  }
+  render() {
+    const {
+      costumes = [],
+      sounds = [],
+      backdrops = [],
+      globalCostumes = [],
+      globalSounds = [],
+      globalBackdrops = []
+    } = this.props;
+
+    // Choose which assets to display based on scope
+    let displayCostumes, displaySounds, displayBackdrops;
+    if (this.state.scope === 'global') {
+      displayCostumes = globalCostumes;
+      displaySounds = globalSounds;
+      displayBackdrops = globalBackdrops;
+    } else {
+      displayCostumes = costumes;
+      displaySounds = sounds;
+      displayBackdrops = backdrops;
+    }
+
+    // Combine all assets with type tags
+    const allAssets = [...displayCostumes.map(c => _objectSpread(_objectSpread({}, c), {}, {
+      assetType: 'costume'
+    })), ...displaySounds.map(s => _objectSpread(_objectSpread({}, s), {}, {
+      assetType: 'sound'
+    })), ...displayBackdrops.map(b => _objectSpread(_objectSpread({}, b), {}, {
+      assetType: 'backdrop'
+    }))];
+    const filteredAssets = this.filterAssets(allAssets);
+
+    // Calculate total size more accurately
+    const totalSize = allAssets.reduce((sum, asset) => {
+      let size = 0;
+      if (asset.asset) {
+        if (asset.asset.size) {
+          size = asset.asset.size;
+        } else if (asset.asset.data) {
+          size = asset.asset.data.length || asset.asset.data.byteLength || 0;
+        }
+      } else if (asset.size) {
+        size = asset.size;
+      }
+      return sum + size;
+    }, 0);
+    const formattedTotalSize = this.formatFileSize(totalSize);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.editorWrapper
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_box_box_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.editorContainer
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.header
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.scopeButtons
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.scopeButton, {
+        [_files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.scopeButtonActive]: this.state.scope === 'current'
+      }),
+      onClick: () => this.handleScopeChange('current')
+    }, "\uD83D\uDCCD Current Sprite"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.scopeButton, {
+        [_files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.scopeButtonActive]: this.state.scope === 'global'
+      }),
+      onClick: () => this.handleScopeChange('global')
+    }, "\uD83C\uDF0D All Project Assets")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_forms_input_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      placeholder: "Search assets",
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.searchBar,
+      onChange: this.handleSearch
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.filterButtons
+    }, ['all', 'costume', 'sound', 'backdrop'].map(type => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      key: type,
+      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.filterButton, {
+        [_files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.filterButtonActive]: this.state.selectedType === type
+      }),
+      onClick: () => this.handleTypeFilter(type)
+    }, type === 'all' ? 'All' : type.charAt(0).toUpperCase() + type.slice(1) + 's')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.summary
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetCount
+    }, filteredAssets.length, " asset", filteredAssets.length !== 1 ? 's' : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.totalSize
+    }, "Total: ", formattedTotalSize)), filteredAssets.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("table", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.assetsTable
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("th", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.previewColumn
+    }, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("th", null, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("th", null, "Type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("th", null, "Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("th", null, "Info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("th", null, "Actions"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("tbody", null, filteredAssets.map(this.renderAsset))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _files_tab_css__WEBPACK_IMPORTED_MODULE_7___default.a.noAssets
+    }, this.state.query ? 'No assets match your search' : 'No assets in this project')));
+  }
+}
+FilesTab.propTypes = {
+  costumes: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array,
+  sounds: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array,
+  backdrops: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array,
+  globalCostumes: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array,
+  globalSounds: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array,
+  globalBackdrops: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array,
+  onExportAsset: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_1__["injectIntl"])(FilesTab));
+
+/***/ }),
+
 /***/ "./src/components/filter/filter.css":
 /*!******************************************!*\
   !*** ./src/components/filter/filter.css ***!
@@ -9411,8 +9740,8 @@ const GUIComponent = props => {
     code: codeTab,
     costume: costumesTab,
     sound: soundsTab,
-    variable: variablesTab
-    // file: filesTab,
+    variable: variablesTab,
+    file: filesTab
   };
 
   // For now, rearranging tabs is not supported
@@ -9617,6 +9946,16 @@ const GUIComponent = props => {
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_8__["FormattedMessage"], {
       defaultMessage: "Variables",
       id: "gui.gui.variablesTab"
+    }))), !tabOrder.includes('file') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_context_menu_context_menu_jsx__WEBPACK_IMPORTED_MODULE_7__["MenuItem"], {
+      onClick: () => addTabToEditor('file')
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: _gui_css__WEBPACK_IMPORTED_MODULE_46___default.a.tabAdditionItem
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
+      draggable: false,
+      src: _icon_files_svg__WEBPACK_IMPORTED_MODULE_53___default.a
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_8__["FormattedMessage"], {
+      defaultMessage: "Files",
+      id: "gui.gui.filesTab"
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       id: "sa_addons_after_add_tab_anchor"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_tabs__WEBPACK_IMPORTED_MODULE_11__["TabPanel"], {
@@ -9656,6 +9995,10 @@ const GUIComponent = props => {
     }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_tabs__WEBPACK_IMPORTED_MODULE_11__["TabPanel"], {
       className: tabClassNames.tabPanel
     }, variablesTabVisible ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_containers_variables_tab_jsx__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      vm: vm
+    }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_tabs__WEBPACK_IMPORTED_MODULE_11__["TabPanel"], {
+      className: tabClassNames.tabPanel
+    }, filesTabVisible ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_containers_files_tab_jsx__WEBPACK_IMPORTED_MODULE_20__["default"], {
       vm: vm
     }) : null)), backpackVisible ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_containers_backpack_jsx__WEBPACK_IMPORTED_MODULE_28__["default"], {
       host: backpackHost
@@ -26885,309 +27228,112 @@ ExtensionLibrary.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash.bindall */ "./node_modules/lodash.bindall/index.js");
-/* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_bindall__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
-/* harmony import */ var scratch_vm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! scratch-vm */ "./node_modules/scratch-vm/src/index.js");
-/* harmony import */ var scratch_vm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(scratch_vm__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_asset_panel_asset_panel_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/asset-panel/asset-panel.jsx */ "./src/components/asset-panel/asset-panel.jsx");
-/* harmony import */ var _components_asset_panel_icon_files_placeholder_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/asset-panel/icon--files-placeholder.svg */ "./src/components/asset-panel/icon--files-placeholder.svg");
-/* harmony import */ var _components_asset_panel_icon_files_placeholder_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_files_placeholder_svg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_asset_panel_nord_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/asset-panel/nord.png */ "./src/components/asset-panel/nord.png");
-/* harmony import */ var _components_asset_panel_nord_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_nord_png__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/file-uploader.js */ "./src/lib/file-uploader.js");
-/* harmony import */ var _lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/error-boundary-hoc.jsx */ "./src/lib/error-boundary-hoc.jsx");
-/* harmony import */ var _lib_download_blob__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lib/download-blob */ "./src/lib/download-blob.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reducers_restore_deletion__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../reducers/restore-deletion */ "./src/reducers/restore-deletion.js");
-/* harmony import */ var _reducers_alerts__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../reducers/alerts */ "./src/reducers/alerts.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var _components_files_tab_files_tab_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/files-tab/files-tab.jsx */ "./src/components/files-tab/files-tab.jsx");
+/* harmony import */ var _lib_download_blob__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/download-blob */ "./src/lib/download-blob.js");
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 
 
+const mapStateToProps = state => {
+  var _target, _target2, _target3;
+  const vm = state.scratchGui.vm;
+  const editingTarget = state.scratchGui.targets.editingTarget;
+  const stage = state.scratchGui.targets.stage;
+  const sprites = state.scratchGui.targets.sprites;
 
-
-
-
-// import soundIconRtl from '../components/asset-panel/icon--sound-rtl.svg';
-// import addSoundFromLibraryIcon from '../components/asset-panel/icon--add-sound-lib.svg';
-// import addSoundFromRecordingIcon from '../components/asset-panel/icon--add-sound-record.svg';
-// import fileUploadIcon from '../components/action-menu/icon--file-upload.svg';
-// import surpriseIcon from '../components/action-menu/icon--surprise.svg';
-// import searchIcon from '../components/action-menu/icon--search.svg';
-
-
-
-// import RecordModal from './record-modal.jsx';
-// import SoundEditor from './sound-editor.jsx';
-// import SoundLibrary from './sound-library.jsx';
-
-// import { getSoundLibrary } from '../lib/libraries/tw-async-libraries';
-
-
-// import DragConstants from '../lib/drag-constants';
-
-
-
-// import {
-//     closeSoundLibrary,
-//     openSoundLibrary,
-//     openSoundRecorder
-// } from '../reducers/modals';
-
-// import {
-//     activateTab,
-//     COSTUMES_TAB_INDEX
-// } from '../reducers/editor-tab';
-
-
-
-class FilesTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
-  constructor(props) {
-    super(props);
-    lodash_bindall__WEBPACK_IMPORTED_MODULE_2___default()(this, ['handleSelectFile', 'handleDeleteFile', 'handleDuplicateFile', 'handleDownloadFile', 'handleNewFile',
-    // 'handleSurpriseSound',
-    'handleFileUploadClick', 'handleExternalFileUpload',
-    // 'handleDrop',
-    'setFileInput']);
-    this.state = {
-      selectedFileIndex: 0
-    };
-  }
-  componentWillReceiveProps(nextProps) {
-    // TODO: handle this
-    // const {
-    //     editingTarget,
-    //     sprites,
-    //     stage
-    // } = nextProps;
-
-    // const target = editingTarget && sprites[editingTarget] ? sprites[editingTarget] : stage;
-    // if (!target || !target.sounds) {
-    //     return;
-    // }
-
-    // // If switching editing targets, reset the sound index
-    // if (this.props.editingTarget !== editingTarget) {
-    //     this.setState({ selectedSoundIndex: 0 });
-    // } else if (this.state.selectedSoundIndex > target.sounds.length - 1) {
-    //     this.setState({ selectedSoundIndex: Math.max(target.sounds.length - 1, 0) });
-    // }
-  }
-  handleSelectFile(fileIndex) {
-    this.setState({
-      selectedFileIndex: fileIndex
-    });
-  }
-  handleDeleteFile(fileIndex) {
-    // TODO: deleteFile isnt a function
-    const restoreFun = this.props.vm.deleteFile(fileIndex);
-    if (fileIndex >= this.state.selectedFileIndex) {
-      this.setState({
-        selectedFileIndex: Math.max(0, fileIndex - 1)
-      });
-    }
-    this.props.dispatchUpdateRestore({
-      restoreFun,
-      deletedItem: 'File'
-    });
-  }
-  handleDownloadFile(fileIndex) {
-    // TODO: vm.files doesnt exist
-    const item = this.props.vm.files[fileIndex];
-    const blob = new Blob([item.asset.data], {
-      type: item.asset.assetType.contentType
-    });
-    Object(_lib_download_blob__WEBPACK_IMPORTED_MODULE_10__["default"])("".concat(item.name, ".").concat(item.asset.dataFormat), blob);
-  }
-  handleDuplicateFile(fileIndex) {
-    // TODO: duplicateFile isnt a function
-    this.props.vm.duplicateFile(fileIndex).then(() => {
-      this.setState({
-        selectedFileIndex: fileIndex + 1
-      });
-    });
-  }
-  handleNewFile() {
-    if (!this.props.vm.editingTarget) {
-      return null;
-    }
-    // TODO: vm.files doesnt exist
-    const files = this.props.vm.files ? this.props.vm.files : [];
-    this.setState({
-      selectedFileIndex: Math.max(files.length - 1, 0)
-    });
-  }
-  handleFileUploadClick() {
-    this.fileInput.click();
-  }
-  handleExternalFileUpload(e) {
-    const storage = this.props.vm.runtime.storage;
-    const targetId = this.props.vm.editingTarget.id;
-    this.props.onShowImporting();
-    Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__["handleFileUpload"])(e.target, (buffer, fileType, fileName, fileIndex, fileCount) => {
-      Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__["externalFileUpload"])(buffer, fileType, storage, newFile => {
-        newFile.name = fileName;
-        // TODO: addFile isnt a function
-        this.props.vm.addFile(newFile, targetId).then(() => {
-          this.handleNewFile();
-          if (fileIndex === fileCount - 1) {
-            this.props.onCloseImporting();
-          }
-        });
-      }, this.props.onCloseImporting);
-    }, this.props.onCloseImporting);
+  // Get the current editing target (sprite or stage)
+  let target = null;
+  let isStage = false;
+  if (stage && stage.id === editingTarget) {
+    target = stage;
+    isStage = true;
+  } else if (editingTarget && sprites[editingTarget]) {
+    target = sprites[editingTarget];
+    isStage = false;
   }
 
-  // handleDrop(dropInfo) {
-  //     if (dropInfo.dragType === DragConstants.SOUND) {
-  //         const sprite = this.props.vm.editingTarget.sprite;
-  //         const activeSound = sprite.sounds[this.state.selectedSoundIndex];
+  // For sprites: show their costumes and sounds
+  // For stage: show backdrops (stage.costumes) and sounds
+  const costumes = isStage ? [] : ((_target = target) === null || _target === void 0 ? void 0 : _target.costumes) || [];
+  const sounds = ((_target2 = target) === null || _target2 === void 0 ? void 0 : _target2.sounds) || [];
+  const backdrops = isStage ? ((_target3 = target) === null || _target3 === void 0 ? void 0 : _target3.costumes) || [] : [];
 
-  //         this.props.vm.reorderSound(this.props.vm.editingTarget.id,
-  //             dropInfo.index, dropInfo.newIndex);
+  // Collect ALL assets from the entire project
+  const allGlobalCostumes = [];
+  const allGlobalSounds = [];
+  const allGlobalBackdrops = (stage === null || stage === void 0 ? void 0 : stage.costumes) || [];
 
-  //         this.setState({ selectedSoundIndex: sprite.sounds.indexOf(activeSound) });
-  //     } else if (dropInfo.dragType === DragConstants.BACKPACK_COSTUME) {
-  //         this.props.onActivateCostumesTab();
-  //         this.props.vm.addCostume(dropInfo.payload.body, {
-  //             name: dropInfo.payload.name
-  //         });
-  //     } else if (dropInfo.dragType === DragConstants.BACKPACK_SOUND) {
-  //         this.props.vm.addSound({
-  //             md5: dropInfo.payload.body,
-  //             name: dropInfo.payload.name
-  //         }).then(this.handleNewSound);
-  //     }
-  // }
-
-  setFileInput(input) {
-    this.fileInput = input;
+  // Add stage sounds
+  if (stage !== null && stage !== void 0 && stage.sounds) {
+    allGlobalSounds.push(...stage.sounds.map(s => _objectSpread(_objectSpread({}, s), {}, {
+      owner: 'Stage'
+    })));
   }
-  render() {
-    const {
-      dispatchUpdateRestore,
-      // eslint-disable-line no-unused-vars
-      intl,
-      isRtl,
-      vm
-      // onNewSoundFromLibraryClick,
-      // onNewSoundFromRecordingClick
-    } = this.props;
-    if (!vm.editingTarget) {
-      return null;
-    }
-    const files = vm.files ? vm.files.map(file => ({
-      url: isRtl ? fileIconRtl : fileIcon,
-      name: file.name,
-      details: file.size,
-      dragPayload: file
-    })) : [];
-    const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_3__["defineMessages"])({
-      fileUploadExternal: {
-        "id": "pm.gui.filesTab.fileUploadExternal",
-        "defaultMessage": "Upload File"
-      },
-      fileNew: {
-        "id": "pm.gui.filesTab.fileNew",
-        "defaultMessage": "New File"
+
+  // Add all sprite costumes and sounds
+  if (sprites) {
+    Object.values(sprites).forEach(sprite => {
+      if (sprite.costumes) {
+        allGlobalCostumes.push(...sprite.costumes.map(c => _objectSpread(_objectSpread({}, c), {}, {
+          owner: sprite.name
+        })));
+      }
+      if (sprite.sounds) {
+        allGlobalSounds.push(...sprite.sounds.map(s => _objectSpread(_objectSpread({}, s), {}, {
+          owner: sprite.name
+        })));
       }
     });
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_asset_panel_asset_panel_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      buttons: [{
-        title: intl.formatMessage(messages.fileNew),
-        img: _components_asset_panel_icon_files_placeholder_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-        onClick: this.handleFileUploadClick // TODO: should make a new TXT file instead
-      }, {
-        title: intl.formatMessage(messages.fileUploadExternal),
-        img: _components_asset_panel_icon_files_placeholder_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-        onClick: this.handleFileUploadClick,
-        fileAccept: '.txt, .json',
-        fileChange: this.handleExternalFileUpload,
-        fileInput: this.setFileInput,
-        fileMultiple: true
-      }, {
-        title: intl.formatMessage(messages.fileNew),
-        img: _components_asset_panel_icon_files_placeholder_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-        onClick: this.handleFileUploadClick // TODO: should make a new TXT file instead
-      }]
-      // dragType={DragConstants.SOUND}
-      ,
-      isRtl: isRtl,
-      items: files,
-      selectedItemIndex: this.state.selectedFileIndex,
-      onDeleteClick: this.handleDeleteFile
-      // onDrop={this.handleDrop}
-      ,
-      onDuplicateClick: this.handleDuplicateFile,
-      onExportClick: this.handleDownloadFile,
-      onItemClick: this.handleSelectFile
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "erm, you dont see anything here"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-      width: "40",
-      height: "40",
-      src: _components_asset_panel_nord_png__WEBPACK_IMPORTED_MODULE_7___default.a,
-      alt: "Nord"
-    }));
   }
-}
-FilesTab.propTypes = {
-  dispatchUpdateRestore: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  editingTarget: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  intl: react_intl__WEBPACK_IMPORTED_MODULE_3__["intlShape"],
-  isRtl: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  // onActivateCostumesTab: PropTypes.func.isRequired,
-  onCloseImporting: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
-  // onNewSoundFromLibraryClick: PropTypes.func.isRequired,
-  // onNewSoundFromRecordingClick: PropTypes.func.isRequired,
-  // onRequestCloseSoundLibrary: PropTypes.func.isRequired,
-  onShowImporting: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
-  // soundLibraryVisible: PropTypes.bool,
-  // soundRecorderVisible: PropTypes.bool,
-  // sprites: PropTypes.shape({
-  //     id: PropTypes.shape({
-  //         sounds: PropTypes.arrayOf(PropTypes.shape({
-  //             name: PropTypes.string.isRequired
-  //         }))
-  //     })
-  // }),
-  // stage: PropTypes.shape({
-  //     sounds: PropTypes.arrayOf(PropTypes.shape({
-  //         name: PropTypes.string.isRequired
-  //     }))
-  // }),
-  vm: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_4___default.a).isRequired
+  return {
+    costumes,
+    sounds,
+    backdrops,
+    globalCostumes: allGlobalCostumes,
+    globalSounds: allGlobalSounds,
+    globalBackdrops: allGlobalBackdrops
+  };
 };
-const mapStateToProps = state => ({
-  editingTarget: state.scratchGui.targets.editingTarget,
-  isRtl: state.locales.isRtl
-  // sprites: state.scratchGui.targets.sprites,
-  // stage: state.scratchGui.targets.stage,
-  // soundLibraryVisible: state.scratchGui.modals.soundLibrary,
-  // soundRecorderVisible: state.scratchGui.modals.soundRecorder
-});
-const mapDispatchToProps = dispatch => ({
-  // onActivateCostumesTab: () => dispatch(activateTab(COSTUMES_TAB_INDEX)),
-  // onNewSoundFromLibraryClick: e => {
-  //     e.preventDefault();
-  //     dispatch(openSoundLibrary());
-  // },
-  // onNewSoundFromRecordingClick: () => {
-  //     dispatch(openSoundRecorder());
-  // },
-  // onRequestCloseSoundLibrary: () => {
-  //     dispatch(closeSoundLibrary());
-  // },
-  dispatchUpdateRestore: restoreState => {
-    dispatch(Object(_reducers_restore_deletion__WEBPACK_IMPORTED_MODULE_12__["setRestore"])(restoreState));
-  },
-  onCloseImporting: () => dispatch(Object(_reducers_alerts__WEBPACK_IMPORTED_MODULE_13__["closeAlertWithId"])('importingAsset')),
-  onShowImporting: () => dispatch(Object(_reducers_alerts__WEBPACK_IMPORTED_MODULE_13__["showStandardAlert"])('importingAsset'))
-});
-/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_9__["default"])('Files Tab')(Object(react_intl__WEBPACK_IMPORTED_MODULE_3__["injectIntl"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_11__["connect"])(mapStateToProps, mapDispatchToProps)(FilesTab))));
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const vm = ownProps.vm;
+  return {
+    onExportAsset: (asset, index) => {
+      if (!asset || !asset.asset) return;
+
+      // Get the asset data
+      const assetData = asset.asset.data || asset.asset;
+
+      // Determine the file extension
+      const extension = asset.dataFormat || 'dat';
+      const fileName = "".concat(asset.name, ".").concat(extension);
+
+      // Create a blob from the asset data
+      let blob;
+      if (assetData instanceof Uint8Array || assetData instanceof ArrayBuffer) {
+        blob = new Blob([assetData]);
+      } else if (typeof assetData === 'string') {
+        // For SVG or text-based assets
+        blob = new Blob([assetData], {
+          type: 'text/plain'
+        });
+      } else {
+        console.error('Unknown asset data type');
+        return;
+      }
+
+      // Download the file
+      Object(_lib_download_blob__WEBPACK_IMPORTED_MODULE_3__["default"])(fileName, blob);
+    }
+  };
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_1__["injectIntl"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_components_files_tab_files_tab_jsx__WEBPACK_IMPORTED_MODULE_2__["default"])));
 
 /***/ }),
 
@@ -43267,6 +43413,14 @@ const menuItems = [{
   iconURL: 'https://extensions.arkide.site/images/Ark/jsonant.svg',
   tags: ['penguinmod'],
   description: 'A nice extension that adds useful operation blocks for Json Number Arrays.',
+  extDeveloper: 'Ark',
+  featured: true
+}, {
+  name: 'ArkIDE Console',
+  extensionId: 'https://extensions.arkide.site/extensions/Ark/arkide-console.js',
+  iconURL: 'https://extensions.arkide.site/images/Ark/console.svg',
+  tags: ['penguinmod'],
+  description: 'Add a console to your project to log messages, errors, and warnings.',
   extDeveloper: 'Ark',
   featured: true
 }, {

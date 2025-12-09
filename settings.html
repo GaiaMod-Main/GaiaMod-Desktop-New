@@ -248,7 +248,7 @@
       
       <div class="version-info">
         <span class="version-label">Current Version:</span>
-        <span class="version-value" id="current-version">v2.6.0</span>
+        <span class="version-value" id="current-version">v2.7.0</span>
       </div>
 
       <div class="version-info">
@@ -286,7 +286,7 @@
 
     <div class="footer">
       <p class="footer">Made with <3 by the ArkIDE Team </p>
-      <p class="footer">Icarus Version: 2.6.0 | Kronos Version: <span id="kronos-version">[GHCOMMIT]</span></p>
+      <p class="footer">Icarus Version: 2.7.0 | Kronos Version: <span id="kronos-version">[GHCOMMIT]</span></p>
     </div>
   </div>
 
@@ -368,7 +368,7 @@
           const currentVersion = result.currentVersion;
           const latestVersion = result.latestVersion;
           
-          // Simple version comparison (works for semantic versioning like 2.6.0)
+          // Simple version comparison (works for semantic versioning like 2.7.0)
           const isAhead = currentVersion.localeCompare(latestVersion, undefined, { numeric: true, sensitivity: 'base' }) > 0;
 
           if (isAhead) {
