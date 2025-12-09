@@ -3092,7 +3092,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .settings-modal_modal-content_2bE7f {\n    max-width: max(60%, 750px);\n} .settings-modal_body_cAUJ0 {\n    background: rgba(255, 255, 255, 0.85); /* Made semi-transparent */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n    padding: 1.5rem 2.25rem;\n    min-height: 150px;\n    max-height: calc(100vh - 250px);\n    overflow-y: auto;\n} [theme=\"dark\"] .settings-modal_body_cAUJ0 {\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n    background: rgba(17, 17, 17, 0.74); /* Made semi-transparent - adjust if needed */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n} /* For small screens, such as in the embed */ @media (max-height: 600px) {\n    .settings-modal_modal-content_2bE7f {\n        margin: 50px auto;\n    }\n    .settings-modal_body_cAUJ0 {\n        max-height: calc(100vh - 150px);\n    }\n} .settings-modal_setting_PxhNM {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n} .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #dbebff;\n} .settings-modal_setting_PxhNM:hover,\n.settings-modal_setting_PxhNM:focus-within {\n    background: #cadef5;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #1e162c71;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM:hover,\n[theme=\"dark\"] .settings-modal_setting_PxhNM:focus-within {\n    background: #2d2041a1;\n} .settings-modal_label_2Phuq {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n} .settings-modal_label-unset-height_3uoDx {\n    height: initial;\n} .settings-modal_setting_PxhNM table {\n    border-collapse: collapse;\n} .settings-modal_setting_PxhNM tr,\n.settings-modal_setting_PxhNM td,\n.settings-modal_setting_PxhNM th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_checkbox_1dXwG {\n    margin-right: 0.5rem;\n} .settings-modal_help-icon_2FTix {\n    border: 0;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./help-black.svg */ "./src/components/tw-settings-modal/help-black.svg")) + ");\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n} [theme=\"dark\"] .settings-modal_help-icon_2FTix {\n    background-image: url(" + escape(__webpack_require__(/*! ./help-white.svg */ "./src/components/tw-settings-modal/help-white.svg")) + ");\n} .settings-modal_custom-stage-size_3I0AA {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    height: initial;\n} .settings-modal_custom-stage-size-container_2OBYk {\n    display: flex;\n    align-items: center;\n} .settings-modal_custom-stage-size_3I0AA > * {\n    margin-right: 0.5rem;\n} .settings-modal_custom-stage-size-button_3koc0 {\n    margin: 8px;\n    background: white;\n    border-radius: 10px;\n    font-size: 40px;\n    width: 168px;\n    height: 126px;\n    border: 4px solid rgba(0, 0, 0, 0.1);\n    outline: 4px white solid;\n} [theme=\"dark\"] .settings-modal_custom-stage-size-button_3koc0 {\n    outline-color: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    background: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    border-color: rgba(255, 255, 255, 0.1);\n} .settings-modal_custom-stage-size-button_3koc0[data-widescreen=\"true\"] {\n    width: 224px;\n} .settings-modal_custom-stage-size-button_3koc0[data-square=\"true\"] {\n    width: 126px;\n} .settings-modal_custom-stage-size-button_3koc0[data-selected=\"true\"] {\n    border-color: hsla(261, 100%, 50%, 1);\n} .settings-modal_custom-stage-size-button_3koc0:active {\n    border-color: hsla(261, 100%, 50%, 0.35);\n} .settings-modal_custom-stage-size-input_2ivQT {\n    width: 80px;\n    margin: 3px 8px;\n} .settings-modal_info_1a5yx {\n    margin-bottom: 0.25rem;\n} .settings-modal_header_3lDNd {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n} .settings-modal_divider_7euKA {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_button_15QCA {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: hsla(261, 100%, 50%, 1);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n} .settings-modal_button_15QCA:active, .settings-modal_button_15QCA:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n} .settings-modal_warning_2xSC8 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(255, 197, 38);\n    color: black;\n} [theme=\"dark\"] .settings-modal_warning_2xSC8 {\n    background: rgb(114, 65, 0);\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_summary_jE5Vl {\n    cursor: pointer;\n} .settings-modal_dropdown_JkJtU {\n    margin-right: 4px;\n} details[open] .settings-modal_dropdown_JkJtU {\n    transform: rotate(90deg);\n}", ""]);
+exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .settings-modal_modal-content_2bE7f {\n    max-width: max(60%, 750px);\n} .settings-modal_body_cAUJ0 {\n    background: rgba(255, 255, 255, 0.85); /* Made semi-transparent */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n    padding: 1.5rem 2.25rem;\n    min-height: 150px;\n    max-height: calc(100vh - 250px);\n    overflow-y: auto;\n} [theme=\"dark\"] .settings-modal_body_cAUJ0 {\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n    background: rgba(17, 17, 17, 0.74); /* Made semi-transparent - adjust if needed */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n} /* For small screens, such as in the embed */ @media (max-height: 600px) {\n    .settings-modal_modal-content_2bE7f {\n        margin: 50px auto;\n    }\n    .settings-modal_body_cAUJ0 {\n        max-height: calc(100vh - 150px);\n    }\n} .settings-modal_setting_PxhNM {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n} .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #dbebff;\n} .settings-modal_setting_PxhNM:hover,\n.settings-modal_setting_PxhNM:focus-within {\n    background: #cadef5;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #1e162c71;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM:hover,\n[theme=\"dark\"] .settings-modal_setting_PxhNM:focus-within {\n    background: #2d2041a1;\n} .settings-modal_label_2Phuq {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n} .settings-modal_label-unset-height_3uoDx {\n    height: initial;\n} .settings-modal_setting_PxhNM table {\n    border-collapse: collapse;\n} .settings-modal_setting_PxhNM tr,\n.settings-modal_setting_PxhNM td,\n.settings-modal_setting_PxhNM th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_checkbox_1dXwG {\n    margin-right: 0.5rem;\n} .settings-modal_help-icon_2FTix {\n    border: 0;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./help-black.svg */ "./src/components/tw-settings-modal/help-black.svg")) + ");\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n} [theme=\"dark\"] .settings-modal_help-icon_2FTix {\n    background-image: url(" + escape(__webpack_require__(/*! ./help-white.svg */ "./src/components/tw-settings-modal/help-white.svg")) + ");\n} .settings-modal_custom-stage-size_3I0AA {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    height: initial;\n} .settings-modal_custom-stage-size-container_2OBYk {\n    display: flex;\n    align-items: center;\n} .settings-modal_custom-stage-size_3I0AA > * {\n    margin-right: 0.5rem;\n} .settings-modal_custom-stage-size-button_3koc0 {\n    margin: 8px;\n    background: white;\n    border-radius: 10px;\n    font-size: 40px;\n    width: 168px;\n    height: 126px;\n    border: 4px solid rgba(0, 0, 0, 0.1);\n    outline: 4px white solid;\n} [theme=\"dark\"] .settings-modal_custom-stage-size-button_3koc0 {\n    outline-color: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    background: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    border-color: rgba(255, 255, 255, 0.1);\n} .settings-modal_custom-stage-size-button_3koc0[data-widescreen=\"true\"] {\n    width: 224px;\n} .settings-modal_custom-stage-size-button_3koc0[data-square=\"true\"] {\n    width: 126px;\n} .settings-modal_custom-stage-size-button_3koc0[data-selected=\"true\"] {\n    border-color: hsla(261, 100%, 50%, 1);\n} .settings-modal_custom-stage-size-button_3koc0:active {\n    border-color: hsla(261, 100%, 50%, 0.35);\n} .settings-modal_custom-stage-size-input_2ivQT {\n    width: 80px;\n    margin: 3px 8px;\n} .settings-modal_info_1a5yx {\n    margin-bottom: 0.25rem;\n} .settings-modal_header_3lDNd {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n} .settings-modal_divider_7euKA {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_button_15QCA {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: hsla(261, 100%, 50%, 1);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n} .settings-modal_button_15QCA:active, .settings-modal_button_15QCA:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n} .settings-modal_warning_2xSC8 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(255, 197, 38);\n    color: black;\n} [theme=\"dark\"] .settings-modal_warning_2xSC8 {\n    background: rgb(114, 65, 0);\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_summary_jE5Vl {\n    cursor: pointer;\n} .settings-modal_dropdown_JkJtU {\n    margin-right: 4px;\n} details[open] .settings-modal_dropdown_JkJtU {\n    transform: rotate(90deg);\n} /* Project Size Tracker Styles */ .settings-modal_project-size-container_3h_2S {\n    padding: 1rem;\n    margin: 0.5rem 0;\n    border-radius: 6px;\n    background: rgba(115, 76, 255, 0.1);\n    border: 2px solid rgba(76, 151, 255, 0.3);\n} [theme=\"dark\"] .settings-modal_project-size-container_3h_2S {\n    background: rgba(139, 76, 255, 0.15);\n    border-color: rgba(115, 76, 255, 0.4);\n} .settings-modal_project-size-header_1YrhY {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-value_WKeoW {\n    font-size: 1.25rem;\n    color: hsla(261, 100%, 50%, 1);\n} [theme=\"dark\"] .settings-modal_project-size-value_WKeoW {\n    color: #8c6cff;\n} .settings-modal_project-size-bar-container_174EJ {\n    position: relative;\n    width: 100%;\n    height: 24px;\n    background: rgba(0, 0, 0, 0.1);\n    border-radius: 12px;\n    overflow: hidden;\n    margin-bottom: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-bar-container_174EJ {\n    background: rgba(255, 255, 255, 0.1);\n} .settings-modal_project-size-bar_24e50 {\n    height: 100%;\n    border-radius: 12px;\n    transition: all 0.3s ease;\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    padding-right: 8px;\n    color: white;\n    font-size: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-bar-safe_3KHc_ {\n    background: linear-gradient(90deg, #7c4cff, #b05cff);\n} .settings-modal_project-size-bar-warning_1v3v7 {\n    background: linear-gradient(90deg, #ffab19, #ffc837);\n} .settings-modal_project-size-bar-danger_3i1sa {\n    background: linear-gradient(90deg, #ff6680, #ff8fa3);\n} .settings-modal_project-size-info_3ObpS {\n    font-size: 0.875rem;\n    color: #575E75;\n    margin-top: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-info_3ObpS {\n    color: #aaa;\n} .settings-modal_project-size-warning-text_1AIn2 {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 171, 25, 0.2);\n    border: 1px solid rgba(255, 171, 25, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-warning-text_1AIn2 {\n    background: rgba(255, 171, 25, 0.15);\n    border-color: rgba(255, 171, 25, 0.4);\n} .settings-modal_project-size-danger-text_2Kyof {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 102, 128, 0.2);\n    border: 1px solid rgba(255, 102, 128, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-danger-text_2Kyof {\n    background: rgba(255, 102, 128, 0.15);\n    border-color: rgba(255, 102, 128, 0.4);\n}", ""]);
 
 // exports
 exports.locals = {
@@ -3121,7 +3121,29 @@ exports.locals = {
 	"button": "settings-modal_button_15QCA",
 	"warning": "settings-modal_warning_2xSC8",
 	"summary": "settings-modal_summary_jE5Vl",
-	"dropdown": "settings-modal_dropdown_JkJtU"
+	"dropdown": "settings-modal_dropdown_JkJtU",
+	"project-size-container": "settings-modal_project-size-container_3h_2S",
+	"projectSizeContainer": "settings-modal_project-size-container_3h_2S",
+	"project-size-header": "settings-modal_project-size-header_1YrhY",
+	"projectSizeHeader": "settings-modal_project-size-header_1YrhY",
+	"project-size-value": "settings-modal_project-size-value_WKeoW",
+	"projectSizeValue": "settings-modal_project-size-value_WKeoW",
+	"project-size-bar-container": "settings-modal_project-size-bar-container_174EJ",
+	"projectSizeBarContainer": "settings-modal_project-size-bar-container_174EJ",
+	"project-size-bar": "settings-modal_project-size-bar_24e50",
+	"projectSizeBar": "settings-modal_project-size-bar_24e50",
+	"project-size-bar-safe": "settings-modal_project-size-bar-safe_3KHc_",
+	"projectSizeBarSafe": "settings-modal_project-size-bar-safe_3KHc_",
+	"project-size-bar-warning": "settings-modal_project-size-bar-warning_1v3v7",
+	"projectSizeBarWarning": "settings-modal_project-size-bar-warning_1v3v7",
+	"project-size-bar-danger": "settings-modal_project-size-bar-danger_3i1sa",
+	"projectSizeBarDanger": "settings-modal_project-size-bar-danger_3i1sa",
+	"project-size-info": "settings-modal_project-size-info_3ObpS",
+	"projectSizeInfo": "settings-modal_project-size-info_3ObpS",
+	"project-size-warning-text": "settings-modal_project-size-warning-text_1AIn2",
+	"projectSizeWarningText": "settings-modal_project-size-warning-text_1AIn2",
+	"project-size-danger-text": "settings-modal_project-size-danger-text_2Kyof",
+	"projectSizeDangerText": "settings-modal_project-size-danger-text_2Kyof"
 };
 
 /***/ }),
@@ -22701,10 +22723,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tw_documentation_link_documentation_link_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../tw-documentation-link/documentation-link.jsx */ "./src/components/tw-documentation-link/documentation-link.jsx");
 /* harmony import */ var _settings_modal_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./settings-modal.css */ "./src/components/tw-settings-modal/settings-modal.css");
 /* harmony import */ var _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_settings_modal_css__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var scratch_vm__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! scratch-vm */ "./node_modules/scratch-vm/src/index.js");
+/* harmony import */ var scratch_vm__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(scratch_vm__WEBPACK_IMPORTED_MODULE_12__);
 const _excluded = ["value", "onChange", "label"];
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
 function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
+
 
 
 
@@ -23054,6 +23079,117 @@ const Header = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.
 Header.propTypes = {
   children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node
 };
+const ProjectSizeTracker = _ref4 => {
+  let {
+    vm
+  } = _ref4;
+  const [projectSize, setProjectSize] = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(0);
+  react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(() => {
+    const calculateSize = () => {
+      if (!vm || !vm.runtime) {
+        return 0;
+      }
+      if (!vm || !vm.runtime) return 0;
+      let totalSize = 0;
+      const processedAssets = new Set();
+      const getAssetSize = asset => {
+        if (!asset) return 0;
+        if (asset.size) return asset.size;
+        if (asset.data) return asset.data.length || asset.data.byteLength || 0;
+        return 0;
+      };
+      if (vm.runtime.targets) {
+        vm.runtime.targets.forEach(target => {
+          if (target.sprite && target.sprite.costumes) {
+            target.sprite.costumes.forEach(costume => {
+              const assetId = costume.assetId || costume.md5;
+              if (assetId && !processedAssets.has(assetId)) {
+                processedAssets.add(assetId);
+                totalSize += getAssetSize(costume.asset);
+              }
+            });
+          }
+          if (target.sprite && target.sprite.sounds) {
+            target.sprite.sounds.forEach(sound => {
+              const assetId = sound.assetId || sound.md5;
+              if (assetId && !processedAssets.has(assetId)) {
+                processedAssets.add(assetId);
+                totalSize += getAssetSize(sound.asset);
+              }
+            });
+          }
+        });
+      }
+      const scriptEstimate = vm.runtime.targets ? vm.runtime.targets.length * 5000 : 10000;
+      totalSize += scriptEstimate;
+      return totalSize;
+    };
+    const updateSize = () => {
+      const size = calculateSize();
+      setProjectSize(size);
+    };
+    updateSize();
+    const interval = setInterval(updateSize, 2000);
+    return () => clearInterval(interval);
+  }, [vm]);
+  const formatBytes = bytes => {
+    if (bytes === 0) return '0 B';
+    if (bytes < 1024) return "".concat(bytes, " B");
+    if (bytes < 1024 * 1024) return "".concat((bytes / 1024).toFixed(2), " KB");
+    return "".concat((bytes / (1024 * 1024)).toFixed(2), " MB");
+  };
+  const UPLOAD_LIMIT = 64 * 1024 * 1024;
+  const percentage = Math.min(projectSize / UPLOAD_LIMIT * 100, 100);
+  const isNearLimit = percentage > 80 && percentage <= 100;
+  const isOverLimit = projectSize > UPLOAD_LIMIT;
+  let barClass = _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeBarSafe;
+  if (isOverLimit) {
+    barClass = _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeBarDanger;
+  } else if (isNearLimit) {
+    barClass = _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeBarWarning;
+  }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeHeader
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Project Size",
+    id: "pm.settingsModal.projectSize"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeValue
+  }, formatBytes(projectSize))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeBarContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeBar, barClass),
+    style: {
+      width: "".concat(percentage, "%")
+    }
+  }, percentage > 15 && "".concat(percentage.toFixed(1), "%"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "This is a tracker to make sure that your project stays under the upload limit for ArkIDE Home.",
+    id: "pm.settingsModal.sizedisc"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeInfo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Upload limit for ArkIDE: {limit}",
+    id: "pm.settingsModal.uploadLimit",
+    values: {
+      limit: formatBytes(UPLOAD_LIMIT)
+    }
+  })), isOverLimit && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeDangerText
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "\u26A0\uFE0F Your project is over the 64MB upload limit. You won't be able to upload this project to the ArkIDE website until you reduce its size by removing unused costumes or sounds.",
+    id: "pm.settingsModal.overLimitWarning"
+  })), isNearLimit && !isOverLimit && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.projectSizeWarningText
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "\u26A0\uFE0F Your project is approaching the 64MB upload limit. Consider removing unused assets to stay under the limit.",
+    id: "pm.settingsModal.nearLimitWarning"
+  })));
+};
+ProjectSizeTracker.propTypes = {
+  vm: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_12___default.a).isRequired
+};
 const SettingsModalComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_containers_modal_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
   className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.modalContent,
   onRequestClose: function onRequestClose() {
@@ -23106,7 +23242,12 @@ const SettingsModalComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MOD
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
   defaultMessage: "Screen Resolution",
   id: "pm.settingsModal.screenResolution"
-})), !props.isEmbedded && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomStageSize, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("details", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("summary", {
+})), !props.isEmbedded && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomStageSize, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+  defaultMessage: "Project Information",
+  id: "pm.settingsModal.projectInfo"
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ProjectSizeTracker, {
+  vm: props.vm
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("details", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("summary", {
   className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.summary
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
   className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.dropdown
@@ -23128,6 +23269,7 @@ SettingsModalComponent.propTypes = {
   intl: react_intl__WEBPACK_IMPORTED_MODULE_0__["intlShape"],
   onClose: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   isEmbedded: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  vm: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_12___default.a),
   framerate: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   onFramerateChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   onCustomizeFramerate: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
@@ -35799,7 +35941,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reducers_modals__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/modals */ "./src/reducers/modals.js");
 /* harmony import */ var _components_tw_settings_modal_settings_modal_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/tw-settings-modal/settings-modal.jsx */ "./src/components/tw-settings-modal/settings-modal.jsx");
 /* harmony import */ var _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../reducers/custom-stage-size */ "./src/reducers/custom-stage-size.js");
-const _excluded = ["onClose", "vm"];
+const _excluded = ["onClose"];
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
 function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
@@ -35906,12 +36048,14 @@ class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
     const _this$props = this.props,
       {
         /* eslint-disable no-unused-vars */
-        onClose,
-        vm
+        onClose
+        // vm,  // REMOVE this line - don't destructure vm separately
         /* eslint-enable no-unused-vars */
       } = _this$props,
       props = _objectWithoutProperties(_this$props, _excluded);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_tw_settings_modal_settings_modal_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], _extends({
+      vm: this.props.vm // ADD this line - explicitly pass vm
+      ,
       onClose: this.props.onClose,
       onFramerateChange: this.handleFramerateChange,
       onCustomizeFramerate: this.handleCustomizeFramerate,
