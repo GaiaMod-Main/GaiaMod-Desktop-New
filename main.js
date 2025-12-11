@@ -10,7 +10,7 @@ let discordClient = null;
 let discordConnected = false;
 let updateAvailable = false;
 
-const APP_VERSION = '2.7.1';
+const APP_VERSION = '2.8.0';
 const DISCORD_CLIENT_ID = '1442337181208281239';
 
 // Initialize Discord RPC
