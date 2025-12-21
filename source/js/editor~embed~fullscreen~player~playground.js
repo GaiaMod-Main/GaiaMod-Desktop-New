@@ -44254,11 +44254,11 @@ const menuItems = [{
 }, {
   // not really an extension, but it's easiest to present it as one
   name: 'ExtForge',
-  href: 'https://jwklong.github.io/extforge',
+  href: 'https://extforge.arkide.site/',
   extensionId: 'special_extforge',
   iconURL: _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_40___default.a,
   description: 'Create extensions with a block-based UI.',
-  extDeveloper: 'jwklong',
+  extDeveloper: 'jwklong (Updated by Arc360)',
   isNew: true,
   tags: ['extcreate'],
   featured: true
@@ -45506,7 +45506,7 @@ module.exports = __webpack_require__.p + "static/assets/73077ae1577fa8af2e8544e1
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/assets/49a8736bf7fbb79e2469272f127e06d3.svg";
+module.exports = __webpack_require__.p + "static/assets/9d9a74851725a66ad00813089c3d00ab.svg";
 
 /***/ }),
 
