@@ -51182,15 +51182,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var scratch_vm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(scratch_vm__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _log__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./log */ "./src/lib/log.js");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
-/* harmony import */ var _reducers_tw__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../reducers/tw */ "./src/reducers/tw.js");
-/* harmony import */ var _reducers_project_state__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../reducers/project-state */ "./src/reducers/project-state.js");
-/* harmony import */ var _reducers_mode__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../reducers/mode */ "./src/reducers/mode.js");
-/* harmony import */ var _tw_username__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tw-username */ "./src/lib/tw-username.js");
-/* harmony import */ var _tw_navigation_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tw-navigation-utils */ "./src/lib/tw-navigation-utils.js");
-/* harmony import */ var _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../reducers/custom-stage-size */ "./src/reducers/custom-stage-size.js");
+/* harmony import */ var _containers_tw_security_manager_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../containers/tw-security-manager.jsx */ "./src/containers/tw-security-manager.jsx");
+/* harmony import */ var _reducers_tw__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../reducers/tw */ "./src/reducers/tw.js");
+/* harmony import */ var _reducers_project_state__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../reducers/project-state */ "./src/reducers/project-state.js");
+/* harmony import */ var _reducers_mode__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../reducers/mode */ "./src/reducers/mode.js");
+/* harmony import */ var _tw_username__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tw-username */ "./src/lib/tw-username.js");
+/* harmony import */ var _tw_navigation_utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./tw-navigation-utils */ "./src/lib/tw-navigation-utils.js");
+/* harmony import */ var _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../reducers/custom-stage-size */ "./src/reducers/custom-stage-size.js");
 const _excluded = ["intl", "customStageSize", "isFullScreen", "isPlayerOnly", "isEmbedded", "projectChanged", "compilerOptions", "runtimeOptions", "highQualityPen", "framerate", "interpolation", "turbo", "onSetIsFullScreen", "onSetIsPlayerOnly", "onSetProjectId", "onSetUsername", "reduxProjectId", "routingStyle", "username", "vm"];
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
 function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
+
 
 
 
@@ -51267,7 +51269,7 @@ class Router {
 }
 class HashRouter extends Router {
   onhashchange() {
-    this.onSetProjectId(readHashProjectId() || _reducers_project_state__WEBPACK_IMPORTED_MODULE_8__["defaultProjectId"]);
+    this.onSetProjectId(readHashProjectId() || _reducers_project_state__WEBPACK_IMPORTED_MODULE_9__["defaultProjectId"]);
   }
   generateURL(_ref2) {
     let {
@@ -51365,7 +51367,7 @@ class WildcardRouter extends Router {
       if (id) {
         this.onSetProjectId(id);
       } else {
-        this.onSetProjectId(_reducers_project_state__WEBPACK_IMPORTED_MODULE_8__["defaultProjectId"]);
+        this.onSetProjectId(_reducers_project_state__WEBPACK_IMPORTED_MODULE_9__["defaultProjectId"]);
       }
     };
     const parsePageType = type => {
@@ -51389,7 +51391,7 @@ class WildcardRouter extends Router {
       parseProjectId(parts[0]);
       parsePageType(parts[1]);
     } else {
-      this.onSetProjectId(_reducers_project_state__WEBPACK_IMPORTED_MODULE_8__["defaultProjectId"]);
+      this.onSetProjectId(_reducers_project_state__WEBPACK_IMPORTED_MODULE_9__["defaultProjectId"]);
       parsePageType(parts[0]);
     }
   }
@@ -51478,7 +51480,7 @@ const TWStateManager = function TWStateManager(WrappedComponent) {
       } else {
         const persistentUsername = this.props.isEmbedded ? null : getLocalStorage(USERNAME_KEY);
         if (persistentUsername === null) {
-          const randomUsername = Object(_tw_username__WEBPACK_IMPORTED_MODULE_10__["generateRandomUsername"])();
+          const randomUsername = Object(_tw_username__WEBPACK_IMPORTED_MODULE_11__["generateRandomUsername"])();
           this.props.onSetUsername(randomUsername);
           if (this.props.isEmbedded) {
             this.doNotPersistUsername = randomUsername;
@@ -51517,6 +51519,13 @@ const TWStateManager = function TWStateManager(WrappedComponent) {
         // force live tests to off no matter what
         this.props.vm.isLiveTest = false;
       }
+      const unsandboxed = urlParams.has('unsandboxed');
+      for (const extension of urlParams.getAll('extension')) {
+        if (unsandboxed) {
+          Object(_containers_tw_security_manager_jsx__WEBPACK_IMPORTED_MODULE_7__["manuallyTrustExtension"])(extension);
+        }
+        this.props.vm.extensionManager.loadExtensionURL(extension);
+      }
       if (urlParams.has('clones')) {
         const clones = +urlParams.get('clones');
         if (Number.isNaN(clones) || clones < 0) {
@@ -51551,9 +51560,6 @@ const TWStateManager = function TWStateManager(WrappedComponent) {
         this.props.vm.setRuntimeOptions({
           disableDirectionClamping: true
         });
-      }
-      for (const extension of urlParams.getAll('extension')) {
-        this.props.vm.extensionManager.loadExtensionURL(extension);
       }
       const routerCallbacks = {
         onSetProjectId: this.onSetProjectId,
@@ -51593,7 +51599,7 @@ const TWStateManager = function TWStateManager(WrappedComponent) {
           width,
           height
         } = this.props.customStageSize;
-        if (width === _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_12__["defaultStageSize"].width && height === _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_12__["defaultStageSize"].height) {
+        if (width === _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_13__["defaultStageSize"].width && height === _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_13__["defaultStageSize"].height) {
           searchParams.delete('size');
         } else {
           searchParams.set('size', "".concat(width, "x").concat(height));
@@ -51664,7 +51670,7 @@ const TWStateManager = function TWStateManager(WrappedComponent) {
         } else {
           searchParams.delete('nodirectionclamping');
         }
-        Object(_tw_navigation_utils__WEBPACK_IMPORTED_MODULE_11__["setSearchParams"])(searchParams);
+        Object(_tw_navigation_utils__WEBPACK_IMPORTED_MODULE_12__["setSearchParams"])(searchParams);
       }
     }
     componentWillUnmount() {
@@ -51783,10 +51789,10 @@ const TWStateManager = function TWStateManager(WrappedComponent) {
     vm: state.scratchGui.vm
   });
   const mapDispatchToProps = dispatch => ({
-    onSetIsFullScreen: isFullScreen => dispatch(Object(_reducers_mode__WEBPACK_IMPORTED_MODULE_9__["setFullScreen"])(isFullScreen)),
-    onSetIsPlayerOnly: isPlayerOnly => dispatch(Object(_reducers_mode__WEBPACK_IMPORTED_MODULE_9__["setPlayer"])(isPlayerOnly)),
-    onSetProjectId: projectId => dispatch(Object(_reducers_project_state__WEBPACK_IMPORTED_MODULE_8__["setProjectId"])(projectId)),
-    onSetUsername: username => dispatch(Object(_reducers_tw__WEBPACK_IMPORTED_MODULE_7__["setUsername"])(username))
+    onSetIsFullScreen: isFullScreen => dispatch(Object(_reducers_mode__WEBPACK_IMPORTED_MODULE_10__["setFullScreen"])(isFullScreen)),
+    onSetIsPlayerOnly: isPlayerOnly => dispatch(Object(_reducers_mode__WEBPACK_IMPORTED_MODULE_10__["setPlayer"])(isPlayerOnly)),
+    onSetProjectId: projectId => dispatch(Object(_reducers_project_state__WEBPACK_IMPORTED_MODULE_9__["setProjectId"])(projectId)),
+    onSetUsername: username => dispatch(Object(_reducers_tw__WEBPACK_IMPORTED_MODULE_8__["setUsername"])(username))
   });
   return Object(react_intl__WEBPACK_IMPORTED_MODULE_6__["injectIntl"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(StateManagerComponent));
 };
