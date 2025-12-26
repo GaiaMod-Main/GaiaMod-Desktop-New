@@ -7,7 +7,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openSettings: () => ipcRenderer.send('open-settings'),
   checkUpdates: () => ipcRenderer.invoke('check-updates'),
   openUrl: (url) => ipcRenderer.send('open-url', url),
-  enableDiscord: () => ipcRenderer.send('discord-enable'),
-  disableDiscord: () => ipcRenderer.send('discord-disable'),
+  enableDiscord: () => ipcRenderer.invoke('discord-enable'),
+  disableDiscord: () => ipcRenderer.invoke('discord-disable'),
   getDiscordStatus: () => ipcRenderer.invoke('discord-status')
 });
