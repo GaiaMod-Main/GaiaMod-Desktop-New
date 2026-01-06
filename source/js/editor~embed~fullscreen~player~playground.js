@@ -12343,6 +12343,11 @@ const CommunityButton = _ref => {
     className,
     onClick
   } = _ref;
+  // Check if 'fromprojectpage' is anywhere in the URL
+  const shouldHide = window.location.href.includes('fromprojectpage');
+
+  // Don't render the button if it should be hidden
+  if (shouldHide) return null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, _community_button_css__WEBPACK_IMPORTED_MODULE_6___default.a.communityButton),
     iconClassName: _community_button_css__WEBPACK_IMPORTED_MODULE_6___default.a.communityButtonIcon,
@@ -13192,7 +13197,7 @@ class MenuBar extends react__WEBPACK_IMPORTED_MODULE_7___default.a.Component {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_3__["FormattedMessage"], {
       defaultMessage: "Settings",
       id: "pm.menuBar.gameplaySettings"
-    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_divider_divider_jsx__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    })))), !window.location.href.includes('fromprojectpage') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_divider_divider_jsx__WEBPACK_IMPORTED_MODULE_14__["default"], {
       className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_menu_bar_css__WEBPACK_IMPORTED_MODULE_37___default.a.divider)
     }), this.props.canEditTitle ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_menu_bar_css__WEBPACK_IMPORTED_MODULE_37___default.a.menuBarItem, _menu_bar_css__WEBPACK_IMPORTED_MODULE_37___default.a.growable)
@@ -13203,7 +13208,7 @@ class MenuBar extends react__WEBPACK_IMPORTED_MODULE_7___default.a.Component {
       className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_menu_bar_css__WEBPACK_IMPORTED_MODULE_37___default.a.titleFieldGrowable)
     }))) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_menu_bar_css__WEBPACK_IMPORTED_MODULE_37___default.a.menuBarItem)
-    }, this.props.canRemix ? remixButton : []), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    }, this.props.canRemix ? remixButton : []), !window.location.href.includes('fromprojectpage') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_menu_bar_css__WEBPACK_IMPORTED_MODULE_37___default.a.menuBarItem, _menu_bar_css__WEBPACK_IMPORTED_MODULE_37___default.a.communityButtonWrapper)
     }, this.props.enableCommunity ? (this.props.isShowingProject || this.props.isUpdating) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_containers_project_watcher_jsx__WEBPACK_IMPORTED_MODULE_16__["default"], {
       onDoneUpdating: this.props.onSeeCommunity
@@ -18515,7 +18520,7 @@ StageHeaderComponent.defaultProps = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/assets/e73c3c9d236267ba684bc3817e62ae5f.svg";
+module.exports = __webpack_require__.p + "static/assets/7819e857765b42ae0d0b7e9318a6c174.svg";
 
 /***/ }),
 
@@ -43395,6 +43400,17 @@ module.exports = __webpack_require__.p + "static/assets/6608d56b3dce2738b2b13756
 
 /***/ }),
 
+/***/ "./src/lib/libraries/extensions/faceSensing/thumb.png":
+/*!************************************************************!*\
+  !*** ./src/lib/libraries/extensions/faceSensing/thumb.png ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/assets/4851d7c79a543911b338f4f87a7f2f5d.png";
+
+/***/ }),
+
 /***/ "./src/lib/libraries/extensions/gallery/gallery.svg":
 /*!**********************************************************!*\
   !*** ./src/lib/libraries/extensions/gallery/gallery.svg ***!
@@ -43492,78 +43508,78 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ev3_ev3_small_svg__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_ev3_ev3_small_svg__WEBPACK_IMPORTED_MODULE_21__);
 /* harmony import */ var _ev3_ev3_hub_illustration_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./ev3/ev3-hub-illustration.svg */ "./src/lib/libraries/extensions/ev3/ev3-hub-illustration.svg");
 /* harmony import */ var _ev3_ev3_hub_illustration_svg__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_ev3_ev3_hub_illustration_svg__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./wedo2/wedo.png */ "./src/lib/libraries/extensions/wedo2/wedo.png");
-/* harmony import */ var _wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./wedo2/wedo-small.svg */ "./src/lib/libraries/extensions/wedo2/wedo-small.svg");
-/* harmony import */ var _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./wedo2/wedo-illustration.svg */ "./src/lib/libraries/extensions/wedo2/wedo-illustration.svg");
-/* harmony import */ var _wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_25__);
-/* harmony import */ var _wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./wedo2/wedo-button-illustration.svg */ "./src/lib/libraries/extensions/wedo2/wedo-button-illustration.svg");
-/* harmony import */ var _wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_26__);
-/* harmony import */ var _boost_boost_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./boost/boost.png */ "./src/lib/libraries/extensions/boost/boost.png");
-/* harmony import */ var _boost_boost_png__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_png__WEBPACK_IMPORTED_MODULE_27__);
-/* harmony import */ var _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./boost/boost-small.svg */ "./src/lib/libraries/extensions/boost/boost-small.svg");
-/* harmony import */ var _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./boost/boost-illustration.svg */ "./src/lib/libraries/extensions/boost/boost-illustration.svg");
-/* harmony import */ var _boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var _boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./boost/boost-button-illustration.svg */ "./src/lib/libraries/extensions/boost/boost-button-illustration.svg");
-/* harmony import */ var _boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var _gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./gdxfor/gdxfor.png */ "./src/lib/libraries/extensions/gdxfor/gdxfor.png");
-/* harmony import */ var _gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_31__);
-/* harmony import */ var _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./gdxfor/gdxfor-small.svg */ "./src/lib/libraries/extensions/gdxfor/gdxfor-small.svg");
-/* harmony import */ var _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(_gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_32__);
-/* harmony import */ var _gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./gdxfor/gdxfor-illustration.svg */ "./src/lib/libraries/extensions/gdxfor/gdxfor-illustration.svg");
-/* harmony import */ var _gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(_gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_33__);
-/* harmony import */ var _tw_tw_svg__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./tw/tw.svg */ "./src/lib/libraries/extensions/tw/tw.svg");
-/* harmony import */ var _tw_tw_svg__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(_tw_tw_svg__WEBPACK_IMPORTED_MODULE_34__);
-/* harmony import */ var _gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./gallery/gallery.svg */ "./src/lib/libraries/extensions/gallery/gallery.svg");
-/* harmony import */ var _gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(_gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_35__);
-/* harmony import */ var _custom_custom_svg__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./custom/custom.svg */ "./src/lib/libraries/extensions/custom/custom.svg");
-/* harmony import */ var _custom_custom_svg__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(_custom_custom_svg__WEBPACK_IMPORTED_MODULE_36__);
-/* harmony import */ var _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./penguinmod/extensions/turbowarp_icon.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/turbowarp_icon.svg");
-/* harmony import */ var _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37__);
-/* harmony import */ var _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./penguinmod/library.svg */ "./src/lib/libraries/extensions/penguinmod/library.svg");
-/* harmony import */ var _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_38__);
-/* harmony import */ var _penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./penguinmod/sharkpool-library.svg */ "./src/lib/libraries/extensions/penguinmod/sharkpool-library.svg");
-/* harmony import */ var _penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_39__);
-/* harmony import */ var _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./penguinmod/extforge.svg */ "./src/lib/libraries/extensions/penguinmod/extforge.svg");
-/* harmony import */ var _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_40__);
-/* harmony import */ var _penguinmod_turbobuilder_png__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./penguinmod/turbobuilder.png */ "./src/lib/libraries/extensions/penguinmod/turbobuilder.png");
-/* harmony import */ var _penguinmod_turbobuilder_png__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_turbobuilder_png__WEBPACK_IMPORTED_MODULE_41__);
-/* harmony import */ var _penguinmod_turbobuilder_dev_png__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./penguinmod/turbobuilder-dev.png */ "./src/lib/libraries/extensions/penguinmod/turbobuilder-dev.png");
-/* harmony import */ var _penguinmod_turbobuilder_dev_png__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_turbobuilder_dev_png__WEBPACK_IMPORTED_MODULE_42__);
-/* harmony import */ var _penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./penguinmod/extensions/files.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/files.svg");
-/* harmony import */ var _penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_43__);
-/* harmony import */ var _penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./penguinmod/extensions/json.png */ "./src/lib/libraries/extensions/penguinmod/extensions/json.png");
-/* harmony import */ var _penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_44__);
-/* harmony import */ var _penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./penguinmod/extensions/tailgating.png */ "./src/lib/libraries/extensions/penguinmod/extensions/tailgating.png");
-/* harmony import */ var _penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_45__);
-/* harmony import */ var _penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./penguinmod/extensions/runtime.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/runtime.svg");
-/* harmony import */ var _penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_46__);
-/* harmony import */ var _penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./penguinmod/extensions/prism.png */ "./src/lib/libraries/extensions/penguinmod/extensions/prism.png");
-/* harmony import */ var _penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_47___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_47__);
-/* harmony import */ var _penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./penguinmod/extensions/debugging.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/debugging.svg");
-/* harmony import */ var _penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_48___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_48__);
-/* harmony import */ var _penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./penguinmod/extensions/proto.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/proto.svg");
-/* harmony import */ var _penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_49___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_49__);
-/* harmony import */ var _penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./penguinmod/extensions/Unite.png */ "./src/lib/libraries/extensions/penguinmod/extensions/Unite.png");
-/* harmony import */ var _penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_50___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_50__);
-/* harmony import */ var _penguinmod_extensions_xml_png__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./penguinmod/extensions/xml.png */ "./src/lib/libraries/extensions/penguinmod/extensions/xml.png");
-/* harmony import */ var _penguinmod_extensions_xml_png__WEBPACK_IMPORTED_MODULE_51___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_xml_png__WEBPACK_IMPORTED_MODULE_51__);
-/* harmony import */ var _penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./penguinmod/extensions/ooplogo.png */ "./src/lib/libraries/extensions/penguinmod/extensions/ooplogo.png");
-/* harmony import */ var _penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_52___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_52__);
-/* harmony import */ var _penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./penguinmod/extensions/jwArray.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwArray.svg");
-/* harmony import */ var _penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_53___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_53__);
-/* harmony import */ var _penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./penguinmod/extensions/jwTargets.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwTargets.svg");
-/* harmony import */ var _penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_54___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_54__);
-/* harmony import */ var _penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./penguinmod/extensions/jwNum.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwNum.svg");
-/* harmony import */ var _penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_55___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_55__);
-/* harmony import */ var _penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./penguinmod/extensions/jwColor.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwColor.svg");
-/* harmony import */ var _penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_56___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_56__);
-/* harmony import */ var _penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./penguinmod/extensions/jwVector.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwVector.svg");
-/* harmony import */ var _penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_57___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_57__);
-/* harmony import */ var _penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./penguinmod/extensions/jwLambda.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwLambda.svg");
-/* harmony import */ var _penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_58___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_58__);
+/* harmony import */ var _faceSensing_thumb_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./faceSensing/thumb.png */ "./src/lib/libraries/extensions/faceSensing/thumb.png");
+/* harmony import */ var _faceSensing_thumb_png__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_faceSensing_thumb_png__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./wedo2/wedo.png */ "./src/lib/libraries/extensions/wedo2/wedo.png");
+/* harmony import */ var _wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./wedo2/wedo-small.svg */ "./src/lib/libraries/extensions/wedo2/wedo-small.svg");
+/* harmony import */ var _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./wedo2/wedo-illustration.svg */ "./src/lib/libraries/extensions/wedo2/wedo-illustration.svg");
+/* harmony import */ var _wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./wedo2/wedo-button-illustration.svg */ "./src/lib/libraries/extensions/wedo2/wedo-button-illustration.svg");
+/* harmony import */ var _wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _boost_boost_png__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./boost/boost.png */ "./src/lib/libraries/extensions/boost/boost.png");
+/* harmony import */ var _boost_boost_png__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_png__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./boost/boost-small.svg */ "./src/lib/libraries/extensions/boost/boost-small.svg");
+/* harmony import */ var _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./boost/boost-illustration.svg */ "./src/lib/libraries/extensions/boost/boost-illustration.svg");
+/* harmony import */ var _boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var _boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./boost/boost-button-illustration.svg */ "./src/lib/libraries/extensions/boost/boost-button-illustration.svg");
+/* harmony import */ var _boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var _gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./gdxfor/gdxfor.png */ "./src/lib/libraries/extensions/gdxfor/gdxfor.png");
+/* harmony import */ var _gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(_gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./gdxfor/gdxfor-small.svg */ "./src/lib/libraries/extensions/gdxfor/gdxfor-small.svg");
+/* harmony import */ var _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(_gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var _gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./gdxfor/gdxfor-illustration.svg */ "./src/lib/libraries/extensions/gdxfor/gdxfor-illustration.svg");
+/* harmony import */ var _gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(_gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var _tw_tw_svg__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./tw/tw.svg */ "./src/lib/libraries/extensions/tw/tw.svg");
+/* harmony import */ var _tw_tw_svg__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(_tw_tw_svg__WEBPACK_IMPORTED_MODULE_35__);
+/* harmony import */ var _gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./gallery/gallery.svg */ "./src/lib/libraries/extensions/gallery/gallery.svg");
+/* harmony import */ var _gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(_gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var _custom_custom_svg__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./custom/custom.svg */ "./src/lib/libraries/extensions/custom/custom.svg");
+/* harmony import */ var _custom_custom_svg__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(_custom_custom_svg__WEBPACK_IMPORTED_MODULE_37__);
+/* harmony import */ var _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./penguinmod/extensions/turbowarp_icon.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/turbowarp_icon.svg");
+/* harmony import */ var _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38__);
+/* harmony import */ var _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./penguinmod/library.svg */ "./src/lib/libraries/extensions/penguinmod/library.svg");
+/* harmony import */ var _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_39__);
+/* harmony import */ var _penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./penguinmod/sharkpool-library.svg */ "./src/lib/libraries/extensions/penguinmod/sharkpool-library.svg");
+/* harmony import */ var _penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_40__);
+/* harmony import */ var _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./penguinmod/extforge.svg */ "./src/lib/libraries/extensions/penguinmod/extforge.svg");
+/* harmony import */ var _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_41__);
+/* harmony import */ var _penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./penguinmod/extensions/files.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/files.svg");
+/* harmony import */ var _penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_42__);
+/* harmony import */ var _penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./penguinmod/extensions/json.png */ "./src/lib/libraries/extensions/penguinmod/extensions/json.png");
+/* harmony import */ var _penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_43__);
+/* harmony import */ var _penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./penguinmod/extensions/tailgating.png */ "./src/lib/libraries/extensions/penguinmod/extensions/tailgating.png");
+/* harmony import */ var _penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_44__);
+/* harmony import */ var _penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./penguinmod/extensions/runtime.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/runtime.svg");
+/* harmony import */ var _penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_45__);
+/* harmony import */ var _penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./penguinmod/extensions/prism.png */ "./src/lib/libraries/extensions/penguinmod/extensions/prism.png");
+/* harmony import */ var _penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_46__);
+/* harmony import */ var _penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./penguinmod/extensions/debugging.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/debugging.svg");
+/* harmony import */ var _penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_47___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_47__);
+/* harmony import */ var _penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./penguinmod/extensions/proto.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/proto.svg");
+/* harmony import */ var _penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_48___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_48__);
+/* harmony import */ var _penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./penguinmod/extensions/Unite.png */ "./src/lib/libraries/extensions/penguinmod/extensions/Unite.png");
+/* harmony import */ var _penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_49___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_49__);
+/* harmony import */ var _penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./penguinmod/extensions/ooplogo.png */ "./src/lib/libraries/extensions/penguinmod/extensions/ooplogo.png");
+/* harmony import */ var _penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_50___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_50__);
+/* harmony import */ var _penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./penguinmod/extensions/jwArray.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwArray.svg");
+/* harmony import */ var _penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_51___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_51__);
+/* harmony import */ var _penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./penguinmod/extensions/jwTargets.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwTargets.svg");
+/* harmony import */ var _penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_52___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_52__);
+/* harmony import */ var _penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./penguinmod/extensions/jwNum.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwNum.svg");
+/* harmony import */ var _penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_53___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_53__);
+/* harmony import */ var _penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./penguinmod/extensions/jwColor.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwColor.svg");
+/* harmony import */ var _penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_54___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_54__);
+/* harmony import */ var _penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./penguinmod/extensions/jwVector.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwVector.svg");
+/* harmony import */ var _penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_55___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_55__);
+/* harmony import */ var _penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./penguinmod/extensions/jwLambda.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwLambda.svg");
+/* harmony import */ var _penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_56___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_56__);
+/* harmony import */ var _penguinmod_extensions_jwScope_svg__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./penguinmod/extensions/jwScope.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwScope.svg");
+/* harmony import */ var _penguinmod_extensions_jwScope_svg__WEBPACK_IMPORTED_MODULE_57___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwScope_svg__WEBPACK_IMPORTED_MODULE_57__);
+/* harmony import */ var _penguinmod_extensions_jwXML_svg__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./penguinmod/extensions/jwXML.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/jwXML.svg");
+/* harmony import */ var _penguinmod_extensions_jwXML_svg__WEBPACK_IMPORTED_MODULE_58___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_jwXML_svg__WEBPACK_IMPORTED_MODULE_58__);
 /* harmony import */ var _penguinmod_extensions_perlinnoisebanner_png__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./penguinmod/extensions/perlinnoisebanner.png */ "./src/lib/libraries/extensions/penguinmod/extensions/perlinnoisebanner.png");
 /* harmony import */ var _penguinmod_extensions_perlinnoisebanner_png__WEBPACK_IMPORTED_MODULE_59___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_perlinnoisebanner_png__WEBPACK_IMPORTED_MODULE_59__);
 /* harmony import */ var _penguinmod_extensions_pmcamera_thumbnail_png__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./penguinmod/extensions/pmcamera_thumbnail.png */ "./src/lib/libraries/extensions/penguinmod/extensions/pmcamera_thumbnail.png");
@@ -43590,97 +43606,96 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _penguinmod_orgtw_TempVariables2_svg__WEBPACK_IMPORTED_MODULE_70___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_orgtw_TempVariables2_svg__WEBPACK_IMPORTED_MODULE_70__);
 /* harmony import */ var _penguinmod_extensions_tempvariables_svg__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./penguinmod/extensions/tempvariables.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/tempvariables.svg");
 /* harmony import */ var _penguinmod_extensions_tempvariables_svg__WEBPACK_IMPORTED_MODULE_71___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_tempvariables_svg__WEBPACK_IMPORTED_MODULE_71__);
-/* harmony import */ var _penguinmod_extensions_colorutil_png__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./penguinmod/extensions/colorutil.png */ "./src/lib/libraries/extensions/penguinmod/extensions/colorutil.png");
-/* harmony import */ var _penguinmod_extensions_colorutil_png__WEBPACK_IMPORTED_MODULE_72___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_colorutil_png__WEBPACK_IMPORTED_MODULE_72__);
-/* harmony import */ var _penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./penguinmod/extensions/iframe.png */ "./src/lib/libraries/extensions/penguinmod/extensions/iframe.png");
-/* harmony import */ var _penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_73___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_73__);
-/* harmony import */ var _penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./penguinmod/extensions/extendedaudio.png */ "./src/lib/libraries/extensions/penguinmod/extensions/extendedaudio.png");
-/* harmony import */ var _penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_74___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_74__);
-/* harmony import */ var _penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./penguinmod/extensions/scratchauth2.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/scratchauth2.svg");
-/* harmony import */ var _penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_75___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_75__);
-/* harmony import */ var _penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./penguinmod/extensions/permissions.png */ "./src/lib/libraries/extensions/penguinmod/extensions/permissions.png");
-/* harmony import */ var _penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_76___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_76__);
-/* harmony import */ var _penguinmod_extensions_oddmessages_svg__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./penguinmod/extensions/oddmessages.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/oddmessages.svg");
-/* harmony import */ var _penguinmod_extensions_oddmessages_svg__WEBPACK_IMPORTED_MODULE_77___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_oddmessages_svg__WEBPACK_IMPORTED_MODULE_77__);
-/* harmony import */ var _penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./penguinmod/extensions/clonemanager.png */ "./src/lib/libraries/extensions/penguinmod/extensions/clonemanager.png");
-/* harmony import */ var _penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_78___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_78__);
-/* harmony import */ var _penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./penguinmod/extensions/inlineblocks.png */ "./src/lib/libraries/extensions/penguinmod/extensions/inlineblocks.png");
-/* harmony import */ var _penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_79___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_79__);
-/* harmony import */ var _penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./penguinmod/extensions/packagedApplications.png */ "./src/lib/libraries/extensions/penguinmod/extensions/packagedApplications.png");
-/* harmony import */ var _penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_80___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_80__);
-/* harmony import */ var _penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./penguinmod/extensions/packagedApplications_inset.png */ "./src/lib/libraries/extensions/penguinmod/extensions/packagedApplications_inset.png");
-/* harmony import */ var _penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_81___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_81__);
-/* harmony import */ var _penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./penguinmod/extensions/sp_json.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/sp_json.svg");
-/* harmony import */ var _penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_82___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_82__);
-/* harmony import */ var _penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./penguinmod/extensions/interfaces2.png */ "./src/lib/libraries/extensions/penguinmod/extensions/interfaces2.png");
-/* harmony import */ var _penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_83___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_83__);
-/* harmony import */ var _penguinmod_extensions_3d_png__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./penguinmod/extensions/3d.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3d.png");
-/* harmony import */ var _penguinmod_extensions_3d_png__WEBPACK_IMPORTED_MODULE_84___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3d_png__WEBPACK_IMPORTED_MODULE_84__);
-/* harmony import */ var _penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./penguinmod/extensions/3dicon.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3dicon.png");
-/* harmony import */ var _penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_85___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_85__);
-/* harmony import */ var _penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./penguinmod/extensions/3dVr.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3dVr.png");
-/* harmony import */ var _penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_86___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_86__);
-/* harmony import */ var _penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./penguinmod/extensions/3dVr_Inset.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3dVr_Inset.png");
-/* harmony import */ var _penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_87___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_87__);
-/* harmony import */ var _penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./penguinmod/extensions/3d_physics.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3d_physics.png");
-/* harmony import */ var _penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_88___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_88__);
-/* harmony import */ var _penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./penguinmod/extensions/3d_physics_icon_sized.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3d_physics_icon_sized.png");
-/* harmony import */ var _penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_89___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_89__);
-/* harmony import */ var _penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./penguinmod/extensions/vr_extension.png */ "./src/lib/libraries/extensions/penguinmod/extensions/vr_extension.png");
-/* harmony import */ var _penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_90___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_90__);
-/* harmony import */ var _penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./penguinmod/orgtw/CustomStyles.svg */ "./src/lib/libraries/extensions/penguinmod/orgtw/CustomStyles.svg");
-/* harmony import */ var _penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_91___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_91__);
-/* harmony import */ var _penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./penguinmod/extensions/canvas_effects.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/canvas_effects.svg");
-/* harmony import */ var _penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_92___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_92__);
-/* harmony import */ var _penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./penguinmod/orgtw/lz-compress2.svg */ "./src/lib/libraries/extensions/penguinmod/orgtw/lz-compress2.svg");
-/* harmony import */ var _penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_93___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_93__);
-/* harmony import */ var _penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./penguinmod/orgtw/ColorPicker.svg */ "./src/lib/libraries/extensions/penguinmod/orgtw/ColorPicker.svg");
-/* harmony import */ var _penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_94___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_94__);
-/* harmony import */ var _penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./penguinmod/extensions/printing.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/printing.svg");
-/* harmony import */ var _penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_95___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_95__);
-/* harmony import */ var _penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./penguinmod/extensions/tuneShark.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/tuneShark.svg");
-/* harmony import */ var _penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_96___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_96__);
-/* harmony import */ var _penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./penguinmod/extensions/myBlocksPlus.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/myBlocksPlus.svg");
-/* harmony import */ var _penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_97___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_97__);
-/* harmony import */ var _penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./penguinmod/extensions/BetterComments.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/BetterComments.svg");
-/* harmony import */ var _penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_98___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_98__);
-/* harmony import */ var _penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./penguinmod/extensions/particleEngine.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/particleEngine.svg");
-/* harmony import */ var _penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_99___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_99__);
-/* harmony import */ var _penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./penguinmod/extensions/scripts.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/scripts.svg");
-/* harmony import */ var _penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_100___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_100__);
-/* harmony import */ var _penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./penguinmod/extensions/looksExpanded.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/looksExpanded.svg");
-/* harmony import */ var _penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_101___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_101__);
-/* harmony import */ var _penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./penguinmod/extensions/turboSkins.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/turboSkins.svg");
-/* harmony import */ var _penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_102___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_102__);
-/* harmony import */ var _penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./penguinmod/extensions/fontManager.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/fontManager.svg");
-/* harmony import */ var _penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_103___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_103__);
-/* harmony import */ var _penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./penguinmod/extensions/soundWaves.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/soundWaves.svg");
-/* harmony import */ var _penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_104___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_104__);
-/* harmony import */ var _penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./penguinmod/extensions/storage.png */ "./src/lib/libraries/extensions/penguinmod/extensions/storage.png");
-/* harmony import */ var _penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_105___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_105__);
-/* harmony import */ var _penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./penguinmod/extensions/multipletimers.png */ "./src/lib/libraries/extensions/penguinmod/extensions/multipletimers.png");
-/* harmony import */ var _penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_106___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_106__);
-/* harmony import */ var _penguinmod_extensions_advancedtext_png__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./penguinmod/extensions/advancedtext.png */ "./src/lib/libraries/extensions/penguinmod/extensions/advancedtext.png");
-/* harmony import */ var _penguinmod_extensions_advancedtext_png__WEBPACK_IMPORTED_MODULE_107___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_advancedtext_png__WEBPACK_IMPORTED_MODULE_107__);
-/* harmony import */ var _penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./penguinmod/extensions/javascript.png */ "./src/lib/libraries/extensions/penguinmod/extensions/javascript.png");
-/* harmony import */ var _penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_108___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_108__);
-/* harmony import */ var _penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./penguinmod/extensions/pathfinding.png */ "./src/lib/libraries/extensions/penguinmod/extensions/pathfinding.png");
-/* harmony import */ var _penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_109___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_109__);
-/* harmony import */ var _penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./penguinmod/extensions/animation.png */ "./src/lib/libraries/extensions/penguinmod/extensions/animation.png");
-/* harmony import */ var _penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_110___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_110__);
-/* harmony import */ var _penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./penguinmod/extensions/motion_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/motion_expanded.png");
-/* harmony import */ var _penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_111___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_111__);
-/* harmony import */ var _penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./penguinmod/extensions/events_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/events_expanded.png");
-/* harmony import */ var _penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_112___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_112__);
-/* harmony import */ var _penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./penguinmod/extensions/controls_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/controls_expanded.png");
-/* harmony import */ var _penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_113___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_113__);
-/* harmony import */ var _penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./penguinmod/extensions/sensing_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/sensing_expanded.png");
-/* harmony import */ var _penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_114___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_114__);
-/* harmony import */ var _penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./penguinmod/extensions/operators_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/operators_expanded.png");
-/* harmony import */ var _penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_115___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_115__);
-/* harmony import */ var _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./penguinmod/extensions/placeholder.png */ "./src/lib/libraries/extensions/penguinmod/extensions/placeholder.png");
-/* harmony import */ var _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116__);
+/* harmony import */ var _penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./penguinmod/extensions/iframe.png */ "./src/lib/libraries/extensions/penguinmod/extensions/iframe.png");
+/* harmony import */ var _penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_72___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_72__);
+/* harmony import */ var _penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./penguinmod/extensions/extendedaudio.png */ "./src/lib/libraries/extensions/penguinmod/extensions/extendedaudio.png");
+/* harmony import */ var _penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_73___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_73__);
+/* harmony import */ var _penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./penguinmod/extensions/scratchauth2.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/scratchauth2.svg");
+/* harmony import */ var _penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_74___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_74__);
+/* harmony import */ var _penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./penguinmod/extensions/permissions.png */ "./src/lib/libraries/extensions/penguinmod/extensions/permissions.png");
+/* harmony import */ var _penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_75___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_75__);
+/* harmony import */ var _penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./penguinmod/extensions/clonemanager.png */ "./src/lib/libraries/extensions/penguinmod/extensions/clonemanager.png");
+/* harmony import */ var _penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_76___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_76__);
+/* harmony import */ var _penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./penguinmod/extensions/inlineblocks.png */ "./src/lib/libraries/extensions/penguinmod/extensions/inlineblocks.png");
+/* harmony import */ var _penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_77___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_77__);
+/* harmony import */ var _penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./penguinmod/extensions/packagedApplications.png */ "./src/lib/libraries/extensions/penguinmod/extensions/packagedApplications.png");
+/* harmony import */ var _penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_78___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_78__);
+/* harmony import */ var _penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./penguinmod/extensions/packagedApplications_inset.png */ "./src/lib/libraries/extensions/penguinmod/extensions/packagedApplications_inset.png");
+/* harmony import */ var _penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_79___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_79__);
+/* harmony import */ var _penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./penguinmod/extensions/sp_json.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/sp_json.svg");
+/* harmony import */ var _penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_80___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_80__);
+/* harmony import */ var _penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./penguinmod/extensions/interfaces2.png */ "./src/lib/libraries/extensions/penguinmod/extensions/interfaces2.png");
+/* harmony import */ var _penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_81___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_81__);
+/* harmony import */ var _penguinmod_extensions_3d_png__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./penguinmod/extensions/3d.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3d.png");
+/* harmony import */ var _penguinmod_extensions_3d_png__WEBPACK_IMPORTED_MODULE_82___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3d_png__WEBPACK_IMPORTED_MODULE_82__);
+/* harmony import */ var _penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./penguinmod/extensions/3dicon.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3dicon.png");
+/* harmony import */ var _penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_83___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_83__);
+/* harmony import */ var _penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./penguinmod/extensions/3dVr.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3dVr.png");
+/* harmony import */ var _penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_84___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_84__);
+/* harmony import */ var _penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./penguinmod/extensions/3dVr_Inset.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3dVr_Inset.png");
+/* harmony import */ var _penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_85___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_85__);
+/* harmony import */ var _penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./penguinmod/extensions/3d_physics.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3d_physics.png");
+/* harmony import */ var _penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_86___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_86__);
+/* harmony import */ var _penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./penguinmod/extensions/3d_physics_icon_sized.png */ "./src/lib/libraries/extensions/penguinmod/extensions/3d_physics_icon_sized.png");
+/* harmony import */ var _penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_87___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_87__);
+/* harmony import */ var _penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./penguinmod/extensions/vr_extension.png */ "./src/lib/libraries/extensions/penguinmod/extensions/vr_extension.png");
+/* harmony import */ var _penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_88___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_88__);
+/* harmony import */ var _penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./penguinmod/orgtw/CustomStyles.svg */ "./src/lib/libraries/extensions/penguinmod/orgtw/CustomStyles.svg");
+/* harmony import */ var _penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_89___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_89__);
+/* harmony import */ var _penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./penguinmod/extensions/canvas_effects.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/canvas_effects.svg");
+/* harmony import */ var _penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_90___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_90__);
+/* harmony import */ var _penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./penguinmod/orgtw/lz-compress2.svg */ "./src/lib/libraries/extensions/penguinmod/orgtw/lz-compress2.svg");
+/* harmony import */ var _penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_91___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_91__);
+/* harmony import */ var _penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./penguinmod/orgtw/ColorPicker.svg */ "./src/lib/libraries/extensions/penguinmod/orgtw/ColorPicker.svg");
+/* harmony import */ var _penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_92___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_92__);
+/* harmony import */ var _penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./penguinmod/extensions/printing.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/printing.svg");
+/* harmony import */ var _penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_93___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_93__);
+/* harmony import */ var _penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./penguinmod/extensions/tuneShark.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/tuneShark.svg");
+/* harmony import */ var _penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_94___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_94__);
+/* harmony import */ var _penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./penguinmod/extensions/myBlocksPlus.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/myBlocksPlus.svg");
+/* harmony import */ var _penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_95___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_95__);
+/* harmony import */ var _penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./penguinmod/extensions/BetterComments.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/BetterComments.svg");
+/* harmony import */ var _penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_96___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_96__);
+/* harmony import */ var _penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./penguinmod/extensions/particleEngine.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/particleEngine.svg");
+/* harmony import */ var _penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_97___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_97__);
+/* harmony import */ var _penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./penguinmod/extensions/scripts.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/scripts.svg");
+/* harmony import */ var _penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_98___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_98__);
+/* harmony import */ var _penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./penguinmod/extensions/looksExpanded.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/looksExpanded.svg");
+/* harmony import */ var _penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_99___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_99__);
+/* harmony import */ var _penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./penguinmod/extensions/turboSkins.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/turboSkins.svg");
+/* harmony import */ var _penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_100___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_100__);
+/* harmony import */ var _penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./penguinmod/extensions/fontManager.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/fontManager.svg");
+/* harmony import */ var _penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_101___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_101__);
+/* harmony import */ var _penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./penguinmod/extensions/soundWaves.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/soundWaves.svg");
+/* harmony import */ var _penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_102___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_102__);
+/* harmony import */ var _penguinmod_extensions_sp_tempVars_svg__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./penguinmod/extensions/sp_tempVars.svg */ "./src/lib/libraries/extensions/penguinmod/extensions/sp_tempVars.svg");
+/* harmony import */ var _penguinmod_extensions_sp_tempVars_svg__WEBPACK_IMPORTED_MODULE_103___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_sp_tempVars_svg__WEBPACK_IMPORTED_MODULE_103__);
+/* harmony import */ var _penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./penguinmod/extensions/storage.png */ "./src/lib/libraries/extensions/penguinmod/extensions/storage.png");
+/* harmony import */ var _penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_104___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_104__);
+/* harmony import */ var _penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./penguinmod/extensions/multipletimers.png */ "./src/lib/libraries/extensions/penguinmod/extensions/multipletimers.png");
+/* harmony import */ var _penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_105___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_105__);
+/* harmony import */ var _penguinmod_extensions_advancedtext_png__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./penguinmod/extensions/advancedtext.png */ "./src/lib/libraries/extensions/penguinmod/extensions/advancedtext.png");
+/* harmony import */ var _penguinmod_extensions_advancedtext_png__WEBPACK_IMPORTED_MODULE_106___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_advancedtext_png__WEBPACK_IMPORTED_MODULE_106__);
+/* harmony import */ var _penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./penguinmod/extensions/javascript.png */ "./src/lib/libraries/extensions/penguinmod/extensions/javascript.png");
+/* harmony import */ var _penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_107___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_107__);
+/* harmony import */ var _penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./penguinmod/extensions/pathfinding.png */ "./src/lib/libraries/extensions/penguinmod/extensions/pathfinding.png");
+/* harmony import */ var _penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_108___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_108__);
+/* harmony import */ var _penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./penguinmod/extensions/animation.png */ "./src/lib/libraries/extensions/penguinmod/extensions/animation.png");
+/* harmony import */ var _penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_109___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_109__);
+/* harmony import */ var _penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./penguinmod/extensions/motion_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/motion_expanded.png");
+/* harmony import */ var _penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_110___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_110__);
+/* harmony import */ var _penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./penguinmod/extensions/events_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/events_expanded.png");
+/* harmony import */ var _penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_111___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_111__);
+/* harmony import */ var _penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./penguinmod/extensions/controls_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/controls_expanded.png");
+/* harmony import */ var _penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_112___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_112__);
+/* harmony import */ var _penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./penguinmod/extensions/sensing_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/sensing_expanded.png");
+/* harmony import */ var _penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_113___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_113__);
+/* harmony import */ var _penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./penguinmod/extensions/operators_expanded.png */ "./src/lib/libraries/extensions/penguinmod/extensions/operators_expanded.png");
+/* harmony import */ var _penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_114___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_114__);
+/* harmony import */ var _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./penguinmod/extensions/placeholder.png */ "./src/lib/libraries/extensions/penguinmod/extensions/placeholder.png");
+/* harmony import */ var _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115___default = /*#__PURE__*/__webpack_require__.n(_penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115__);
 /* eslint-disable max-len */
+
 
 
 
@@ -43748,7 +43763,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 // thank yo godslayerakp for makin pmCamera :good:
 
 
@@ -43769,12 +43783,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // LilyMakesThings 🙏
-// import lmsMcUtilsIcon from './penguinmod/extensions/mcutils.png';
 
 
 // more icons so they arent just red when the extension color is not red
-
-
 
 
 
@@ -43816,6 +43827,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 // events
 
 
@@ -43831,8 +43843,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// jg: default icon if you are too lazy to make one and you want me to make one instead lololololololol
-// gsa: ololololololo
+/*
+    Deprecated Thumbnails, uncomment if useful again
+import turboBuilderIcon from './penguinmod/turbobuilder.png';
+import turboBuilderDevIcon from './penguinmod/turbobuilder-dev.png';
+
+import silvxrcatOddMessagesExtensionIcon from './penguinmod/extensions/oddmessages.svg';
+import gsaColorUtilExtensionIcon from './penguinmod/extensions/colorutil.png';
+import jgJSONExtensionIcon from './penguinmod/extensions/json.png';
+*/
+
+// default icon if one is not made yet...
 
 const urlParams = new URLSearchParams(location.search);
 const IsLocal = String(window.location.href).startsWith("http://localhost:");
@@ -43889,6 +43910,13 @@ const menuItems = [{
     defaultMessage: "Sense motion with the camera.",
     id: "gui.extension.videosensing.description"
   }),
+  featured: true
+}, {
+  name: 'Face Sensing',
+  extensionId: 'https://extensions.turbowarp.org/lab/face-sensing.js',
+  iconURL: _faceSensing_thumb_png__WEBPACK_IMPORTED_MODULE_23___default.a,
+  tags: ['scratch'],
+  description: 'Sense faces with the camera.',
   featured: true
 }, {
   name: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
@@ -43949,7 +43977,9 @@ const menuItems = [{
   }),
   credits: 'Inspired by⠀⠀⠀⠀⠀⠀ DT-is-not-available',
   featured: true
-}, {
+},
+// ArkIDE Extensions
+{
   name: 'ArkIDE Additons',
   extensionId: 'https://extensions.arkide.site/extensions/Ark/arkide-additons.js',
   iconURL: 'https://extensions.arkide.site/images/Ark/banner.svg',
@@ -43973,20 +44003,21 @@ const menuItems = [{
   description: 'Add a console to your project to log messages, errors, and warnings.',
   extDeveloper: 'Ark',
   featured: true
-}, {
+},
+// ArkIDE Extensions end
+{
   name: 'Files',
-  extensionId: 'twFiles',
-  twDeveloper: 'GarboMuffin',
-  iconURL: _penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_43___default.a,
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Files-Expanded.js',
+  extDeveloper: 'SharkPool',
+  iconURL: _penguinmod_extensions_files_svg__WEBPACK_IMPORTED_MODULE_42___default.a,
   tags: ['turbowarp', 'datamgmt'],
-  description: 'Blocks for reading and creating files.',
+  description: 'Blocks for reading, editing, & creating files & folders.',
   featured: true
 }, {
   name: 'Zip',
   extensionId: 'https://extensions.turbowarp.org/CST1229/zip.js',
   iconURL: 'https://extensions.turbowarp.org/images/CST1229/zip.svg',
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   tags: ['turbowarp', 'datamgmt'],
   description: 'Create and edit .zip format files, including .sb3 files.',
   twDeveloper: 'CST1229',
@@ -44002,14 +44033,14 @@ const menuItems = [{
 }, {
   name: 'Sound Systems',
   extensionId: 'jgExtendedAudio',
-  iconURL: _penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_74___default.a,
+  iconURL: _penguinmod_extensions_extendedaudio_png__WEBPACK_IMPORTED_MODULE_73___default.a,
   tags: ['penguinmod', 'categoryexpansion', 'noisemaker'],
   description: 'An audio grouping system for more intensive audio work.',
   featured: true
 }, {
   name: 'Tune Shark V3',
   extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Tune-Shark-V3.js',
-  iconURL: _penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_96___default.a,
+  iconURL: _penguinmod_extensions_tuneShark_svg__WEBPACK_IMPORTED_MODULE_94___default.a,
   tags: ['penguinmod', 'categoryexpansion', 'noisemaker'],
   description: 'Advanced audio engine with complex sound control, multiple audio effects and more!',
   extDeveloper: 'SharkPool',
@@ -44017,31 +44048,31 @@ const menuItems = [{
 }, {
   name: 'Sound Waves',
   extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/Sound-Waves.js',
-  iconURL: _penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_104___default.a,
+  iconURL: _penguinmod_extensions_soundWaves_svg__WEBPACK_IMPORTED_MODULE_102___default.a,
   tags: ['penguinmod', 'noisemaker'],
   description: 'Make sounds with oscillators!',
   extDeveloper: 'SharkPool',
   featured: true
 }, {
-  name: 'Looks Expanded',
-  extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Looks-Expanded.js',
-  iconURL: _penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_101___default.a,
-  tags: ['penguinmod', 'categoryexpansion', 'graphics'],
-  description: 'Expansion of the Looks Category.',
-  extDeveloper: 'SharkPool, CST1229',
-  featured: true
-}, {
   name: 'Motion Expansion',
   extensionId: 'pmMotionExpansion',
-  iconURL: _penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_111___default.a,
+  iconURL: _penguinmod_extensions_motion_expanded_png__WEBPACK_IMPORTED_MODULE_110___default.a,
   tags: ['penguinmod', 'categoryexpansion'],
   description: 'More small motion blocks for movement or collision.',
   featured: true,
   credits: 'Some blocks from NexusKitten'
 }, {
+  name: 'Looks Expanded',
+  extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Looks-Expanded.js',
+  iconURL: _penguinmod_extensions_looksExpanded_svg__WEBPACK_IMPORTED_MODULE_99___default.a,
+  tags: ['penguinmod', 'categoryexpansion', 'graphics'],
+  description: 'Expansion of the Looks Category.',
+  extDeveloper: 'SharkPool, CST1229',
+  featured: true
+}, {
   name: 'Events Expansion',
   extensionId: 'pmEventsExpansion',
-  iconURL: _penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_112___default.a,
+  iconURL: _penguinmod_extensions_events_expanded_png__WEBPACK_IMPORTED_MODULE_111___default.a,
   tags: ['penguinmod', 'categoryexpansion'],
   description: 'More events for sending & receiving information, notifing specific sprites or better control when things should happen.',
   featured: true,
@@ -44049,7 +44080,7 @@ const menuItems = [{
 }, {
   name: 'Controls Expansion',
   extensionId: 'pmControlsExpansion',
-  iconURL: _penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_113___default.a,
+  iconURL: _penguinmod_extensions_controls_expanded_png__WEBPACK_IMPORTED_MODULE_112___default.a,
   tags: ['penguinmod', 'categoryexpansion'],
   description: 'More control blocks for animations, complex systems or cleaner one-time use blocks.',
   featured: true,
@@ -44057,7 +44088,7 @@ const menuItems = [{
 }, {
   name: 'Sensing Expansion',
   extensionId: 'pmSensingExpansion',
-  iconURL: _penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_114___default.a,
+  iconURL: _penguinmod_extensions_sensing_expanded_png__WEBPACK_IMPORTED_MODULE_113___default.a,
   tags: ['penguinmod', 'categoryexpansion'],
   description: "More sensing blocks for specific use cases or interacting with the user's device.",
   credits: 'Some blocks from SharkPool-SP',
@@ -44065,14 +44096,14 @@ const menuItems = [{
 }, {
   name: 'Operators Expansion',
   extensionId: 'pmOperatorsExpansion',
-  iconURL: _penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_115___default.a,
+  iconURL: _penguinmod_extensions_operators_expanded_png__WEBPACK_IMPORTED_MODULE_114___default.a,
   tags: ['penguinmod', 'categoryexpansion', 'math'],
   description: 'More operators like nand, nor, character code to character, reading multiple lined text line by line, etc.',
   featured: true
 }, {
   name: 'My Blocks+',
   extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/My-Blocks-Plus.js',
-  iconURL: _penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_97___default.a,
+  iconURL: _penguinmod_extensions_myBlocksPlus_svg__WEBPACK_IMPORTED_MODULE_95___default.a,
   tags: ['penguinmod', 'categoryexpansion'],
   description: 'Create private or global custom blocks with custom inputs, colors, and more!',
   extDeveloper: 'SharkPool, CST1229, 0znzw',
@@ -44080,7 +44111,7 @@ const menuItems = [{
 }, {
   name: 'Better Comments',
   extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Better-Comments.js',
-  iconURL: _penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_98___default.a,
+  iconURL: _penguinmod_extensions_BetterComments_svg__WEBPACK_IMPORTED_MODULE_96___default.a,
   tags: ['penguinmod', 'categoryexpansion'],
   description: 'Better Comments with Customization and Markdown support',
   extDeveloper: 'SharkPool',
@@ -44088,22 +44119,14 @@ const menuItems = [{
 }, {
   name: 'JSON',
   extensionId: 'jgJSON',
-  iconURL: _penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_44___default.a,
+  iconURL: _penguinmod_extensions_json_png__WEBPACK_IMPORTED_MODULE_43___default.a,
   tags: ['penguinmod', 'datamgmt'],
   description: 'Blocks for handling JSON objects and Arrays.',
   featured: true
 }, {
-  name: 'Swift JSON',
-  extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/JSON-Array.js',
-  iconURL: _penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_82___default.a,
-  tags: ['penguinmod', 'datamgmt'],
-  extDeveloper: 'SharkPool',
-  description: 'POTENTIALLY DANGEROUS, but faster extension for handling JSON objects and arrays. Recommended if you are heavily using JSON several times in a project.',
-  featured: true
-}, {
   name: 'Particle Engine',
   extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Particle-Engine.js',
-  iconURL: _penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_99___default.a,
+  iconURL: _penguinmod_extensions_particleEngine_svg__WEBPACK_IMPORTED_MODULE_97___default.a,
   tags: ['penguinmod', 'graphics'],
   description: 'Create powerful Particle Engines without Clones',
   extDeveloper: 'SharkPool',
@@ -44111,7 +44134,7 @@ const menuItems = [{
 }, {
   name: 'Custom Styles',
   extensionId: 'shovelcss',
-  iconURL: _penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_91___default.a,
+  iconURL: _penguinmod_orgtw_CustomStyles_svg__WEBPACK_IMPORTED_MODULE_89___default.a,
   tags: ['penguinmod', 'graphics'],
   description: 'Customize the appearance of variable monitors and prompts in your project.',
   extDeveloper: 'TheShovel',
@@ -44138,7 +44161,7 @@ const menuItems = [{
   name: 'Tailgating',
   extensionId: 'jgTailgating',
   description: 'Have sprites & clones follow behind other sprites & clones by an offset, like RPG party members.',
-  iconURL: _penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_45___default.a,
+  iconURL: _penguinmod_extensions_tailgating_png__WEBPACK_IMPORTED_MODULE_44___default.a,
   tags: ['penguinmod'],
   featured: true
 }, {
@@ -44152,7 +44175,7 @@ const menuItems = [{
 }, {
   name: 'Canvas Effects',
   extensionId: 'theshovelcanvaseffects',
-  iconURL: _penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_92___default.a,
+  iconURL: _penguinmod_extensions_canvas_effects_svg__WEBPACK_IMPORTED_MODULE_90___default.a,
   tags: ['penguinmod', 'graphics'],
   description: 'Apply visual effects to the entire stage.',
   extDeveloper: 'TheShovel',
@@ -44163,7 +44186,7 @@ const menuItems = [{
   extensionId: 'https://extensions.turbowarp.org/Lily/ClonesPlus.js',
   tags: ['turbowarp', 'categoryexpansion'],
   iconURL: 'https://extensions.turbowarp.org/images/Lily/ClonesPlus.svg',
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   description: "Expansion of Scratch's clone features.",
   featured: true,
   twDeveloper: 'LilyMakesThings'
@@ -44171,7 +44194,7 @@ const menuItems = [{
   name: 'Turbo Skins',
   extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Turbo-Skins.js',
   tags: ['penguinmod', 'graphics'],
-  iconURL: _penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_102___default.a,
+  iconURL: _penguinmod_extensions_turboSkins_svg__WEBPACK_IMPORTED_MODULE_100___default.a,
   description: 'Display sprites with various images or costumes and control their hitboxes',
   extraLabels: [{
     name: "Inspired by",
@@ -44182,7 +44205,7 @@ const menuItems = [{
 }, {
   name: 'Multiple Timers',
   extensionId: 'jgTimers',
-  iconURL: _penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_106___default.a,
+  iconURL: _penguinmod_extensions_multipletimers_png__WEBPACK_IMPORTED_MODULE_105___default.a,
   tags: ['penguinmod'],
   description: 'Create different timers you can control seperately.',
   eventSubmittor: 'Arrow',
@@ -44195,26 +44218,41 @@ const menuItems = [{
   description: 'Create temporary variables for use in one block stack.',
   featured: true
 }, {
+  name: 'SharkPool\'s Temporary Variables',
+  extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Temporary-Variables.js',
+  iconURL: _penguinmod_extensions_sp_tempVars_svg__WEBPACK_IMPORTED_MODULE_103___default.a,
+  tags: ['penguinmod', 'datamgmt'],
+  description: 'Create temporary runtime, threaded, sprite & scoped variables.',
+  featured: true
+}, {
   name: 'TurboWarp Temporary Variables',
   extensionId: 'lmsTempVars2',
   iconURL: _penguinmod_orgtw_TempVariables2_svg__WEBPACK_IMPORTED_MODULE_70___default.a,
   tags: ['turbowarp'],
   description: 'Create disposable runtime or thread variables.',
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   credits: 'LilyMakesThings',
+  featured: true
+}, {
+  name: 'Swift JSON',
+  extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/JSON-Array.js',
+  iconURL: _penguinmod_extensions_sp_json_svg__WEBPACK_IMPORTED_MODULE_80___default.a,
+  tags: ['penguinmod', 'datamgmt'],
+  extDeveloper: 'SharkPool',
+  description: 'FAST Extension for handling JSON objects and arrays efficiently. Recommended if you are heavily using JSON several times in a project.',
   featured: true
 }, {
   name: 'Runtime Modifications',
   extensionId: 'jgRuntime',
   tags: ['penguinmod'],
-  iconURL: _penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_46___default.a,
+  iconURL: _penguinmod_extensions_runtime_svg__WEBPACK_IMPORTED_MODULE_45___default.a,
   description: 'Blocks for updating Scratch objects like the stage and sprites.',
   credits: 'TheShovel, showierdata9978, SharkPool',
   featured: true
 }, {
   name: 'Font Manager',
   extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/Font-Manager.js',
-  iconURL: _penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_103___default.a,
+  iconURL: _penguinmod_extensions_fontManager_svg__WEBPACK_IMPORTED_MODULE_101___default.a,
   tags: ['penguinmod', 'graphics'],
   description: 'Manage, create, and delete fonts.',
   credits: 'SharkPool, Ashimee',
@@ -44222,7 +44260,7 @@ const menuItems = [{
 }, {
   name: 'Storage',
   extensionId: 'jgStorage',
-  iconURL: _penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_105___default.a,
+  iconURL: _penguinmod_extensions_storage_png__WEBPACK_IMPORTED_MODULE_104___default.a,
   tags: ['penguinmod', 'datamgmt'],
   description: 'Store data after PenguinMod has already been closed out. Basic Server Storage is also included.',
   eventSubmittor: 'Fir & silvxrcat',
@@ -44231,7 +44269,7 @@ const menuItems = [{
   name: 'HTTP',
   extensionId: 'https://extensions.turbowarp.org/godslayerakp/http.js',
   iconURL: 'https://extensions.turbowarp.org/images/godslayerakp/http.svg',
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   tags: ['turbowarp'],
   description: 'Comprehensive extension for interacting with external websites.',
   featured: true,
@@ -44250,7 +44288,7 @@ const menuItems = [{
 }, {
   name: 'Scripts',
   extensionId: 'jgScripts',
-  iconURL: _penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_100___default.a,
+  iconURL: _penguinmod_extensions_scripts_svg__WEBPACK_IMPORTED_MODULE_98___default.a,
   tags: ['penguinmod', 'datamgmt'],
   description: 'Create compiled scripts with blocks while the project is running.',
   featured: true
@@ -44270,17 +44308,7 @@ const menuItems = [{
   description: 'A handful of utilities for making your own sprite-based 3D engine.',
   extDeveloper: 'pinksheep2917',
   featured: true
-},
-/*DEPRECATED {
-    name: 'Extra Mathematics',
-    extensionId: 'https://extensions.penguinmod.com/extensions/jwklong/mathematics.js',
-    iconURL: 'https://extensions.penguinmod.com/images/jwklong/mathematics.avif',
-    tags: ['penguinmod', 'categoryexpansion', 'math'],
-    description: 'Complicated maths extension for nerds.',
-    extDeveloper: 'jwklong',
-    featured: false
-},*/
-{
+}, {
   name: 'Random Utilities',
   extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/random_utils.js',
   iconURL: 'https://extensions.penguinmod.com/images/Gen1x/randomutils.avif',
@@ -44291,7 +44319,7 @@ const menuItems = [{
 }, {
   name: 'LZ Compress',
   extensionId: 'shovellzcompresss',
-  iconURL: _penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_93___default.a,
+  iconURL: _penguinmod_orgtw_lz_compress2_svg__WEBPACK_IMPORTED_MODULE_91___default.a,
   tags: ['penguinmod', 'datamgmt'],
   description: 'Compress and decompress text using lz-string.',
   extDeveloper: 'TheShovel',
@@ -44300,23 +44328,13 @@ const menuItems = [{
   name: 'Prism',
   extensionId: 'jgPrism',
   tags: ['penguinmod', 'datamgmt'],
-  iconURL: _penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_47___default.a,
+  iconURL: _penguinmod_extensions_prism_png__WEBPACK_IMPORTED_MODULE_46___default.a,
   description: 'Blocks for specific use-cases or major convenience.',
   featured: true
-},
-/*DEPRECATED{
-    name: 'Odd Messages',
-    extensionId: 'oddMessage',
-    tags: ['penguinmod'],
-    iconURL: silvxrcatOddMessagesExtensionIcon,
-    description: 'For logging and variable utilization.',
-    featured: true,
-    extDeveloper: 'silvxrcat'
-},*/
-{
+}, {
   name: 'HTML iframe Elements',
   extensionId: 'jgIframe',
-  iconURL: _penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_73___default.a,
+  iconURL: _penguinmod_extensions_iframe_png__WEBPACK_IMPORTED_MODULE_72___default.a,
   tags: ['penguinmod'],
   description: 'Blocks to place and move around frames that contain HTML content or websites.',
   featured: true,
@@ -44324,17 +44342,10 @@ const menuItems = [{
 }, {
   name: 'Color Picker',
   extensionId: 'shovelColorPicker',
-  iconURL: _penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_94___default.a,
+  iconURL: _penguinmod_orgtw_ColorPicker_svg__WEBPACK_IMPORTED_MODULE_92___default.a,
   tags: ['penguinmod'],
   description: 'Allow the user to choose a color using the built-in color picker, so you don\'t need to make your own.',
   extDeveloper: 'TheShovel',
-  featured: true
-}, {
-  name: 'Color Utility Blocks',
-  extensionId: 'colors',
-  iconURL: _penguinmod_extensions_colorutil_png__WEBPACK_IMPORTED_MODULE_72___default.a,
-  tags: ['penguinmod'],
-  description: 'Converters for Hex, RGB, HSV and Decimal colors and other color related things.',
   featured: true
 }, {
   name: 'All Menus',
@@ -44350,7 +44361,7 @@ const menuItems = [{
     id: "jwProto.jwProtoExtension.name"
   }),
   extensionId: 'jwProto',
-  iconURL: _penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_49___default.a,
+  iconURL: _penguinmod_extensions_proto_svg__WEBPACK_IMPORTED_MODULE_48___default.a,
   tags: ['penguinmod'],
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"]
   // change this back if you update the extension to have more things
@@ -44376,7 +44387,7 @@ const menuItems = [{
   name: 'GamePad',
   extensionId: 'Gamepad',
   tags: ['turbowarp', 'hardware'],
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   twDeveloper: 'GarboMuffin',
   iconURL: _penguinmod_extensions_gamepad_svg__WEBPACK_IMPORTED_MODULE_66___default.a,
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
@@ -44388,7 +44399,7 @@ const menuItems = [{
   name: 'Printing',
   tags: ['penguinmod', 'hardware'],
   extensionId: 'sharkpoolPrinting',
-  iconURL: _penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_95___default.a,
+  iconURL: _penguinmod_extensions_printing_svg__WEBPACK_IMPORTED_MODULE_93___default.a,
   description: 'Allows you to show a dialog for printing text, images, and custom HTML to a printer.',
   featured: true
 }, {
@@ -44396,7 +44407,7 @@ const menuItems = [{
   extensionId: 'https://extensions.turbowarp.org/Xeltalliv/clippingblending.js',
   iconURL: _penguinmod_extensions_clippingblending_svg__WEBPACK_IMPORTED_MODULE_67___default.a,
   tags: ['turbowarp', 'graphics'],
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   description: 'Clipping outside of a specified rectangular area and additive color blending.',
   featured: true,
   twDeveloper: 'Vadik1'
@@ -44404,7 +44415,7 @@ const menuItems = [{
   name: 'Pointer Lock',
   extensionId: 'https://extensions.turbowarp.org/pointerlock.js',
   tags: ['turbowarp'],
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   iconURL: _penguinmod_extensions_pointerlock_png__WEBPACK_IMPORTED_MODULE_68___default.a,
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "A extension to lock the mouse cursor in the stage.",
@@ -44417,7 +44428,7 @@ const menuItems = [{
   name: 'Mouse Cursor',
   extensionId: 'https://extensions.turbowarp.org/cursor.js',
   tags: ['turbowarp'],
-  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
   iconURL: 'https://extensions.turbowarp.org/images/cursor.png',
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "A extension to change what the mouse cursor looks like on the stage.",
@@ -44429,29 +44440,45 @@ const menuItems = [{
 }, {
   name: 'Scratch Authentication',
   extensionId: 'jgScratchAuthenticate',
-  iconURL: _penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_75___default.a,
+  iconURL: _penguinmod_extensions_scratchauth2_svg__WEBPACK_IMPORTED_MODULE_74___default.a,
   tags: ['penguinmod'],
   description: "Interact with Scratch Authentication to prove the player is a real scratch user.",
   featured: true
 }, {
   name: 'JavaScript',
   extensionId: 'SPjavascriptV2',
-  iconURL: _penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_108___default.a,
+  iconURL: _penguinmod_extensions_javascript_png__WEBPACK_IMPORTED_MODULE_107___default.a,
   tags: ['penguinmod', 'programminglanguage'],
   description: 'Run your own custom code written in JavaScript!',
   featured: true
 }, {
   name: 'Arrays',
   extensionId: 'jwArray',
-  iconURL: _penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_53___default.a,
+  iconURL: _penguinmod_extensions_jwArray_svg__WEBPACK_IMPORTED_MODULE_51___default.a,
   tags: ['penguinmod', 'datamgmt'],
   description: 'Store data efficiently in multi-purpose arrays.',
   extDeveloper: 'jwklong',
   featured: true
 }, {
+  name: 'Objects',
+  extensionId: 'https://extensions.penguinmod.com/extensions/DogeisCut/dogeiscutObject.js',
+  iconURL: 'https://extensions.penguinmod.com/images/DogeisCut/dogeiscutObject.svg',
+  tags: ['penguinmod', 'datamgmt'],
+  description: 'Store data efficiently in multi-purpose objects.',
+  extDeveloper: 'DogeisCut',
+  featured: true
+}, {
+  name: 'XML',
+  extensionId: 'jwXML',
+  iconURL: _penguinmod_extensions_jwXML_svg__WEBPACK_IMPORTED_MODULE_58___default.a,
+  tags: ['penguinmod', 'datamgmt'],
+  description: 'Creating, parsing and modifying XML data.',
+  extDeveloper: 'jwklong',
+  featured: true
+}, {
   name: 'Targets',
   extensionId: 'jwTargets',
-  iconURL: _penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_54___default.a,
+  iconURL: _penguinmod_extensions_jwTargets_svg__WEBPACK_IMPORTED_MODULE_52___default.a,
   tags: ['penguinmod'],
   description: 'Direct access to sprites and their clones.',
   extDeveloper: 'jwklong',
@@ -44459,7 +44486,7 @@ const menuItems = [{
 }, {
   name: 'Infinity',
   extensionId: 'jwNum',
-  iconURL: _penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_55___default.a,
+  iconURL: _penguinmod_extensions_jwNum_svg__WEBPACK_IMPORTED_MODULE_53___default.a,
   tags: ['penguinmod', 'math'],
   description: 'Advanced number type capable of really big numbers.',
   extDeveloper: 'jwklong',
@@ -44468,7 +44495,7 @@ const menuItems = [{
 }, {
   name: 'Color',
   extensionId: 'jwColor',
-  iconURL: _penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_56___default.a,
+  iconURL: _penguinmod_extensions_jwColor_svg__WEBPACK_IMPORTED_MODULE_54___default.a,
   tags: ['penguinmod', 'graphics'],
   description: 'Utilities for anything involving colors.',
   extDeveloper: 'jwklong',
@@ -44476,7 +44503,7 @@ const menuItems = [{
 }, {
   name: 'Vector',
   extensionId: 'jwVector',
-  iconURL: _penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_57___default.a,
+  iconURL: _penguinmod_extensions_jwVector_svg__WEBPACK_IMPORTED_MODULE_55___default.a,
   tags: ['penguinmod', 'math'],
   description: 'Vector type for calculating with X and Y coordinates.',
   extDeveloper: 'jwklong',
@@ -44484,9 +44511,17 @@ const menuItems = [{
 }, {
   name: 'Lambda',
   extensionId: 'jwLambda',
-  iconURL: _penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_58___default.a,
+  iconURL: _penguinmod_extensions_jwLambda_svg__WEBPACK_IMPORTED_MODULE_56___default.a,
   tags: ['penguinmod'],
   description: 'Create anonymous functions with arguments and execute them.',
+  extDeveloper: 'jwklong',
+  featured: true
+}, {
+  name: 'Scope',
+  extensionId: 'jwScope',
+  iconURL: _penguinmod_extensions_jwScope_svg__WEBPACK_IMPORTED_MODULE_57___default.a,
+  tags: ['penguinmod'],
+  description: 'Temporary variables based on the block stack. (extra blocks included if Array extension is added)',
   extDeveloper: 'jwklong',
   featured: true
 }, {
@@ -44542,8 +44577,8 @@ const menuItems = [{
   name: 'LEGO BOOST',
   extensionId: 'boost',
   collaborator: 'LEGO',
-  iconURL: _boost_boost_png__WEBPACK_IMPORTED_MODULE_27___default.a,
-  insetIconURL: _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_28___default.a,
+  iconURL: _boost_boost_png__WEBPACK_IMPORTED_MODULE_28___default.a,
+  insetIconURL: _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_29___default.a,
   tags: ['scratch', 'hardware'],
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "Bring robotic creations to life.",
@@ -44555,9 +44590,9 @@ const menuItems = [{
   internetConnectionRequired: true,
   launchPeripheralConnectionFlow: true,
   useAutoScan: true,
-  connectionIconURL: _boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_29___default.a,
-  connectionSmallIconURL: _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_28___default.a,
-  connectionTipIconURL: _boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_30___default.a,
+  connectionIconURL: _boost_boost_illustration_svg__WEBPACK_IMPORTED_MODULE_30___default.a,
+  connectionSmallIconURL: _boost_boost_small_svg__WEBPACK_IMPORTED_MODULE_29___default.a,
+  connectionTipIconURL: _boost_boost_button_illustration_svg__WEBPACK_IMPORTED_MODULE_31___default.a,
   customInsetColor: '#FFAB19',
   connectingMessage: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "Connecting",
@@ -44568,8 +44603,8 @@ const menuItems = [{
   name: 'LEGO Education WeDo 2.0',
   extensionId: 'wedo2',
   collaborator: 'LEGO',
-  iconURL: _wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_23___default.a,
-  insetIconURL: _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_24___default.a,
+  iconURL: _wedo2_wedo_png__WEBPACK_IMPORTED_MODULE_24___default.a,
+  insetIconURL: _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_25___default.a,
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "Build with motors and sensors.",
     id: "gui.extension.wedo2.description"
@@ -44581,9 +44616,9 @@ const menuItems = [{
   internetConnectionRequired: true,
   launchPeripheralConnectionFlow: true,
   useAutoScan: true,
-  connectionIconURL: _wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_25___default.a,
-  connectionSmallIconURL: _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_24___default.a,
-  connectionTipIconURL: _wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_26___default.a,
+  connectionIconURL: _wedo2_wedo_illustration_svg__WEBPACK_IMPORTED_MODULE_26___default.a,
+  connectionSmallIconURL: _wedo2_wedo_small_svg__WEBPACK_IMPORTED_MODULE_25___default.a,
+  connectionTipIconURL: _wedo2_wedo_button_illustration_svg__WEBPACK_IMPORTED_MODULE_27___default.a,
   customInsetColor: '#FF6680',
   connectingMessage: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "Connecting",
@@ -44594,8 +44629,8 @@ const menuItems = [{
   name: 'Go Direct Force & Acceleration',
   extensionId: 'gdxfor',
   collaborator: 'Vernier',
-  iconURL: _gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_31___default.a,
-  insetIconURL: _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_32___default.a,
+  iconURL: _gdxfor_gdxfor_png__WEBPACK_IMPORTED_MODULE_32___default.a,
+  insetIconURL: _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_33___default.a,
   customInsetColor: '#4C97FF',
   tags: ['scratch', 'hardware'],
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
@@ -44608,8 +44643,8 @@ const menuItems = [{
   internetConnectionRequired: true,
   launchPeripheralConnectionFlow: true,
   useAutoScan: false,
-  connectionIconURL: _gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_33___default.a,
-  connectionSmallIconURL: _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_32___default.a,
+  connectionIconURL: _gdxfor_gdxfor_illustration_svg__WEBPACK_IMPORTED_MODULE_34___default.a,
+  connectionSmallIconURL: _gdxfor_gdxfor_small_svg__WEBPACK_IMPORTED_MODULE_33___default.a,
   connectingMessage: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "Connecting",
     id: "gui.extension.gdxfor.connectingMessage"
@@ -44622,7 +44657,7 @@ const menuItems = [{
   }),
   href: 'https://extensions.arkide.site/',
   extensionId: 'special_penguinmodExtensionLibrary',
-  iconURL: _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
+  iconURL: _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_39___default.a,
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
     defaultMessage: "See some user-submitted extensions. Opens in a new tab.",
     id: "pm.extraLibraryExtensions.description"
@@ -44639,7 +44674,7 @@ const menuItems = [{
   }),
   href: 'https://extensions.turbowarp.org/',
   extensionId: 'special_turbowarpExtensionLibrary',
-  iconURL: _gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_35___default.a,
+  iconURL: _gallery_gallery_svg__WEBPACK_IMPORTED_MODULE_36___default.a,
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"]
   // eslint-disable-next-line max-len
   , {
@@ -44652,7 +44687,7 @@ const menuItems = [{
   name: 'SharkPool\'s Extension Collection',
   href: 'https://sharkpools-extensions.vercel.app/?originPM=true',
   extensionId: 'special_sharkpoolExtensionLibrary',
-  iconURL: _penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_39___default.a,
+  iconURL: _penguinmod_sharkpool_library_svg__WEBPACK_IMPORTED_MODULE_40___default.a,
   description: 'Tons of extensions created by SharkPool.\n\nClick on an extension while this menu is open to add it to your project.',
   credits: 'Listed in the site',
   tags: ['library'],
@@ -44662,14 +44697,71 @@ const menuItems = [{
   name: 'ExtForge',
   href: 'https://extforge.arkide.site/',
   extensionId: 'special_extforge',
-  iconURL: _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_40___default.a,
+  iconURL: _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_41___default.a,
   description: 'Create extensions with a block-based UI.',
   extDeveloper: 'jwklong (Updated by Arc360)',
   isNew: true,
   tags: ['extcreate'],
   featured: true
+}, {
+  // not really an extension, but it's easiest to present it as one
+  name: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
+    defaultMessage: "Custom Extension",
+    id: "tw.customExtension.name"
+  }),
+  extensionId: '',
+  iconURL: _custom_custom_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+  description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
+    defaultMessage: "Load custom extensions from URLs, files, or JavaScript source code.",
+    id: "tw.customExtension.description"
+  }),
+  featured: true
+}
+/*DEPRECATED
+{
+    name: 'JSON',
+    extensionId: 'jgJSON',
+    iconURL: jgJSONExtensionIcon,
+    tags: ['penguinmod', 'datamgmt'],
+    description: 'Blocks for handling JSON objects and Arrays.',
+    featured: true
 },
-/*{
+{
+    name: 'Color Utility Blocks',
+    extensionId: 'colors',
+    iconURL: gsaColorUtilExtensionIcon,
+    tags: ['penguinmod'],
+    description: 'Converters for Hex, RGB, HSV and Decimal colors and other color related things.',
+    featured: true
+},
+{
+    name: 'Odd Messages',
+    extensionId: 'oddMessage',
+    tags: ['penguinmod'],
+    iconURL: silvxrcatOddMessagesExtensionIcon,
+    description: 'For logging and variable utilization.',
+    featured: true,
+    extDeveloper: 'silvxrcat'
+},
+{
+    name: 'Extra Mathematics',
+    extensionId: 'https://extensions.penguinmod.com/extensions/jwklong/mathematics.js',
+    iconURL: 'https://extensions.penguinmod.com/images/jwklong/mathematics.avif',
+    tags: ['penguinmod', 'categoryexpansion', 'math'],
+    description: 'Complicated maths extension for nerds.',
+    extDeveloper: 'jwklong',
+    featured: false
+},
+{
+    name: 'All Menus',
+    extensionId: 'https://extensions.penguinmod.com/extensions/Lily/AllMenus.js',
+    iconURL: 'https://extensions.penguinmod.com/images/Lily/AllMenus.svg',
+    tags: ['penguinmod'],
+    description: 'Every dropdown menu for each block, in one extension.',
+    extDeveloper: 'LilyMakesThings',
+    featured: true
+},
+{
     // not really an extension, but it's easiest to present it as one
     name: 'TurboBuilder',
     href: 'https://turbobuilder.vercel.app/',
@@ -44691,21 +44783,7 @@ const menuItems = [{
     credits: 'Started by JeremyGamer13, continued by jwklong',
     tags: ['extcreate'],
     featured: true
-},*/
-{
-  // not really an extension, but it's easiest to present it as one
-  name: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-    defaultMessage: "Custom Extension",
-    id: "tw.customExtension.name"
-  }),
-  extensionId: '',
-  iconURL: _custom_custom_svg__WEBPACK_IMPORTED_MODULE_36___default.a,
-  description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-    defaultMessage: "Load custom extensions from URLs, files, or JavaScript source code.",
-    id: "tw.customExtension.description"
-  }),
-  featured: true
-}];
+},*/];
 
 /*
 ----------------------------------------------
@@ -44747,21 +44825,21 @@ if (IsLocal || IsLiveTests) {
   }, {
     name: 'Legacy Files',
     extensionId: 'jgFiles',
-    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116___default.a,
+    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115___default.a,
     tags: ['penguinmod', 'datamgmt'],
     description: 'Basic blocks for files. This has been replaced by the TurboWarp files extension.',
     featured: true
   }, {
     name: 'Clone Communication',
     extensionId: 'jgClones',
-    iconURL: _penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_78___default.a,
+    iconURL: _penguinmod_extensions_clonemanager_png__WEBPACK_IMPORTED_MODULE_76___default.a,
     tags: ['penguinmod'],
     description: 'Mainly sharing data between clones and the main sprite, but also some other small features. This has been replaced by the TurboWarp Clones+ extension.',
     featured: true
   }, {
     name: 'Easy Save',
     extensionId: 'jgEasySave',
-    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116___default.a,
+    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115___default.a,
     tags: ['penguinmod', 'datamgmt'],
     description: 'Save variables, lists and extra info to a file, then load those things back in.',
     featured: true
@@ -44776,14 +44854,14 @@ if (IsLocal || IsLiveTests) {
     extensionId: 'tw',
     twDeveloper: 'GarboMuffin',
     tags: ['turbowarp'],
-    insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
-    iconURL: _tw_tw_svg__WEBPACK_IMPORTED_MODULE_34___default.a,
+    insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
+    iconURL: _tw_tw_svg__WEBPACK_IMPORTED_MODULE_35___default.a,
     description: 'Weird new blocks. Replaced by Sensing Expansion.',
     featured: true
   }, {
     name: 'the doo doo extension',
     extensionId: 'jgDooDoo',
-    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116___default.a,
+    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115___default.a,
     tags: ['penguinmod', 'joke'],
     description: 'dr bob eae',
     featured: true
@@ -44822,7 +44900,7 @@ if (IsLocal || IsLiveTests) {
     extensionId: 'https://extensions.turbowarp.org/Lily/McUtils.js',
     tags: ['turbowarp', 'joke'],
     iconURL: 'https://extensions.turbowarp.org/images/Lily/McUtils.png',
-    insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_37___default.a,
+    insetIconURL: _penguinmod_extensions_turbowarp_icon_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
     description: 'Basic utilities for any fast food employee',
     featured: true,
     twDeveloper: 'LilyMakesThings'
@@ -44846,22 +44924,14 @@ if (IsLocal || IsLiveTests) {
   }, {
     name: 'Unite',
     extensionId: 'jwUnite',
-    iconURL: _penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_50___default.a,
+    iconURL: _penguinmod_extensions_Unite_png__WEBPACK_IMPORTED_MODULE_49___default.a,
     tags: ['penguinmod'],
     description: 'Legacy extension that was eventually merged into the default toolbox.',
     featured: true
   }, {
-    name: 'XML',
-    extensionId: 'jwXml',
-    iconURL: _penguinmod_extensions_xml_png__WEBPACK_IMPORTED_MODULE_51___default.a,
-    tags: ['penguinmod', 'datamgmt'],
-    description: 'Enables the creation and getting of XML data. Not yet able to modify data.',
-    extDeveloper: 'jwklong',
-    featured: true
-  }, {
     name: 'Debugging',
     extensionId: 'jgDebugging',
-    iconURL: _penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_48___default.a,
+    iconURL: _penguinmod_extensions_debugging_svg__WEBPACK_IMPORTED_MODULE_47___default.a,
     tags: ['penguinmod'],
     description: 'Log information and run commands. Good for debugging packaged projects or just easily changing things.',
     featured: true
@@ -44869,14 +44939,14 @@ if (IsLocal || IsLiveTests) {
     name: 'Test Extension Loader',
     href: 'https://studio.penguinmod.com/loadExt.html',
     extensionId: 'special_testExtensionLibrary',
-    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116___default.a,
+    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115___default.a,
     description: 'Test loading extensions from a library. For developers.',
     featured: true
   }, {
     name: 'Editor',
     href: 'https://studio.penguinmod.com/editor.html',
     extensionId: 'special_editorExtensionLibrary',
-    iconURL: _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_38___default.a,
+    iconURL: _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_39___default.a,
     description: 'Opens the editor with this tab as the parent, still with the library opened. For developers.',
     featured: true
   }, {
@@ -44886,7 +44956,7 @@ if (IsLocal || IsLiveTests) {
     }),
     extensionId: 'jwStructs',
     tags: ['penguinmod'],
-    iconURL: _penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_52___default.a,
+    iconURL: _penguinmod_extensions_ooplogo_png__WEBPACK_IMPORTED_MODULE_50___default.a,
     description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
       defaultMessage: "Removed from list. OOP blocks. OOp is a programming paradigm that uses objects and their interactions to design applications and computer programs.",
       id: "jwStructs.jwStructsExtension.description"
@@ -44895,14 +44965,14 @@ if (IsLocal || IsLiveTests) {
   }, {
     name: 'PenguinMod Permissions',
     extensionId: 'JgPermissionBlocks',
-    iconURL: _penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_76___default.a,
+    iconURL: _penguinmod_extensions_permissions_png__WEBPACK_IMPORTED_MODULE_75___default.a,
     tags: ['penguinmod'],
     description: 'Legacy extension, old blocks no longer serve a real purpose. Direct blocks to manage permissions that PenguinMod requires you have to do certain tasks.',
     featured: true
   }, {
     name: 'Jeremys Dev Tools',
     extensionId: 'jgDev',
-    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116___default.a,
+    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115___default.a,
     tags: ['penguinmod'],
     description: 'Test extension to see if things are possible.\nDO NOT USE THIS IN PRODUCTION as blocks are subject to change and may corrupt your projects.',
     credits: 'Some features added from LilyMakesThings, CubesterYT, TheShovel',
@@ -44910,36 +44980,36 @@ if (IsLocal || IsLiveTests) {
   }, {
     name: '3D',
     extensionId: 'jg3d',
-    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_116___default.a,
+    iconURL: _penguinmod_extensions_placeholder_png__WEBPACK_IMPORTED_MODULE_115___default.a,
     tags: ['penguinmod', '3d'],
     customInsetColor: '#B200FF',
-    insetIconURL: _penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_85___default.a,
+    insetIconURL: _penguinmod_extensions_3dicon_png__WEBPACK_IMPORTED_MODULE_83___default.a,
     description: 'Do not use for real projects. Not recommended, unstable, and will be rewritten/remade entirely at a later date. In development.',
     featured: true,
     extensionWarningOnImport: true
   }, {
     name: '3D Physics',
     extensionId: 'fr3d',
-    iconURL: _penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_88___default.a,
+    iconURL: _penguinmod_extensions_3d_physics_png__WEBPACK_IMPORTED_MODULE_86___default.a,
     tags: ['penguinmod', '3d'],
     customInsetColor: '#D066FE',
-    insetIconURL: _penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_89___default.a,
+    insetIconURL: _penguinmod_extensions_3d_physics_icon_sized_png__WEBPACK_IMPORTED_MODULE_87___default.a,
     description: 'Physics for the 3D extension.',
     featured: true
   }, {
     name: '3D Virtual Reality',
     extensionId: 'jg3dVr',
-    iconURL: _penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_86___default.a,
+    iconURL: _penguinmod_extensions_3dVr_png__WEBPACK_IMPORTED_MODULE_84___default.a,
     tags: ['penguinmod', 'hardware', '3d'],
     customInsetColor: '#B200FF',
-    insetIconURL: _penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_87___default.a,
+    insetIconURL: _penguinmod_extensions_3dVr_Inset_png__WEBPACK_IMPORTED_MODULE_85___default.a,
     description: 'Do not use for real projects. Not recommended, unstable, and will be rewritten/remade entirely at a later date. In development. May break compatibility. Allow players to really jump into your world!',
     featured: true,
     extensionWarningOnImport: true
   }, {
     name: 'Interfaces',
     extensionId: 'jgInterfaces',
-    iconURL: _penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_83___default.a,
+    iconURL: _penguinmod_extensions_interfaces2_png__WEBPACK_IMPORTED_MODULE_81___default.a,
     credits: 'silvxrcat',
     tags: ['penguinmod'],
     description: 'In development.',
@@ -44947,8 +45017,8 @@ if (IsLocal || IsLiveTests) {
   }, {
     name: 'Packager Applications',
     extensionId: 'jgPackagerApplications',
-    iconURL: _penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_80___default.a,
-    insetIconURL: _penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_81___default.a,
+    iconURL: _penguinmod_extensions_packagedApplications_png__WEBPACK_IMPORTED_MODULE_78___default.a,
+    insetIconURL: _penguinmod_extensions_packagedApplications_inset_png__WEBPACK_IMPORTED_MODULE_79___default.a,
     twDeveloper: 'CubesterYT',
     customInsetColor: '#66B8FF',
     tags: ['penguinmod', 'packager'],
@@ -44957,7 +45027,7 @@ if (IsLocal || IsLiveTests) {
   }, {
     name: 'Inline Blocks',
     extensionId: 'pmInlineBlocks',
-    iconURL: _penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_79___default.a,
+    iconURL: _penguinmod_extensions_inlineblocks_png__WEBPACK_IMPORTED_MODULE_77___default.a,
     tags: ['penguinmod'],
     description: 'Create quick blocks for simple tasks. Insert them into any circle spot and have them return any value you want.',
     featured: true
@@ -44968,7 +45038,7 @@ if (IsLocal || IsLiveTests) {
     }),
     extensionId: 'jgPathfinding',
     tags: ['penguinmod'],
-    iconURL: _penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_109___default.a,
+    iconURL: _penguinmod_extensions_pathfinding_png__WEBPACK_IMPORTED_MODULE_108___default.a,
     description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
       defaultMessage: "(Unstable and or laggy; Needs further work) Have sprites navigate around obstacles in your game instead of clipping into them.",
       id: "jgPathfinding.Pathfinding.description"
@@ -44977,14 +45047,14 @@ if (IsLocal || IsLiveTests) {
   }, {
     name: 'Animation',
     extensionId: 'jgAnimation',
-    iconURL: _penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_110___default.a,
+    iconURL: _penguinmod_extensions_animation_png__WEBPACK_IMPORTED_MODULE_109___default.a,
     tags: ['penguinmod'],
     description: 'In development. Currently buggy and missing features.',
     featured: true
   }, {
     name: 'Virtual Reality',
     extensionId: 'jgVr',
-    iconURL: _penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_90___default.a,
+    iconURL: _penguinmod_extensions_vr_extension_png__WEBPACK_IMPORTED_MODULE_88___default.a,
     tags: ['penguinmod', 'hardware'],
     description: 'In development.',
     extDeveloper: "JeremyGamer13",
@@ -45278,17 +45348,6 @@ module.exports = __webpack_require__.p + "static/assets/930323f74179aa022fd87939
 
 /***/ }),
 
-/***/ "./src/lib/libraries/extensions/penguinmod/extensions/colorutil.png":
-/*!**************************************************************************!*\
-  !*** ./src/lib/libraries/extensions/penguinmod/extensions/colorutil.png ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/assets/6a8cb419123dfa9fe427b191f7b561ad.png";
-
-/***/ }),
-
 /***/ "./src/lib/libraries/extensions/penguinmod/extensions/controls_expanded.png":
 /*!**********************************************************************************!*\
   !*** ./src/lib/libraries/extensions/penguinmod/extensions/controls_expanded.png ***!
@@ -45498,6 +45557,17 @@ module.exports = __webpack_require__.p + "static/assets/03562df738acb5b29670d589
 
 /***/ }),
 
+/***/ "./src/lib/libraries/extensions/penguinmod/extensions/jwScope.svg":
+/*!************************************************************************!*\
+  !*** ./src/lib/libraries/extensions/penguinmod/extensions/jwScope.svg ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/assets/2c3b7928d26e6a043141e479a494d47e.svg";
+
+/***/ }),
+
 /***/ "./src/lib/libraries/extensions/penguinmod/extensions/jwTargets.svg":
 /*!**************************************************************************!*\
   !*** ./src/lib/libraries/extensions/penguinmod/extensions/jwTargets.svg ***!
@@ -45517,6 +45587,17 @@ module.exports = __webpack_require__.p + "static/assets/174cbb7cc72418e5f095e0b7
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/assets/3b0c388c2cf1462401585224ffe2f077.svg";
+
+/***/ }),
+
+/***/ "./src/lib/libraries/extensions/penguinmod/extensions/jwXML.svg":
+/*!**********************************************************************!*\
+  !*** ./src/lib/libraries/extensions/penguinmod/extensions/jwXML.svg ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/assets/664da05abbdb25fc499645258e587890.svg";
 
 /***/ }),
 
@@ -45561,17 +45642,6 @@ module.exports = __webpack_require__.p + "static/assets/f6c7e603df1d93a09e434cd3
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/assets/fb7214f085f0444816f6d8a8b623b89e.svg";
-
-/***/ }),
-
-/***/ "./src/lib/libraries/extensions/penguinmod/extensions/oddmessages.svg":
-/*!****************************************************************************!*\
-  !*** ./src/lib/libraries/extensions/penguinmod/extensions/oddmessages.svg ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/assets/64faeccd0a42a3548ec41b7471ff5ef6.svg";
 
 /***/ }),
 
@@ -45795,6 +45865,17 @@ module.exports = __webpack_require__.p + "static/assets/e48e8bc4ca2913e19da20f08
 
 /***/ }),
 
+/***/ "./src/lib/libraries/extensions/penguinmod/extensions/sp_tempVars.svg":
+/*!****************************************************************************!*\
+  !*** ./src/lib/libraries/extensions/penguinmod/extensions/sp_tempVars.svg ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/assets/1505a7fe5cdea368a3e32622c3e334f1.svg";
+
+/***/ }),
+
 /***/ "./src/lib/libraries/extensions/penguinmod/extensions/storage.png":
 /*!************************************************************************!*\
   !*** ./src/lib/libraries/extensions/penguinmod/extensions/storage.png ***!
@@ -45894,17 +45975,6 @@ module.exports = __webpack_require__.p + "static/assets/7455bbbfec01551f145bced3
 
 /***/ }),
 
-/***/ "./src/lib/libraries/extensions/penguinmod/extensions/xml.png":
-/*!********************************************************************!*\
-  !*** ./src/lib/libraries/extensions/penguinmod/extensions/xml.png ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/assets/73077ae1577fa8af2e8544e19e447491.png";
-
-/***/ }),
-
 /***/ "./src/lib/libraries/extensions/penguinmod/extforge.svg":
 /*!**************************************************************!*\
   !*** ./src/lib/libraries/extensions/penguinmod/extforge.svg ***!
@@ -45979,28 +46049,6 @@ module.exports = __webpack_require__.p + "static/assets/306abcf3a285c1d279e1fed2
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/assets/93259f95026260bc06f83d29d3b89115.svg";
-
-/***/ }),
-
-/***/ "./src/lib/libraries/extensions/penguinmod/turbobuilder-dev.png":
-/*!**********************************************************************!*\
-  !*** ./src/lib/libraries/extensions/penguinmod/turbobuilder-dev.png ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/assets/78d464ee4e15000ce44b841ff2f4c518.png";
-
-/***/ }),
-
-/***/ "./src/lib/libraries/extensions/penguinmod/turbobuilder.png":
-/*!******************************************************************!*\
-  !*** ./src/lib/libraries/extensions/penguinmod/turbobuilder.png ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/assets/3fc5bb5bf0381947df17be6225e1cb26.png";
 
 /***/ }),
 

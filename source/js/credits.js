@@ -613,19 +613,23 @@ const pmDevelopers = ['enderhacker', 'FreshPenguin112', 'Ianyourgod', 'JoshAttic
 const arkideDevs = [{
   text: 'Arc360 (Lead Developer, Owner)',
   image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=ark",
-  href: "https://studio.penguinmod.com/credits.html#"
+  href: "https://arkide.site/profile?user=ark"
 }, {
   text: 'Insomnia (Co-Owner, Main art lead)',
   image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=insomnia64",
-  href: "https://studio.penguinmod.com/credits.html#"
+  href: "https://arkide.site/profile?user=insomnia64"
 }, {
   text: 'w9pti (Moderator)',
   image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=w9pti",
-  href: "https://studio.penguinmod.com/credits.html#"
+  href: "https://arkide.site/profile?user=w9pti"
 }, {
   text: 'battman (Creator of the old mascot)',
   image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=battman",
-  href: "https://studio.penguinmod.com/credits.html#"
+  href: "https://arkide.site/profile?user=battman"
+}, {
+  text: 'snowyy (Ark but its his alt account)',
+  image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=snowyy",
+  href: "https://arkide.site/profile?user=snowyy"
 }];
 const pmPullRequestDevelopers = [
 // these people made a PR that got merged, or got a dev to add something they made

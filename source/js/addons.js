@@ -2111,7 +2111,8 @@ __webpack_require__.r(__webpack_exports__);
   "editor-animations": () => __webpack_require__.e(/*! import() | addon-default-entry */ "addon-default-entry").then(__webpack_require__.bind(null, /*! ../addons/editor-animations/_runtime_entry.js */ "./src/addons/addons/editor-animations/_runtime_entry.js")),
   "reorder-custom-inputs": () => __webpack_require__.e(/*! import() | addon-default-entry */ "addon-default-entry").then(__webpack_require__.bind(null, /*! ../addons/reorder-custom-inputs/_runtime_entry.js */ "./src/addons/addons/reorder-custom-inputs/_runtime_entry.js")),
   "sounds-newgrounds-button": () => __webpack_require__.e(/*! import() | addon-default-entry */ "addon-default-entry").then(__webpack_require__.bind(null, /*! ../addons/sounds-newgrounds-button/_runtime_entry.js */ "./src/addons/addons/sounds-newgrounds-button/_runtime_entry.js")),
-  "paint-reshape-tweaks": () => __webpack_require__.e(/*! import() | addon-default-entry */ "addon-default-entry").then(__webpack_require__.bind(null, /*! ../addons/paint-reshape-tweaks/_runtime_entry.js */ "./src/addons/addons/paint-reshape-tweaks/_runtime_entry.js"))
+  "paint-reshape-tweaks": () => __webpack_require__.e(/*! import() | addon-default-entry */ "addon-default-entry").then(__webpack_require__.bind(null, /*! ../addons/paint-reshape-tweaks/_runtime_entry.js */ "./src/addons/addons/paint-reshape-tweaks/_runtime_entry.js")),
+  "js-viewer": () => __webpack_require__.e(/*! import() | addon-default-entry */ "addon-default-entry").then(__webpack_require__.bind(null, /*! ../addons/js-viewer/_runtime_entries.js */ "./src/addons/addons/js-viewer/_runtime_entries.js"))
 });
 
 /***/ }),

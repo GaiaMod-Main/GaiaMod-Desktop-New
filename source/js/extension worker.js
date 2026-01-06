@@ -3342,8 +3342,8 @@ jQuery.getScript = (src, callback) => {
 };
 
 /**
- * @param {Record<string, any>|undefined} obj
- * @returns {URLSearchParams}
+ * @param {Record<string, any>|undefined} obj Object to process
+ * @returns {URLSearchParams} The generated query parameters
  */
 const objectToQueryString = obj => {
   const params = new URLSearchParams();
@@ -3432,8 +3432,8 @@ module.exports = jQuery;
 const formatMessage = __webpack_require__(/*! format-message */ "./node_modules/format-message/index.js");
 
 /**
- * @param {VM|null} vm
- * @returns {object}
+ * @param {VM|null} vm A virtual machine, used only to determin the locale
+ * @returns {object} A translation handle
  */
 const createTranslate = vm => {
   const namespace = formatMessage.namespace();
@@ -3547,6 +3547,7 @@ const isScratchCompatibleValue = v => typeof v === 'string' || typeof v === 'num
 /**
  * @param {string} argument ScratchX argument with leading % removed.
  * @param {unknown} defaultValue Default value, if any
+ * @returns {ExtensionArgumentMetadata} The generated argument
  */
 const parseScratchXArgument = (argument, defaultValue) => {
   const result = {};
@@ -3590,9 +3591,10 @@ const wrapScratchXFunction = (originalFunction, argumentCount, async) => args =>
 };
 
 /**
- * @param {string} name
- * @param {ScratchXDescriptor} descriptor
- * @param {Record<string, () => unknown>} functions
+ * @param {string} name The extensions original name
+ * @param {ScratchXDescriptor} descriptor The parsed scratchx extension info
+ * @param {Record<string, Function>} functions The functions referenced by that info
+ * @returns {!ExtensionMetadata} The converted result
  */
 const convert = (name, descriptor, functions) => {
   const extensionId = generateExtensionId(name);
@@ -3714,8 +3716,8 @@ module.exports = createScratchX;
  */
 
 /**
- * @param {string} scratchXName
- * @returns {string}
+ * @param {string} scratchXName The name the scratchx extension uses
+ * @returns {string} The name that should be used in the runtime
  */
 const generateExtensionId = scratchXName => {
   const sanitizedName = scratchXName.replace(/[^a-z0-9]/gi, '').toLowerCase();
