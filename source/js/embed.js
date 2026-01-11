@@ -373,12 +373,41 @@ const onVmInit = _vm => {
   var _vm$runtime$renderer;
   vm = _vm;
   if ((_vm$runtime$renderer = vm.runtime.renderer) !== null && _vm$runtime$renderer !== void 0 && _vm$runtime$renderer.setPrivateSkinAccess) vm.runtime.renderer.setPrivateSkinAccess(false);
+
+  // Add global screenshot function
+  window.takeScreenshot = () => {
+    if (!vm) return;
+    const renderer = vm.runtime.renderer;
+    const canvas = renderer.canvas;
+    const captureCallback = () => {
+      const now = new Date();
+      const filename = "scratch-".concat(now.toISOString().split('T')[0], "-").concat(now.toTimeString().split(' ')[0].replace(/:/g, '-'));
+      canvas.toBlob(blob => {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.download = "".concat(filename, ".png");
+        link.href = url;
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+    };
+    renderer._snapshotCallbacks.push(captureCallback);
+    renderer.dirty = true;
+  };
 };
 const onProjectLoaded = () => {
   if (urlParams.has('autoplay')) {
     vm.start();
     vm.greenFlag();
   }
+
+  // Add screenshot keyboard shortcut (Ctrl+Shift+S)
+  document.addEventListener('keydown', e => {
+    if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+      e.preventDefault();
+      window.takeScreenshot();
+    }
+  });
 };
 const WrappedGUI = Object(redux__WEBPACK_IMPORTED_MODULE_3__["compose"])(_lib_app_state_hoc_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], _lib_tw_state_manager_hoc_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], _lib_tw_embed_fullscreen_hoc_jsx__WEBPACK_IMPORTED_MODULE_6__["default"])(_render_gui_jsx__WEBPACK_IMPORTED_MODULE_9__["default"]);
 Object(react_modal__WEBPACK_IMPORTED_MODULE_4__["setAppElement"])(_app_target__WEBPACK_IMPORTED_MODULE_10__["default"]);

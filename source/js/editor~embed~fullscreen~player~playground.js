@@ -13553,7 +13553,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/assets/af9c94cb6f7bc0b9c60e590ea0e876ce.svg";
+module.exports = __webpack_require__.p + "static/assets/acfb2a41e4871e1653a96c48efc96e49.svg";
 
 /***/ }),
 
@@ -18213,6 +18213,17 @@ module.exports = __webpack_require__.p + "static/assets/01ba3afd97b3146727e6210e
 
 /***/ }),
 
+/***/ "./src/components/stage-header/icon--screenshot.svg":
+/*!**********************************************************!*\
+  !*** ./src/components/stage-header/icon--screenshot.svg ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/assets/212918ccca46ed17261999e908ce87e8.svg";
+
+/***/ }),
+
 /***/ "./src/components/stage-header/icon--settings.svg":
 /*!********************************************************!*\
   !*** ./src/components/stage-header/icon--settings.svg ***!
@@ -18310,9 +18321,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _icon_unfullscreen_svg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_icon_unfullscreen_svg__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _icon_settings_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./icon--settings.svg */ "./src/components/stage-header/icon--settings.svg");
 /* harmony import */ var _icon_settings_svg__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_icon_settings_svg__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _stage_header_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./stage-header.css */ "./src/components/stage-header/stage-header.css");
-/* harmony import */ var _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_stage_header_css__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _lib_tw_fullscreen_api__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../lib/tw-fullscreen-api */ "./src/lib/tw-fullscreen-api.js");
+/* harmony import */ var _icon_screenshot_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./icon--screenshot.svg */ "./src/components/stage-header/icon--screenshot.svg");
+/* harmony import */ var _icon_screenshot_svg__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_icon_screenshot_svg__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _stage_header_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./stage-header.css */ "./src/components/stage-header/stage-header.css");
+/* harmony import */ var _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_stage_header_css__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _lib_tw_fullscreen_api__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../lib/tw-fullscreen-api */ "./src/lib/tw-fullscreen-api.js");
+
 
 
 
@@ -18360,6 +18374,10 @@ const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_1__["defineMessages"
   openSettingsMessage: {
     "id": "pm.openGameplay",
     "defaultMessage": "Open gameplay settings"
+  },
+  screenshotMessage: {
+    "id": "gui.stageHeader.screenshot",
+    "defaultMessage": "Take screenshot"
   }
 });
 const enableSettingsButton = new URLSearchParams(location.search).has('settings-button');
@@ -18380,6 +18398,18 @@ const StageHeaderComponent = function StageHeaderComponent(props) {
   } = props;
   let header = null;
 
+  // ADD THIS:
+  const screenshotButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButton,
+    onClick: props.onTakeScreenshot
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
+    alt: props.intl.formatMessage(messages.screenshotMessage),
+    className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonIcon,
+    draggable: false,
+    src: _icon_screenshot_svg__WEBPACK_IMPORTED_MODULE_16___default.a,
+    title: props.intl.formatMessage(messages.screenshotMessage)
+  }));
+
   // const popoutWindowButton = <Button
   //     className={styles.stageButton}
   //     onClick={Popout.toggle}
@@ -18396,86 +18426,86 @@ const StageHeaderComponent = function StageHeaderComponent(props) {
   if (isFullScreen || isEmbedded) {
     const stageDimensions = Object(_lib_screen_utils__WEBPACK_IMPORTED_MODULE_9__["getStageDimensions"])(null, customStageSize, true);
     const settingsButton = isEmbedded && enableSettingsButton ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButton,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButton,
       onClick: onOpenSettings
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
       alt: props.intl.formatMessage(messages.openSettingsMessage),
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonIcon,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonIcon,
       draggable: false,
       src: _icon_settings_svg__WEBPACK_IMPORTED_MODULE_15___default.a,
       title: props.intl.formatMessage(messages.openSettingsMessage)
     })) : null;
     const fullscreenButton = isFullScreen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButton,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButton,
       onClick: onSetStageUnFull,
       onKeyPress: onKeyPress
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
       alt: props.intl.formatMessage(messages.unFullStageSizeMessage),
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonIcon,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonIcon,
       draggable: false,
       src: _icon_unfullscreen_svg__WEBPACK_IMPORTED_MODULE_14___default.a,
       title: props.intl.formatMessage(messages.fullscreenControl)
-    })) : _lib_tw_fullscreen_api__WEBPACK_IMPORTED_MODULE_17__["default"].available() ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButton,
+    })) : _lib_tw_fullscreen_api__WEBPACK_IMPORTED_MODULE_18__["default"].available() ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButton,
       onClick: onSetStageFull
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
       alt: props.intl.formatMessage(messages.fullStageSizeMessage),
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonIcon,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonIcon,
       draggable: false,
       src: _icon_fullscreen_svg__WEBPACK_IMPORTED_MODULE_11___default.a,
       title: props.intl.formatMessage(messages.fullscreenControl)
     })) : null;
     header = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_box_box_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageHeaderWrapperOverlay, {
-        [_stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.embedded]: isEmbedded
+      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageHeaderWrapperOverlay, {
+        [_stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.embedded]: isEmbedded
       })
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_box_box_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageMenuWrapper,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageMenuWrapper,
       style: {
         width: stageDimensions.width
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_containers_controls_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
       vm: vm
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.embedButtons
-    }, settingsButton, fullscreenButton)));
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.embedButtons
+    }, settingsButton, screenshotButton, fullscreenButton)));
   } else {
     const stageControls = isPlayerOnly ? [] : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageSizeToggleGroup
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageSizeToggleGroup
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButton, _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonFirst, stageSizeMode === _lib_layout_constants__WEBPACK_IMPORTED_MODULE_10__["STAGE_SIZE_MODES"].small ? null : _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonToggledOff),
+      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButton, _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonFirst, stageSizeMode === _lib_layout_constants__WEBPACK_IMPORTED_MODULE_10__["STAGE_SIZE_MODES"].small ? null : _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonToggledOff),
       onClick: onSetStageSmall
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
       alt: props.intl.formatMessage(messages.smallStageSizeMessage),
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonIcon,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonIcon,
       draggable: false,
       src: _icon_small_stage_svg__WEBPACK_IMPORTED_MODULE_13___default.a
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButton, _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonLast, stageSizeMode === _lib_layout_constants__WEBPACK_IMPORTED_MODULE_10__["STAGE_SIZE_MODES"].large ? null : _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonToggledOff),
+      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButton, _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonLast, stageSizeMode === _lib_layout_constants__WEBPACK_IMPORTED_MODULE_10__["STAGE_SIZE_MODES"].large ? null : _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonToggledOff),
       onClick: onSetStageLarge
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
       alt: props.intl.formatMessage(messages.largeStageSizeMessage),
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonIcon,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonIcon,
       draggable: false,
       src: _icon_large_stage_svg__WEBPACK_IMPORTED_MODULE_12___default.a
     }))));
     header = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_box_box_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageHeaderWrapper
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageHeaderWrapper
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_box_box_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageMenuWrapper
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageMenuWrapper
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_containers_controls_jsx__WEBPACK_IMPORTED_MODULE_8__["default"], {
       vm: vm,
       isSmall: stageSizeMode === _lib_layout_constants__WEBPACK_IMPORTED_MODULE_10__["STAGE_SIZE_MODES"].small
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageSizeRow
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageSizeRow
     }, stageControls, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.embedButtons
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButton,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.embedButtons
+    }, screenshotButton, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButton,
       onClick: onSetStageFull
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
       alt: props.intl.formatMessage(messages.fullStageSizeMessage),
-      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_16___default.a.stageButtonIcon,
+      className: _stage_header_css__WEBPACK_IMPORTED_MODULE_17___default.a.stageButtonIcon,
       draggable: false,
       src: _icon_fullscreen_svg__WEBPACK_IMPORTED_MODULE_11___default.a,
       title: props.intl.formatMessage(messages.fullscreenControl)
@@ -18504,7 +18534,10 @@ StageHeaderComponent.propTypes = {
   onOpenSettings: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
   isEmbedded: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,
   stageSizeMode: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOf(Object.keys(_lib_layout_constants__WEBPACK_IMPORTED_MODULE_10__["STAGE_SIZE_MODES"])),
-  vm: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_5___default.a).isRequired
+  vm: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_5___default.a).isRequired,
+  onOpenSettings: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
+  onTakeScreenshot: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
+  isEmbedded: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired
 };
 StageHeaderComponent.defaultProps = {
   stageSizeMode: _lib_layout_constants__WEBPACK_IMPORTED_MODULE_10__["STAGE_SIZE_MODES"].large
@@ -33083,12 +33116,47 @@ const mapStateToProps = state => ({
   dimensions: state.scratchGui.tw.dimensions,
   isPlayerOnly: state.scratchGui.mode.isPlayerOnly
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
   onSetStageLarge: () => dispatch(Object(_reducers_stage_size__WEBPACK_IMPORTED_MODULE_5__["setStageSize"])(_lib_layout_constants__WEBPACK_IMPORTED_MODULE_4__["STAGE_SIZE_MODES"].large)),
   onSetStageSmall: () => dispatch(Object(_reducers_stage_size__WEBPACK_IMPORTED_MODULE_5__["setStageSize"])(_lib_layout_constants__WEBPACK_IMPORTED_MODULE_4__["STAGE_SIZE_MODES"].small)),
   onSetStageFull: () => dispatch(Object(_reducers_mode__WEBPACK_IMPORTED_MODULE_6__["setFullScreen"])(true)),
   onSetStageUnFull: () => dispatch(Object(_reducers_mode__WEBPACK_IMPORTED_MODULE_6__["setFullScreen"])(false)),
-  onOpenSettings: () => dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_7__["openSettingsModal"])())
+  onOpenSettings: () => dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_7__["openSettingsModal"])()),
+  onTakeScreenshot: () => {
+    const vm = ownProps.vm;
+    if (!vm || !vm.runtime || !vm.runtime.renderer) {
+      console.error('VM not available for screenshot');
+      return;
+    }
+    try {
+      const renderer = vm.runtime.renderer;
+      const canvas = renderer.canvas;
+      if (!canvas) {
+        console.error('Canvas not available');
+        return;
+      }
+      const captureCallback = () => {
+        const now = new Date();
+        const filename = "scratch-".concat(now.toISOString().split('T')[0], "-").concat(now.toTimeString().split(' ')[0].replace(/:/g, '-'));
+        canvas.toBlob(blob => {
+          if (!blob) {
+            console.error('Failed to create blob');
+            return;
+          }
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.download = "".concat(filename, ".png");
+          link.href = url;
+          link.click();
+          URL.revokeObjectURL(url);
+        });
+      };
+      renderer._snapshotCallbacks.push(captureCallback);
+      renderer.dirty = true;
+    } catch (error) {
+      console.error('Screenshot error:', error);
+    }
+  }
 });
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStateToProps, mapDispatchToProps)(StageHeader));
 
