@@ -25161,18 +25161,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _addons_hooks__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../addons/hooks */ "./src/addons/hooks.js");
 /* harmony import */ var _lib_tw_load_scratch_blocks_hoc_jsx__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../lib/tw-load-scratch-blocks-hoc.jsx */ "./src/lib/tw-load-scratch-blocks-hoc.jsx");
 /* harmony import */ var _lib_uid_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../lib/uid.js */ "./src/lib/uid.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reducers_toolbox__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../reducers/toolbox */ "./src/reducers/toolbox.js");
-/* harmony import */ var _reducers_color_picker__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../reducers/color-picker */ "./src/reducers/color-picker.js");
-/* harmony import */ var _reducers_modals__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../reducers/modals */ "./src/reducers/modals.js");
-/* harmony import */ var _reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../reducers/custom-procedures */ "./src/reducers/custom-procedures.js");
-/* harmony import */ var _reducers_connection_modal__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../reducers/connection-modal */ "./src/reducers/connection-modal.js");
-/* harmony import */ var _reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../reducers/workspace-metrics */ "./src/reducers/workspace-metrics.js");
-/* harmony import */ var _reducers_editor_tab__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../reducers/editor-tab */ "./src/reducers/editor-tab.js");
+/* harmony import */ var _lib_block_export_image__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../lib/block-export-image */ "./src/lib/block-export-image.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reducers_toolbox__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../reducers/toolbox */ "./src/reducers/toolbox.js");
+/* harmony import */ var _reducers_color_picker__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../reducers/color-picker */ "./src/reducers/color-picker.js");
+/* harmony import */ var _reducers_modals__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../reducers/modals */ "./src/reducers/modals.js");
+/* harmony import */ var _reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../reducers/custom-procedures */ "./src/reducers/custom-procedures.js");
+/* harmony import */ var _reducers_connection_modal__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../reducers/connection-modal */ "./src/reducers/connection-modal.js");
+/* harmony import */ var _reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../reducers/workspace-metrics */ "./src/reducers/workspace-metrics.js");
+/* harmony import */ var _reducers_editor_tab__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../reducers/editor-tab */ "./src/reducers/editor-tab.js");
 const _excluded = ["anyModalVisible", "canUseCloud", "customStageSize", "customProceduresVisible", "extensionLibraryVisible", "options", "stageSize", "vm", "isRtl", "isVisible", "onActivateColorPicker", "onOpenConnectionModal", "onOpenSoundRecorder", "onOpenCustomExtensionModal", "updateToolboxState", "onActivateCustomProcedures", "onRequestCloseExtensionLibrary", "onRequestCloseCustomProcedures", "toolboxXML", "updateMetrics", "workspaceMetrics"];
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
 function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
+
 
 
 
@@ -25347,6 +25349,47 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
     for (const category of this.props.vm.runtime._blockInfo) {
       this.handleExtensionAdded(category);
     }
+    // Setup block export functionality
+    Object(_lib_block_export_image__WEBPACK_IMPORTED_MODULE_23__["default"])(this.ScratchBlocks, this.workspace);
+    // Setup block export functionality
+    Object(_lib_block_export_image__WEBPACK_IMPORTED_MODULE_23__["default"])(this.ScratchBlocks, this.workspace);
+
+    // Setup pin/unpin functionality for toolbox blocks
+    const setupPinUnpin = (ScratchBlocks, getToolboxXMLFn, updateToolboxStateFn) => {
+      const originalShowContextMenu = ScratchBlocks.BlockSvg.prototype.showContextMenu_;
+      ScratchBlocks.BlockSvg.prototype.showContextMenu_ = function (e) {
+        const block = this;
+        if (block.workspace.isFlyout) {
+          const menuOptions = [];
+          const blockXML = ScratchBlocks.Xml.domToText(ScratchBlocks.Xml.blockToDom(block));
+          const {
+            isBlockPinned,
+            pinBlock,
+            unpinBlock
+          } = __webpack_require__(/*! ../lib/pinned-blocks-storage */ "./src/lib/pinned-blocks-storage.js");
+          const isPinned = isBlockPinned(blockXML);
+          menuOptions.push({
+            enabled: true,
+            text: isPinned ? 'Unpin Block' : 'Pin Block',
+            callback: () => {
+              if (isPinned) {
+                unpinBlock(blockXML);
+              } else {
+                pinBlock(blockXML);
+              }
+              const toolboxXML = getToolboxXMLFn();
+              if (toolboxXML) {
+                updateToolboxStateFn(toolboxXML);
+              }
+            }
+          });
+          ScratchBlocks.ContextMenu.show(e, menuOptions, this.RTL);
+        } else {
+          originalShowContextMenu.call(this, e);
+        }
+      };
+    };
+    setupPinUnpin(this.ScratchBlocks, this.getToolboxXML.bind(this), this.props.updateToolboxState);
   }
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.prompt !== nextState.prompt || this.state.customPrompts !== nextState.customPrompts || nextState.customPrompts && this.state.customPrompts.length !== nextState.customPrompts.length || this.props.isVisible !== nextProps.isVisible || this._renderedToolboxXML !== nextProps.toolboxXML || this.props.extensionLibraryVisible !== nextProps.extensionLibraryVisible || this.props.customProceduresVisible !== nextProps.customProceduresVisible || this.props.locale !== nextProps.locale || this.props.anyModalVisible !== nextProps.anyModalVisible || this.props.stageSize !== nextProps.stageSize || this.props.customStageSize !== nextProps.customStageSize;
@@ -25978,31 +26021,31 @@ const mapStateToProps = state => ({
   isFullScreen: state.scratchGui.mode.isFullScreen
 });
 const mapDispatchToProps = dispatch => ({
-  onActivateColorPicker: callback => dispatch(Object(_reducers_color_picker__WEBPACK_IMPORTED_MODULE_25__["activateColorPicker"])(callback)),
-  onActivateCustomProcedures: (data, callback) => dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_27__["activateCustomProcedures"])(data, callback)),
+  onActivateColorPicker: callback => dispatch(Object(_reducers_color_picker__WEBPACK_IMPORTED_MODULE_26__["activateColorPicker"])(callback)),
+  onActivateCustomProcedures: (data, callback) => dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_28__["activateCustomProcedures"])(data, callback)),
   onOpenConnectionModal: id => {
-    dispatch(Object(_reducers_connection_modal__WEBPACK_IMPORTED_MODULE_28__["setConnectionModalExtensionId"])(id));
-    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["openConnectionModal"])());
+    dispatch(Object(_reducers_connection_modal__WEBPACK_IMPORTED_MODULE_29__["setConnectionModalExtensionId"])(id));
+    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["openConnectionModal"])());
   },
   onOpenSoundRecorder: () => {
-    dispatch(Object(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_30__["activateTab"])(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_30__["SOUNDS_TAB_INDEX"]));
-    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["openSoundRecorder"])());
+    dispatch(Object(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_31__["activateTab"])(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_31__["SOUNDS_TAB_INDEX"]));
+    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["openSoundRecorder"])());
   },
-  onOpenCustomExtensionModal: swapId => dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["openCustomExtensionModal"])(swapId)),
+  onOpenCustomExtensionModal: swapId => dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["openCustomExtensionModal"])(swapId)),
   onRequestCloseExtensionLibrary: () => {
-    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["closeExtensionLibrary"])());
+    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["closeExtensionLibrary"])());
   },
   onRequestCloseCustomProcedures: data => {
-    dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_27__["deactivateCustomProcedures"])(data));
+    dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_28__["deactivateCustomProcedures"])(data));
   },
   updateToolboxState: toolboxXML => {
-    dispatch(Object(_reducers_toolbox__WEBPACK_IMPORTED_MODULE_24__["updateToolbox"])(toolboxXML));
+    dispatch(Object(_reducers_toolbox__WEBPACK_IMPORTED_MODULE_25__["updateToolbox"])(toolboxXML));
   },
   updateMetrics: metrics => {
-    dispatch(Object(_reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_29__["updateMetrics"])(metrics));
+    dispatch(Object(_reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_30__["updateMetrics"])(metrics));
   }
 });
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_6__["injectIntl"])(Object(_lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_15__["default"])('Blocks')(Object(react_redux__WEBPACK_IMPORTED_MODULE_23__["connect"])(mapStateToProps, mapDispatchToProps)(Object(_lib_tw_load_scratch_blocks_hoc_jsx__WEBPACK_IMPORTED_MODULE_21__["default"])(Blocks)))));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_6__["injectIntl"])(Object(_lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_15__["default"])('Blocks')(Object(react_redux__WEBPACK_IMPORTED_MODULE_24__["connect"])(mapStateToProps, mapDispatchToProps)(Object(_lib_tw_load_scratch_blocks_hoc_jsx__WEBPACK_IMPORTED_MODULE_21__["default"])(Blocks)))));
 
 /***/ }),
 
@@ -38994,6 +39037,181 @@ const jpegThumbnail = dataUrl => new Promise((resolve, reject) => {
 
 /***/ }),
 
+/***/ "./src/lib/block-export-image.js":
+/*!***************************************!*\
+  !*** ./src/lib/block-export-image.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Block Export to Image functionality
+ * Adds "Export as Image" option to block right-click menu
+ */
+
+const setupBlockExport = (ScratchBlocks, workspace) => {
+  // Store original context menu function
+  const originalShowContextMenu = ScratchBlocks.BlockSvg.prototype.showContextMenu_;
+
+  // Override the context menu function
+  ScratchBlocks.BlockSvg.prototype.showContextMenu_ = function (e) {
+    const block = this;
+    const menuOptions = [];
+
+    // Get default menu options first
+    if (this.isDeletable() && this.isMovable()) {
+      menuOptions.push(ScratchBlocks.ContextMenu.blockDuplicateOption(block, e));
+    }
+    if (this.isDeletable()) {
+      menuOptions.push(ScratchBlocks.ContextMenu.blockDeleteOption(block));
+    }
+
+    // Add "Export as Image" option
+    menuOptions.push({
+      enabled: true,
+      text: 'Export as Image',
+      callback: () => exportBlockAsImage(block, workspace)
+    });
+
+    // Add help option if available
+    const url = typeof this.helpUrl === 'function' ? this.helpUrl() : this.helpUrl;
+    if (url) {
+      menuOptions.push(ScratchBlocks.ContextMenu.blockHelpOption(block));
+    }
+
+    // Show the menu
+    ScratchBlocks.ContextMenu.show(e, menuOptions, this.RTL);
+  };
+};
+const convertImagesToDataUrls = async svgElement => {
+  const images = svgElement.querySelectorAll('image');
+  const promises = [];
+  for (const img of images) {
+    const href = img.getAttribute('href') || img.getAttribute('xlink:href');
+    if (href && !href.startsWith('data:')) {
+      const promise = fetch(href).then(response => response.blob()).then(blob => new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          img.setAttribute('href', reader.result);
+          img.removeAttribute('xlink:href');
+          resolve();
+        };
+        reader.readAsDataURL(blob);
+      })).catch(err => {
+        console.warn('Failed to load image:', href, err);
+      });
+      promises.push(promise);
+    }
+  }
+  return Promise.all(promises);
+};
+const exportBlockAsImage = async (block, workspace) => {
+  try {
+    // Get the root block of the stack
+    const rootBlock = block.getRootBlock();
+
+    // Get the block group element
+    const blockGroup = rootBlock.getSvgRoot();
+    if (!blockGroup) {
+      console.error('Could not find block SVG');
+      return;
+    }
+
+    // Get bounding box
+    const bbox = blockGroup.getBBox();
+    const padding = 20;
+
+    // Create new SVG with proper namespaces and styling
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const newSvg = document.createElementNS(svgNS, 'svg');
+    newSvg.setAttribute('xmlns', svgNS);
+    newSvg.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
+    newSvg.setAttribute('width', bbox.width + padding * 2);
+    newSvg.setAttribute('height', bbox.height + padding * 2);
+    newSvg.setAttribute('viewBox', "0 0 ".concat(bbox.width + padding * 2, " ").concat(bbox.height + padding * 2));
+
+    // Add defs for gradients and filters that blocks use
+    const defs = document.createElementNS(svgNS, 'defs');
+
+    // Copy defs from workspace (includes block shadows, gradients, etc)
+    const workspaceDefs = workspace.svgBlockCanvas_.querySelector('defs');
+    if (workspaceDefs) {
+      defs.innerHTML = workspaceDefs.innerHTML;
+    }
+    newSvg.appendChild(defs);
+
+    // Add style element for fonts
+    const style = document.createElementNS(svgNS, 'style');
+    style.textContent = "\n            text {\n                font-family: \"Helvetica Neue\", Helvetica, sans-serif;\n                font-size: 12pt;\n                font-weight: 500;\n                fill: white;\n            }\n            .blocklyText {\n                font-family: \"Helvetica Neue\", Helvetica, sans-serif;\n                font-size: 12pt;\n                font-weight: 500;\n                fill: white;\n            }\n            .blocklyEditableText {\n                font-family: \"Helvetica Neue\", Helvetica, sans-serif;\n                font-size: 12pt;\n                font-weight: 500;\n                fill: white;\n            }\n            .blocklyNonEditableText > text {\n                fill: white;\n            }\n            .blocklyEditableText > .blocklyText {\n                fill: black !important;\n            }\n            .blocklyDropdownText {\n                fill: white;\n            }\n        ";
+    newSvg.appendChild(style);
+
+    // Clone and transform the block
+    const clonedBlock = blockGroup.cloneNode(true);
+    const transform = "translate(".concat(padding - bbox.x, ", ").concat(padding - bbox.y, ")");
+    clonedBlock.setAttribute('transform', transform);
+    newSvg.appendChild(clonedBlock);
+
+    // Convert all image URLs to data URLs
+    await convertImagesToDataUrls(newSvg);
+
+    // Serialize SVG
+    const serializer = new XMLSerializer();
+    let svgString = serializer.serializeToString(newSvg);
+
+    // Create canvas for conversion
+    const canvas = document.createElement('canvas');
+    const scale = 3; // Higher quality for crisp text
+    canvas.width = (bbox.width + padding * 2) * scale;
+    canvas.height = (bbox.height + padding * 2) * scale;
+    const ctx = canvas.getContext('2d');
+
+    // Create image from SVG
+    const img = new Image();
+    const blob = new Blob([svgString], {
+      type: 'image/svg+xml;charset=utf-8'
+    });
+    const url = URL.createObjectURL(blob);
+    img.onload = () => {
+      // Enable better rendering
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+
+      // Draw image at higher resolution
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+      // Convert to PNG and download
+      canvas.toBlob(pngBlob => {
+        const downloadUrl = URL.createObjectURL(pngBlob);
+        const link = document.createElement('a');
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+        link.download = "block-".concat(timestamp, ".png");
+        link.href = downloadUrl;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Cleanup
+        URL.revokeObjectURL(downloadUrl);
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    };
+    img.onerror = err => {
+      console.error('Error loading image:', err);
+      URL.revokeObjectURL(url);
+      alert('Failed to export block. Please try again.');
+    };
+    img.src = url;
+  } catch (error) {
+    console.error('Error exporting block:', error);
+    alert('Failed to export block as image: ' + error.message);
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (setupBlockExport);
+
+/***/ }),
+
 /***/ "./src/lib/block-search.js":
 /*!*********************************!*\
   !*** ./src/lib/block-search.js ***!
@@ -46759,10 +46977,47 @@ window.log = minilog__WEBPACK_IMPORTED_MODULE_0___default()('gui');
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tw-lazy-scratch-blocks */ "./src/lib/tw-lazy-scratch-blocks.js");
+/* harmony import */ var _pinned_blocks_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pinned-blocks-storage */ "./src/lib/pinned-blocks-storage.js");
 
 const categorySeparator = '<sep gap="36"/>';
 const blockSeparator = '<sep gap="36"/>'; // At default scale, about 28px
 
+
+const pinned = function pinned() {
+  let loadedExtensions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  Object(_pinned_blocks_storage__WEBPACK_IMPORTED_MODULE_1__["cleanupPinnedBlocks"])();
+  const pinnedBlocks = Object(_pinned_blocks_storage__WEBPACK_IMPORTED_MODULE_1__["getPinnedBlocks"])();
+
+  // Filter out blocks from extensions that aren't loaded
+  const filteredBlocks = pinnedBlocks.filter(blockXML => {
+    // Check if block is from an extension by looking for extension ID in the block type
+    const typeMatch = blockXML.match(/type="([^"]+)"/);
+    if (!typeMatch) return true; // Keep blocks without a type (shouldn't happen)
+
+    const blockType = typeMatch[1];
+
+    // Check if this is an extension block (contains underscore, like "pen_clear")
+    if (blockType.includes('_')) {
+      const extensionId = blockType.split('_')[0];
+
+      // Core categories that aren't extensions
+      const coreCategories = ['motion', 'looks', 'sound', 'event', 'control', 'sensing', 'operator', 'data', 'procedures', 'argument'];
+
+      // If it's a core category, keep it
+      if (coreCategories.includes(extensionId)) {
+        return true;
+      }
+
+      // Otherwise, only keep if the extension is loaded
+      return loadedExtensions.some(ext => ext.id === extensionId);
+    }
+
+    // Keep non-extension blocks (core blocks)
+    return true;
+  });
+  const blocksXML = filteredBlocks.join('\n');
+  return "\n    <category name=\"Pinned\" id=\"pinned\" colour=\"#FF66CC\" secondaryColour=\"#E64DB8\" iconURI=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPvCfk4w8L3RleHQ+PC9zdmc+\">\n        ".concat(blocksXML || '<label text="Right-click blocks to pin them here"></label>', "\n        ").concat(categorySeparator, "\n    </category>\n    ");
+};
 const translate = (id, english) => {
   if (_tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].isLoaded()) {
     const ScratchBlocks = _tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].get();
@@ -46886,7 +47141,9 @@ const makeToolboxXML = function makeToolboxXML(isInitialSetup) {
   const listsXML = moveCategory('lists') || lists(isInitialSetup, isStage, targetId);
   const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
   const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);
-  const everything = [xmlOpen, motionXML, looksXML, soundXML, eventsXML, controlXML, sensingXML, operatorsXML, variablesXML, listsXML, myBlocksXML];
+  const pinnedXML = pinned(categoriesXML); // Pass the loaded extensions
+
+  const everything = [xmlOpen, pinnedXML, motionXML, looksXML, soundXML, eventsXML, controlXML, sensingXML, operatorsXML, variablesXML, listsXML, myBlocksXML];
   if (isLiveTest) everything.push(liveTestsXML);
   for (const extensionCategory of categoriesXML) {
     everything.push(extensionCategory.xml);
@@ -47525,6 +47782,76 @@ class OpcodeLabels {
   }
 }
 /* harmony default export */ __webpack_exports__["default"] = (new OpcodeLabels());
+
+/***/ }),
+
+/***/ "./src/lib/pinned-blocks-storage.js":
+/*!******************************************!*\
+  !*** ./src/lib/pinned-blocks-storage.js ***!
+  \******************************************/
+/*! exports provided: getPinnedBlocks, setPinnedBlocks, pinBlock, unpinBlock, isBlockPinned, cleanupPinnedBlocks */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPinnedBlocks", function() { return getPinnedBlocks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setPinnedBlocks", function() { return setPinnedBlocks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pinBlock", function() { return pinBlock; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unpinBlock", function() { return unpinBlock; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isBlockPinned", function() { return isBlockPinned; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cleanupPinnedBlocks", function() { return cleanupPinnedBlocks; });
+// Storage key for pinned blocks
+const PINNED_BLOCKS_KEY = 'scratch_pinned_blocks';
+
+// Get pinned blocks from localStorage
+const getPinnedBlocks = () => {
+  try {
+    const stored = localStorage.getItem(PINNED_BLOCKS_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch (e) {
+    console.error('Failed to load pinned blocks:', e);
+    return [];
+  }
+};
+
+// Save pinned blocks to localStorage
+const setPinnedBlocks = blocks => {
+  try {
+    localStorage.setItem(PINNED_BLOCKS_KEY, JSON.stringify(blocks));
+  } catch (e) {
+    console.error('Failed to save pinned blocks:', e);
+  }
+};
+
+// Add a block to pinned
+const pinBlock = blockXML => {
+  const pinned = getPinnedBlocks();
+  if (!pinned.includes(blockXML)) {
+    pinned.push(blockXML);
+    setPinnedBlocks(pinned);
+  }
+  return pinned;
+};
+
+// Remove a block from pinned
+const unpinBlock = blockXML => {
+  const pinned = getPinnedBlocks();
+  const filtered = pinned.filter(b => b !== blockXML);
+  setPinnedBlocks(filtered);
+  return filtered;
+};
+
+// Check if a block is pinned
+const isBlockPinned = blockXML => {
+  return getPinnedBlocks().includes(blockXML);
+};
+const cleanupPinnedBlocks = () => {
+  const pinned = getPinnedBlocks();
+  // Remove duplicates and empty entries
+  const cleaned = [...new Set(pinned)].filter(block => block && block.trim().length > 0);
+  setPinnedBlocks(cleaned);
+  return cleaned;
+};
 
 /***/ }),
 
