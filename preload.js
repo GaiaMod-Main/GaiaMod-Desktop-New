@@ -9,5 +9,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openUrl: (url) => ipcRenderer.send('open-url', url),
   enableDiscord: () => ipcRenderer.invoke('discord-enable'),
   disableDiscord: () => ipcRenderer.invoke('discord-disable'),
-  getDiscordStatus: () => ipcRenderer.invoke('discord-status')
+  getDiscordStatus: () => ipcRenderer.invoke('discord-status'),
+  autoDownloadUpdate: (version) => ipcRenderer.invoke('auto-download-update', version),
+  onDownloadProgress: (callback) => ipcRenderer.on('download-progress', (event, percent) => callback(percent)),
 });
