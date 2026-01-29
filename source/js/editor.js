@@ -3421,7 +3421,7 @@ const TWProjectMetaFetcherHOC = function TWProjectMetaFetcherHOC(WrappedComponen
       if ((_this$props$vm$runtim = this.props.vm.runtime.renderer) !== null && _this$props$vm$runtim !== void 0 && _this$props$vm$runtim.setPrivateSkinAccess) this.props.vm.runtime.renderer.setPrivateSkinAccess(true);
       this.props.onSetAuthor('', '');
       this.props.onSetDescription('', '');
-      this.props.onSetRemixedProjectInfo(false, '', '');
+      // this.props.onSetRemixedProjectInfo(false, '', '');
       const projectId = this.props.projectId;
       // Don't try to load metadata for empty projects.
       if (projectId === '0') {
@@ -3469,9 +3469,13 @@ const TWProjectMetaFetcherHOC = function TWProjectMetaFetcherHOC(WrappedComponen
               if (this.props.projectId !== projectId) {
                 return;
               }
-              this.props.onSetRemixedProjectInfo(true,
-              // loaded
-              remixProject.title, remixProject.author.username);
+              /*
+              this.props.onSetRemixedProjectInfo(
+                  true, // loaded
+                  remixProject.title,
+                  remixProject.author.username
+              );
+              */
             }).catch(err => {
               // this isnt fatal, just log
               _log__WEBPACK_IMPORTED_MODULE_3__["default"].warn('cannot fetch remixed project meta for this project;', err);
@@ -3530,20 +3534,23 @@ const TWProjectMetaFetcherHOC = function TWProjectMetaFetcherHOC(WrappedComponen
       instructions,
       credits
     })),
-    onSetExtraProjectInfo: (accepted, isRemix, remixId, tooLarge, author, releaseDate, isUpdated) => dispatch(Object(_reducers_tw__WEBPACK_IMPORTED_MODULE_5__["setExtraProjectInfo"])({
-      accepted,
-      isRemix,
-      remixId,
-      tooLarge,
-      author,
-      releaseDate,
-      isUpdated
+    /*onSetExtraProjectInfo: (accepted, isRemix, remixId, tooLarge, author, releaseDate, isUpdated) => dispatch(setExtraProjectInfo({
+        accepted,
+        isRemix,
+        remixId,
+        tooLarge,
+        author,
+        releaseDate,
+        isUpdated
     })),
-    onSetRemixedProjectInfo: (loaded, name, author) => dispatch(Object(_reducers_tw__WEBPACK_IMPORTED_MODULE_5__["setRemixedProjectInfo"])({
-      loaded,
-      name,
-      author
+    
+    onSetRemixedProjectInfo: (loaded, name, author) => dispatch(setRemixedProjectInfo({
+        loaded,
+        name,
+        author
     })),
+    */
+
     onSetProjectTitle: title => dispatch(Object(_reducers_project_title__WEBPACK_IMPORTED_MODULE_4__["setProjectTitle"])(title))
   });
   return Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(ProjectMetaFetcherComponent);
@@ -4107,7 +4114,7 @@ class Interface extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       href: "https://arkide.site/profile?user=".concat(remixedProjectInfo.author),
       rel: "noreferrer"
     }, remixedProjectInfo.author)), " for the original project ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-      href: "".concat(window.location.origin, "/#").concat(extraProjectInfo.remixId)
+      href: "".concat(window.location.origin, "/#").concat(Number(extraProjectInfo.remixId))
     }, remixedProjectInfo.name)), "."))), Object(_lib_tw_environment_support_prober__WEBPACK_IMPORTED_MODULE_25__["isBrowserSupported"])() ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_browser_modal_browser_modal_jsx__WEBPACK_IMPORTED_MODULE_23__["default"], {
       isRtl: isRtl
     }), hasCloudVariables && projectId !== '0' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {

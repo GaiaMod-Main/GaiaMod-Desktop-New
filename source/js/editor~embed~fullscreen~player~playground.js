@@ -3133,7 +3133,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .settings-modal_modal-content_2bE7f {\n    max-width: max(60%, 750px);\n} .settings-modal_body_cAUJ0 {\n    background: rgba(255, 255, 255, 0.85); /* Made semi-transparent */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n    padding: 1.5rem 2.25rem;\n    min-height: 150px;\n    max-height: calc(100vh - 250px);\n    overflow-y: auto;\n} [theme=\"dark\"] .settings-modal_body_cAUJ0 {\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n    background: rgba(17, 17, 17, 0.74); /* Made semi-transparent - adjust if needed */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n} /* For small screens, such as in the embed */ @media (max-height: 600px) {\n    .settings-modal_modal-content_2bE7f {\n        margin: 50px auto;\n    }\n    .settings-modal_body_cAUJ0 {\n        max-height: calc(100vh - 150px);\n    }\n} .settings-modal_setting_PxhNM {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n} .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #dbebff;\n} .settings-modal_setting_PxhNM:hover,\n.settings-modal_setting_PxhNM:focus-within {\n    background: #cadef5;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #1e162c71;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM:hover,\n[theme=\"dark\"] .settings-modal_setting_PxhNM:focus-within {\n    background: #2d2041a1;\n} .settings-modal_label_2Phuq {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n} .settings-modal_label-unset-height_3uoDx {\n    height: initial;\n} .settings-modal_setting_PxhNM table {\n    border-collapse: collapse;\n} .settings-modal_setting_PxhNM tr,\n.settings-modal_setting_PxhNM td,\n.settings-modal_setting_PxhNM th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_checkbox_1dXwG {\n    margin-right: 0.5rem;\n} .settings-modal_help-icon_2FTix {\n    border: 0;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./help-black.svg */ "./src/components/tw-settings-modal/help-black.svg")) + ");\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n} [theme=\"dark\"] .settings-modal_help-icon_2FTix {\n    background-image: url(" + escape(__webpack_require__(/*! ./help-white.svg */ "./src/components/tw-settings-modal/help-white.svg")) + ");\n} .settings-modal_custom-stage-size_3I0AA {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    height: initial;\n} .settings-modal_custom-stage-size-container_2OBYk {\n    display: flex;\n    align-items: center;\n} .settings-modal_custom-stage-size_3I0AA > * {\n    margin-right: 0.5rem;\n} .settings-modal_custom-stage-size-button_3koc0 {\n    margin: 8px;\n    background: white;\n    border-radius: 10px;\n    font-size: 40px;\n    width: 168px;\n    height: 126px;\n    border: 4px solid rgba(0, 0, 0, 0.1);\n    outline: 4px white solid;\n} [theme=\"dark\"] .settings-modal_custom-stage-size-button_3koc0 {\n    outline-color: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    background: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    border-color: rgba(255, 255, 255, 0.1);\n} .settings-modal_custom-stage-size-button_3koc0[data-widescreen=\"true\"] {\n    width: 224px;\n} .settings-modal_custom-stage-size-button_3koc0[data-square=\"true\"] {\n    width: 126px;\n} .settings-modal_custom-stage-size-button_3koc0[data-selected=\"true\"] {\n    border-color: hsla(261, 100%, 50%, 1);\n} .settings-modal_custom-stage-size-button_3koc0:active {\n    border-color: hsla(261, 100%, 50%, 0.35);\n} .settings-modal_custom-stage-size-input_2ivQT {\n    width: 80px;\n    margin: 3px 8px;\n} .settings-modal_info_1a5yx {\n    margin-bottom: 0.25rem;\n} .settings-modal_header_3lDNd {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n} .settings-modal_divider_7euKA {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_button_15QCA {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: hsla(261, 100%, 50%, 1);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n} .settings-modal_button_15QCA:active, .settings-modal_button_15QCA:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n} .settings-modal_warning_2xSC8 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(255, 197, 38);\n    color: black;\n} [theme=\"dark\"] .settings-modal_warning_2xSC8 {\n    background: rgb(114, 65, 0);\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_summary_jE5Vl {\n    cursor: pointer;\n} .settings-modal_dropdown_JkJtU {\n    margin-right: 4px;\n} details[open] .settings-modal_dropdown_JkJtU {\n    transform: rotate(90deg);\n} /* Project Size Tracker Styles */ .settings-modal_project-size-container_3h_2S {\n    padding: 1rem;\n    margin: 0.5rem 0;\n    border-radius: 6px;\n    background: rgba(115, 76, 255, 0.1);\n    border: 2px solid rgba(76, 151, 255, 0.3);\n} [theme=\"dark\"] .settings-modal_project-size-container_3h_2S {\n    background: rgba(139, 76, 255, 0.15);\n    border-color: rgba(115, 76, 255, 0.4);\n} .settings-modal_project-size-header_1YrhY {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-value_WKeoW {\n    font-size: 1.25rem;\n    color: hsla(261, 100%, 50%, 1);\n} [theme=\"dark\"] .settings-modal_project-size-value_WKeoW {\n    color: #8c6cff;\n} .settings-modal_project-size-bar-container_174EJ {\n    position: relative;\n    width: 100%;\n    height: 24px;\n    background: rgba(0, 0, 0, 0.1);\n    border-radius: 12px;\n    overflow: hidden;\n    margin-bottom: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-bar-container_174EJ {\n    background: rgba(255, 255, 255, 0.1);\n} .settings-modal_project-size-bar_24e50 {\n    height: 100%;\n    border-radius: 12px;\n    transition: all 0.3s ease;\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    padding-right: 8px;\n    color: white;\n    font-size: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-bar-safe_3KHc_ {\n    background: linear-gradient(90deg, #7c4cff, #b05cff);\n} .settings-modal_project-size-bar-warning_1v3v7 {\n    background: linear-gradient(90deg, #ffab19, #ffc837);\n} .settings-modal_project-size-bar-danger_3i1sa {\n    background: linear-gradient(90deg, #ff6680, #ff8fa3);\n} .settings-modal_project-size-info_3ObpS {\n    font-size: 0.875rem;\n    color: #575E75;\n    margin-top: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-info_3ObpS {\n    color: #aaa;\n} .settings-modal_project-size-warning-text_1AIn2 {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 171, 25, 0.2);\n    border: 1px solid rgba(255, 171, 25, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-warning-text_1AIn2 {\n    background: rgba(255, 171, 25, 0.15);\n    border-color: rgba(255, 171, 25, 0.4);\n} .settings-modal_project-size-danger-text_2Kyof {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 102, 128, 0.2);\n    border: 1px solid rgba(255, 102, 128, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-danger-text_2Kyof {\n    background: rgba(255, 102, 128, 0.15);\n    border-color: rgba(255, 102, 128, 0.4);\n}", ""]);
+exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .settings-modal_modal-content_2bE7f {\n    max-width: max(60%, 750px);\n} body.disable-blur * {\n    backdrop-filter: none !important;\n    -webkit-backdrop-filter: none !important;\n} .settings-modal_body_cAUJ0 {\n    background: rgba(255, 255, 255, 0.85);\n    backdrop-filter: blur(10px);\n    -webkit-backdrop-filter: blur(10px);\n    padding: 1.5rem 2.25rem;\n    min-height: 900px; /* Add minimum height */\n    max-height: calc(100vh - 250px);\n    overflow: hidden; /* Change from auto to hidden since tab-content will handle scrolling */\n} [theme=\"dark\"] .settings-modal_body_cAUJ0 {\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n    background: rgba(17, 17, 17, 0.74); /* Made semi-transparent - adjust if needed */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n} /* For small screens, such as in the embed */ @media (max-height: 600px) {\n    .settings-modal_modal-content_2bE7f {\n        margin: 50px auto;\n    }\n    .settings-modal_body_cAUJ0 {\n        max-height: calc(100vh - 150px);\n    }\n} .settings-modal_setting_PxhNM {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n} .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #dbebff;\n} .settings-modal_setting_PxhNM:hover,\n.settings-modal_setting_PxhNM:focus-within {\n    background: #cadef5;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #1e162c71;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM:hover,\n[theme=\"dark\"] .settings-modal_setting_PxhNM:focus-within {\n    background: #2d2041a1;\n} .settings-modal_label_2Phuq {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n} .settings-modal_label-unset-height_3uoDx {\n    height: initial;\n} .settings-modal_setting_PxhNM table {\n    border-collapse: collapse;\n} .settings-modal_setting_PxhNM tr,\n.settings-modal_setting_PxhNM td,\n.settings-modal_setting_PxhNM th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_checkbox_1dXwG {\n    margin-right: 0.5rem;\n} .settings-modal_help-icon_2FTix {\n    border: 0;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./help-black.svg */ "./src/components/tw-settings-modal/help-black.svg")) + ");\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n} [theme=\"dark\"] .settings-modal_help-icon_2FTix {\n    background-image: url(" + escape(__webpack_require__(/*! ./help-white.svg */ "./src/components/tw-settings-modal/help-white.svg")) + ");\n} .settings-modal_custom-stage-size_3I0AA {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    height: initial;\n} .settings-modal_custom-stage-size-container_2OBYk {\n    display: flex;\n    align-items: center;\n} .settings-modal_custom-stage-size_3I0AA > * {\n    margin-right: 0.5rem;\n} .settings-modal_custom-stage-size-button_3koc0 {\n    margin: 8px;\n    background: white;\n    border-radius: 10px;\n    font-size: 40px;\n    width: 168px;\n    height: 126px;\n    border: 4px solid rgba(0, 0, 0, 0.1);\n    outline: 4px white solid;\n} [theme=\"dark\"] .settings-modal_custom-stage-size-button_3koc0 {\n    outline-color: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    background: var(--ui-primary, hsla(261, 100%, 50%, 1));\n    border-color: rgba(255, 255, 255, 0.1);\n} .settings-modal_custom-stage-size-button_3koc0[data-widescreen=\"true\"] {\n    width: 224px;\n} .settings-modal_custom-stage-size-button_3koc0[data-square=\"true\"] {\n    width: 126px;\n} .settings-modal_custom-stage-size-button_3koc0[data-selected=\"true\"] {\n    border-color: hsla(261, 100%, 50%, 1);\n} .settings-modal_custom-stage-size-button_3koc0:active {\n    border-color: hsla(261, 100%, 50%, 0.35);\n} .settings-modal_custom-stage-size-input_2ivQT {\n    width: 80px;\n    margin: 3px 8px;\n} .settings-modal_info_1a5yx {\n    margin-bottom: 0.25rem;\n} .settings-modal_header_3lDNd {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n} .settings-modal_divider_7euKA {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n} .settings-modal_button_15QCA {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: hsla(261, 100%, 50%, 1);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n} .settings-modal_button_15QCA:active, .settings-modal_button_15QCA:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n} .settings-modal_warning_2xSC8 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(255, 197, 38);\n    color: black;\n} [theme=\"dark\"] .settings-modal_warning_2xSC8 {\n    background: rgb(114, 65, 0);\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_summary_jE5Vl {\n    cursor: pointer;\n} .settings-modal_dropdown_JkJtU {\n    margin-right: 4px;\n} details[open] .settings-modal_dropdown_JkJtU {\n    transform: rotate(90deg);\n} /* Project Size Tracker Styles */ .settings-modal_project-size-container_3h_2S {\n    padding: 1rem;\n    margin: 0.5rem 0;\n    border-radius: 6px;\n    background: rgba(115, 76, 255, 0.1);\n    border: 2px solid rgba(76, 151, 255, 0.3);\n} [theme=\"dark\"] .settings-modal_project-size-container_3h_2S {\n    background: rgba(139, 76, 255, 0.15);\n    border-color: rgba(115, 76, 255, 0.4);\n} .settings-modal_project-size-header_1YrhY {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-value_WKeoW {\n    font-size: 1.25rem;\n    color: hsla(261, 100%, 50%, 1);\n} [theme=\"dark\"] .settings-modal_project-size-value_WKeoW {\n    color: #8c6cff;\n} .settings-modal_project-size-bar-container_174EJ {\n    position: relative;\n    width: 100%;\n    height: 24px;\n    background: rgba(0, 0, 0, 0.1);\n    border-radius: 12px;\n    overflow: hidden;\n    margin-bottom: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-bar-container_174EJ {\n    background: rgba(255, 255, 255, 0.1);\n} .settings-modal_project-size-bar_24e50 {\n    height: 100%;\n    border-radius: 12px;\n    transition: all 0.3s ease;\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    padding-right: 8px;\n    color: white;\n    font-size: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-bar-safe_3KHc_ {\n    background: linear-gradient(90deg, #7c4cff, #b05cff);\n} .settings-modal_project-size-bar-warning_1v3v7 {\n    background: linear-gradient(90deg, #ffab19, #ffc837);\n} .settings-modal_project-size-bar-danger_3i1sa {\n    background: linear-gradient(90deg, #ff6680, #ff8fa3);\n} .settings-modal_project-size-info_3ObpS {\n    font-size: 0.875rem;\n    color: #575E75;\n    margin-top: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-info_3ObpS {\n    color: #aaa;\n} .settings-modal_project-size-warning-text_1AIn2 {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 171, 25, 0.2);\n    border: 1px solid rgba(255, 171, 25, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-warning-text_1AIn2 {\n    background: rgba(255, 171, 25, 0.15);\n    border-color: rgba(255, 171, 25, 0.4);\n} .settings-modal_project-size-danger-text_2Kyof {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 102, 128, 0.2);\n    border: 1px solid rgba(255, 102, 128, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-danger-text_2Kyof {\n    background: rgba(255, 102, 128, 0.15);\n    border-color: rgba(255, 102, 128, 0.4);\n} .settings-modal_tab-container_2rNl- {\n    display: flex;\n    gap: 1.5rem;\n    min-height: 400px;\n    height: 100%; /* Make it fill the body */\n} .settings-modal_sidebar_1lMEg {\n    display: flex;\n    flex-direction: column;\n    gap: 0.25rem;\n    min-width: 180px;\n    padding-right: 1rem;\n    border-right: 1px solid var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n    flex-shrink: 0; /* Prevent sidebar from shrinking */\n} [theme=\"dark\"] .settings-modal_sidebar_1lMEg {\n    border-right-color: rgba(255, 255, 255, 0.2);\n} .settings-modal_tab-button_3HCfI {\n    background: transparent;\n    border: none;\n    padding: 0.75rem 1rem;\n    text-align: left;\n    cursor: pointer;\n    border-radius: 4px;\n    font-family: inherit;\n    font-size: 14px;\n    color: #575E75;\n    transition: background-color 0.2s ease;\n} [theme=\"dark\"] .settings-modal_tab-button_3HCfI {\n    color: #aaa;\n} .settings-modal_tab-button_3HCfI:hover {\n    background: rgba(0, 0, 0, 0.05);\n} [theme=\"dark\"] .settings-modal_tab-button_3HCfI:hover {\n    background: rgba(255, 255, 255, 0.05);\n} .settings-modal_tab-button-active_26f4D {\n    background: #dbebff;\n    color: #575E75;\n    font-weight: bold;\n} [theme=\"dark\"] .settings-modal_tab-button-active_26f4D {\n    background: #1e162c71;\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_tab-content_roO78 {\n    flex: 1;\n    overflow-y: auto;\n    max-height: none; \n    padding-right: 0.5rem;\n} /* For small screens */ @media (max-width: 1068px) {\n    .settings-modal_tab-container_2rNl- {\n        flex-direction: column;\n    }\n    \n    .settings-modal_sidebar_1lMEg {\n        flex-direction: row;\n        overflow-x: auto;\n        border-right: none;\n        border-bottom: 1px solid var(--ui-tertiary, hsla(261, 100%, 70%, 1));\n        padding-right: 0;\n        padding-bottom: 0.5rem;\n        min-width: auto;\n    }\n    \n    [theme=\"dark\"] .settings-modal_sidebar_1lMEg {\n        border-bottom-color: rgba(255, 255, 255, 0.2);\n    }\n    \n    .settings-modal_tab-button_3HCfI {\n        white-space: nowrap;\n    }\n}", ""]);
 
 // exports
 exports.locals = {
@@ -3184,7 +3184,16 @@ exports.locals = {
 	"project-size-warning-text": "settings-modal_project-size-warning-text_1AIn2",
 	"projectSizeWarningText": "settings-modal_project-size-warning-text_1AIn2",
 	"project-size-danger-text": "settings-modal_project-size-danger-text_2Kyof",
-	"projectSizeDangerText": "settings-modal_project-size-danger-text_2Kyof"
+	"projectSizeDangerText": "settings-modal_project-size-danger-text_2Kyof",
+	"tab-container": "settings-modal_tab-container_2rNl-",
+	"tabContainer": "settings-modal_tab-container_2rNl-",
+	"sidebar": "settings-modal_sidebar_1lMEg",
+	"tab-button": "settings-modal_tab-button_3HCfI",
+	"tabButton": "settings-modal_tab-button_3HCfI",
+	"tab-button-active": "settings-modal_tab-button-active_26f4D",
+	"tabButtonActive": "settings-modal_tab-button-active_26f4D",
+	"tab-content": "settings-modal_tab-content_roO78",
+	"tabContent": "settings-modal_tab-content_roO78"
 };
 
 /***/ }),
@@ -14175,7 +14184,6 @@ class UserProfileButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Com
   loadUserProfile() {
     // const username = "ark"
     const username = this.getCookie('arkide_username');
-    console.log('Fetched cookie username:', username); // 🔍 logging
     if (username) {
       // Update state so render shows profile instead of login
       this.setState({
@@ -23310,6 +23318,16 @@ const EnableDangerousOptimizations = props => /*#__PURE__*/react__WEBPACK_IMPORT
   })
   // slug="enable-dangerous-optimizations"
 }));
+const DisableBlur = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(BooleanSetting, _extends({}, props, {
+  label: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Disable Blur",
+    id: "pm.settingsModal.disableBlur"
+  }),
+  help: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Disables background blur effects on modals and UI elements across the website. Good for older computers.",
+    id: "pm.settingsModal.disableBlurHelp"
+  })
+}));
 const DisableOffscreenRendering = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(BooleanSetting, _extends({}, props, {
   label: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
     defaultMessage: "Disable Off Screen Rendering",
@@ -23566,81 +23584,96 @@ const ProjectSizeTracker = _ref4 => {
 ProjectSizeTracker.propTypes = {
   vm: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_12___default.a).isRequired
 };
-const SettingsModalComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_containers_modal_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
-  className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.modalContent,
-  onRequestClose: function onRequestClose() {
-    if (!props.isEmbedded) {
-      props.onStoreProjectOptions();
-    }
-    props.onClose(...arguments);
-  },
-  contentLabel: props.intl.formatMessage(messages.title),
-  id: "settingsModal"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_box_box_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
-  className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.body
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
-  defaultMessage: "Gameplay",
-  id: "pm.settingsModal.gameplay"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomFPS, {
-  framerate: props.framerate,
-  onChange: props.onFramerateChange,
-  onCustomizeFramerate: props.onCustomizeFramerate
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(HighQualityPen, {
-  value: props.highQualityPen,
-  onChange: props.onHighQualityPenChange
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(WarpTimer, {
-  value: props.warpTimer,
-  onChange: props.onWarpTimerChange
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
-  defaultMessage: "Remove Limits",
-  id: "tw.settingsModal.removeLimits"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(InfiniteClones, {
-  value: props.infiniteClones,
-  onChange: props.onInfiniteClonesChange
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(RemoveFencing, {
-  value: props.removeFencing,
-  onChange: props.onRemoveFencingChange
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(RemoveMiscLimits, {
-  value: props.removeLimits,
-  onChange: props.onRemoveLimitsChange
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
-  defaultMessage: "Optimizations",
-  id: "pm.settingsModal.optimizations"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(DisableOffscreenRendering, {
-  value: props.disableOffscreenRendering,
-  onChange: props.onDisableOffscreenRenderingChange
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(EnableDangerousOptimizations, {
-  value: props.dangerousOptimizations,
-  onChange: props.onEnableDangerousOptimizationsChange
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(DisableDirectionClamping, {
-  value: props.disableDirectionClamping,
-  onChange: props.onDisableDirectionClamping
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
-  defaultMessage: "Screen Resolution",
-  id: "pm.settingsModal.screenResolution"
-})), !props.isEmbedded && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomStageSize, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
-  defaultMessage: "Project Information",
-  id: "pm.settingsModal.projectInfo"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ProjectSizeTracker, {
-  vm: props.vm
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("details", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("summary", {
-  className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.summary
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-  className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.dropdown
-}, "\u2BC8"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
-  defaultMessage: "Unsupported",
-  id: "pm.settingsModal.unsupported"
-}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-  className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.warning
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"]
-// eslint-disable-next-line max-len
-, {
-  defaultMessage: "The settings here are unsupported and can break at any time. These settings are here as they either have better methods to create their effects with better results, or break often when used with other extensions.",
-  id: "pm.settingsModal.unsupportedWarning"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Interpolation, {
-  value: props.interpolation,
-  onChange: props.onInterpolationChange
-}))));
+const SettingsModalComponent = props => {
+  const [activeTab, setActiveTab] = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState('render');
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_containers_modal_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.modalContent,
+    onRequestClose: function onRequestClose() {
+      if (!props.isEmbedded) {
+        props.onStoreProjectOptions();
+      }
+      props.onClose(...arguments);
+    },
+    contentLabel: props.intl.formatMessage(messages.title),
+    id: "settingsModal"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_box_box_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.body
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.sidebar
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButton, {
+      [_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButtonActive]: activeTab === 'render'
+    }),
+    onClick: () => setActiveTab('render')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Render",
+    id: "pm.settingsModal.render"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButton, {
+      [_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButtonActive]: activeTab === 'limits'
+    }),
+    onClick: () => setActiveTab('limits')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Limits",
+    id: "pm.settingsModal.limits"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButton, {
+      [_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButtonActive]: activeTab === 'optimization'
+    }),
+    onClick: () => setActiveTab('optimization')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Optimization",
+    id: "pm.settingsModal.optimization"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButton, {
+      [_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButtonActive]: activeTab === 'projectInfo'
+    }),
+    onClick: () => setActiveTab('projectInfo')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Project Information",
+    id: "pm.settingsModal.projectInfo"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabContent
+  }, activeTab === 'render' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, !props.isEmbedded && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomStageSize, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomFPS, {
+    framerate: props.framerate,
+    onChange: props.onFramerateChange,
+    onCustomizeFramerate: props.onCustomizeFramerate
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(HighQualityPen, {
+    value: props.highQualityPen,
+    onChange: props.onHighQualityPenChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(DisableBlur, {
+    value: props.disableBlur,
+    onChange: props.onDisableBlurChange
+  })), activeTab === 'limits' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(InfiniteClones, {
+    value: props.infiniteClones,
+    onChange: props.onInfiniteClonesChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(RemoveFencing, {
+    value: props.removeFencing,
+    onChange: props.onRemoveFencingChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(RemoveMiscLimits, {
+    value: props.removeLimits,
+    onChange: props.onRemoveLimitsChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(WarpTimer, {
+    value: props.warpTimer,
+    onChange: props.onWarpTimerChange
+  })), activeTab === 'optimization' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(DisableOffscreenRendering, {
+    value: props.disableOffscreenRendering,
+    onChange: props.onDisableOffscreenRenderingChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(EnableDangerousOptimizations, {
+    value: props.dangerousOptimizations,
+    onChange: props.onEnableDangerousOptimizationsChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(DisableDirectionClamping, {
+    value: props.disableDirectionClamping,
+    onChange: props.onDisableDirectionClamping
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Interpolation, {
+    value: props.interpolation,
+    onChange: props.onInterpolationChange
+  })), activeTab === 'projectInfo' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ProjectSizeTracker, {
+    vm: props.vm
+  }))))));
+};
 SettingsModalComponent.propTypes = {
   intl: react_intl__WEBPACK_IMPORTED_MODULE_0__["intlShape"],
   onClose: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
@@ -23666,7 +23699,9 @@ SettingsModalComponent.propTypes = {
   onDisableCompilerChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   onEnableDangerousOptimizationsChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   disableOffscreenRendering: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-  onDisableOffscreenRenderingChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+  onDisableOffscreenRenderingChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  disableBlur: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  onDisableBlurChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_0__["injectIntl"])(SettingsModalComponent));
 
@@ -28049,19 +28084,12 @@ class GUI extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     }
   }
   initializeBlockSearch() {
-    console.log('Attempting to initialize block search...');
     const tryInit = () => {
-      console.log('tryInit called');
-      console.log('VM:', this.props.vm);
-      console.log('Blockly:', window.Blockly);
       try {
         var _this$props$vm, _this$props$vm$runtim, _this$props$vm$runtim2, _this$props$vm$runtim3, _this$props$vm$runtim4, _window$Blockly, _window$Blockly$getMa;
         const workspace = ((_this$props$vm = this.props.vm) === null || _this$props$vm === void 0 ? void 0 : (_this$props$vm$runtim = _this$props$vm.runtime) === null || _this$props$vm$runtim === void 0 ? void 0 : (_this$props$vm$runtim2 = _this$props$vm$runtim.getEditingTarget) === null || _this$props$vm$runtim2 === void 0 ? void 0 : (_this$props$vm$runtim3 = _this$props$vm$runtim2.call(_this$props$vm$runtim)) === null || _this$props$vm$runtim3 === void 0 ? void 0 : (_this$props$vm$runtim4 = _this$props$vm$runtim3.blocks) === null || _this$props$vm$runtim4 === void 0 ? void 0 : _this$props$vm$runtim4._workspace) || ((_window$Blockly = window.Blockly) === null || _window$Blockly === void 0 ? void 0 : (_window$Blockly$getMa = _window$Blockly.getMainWorkspace) === null || _window$Blockly$getMa === void 0 ? void 0 : _window$Blockly$getMa.call(_window$Blockly));
-        console.log('Workspace found:', workspace);
         if (workspace) {
-          console.log('Calling BlockSearch.init...');
           _lib_block_search__WEBPACK_IMPORTED_MODULE_23__["default"].init(workspace, vm);
-          console.log('BlockSearch initialized successfully');
           return true;
         }
       } catch (err) {
@@ -28070,13 +28098,10 @@ class GUI extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       return false;
     };
     if (!tryInit()) {
-      console.log('Initial attempt failed, will retry...');
       let attempts = 0;
       const retry = setInterval(() => {
-        console.log('Retry attempt:', attempts);
         if (tryInit() || attempts++ > 10) {
           clearInterval(retry);
-          console.log('Stopped retrying');
         }
       }, 200);
     }
@@ -36481,10 +36506,48 @@ const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_2__["defineMessages"
     "defaultMessage": "New framerate:"
   }
 });
+
+// Blur Manager
+class BlurManager {
+  constructor() {
+    this.STORAGE_KEY = 'arkide_disable_blur';
+  }
+  isBlurDisabled() {
+    try {
+      return localStorage.getItem(this.STORAGE_KEY) === 'true';
+    } catch (e) {
+      return false;
+    }
+  }
+  setBlurDisabled(disabled) {
+    try {
+      localStorage.setItem(this.STORAGE_KEY, disabled.toString());
+      this.applyBlurSetting(disabled);
+    } catch (e) {
+      console.error('Failed to save blur setting:', e);
+    }
+  }
+  applyBlurSetting(disabled) {
+    if (disabled) {
+      document.body.classList.add('disable-blur');
+    } else {
+      document.body.classList.remove('disable-blur');
+    }
+  }
+}
+const blurManager = new BlurManager();
+
+// Initialize blur setting on page load
+if (typeof window !== 'undefined') {
+  blurManager.applyBlurSetting(blurManager.isBlurDisabled());
+}
 class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
-    lodash_bindall__WEBPACK_IMPORTED_MODULE_3___default()(this, ['handleFramerateChange', 'handleCustomizeFramerate', 'handleHighQualityPenChange', 'handleInterpolationChange', 'handleInfiniteClonesChange', 'handleRemoveFencingChange', 'handleRemoveLimitsChange', 'handleWarpTimerChange', 'handleStageWidthChange', 'handleStageHeightChange', 'handleStagePresetUsed', 'handleDisableCompilerChange', 'handleStoreProjectOptions', 'handleEnableDangerousOptimizationsChange', 'handleDisableOffscreenRenderingChange', 'handleDisableDirectionClamping']);
+    lodash_bindall__WEBPACK_IMPORTED_MODULE_3___default()(this, ['handleFramerateChange', 'handleCustomizeFramerate', 'handleHighQualityPenChange', 'handleInterpolationChange', 'handleInfiniteClonesChange', 'handleRemoveFencingChange', 'handleRemoveLimitsChange', 'handleWarpTimerChange', 'handleStageWidthChange', 'handleStageHeightChange', 'handleStagePresetUsed', 'handleDisableCompilerChange', 'handleStoreProjectOptions', 'handleEnableDangerousOptimizationsChange', 'handleDisableOffscreenRenderingChange', 'handleDisableDirectionClamping', 'handleDisableBlurChange']);
+    this.state = {
+      disableBlur: blurManager.isBlurDisabled()
+    };
   }
   handleFramerateChange(e) {
     this.props.vm.setFramerate(e.target.checked ? 60 : 30);
@@ -36544,6 +36607,13 @@ class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
       enabled: !e.target.checked
     });
   }
+  handleDisableBlurChange(e) {
+    const disabled = e.target.checked;
+    blurManager.setBlurDisabled(disabled);
+    this.setState({
+      disableBlur: disabled
+    });
+  }
   handleStageWidthChange(value) {
     this.props.vm.setStageSize(value, this.props.customStageSize.height);
   }
@@ -36590,6 +36660,7 @@ class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
       onDisableOffscreenRenderingChange: this.handleDisableOffscreenRenderingChange,
       onDisableDirectionClamping: this.handleDisableDirectionClamping,
       onWarpTimerChange: this.handleWarpTimerChange,
+      onDisableBlurChange: this.handleDisableBlurChange,
       onStageWidthChange: this.handleStageWidthChange,
       onStageHeightChange: this.handleStageHeightChange,
       onStagePresetUsed: this.handleStagePresetUsed,
@@ -36597,6 +36668,7 @@ class UsernameModal extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
       stageWidth: this.props.customStageSize.width,
       stageHeight: this.props.customStageSize.height,
       customStageSizeEnabled: this.props.customStageSize.width !== _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_7__["defaultStageSize"].width || this.props.customStageSize.height !== _reducers_custom_stage_size__WEBPACK_IMPORTED_MODULE_7__["defaultStageSize"].height,
+      disableBlur: this.state.disableBlur,
       onStoreProjectOptions: this.handleStoreProjectOptions
     }, props));
   }
@@ -39669,7 +39741,6 @@ class BlockSearch {
         this.buildExtensionMetadata();
       }, 300);
     });
-    console.log('✅ VM extension listeners set up');
   }
   buildExtensionMetadata() {
     if (!this.workspace || !_tw_lazy_scratch_blocks__WEBPACK_IMPORTED_MODULE_0__["default"].isLoaded()) {
@@ -39680,9 +39751,6 @@ class BlockSearch {
       const toolbox = this.workspace.getToolbox();
       const blockTypes = Object.keys(ScratchBlocks.Blocks);
       let newBlocksFound = 0;
-      console.log("\uD83D\uDD0D Scanning ".concat(blockTypes.length, " block types..."));
-
-      // DEFINE HELPER FUNCTIONS FIRST, BEFORE USING THEM
 
       // Helper to get actual color from a rendered block in the flyout
       const getBlockColorFromFlyout = blockType => {
@@ -39961,9 +40029,7 @@ class BlockSearch {
           color: color
         };
       });
-      if (newBlocksFound > 0) {
-        console.log("\uD83D\uDCDA Added ".concat(newBlocksFound, " new blocks. Total: ").concat(Object.keys(this.dynamicBlockMetadata).length));
-      }
+      if (newBlocksFound > 0) {}
     } catch (err) {
       console.error('Error building extension metadata:', err);
     }
@@ -40003,7 +40069,6 @@ class BlockSearch {
           originalRefresh.call(toolbox);
           // Rebuild metadata after toolbox updates
           setTimeout(() => {
-            console.log('Toolbox refreshed, rebuilding metadata...');
             this.buildExtensionMetadata();
           }, 500);
         };
@@ -40029,7 +40094,6 @@ class BlockSearch {
               result.then(() => {
                 setTimeout(() => {
                   var _window$BlockSearch;
-                  console.log('Extension loaded, rebuilding metadata...');
                   (_window$BlockSearch = window.BlockSearch) === null || _window$BlockSearch === void 0 ? void 0 : _window$BlockSearch.buildExtensionMetadata();
                 }, 1000);
               });
@@ -40053,9 +40117,7 @@ class BlockSearch {
       if (typeof message === 'string') {
         // Check for arkide-additons specifically
         if (message.includes('arkide-additons') || message.includes('arkide')) {
-          console.log('🔍 Detected ArkIDE extension!');
           setTimeout(() => {
-            console.log('⚡ Rebuilding metadata for ArkIDE...');
             this.buildExtensionMetadata();
           }, 2000); // Longer delay for complex extensions
           return;
@@ -40064,7 +40126,6 @@ class BlockSearch {
         // Check if message contains extension URL
         for (const origin of trustedExtensionOrigins) {
           if (message.includes(origin)) {
-            console.log('🔍 Detected extension from:', origin);
             setTimeout(() => {
               console.log('⚡ Rebuilding metadata...');
               this.buildExtensionMetadata();
@@ -40104,12 +40165,10 @@ class BlockSearch {
         args[_key4 - 1] = arguments[_key4];
       }
       if (typeof url === 'string' && isTrustedExtensionOrigin(url) && url.endsWith('.js')) {
-        console.log('🌐 Fetching extension:', url);
         const fetchPromise = originalFetch.call(this, url, ...args);
         fetchPromise.then(() => {
           setTimeout(() => {
             var _window$BlockSearch2;
-            console.log('✅ Extension fetch complete, rebuilding...');
             (_window$BlockSearch2 = window.BlockSearch) === null || _window$BlockSearch2 === void 0 ? void 0 : _window$BlockSearch2.buildExtensionMetadata();
           }, 2500); // Even longer for fetch
         }).catch(err => {
@@ -40123,7 +40182,6 @@ class BlockSearch {
       }
       return originalFetch.call(this, url, ...args);
     };
-    console.log('🔍 Extension URL monitoring active');
   }
   stopMetadataRefresh() {
     if (this.metadataRefreshInterval) {
@@ -40204,8 +40262,6 @@ class BlockSearch {
     }
   }
   addSearchCategory() {
-    console.log('Adding search category (super robust version)...');
-
     // Cleanup any existing observers/intervals
     if (this._searchCategoryObserver) {
       this._searchCategoryObserver.disconnect();
@@ -40258,7 +40314,6 @@ class BlockSearch {
           this.toggleSearchBar();
         });
         targetMenu.insertBefore(searchCategory, targetMenu.firstChild);
-        console.log('✅ Search category injected');
         return true;
       } catch (err) {
         console.error('Error in ensureSearchCategory:', err);
@@ -40307,7 +40362,6 @@ class BlockSearch {
     this._searchCategoryInterval = setInterval(() => {
       const menu = document.querySelector('.scratchCategoryMenu');
       if (menu && !menu.querySelector('.scratch-search-category')) {
-        console.log('🔧 Re-injecting missing search category...');
         ensureSearchCategory();
       }
     }, 1000);
@@ -40366,14 +40420,9 @@ class BlockSearch {
     });
   }
   attachToToolbox() {
-    console.log('Attempting to attach to toolbox...');
-
     // Find the blocks wrapper specifically
     let targetDiv = document.querySelector('[class*="blocks_blocks"]') || document.querySelector('.injectionDiv');
-    console.log('Target div:', targetDiv);
     if (targetDiv) {
-      console.log('Attaching search to:', targetDiv);
-
       // Make sure parent can contain positioned elements
       const currentPosition = window.getComputedStyle(targetDiv).position;
       if (currentPosition === 'static') {
@@ -40383,7 +40432,6 @@ class BlockSearch {
       // Position at top-left of blocks area, below tabs
       this.searchContainer.style.cssText = "\n                margin-left: 60px;\n                position: absolute;\n                top: 5px;\n                left: 5px;\n                width: 240px;\n                z-index: 99999;\n                padding: 8px;\n                background: #2d2d2d;\n                border: 2px solid #4C97FF;\n                border-radius: 6px;\n                box-shadow: 0 4px 12px rgba(0,0,0,0.5);\n                pointer-events: auto;\n            ";
       targetDiv.appendChild(this.searchContainer);
-      console.log('Search bar attached!');
     }
   }
   handleSearch(query) {
@@ -40423,7 +40471,6 @@ class BlockSearch {
         }, meta));
       }
     }
-    console.log("Found ".concat(results.length, " blocks matching \"").concat(query, "\""));
     return results.slice(0, 10);
   }
   displayResults(results) {
@@ -40592,7 +40639,6 @@ class BlockSearch {
 
               // Scroll to block if needed
               this.workspace.centerOnBlock(newBlock.id);
-              console.log("\u2705 Block positioned at (".concat(position.x, ", ").concat(position.y, ")"));
             } catch (e) {
               console.warn('Error positioning block:', e);
             }
@@ -44287,6 +44333,14 @@ const menuItems = [{
   iconURL: 'https://extensions.arkide.site/images/Ark/console.svg',
   tags: ['penguinmod'],
   description: 'Add a console to your project to log messages, errors, and warnings.',
+  extDeveloper: 'Ark',
+  featured: true
+}, {
+  name: 'Store My Stuff',
+  extensionId: 'https://extensions.arkide.site/extensions/Ark/store-my-stuff.js',
+  iconURL: 'https://extensions.arkide.site/images/Ark/storemystuff.svg',
+  tags: ['penguinmod'],
+  description: 'Store strings and numbers to my server or local/indexdb storage.',
   extDeveloper: 'Ark',
   featured: true
 },
@@ -53298,8 +53352,8 @@ const vmListenerHOC = function vmListenerHOC(WrappedComponent) {
       this.props.vm.on('PROJECT_CHANGED', this.handleProjectChanged);
       this.props.vm.on('RUNTIME_STARTED', this.props.onRuntimeStarted);
       this.props.vm.on('RUNTIME_STOPPED', this.props.onRuntimeStopped);
-      this.props.vm.on('RUNTIME_PAUSED', this.props.onRuntimePaused);
-      this.props.vm.on('RUNTIME_UNPAUSED', this.props.onRuntimeUnpaused);
+      // this.props.vm.on('RUNTIME_PAUSED', this.props.onRuntimePaused);
+      // this.props.vm.on('RUNTIME_UNPAUSED', this.props.onRuntimeUnpaused);
       this.props.vm.on('PROJECT_START', this.props.onGreenFlag);
       this.props.vm.on('PERIPHERAL_CONNECTION_LOST_ERROR', this.props.onShowExtensionAlert);
       this.props.vm.on('MIC_LISTENING', this.props.onMicListeningUpdate);
@@ -53474,8 +53528,8 @@ const vmListenerHOC = function vmListenerHOC(WrappedComponent) {
     onProjectSaved: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
     onRuntimeStarted: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
     onRuntimeStopped: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
-    onRuntimePaused: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
-    onRuntimeUnpaused: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
+    // onRuntimePaused: PropTypes.func.isRequired,
+    // onRuntimeUnpaused: PropTypes.func.isRequired,
     onShowExtensionAlert: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
     onTargetsUpdate: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
     onTurboModeOff: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
@@ -53528,8 +53582,8 @@ const vmListenerHOC = function vmListenerHOC(WrappedComponent) {
     onProjectSaved: () => dispatch(Object(_reducers_project_changed__WEBPACK_IMPORTED_MODULE_8__["setProjectUnchanged"])()),
     onRuntimeStarted: () => dispatch(Object(_reducers_vm_status__WEBPACK_IMPORTED_MODULE_9__["setStartedState"])(true)),
     onRuntimeStopped: () => dispatch(Object(_reducers_vm_status__WEBPACK_IMPORTED_MODULE_9__["setStartedState"])(false)),
-    onRuntimePaused: () => dispatch(Object(_reducers_vm_status__WEBPACK_IMPORTED_MODULE_9__["setPausedState"])(true)),
-    onRuntimeUnpaused: () => dispatch(Object(_reducers_vm_status__WEBPACK_IMPORTED_MODULE_9__["setPausedState"])(false)),
+    // onRuntimePaused: () => dispatch(setPausedState(true)),
+    // onRuntimeUnpaused: () => dispatch(setPausedState(false)),
     onTurboModeOn: () => dispatch(Object(_reducers_vm_status__WEBPACK_IMPORTED_MODULE_9__["setTurboState"])(true)),
     onTurboModeOff: () => dispatch(Object(_reducers_vm_status__WEBPACK_IMPORTED_MODULE_9__["setTurboState"])(false)),
     onHasCloudVariablesChanged: hasCloudVariables => dispatch(Object(_reducers_tw__WEBPACK_IMPORTED_MODULE_12__["setHasCloudVariables"])(hasCloudVariables)),

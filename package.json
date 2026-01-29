@@ -1,6 +1,6 @@
 {
   "name": "ark-ide",
-  "version": "1.0.0",
+  "version": "2.13.3",
   "main": "main.js",
   "description": "Ark IDE Desktop Application",
   "author": "arc",
