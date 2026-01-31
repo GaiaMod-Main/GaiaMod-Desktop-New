@@ -25196,15 +25196,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _addons_hooks__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../addons/hooks */ "./src/addons/hooks.js");
 /* harmony import */ var _lib_tw_load_scratch_blocks_hoc_jsx__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../lib/tw-load-scratch-blocks-hoc.jsx */ "./src/lib/tw-load-scratch-blocks-hoc.jsx");
 /* harmony import */ var _lib_uid_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../lib/uid.js */ "./src/lib/uid.js");
-/* harmony import */ var _lib_block_export_image__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../lib/block-export-image */ "./src/lib/block-export-image.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _reducers_toolbox__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../reducers/toolbox */ "./src/reducers/toolbox.js");
-/* harmony import */ var _reducers_color_picker__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../reducers/color-picker */ "./src/reducers/color-picker.js");
-/* harmony import */ var _reducers_modals__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../reducers/modals */ "./src/reducers/modals.js");
-/* harmony import */ var _reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../reducers/custom-procedures */ "./src/reducers/custom-procedures.js");
-/* harmony import */ var _reducers_connection_modal__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../reducers/connection-modal */ "./src/reducers/connection-modal.js");
-/* harmony import */ var _reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../reducers/workspace-metrics */ "./src/reducers/workspace-metrics.js");
-/* harmony import */ var _reducers_editor_tab__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../reducers/editor-tab */ "./src/reducers/editor-tab.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reducers_toolbox__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../reducers/toolbox */ "./src/reducers/toolbox.js");
+/* harmony import */ var _reducers_color_picker__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../reducers/color-picker */ "./src/reducers/color-picker.js");
+/* harmony import */ var _reducers_modals__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../reducers/modals */ "./src/reducers/modals.js");
+/* harmony import */ var _reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../reducers/custom-procedures */ "./src/reducers/custom-procedures.js");
+/* harmony import */ var _reducers_connection_modal__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../reducers/connection-modal */ "./src/reducers/connection-modal.js");
+/* harmony import */ var _reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../reducers/workspace-metrics */ "./src/reducers/workspace-metrics.js");
+/* harmony import */ var _reducers_editor_tab__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../reducers/editor-tab */ "./src/reducers/editor-tab.js");
 const _excluded = ["anyModalVisible", "canUseCloud", "customStageSize", "customProceduresVisible", "extensionLibraryVisible", "options", "stageSize", "vm", "isRtl", "isVisible", "onActivateColorPicker", "onOpenConnectionModal", "onOpenSoundRecorder", "onOpenCustomExtensionModal", "updateToolboxState", "onActivateCustomProcedures", "onRequestCloseExtensionLibrary", "onRequestCloseCustomProcedures", "toolboxXML", "updateMetrics", "workspaceMetrics"];
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
@@ -25232,6 +25231,7 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 
+// import setupBlockExport from '../lib/block-export-image';
 
 
 
@@ -25385,9 +25385,9 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
       this.handleExtensionAdded(category);
     }
     // Setup block export functionality
-    Object(_lib_block_export_image__WEBPACK_IMPORTED_MODULE_23__["default"])(this.ScratchBlocks, this.workspace);
+    // setupBlockExport(this.ScratchBlocks, this.workspace);
     // Setup block export functionality
-    Object(_lib_block_export_image__WEBPACK_IMPORTED_MODULE_23__["default"])(this.ScratchBlocks, this.workspace);
+    // setupBlockExport(this.ScratchBlocks, this.workspace);
 
     // Setup pin/unpin functionality for toolbox blocks
     const setupPinUnpin = (ScratchBlocks, getToolboxXMLFn, updateToolboxStateFn) => {
@@ -26056,31 +26056,31 @@ const mapStateToProps = state => ({
   isFullScreen: state.scratchGui.mode.isFullScreen
 });
 const mapDispatchToProps = dispatch => ({
-  onActivateColorPicker: callback => dispatch(Object(_reducers_color_picker__WEBPACK_IMPORTED_MODULE_26__["activateColorPicker"])(callback)),
-  onActivateCustomProcedures: (data, callback) => dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_28__["activateCustomProcedures"])(data, callback)),
+  onActivateColorPicker: callback => dispatch(Object(_reducers_color_picker__WEBPACK_IMPORTED_MODULE_25__["activateColorPicker"])(callback)),
+  onActivateCustomProcedures: (data, callback) => dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_27__["activateCustomProcedures"])(data, callback)),
   onOpenConnectionModal: id => {
-    dispatch(Object(_reducers_connection_modal__WEBPACK_IMPORTED_MODULE_29__["setConnectionModalExtensionId"])(id));
-    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["openConnectionModal"])());
+    dispatch(Object(_reducers_connection_modal__WEBPACK_IMPORTED_MODULE_28__["setConnectionModalExtensionId"])(id));
+    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["openConnectionModal"])());
   },
   onOpenSoundRecorder: () => {
-    dispatch(Object(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_31__["activateTab"])(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_31__["SOUNDS_TAB_INDEX"]));
-    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["openSoundRecorder"])());
+    dispatch(Object(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_30__["activateTab"])(_reducers_editor_tab__WEBPACK_IMPORTED_MODULE_30__["SOUNDS_TAB_INDEX"]));
+    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["openSoundRecorder"])());
   },
-  onOpenCustomExtensionModal: swapId => dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["openCustomExtensionModal"])(swapId)),
+  onOpenCustomExtensionModal: swapId => dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["openCustomExtensionModal"])(swapId)),
   onRequestCloseExtensionLibrary: () => {
-    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_27__["closeExtensionLibrary"])());
+    dispatch(Object(_reducers_modals__WEBPACK_IMPORTED_MODULE_26__["closeExtensionLibrary"])());
   },
   onRequestCloseCustomProcedures: data => {
-    dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_28__["deactivateCustomProcedures"])(data));
+    dispatch(Object(_reducers_custom_procedures__WEBPACK_IMPORTED_MODULE_27__["deactivateCustomProcedures"])(data));
   },
   updateToolboxState: toolboxXML => {
-    dispatch(Object(_reducers_toolbox__WEBPACK_IMPORTED_MODULE_25__["updateToolbox"])(toolboxXML));
+    dispatch(Object(_reducers_toolbox__WEBPACK_IMPORTED_MODULE_24__["updateToolbox"])(toolboxXML));
   },
   updateMetrics: metrics => {
-    dispatch(Object(_reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_30__["updateMetrics"])(metrics));
+    dispatch(Object(_reducers_workspace_metrics__WEBPACK_IMPORTED_MODULE_29__["updateMetrics"])(metrics));
   }
 });
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_6__["injectIntl"])(Object(_lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_15__["default"])('Blocks')(Object(react_redux__WEBPACK_IMPORTED_MODULE_24__["connect"])(mapStateToProps, mapDispatchToProps)(Object(_lib_tw_load_scratch_blocks_hoc_jsx__WEBPACK_IMPORTED_MODULE_21__["default"])(Blocks)))));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_6__["injectIntl"])(Object(_lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_15__["default"])('Blocks')(Object(react_redux__WEBPACK_IMPORTED_MODULE_23__["connect"])(mapStateToProps, mapDispatchToProps)(Object(_lib_tw_load_scratch_blocks_hoc_jsx__WEBPACK_IMPORTED_MODULE_21__["default"])(Blocks)))));
 
 /***/ }),
 
@@ -39109,181 +39109,6 @@ const jpegThumbnail = dataUrl => new Promise((resolve, reject) => {
 
 /***/ }),
 
-/***/ "./src/lib/block-export-image.js":
-/*!***************************************!*\
-  !*** ./src/lib/block-export-image.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * Block Export to Image functionality
- * Adds "Export as Image" option to block right-click menu
- */
-
-const setupBlockExport = (ScratchBlocks, workspace) => {
-  // Store original context menu function
-  const originalShowContextMenu = ScratchBlocks.BlockSvg.prototype.showContextMenu_;
-
-  // Override the context menu function
-  ScratchBlocks.BlockSvg.prototype.showContextMenu_ = function (e) {
-    const block = this;
-    const menuOptions = [];
-
-    // Get default menu options first
-    if (this.isDeletable() && this.isMovable()) {
-      menuOptions.push(ScratchBlocks.ContextMenu.blockDuplicateOption(block, e));
-    }
-    if (this.isDeletable()) {
-      menuOptions.push(ScratchBlocks.ContextMenu.blockDeleteOption(block));
-    }
-
-    // Add "Export as Image" option
-    menuOptions.push({
-      enabled: true,
-      text: 'Export as Image',
-      callback: () => exportBlockAsImage(block, workspace)
-    });
-
-    // Add help option if available
-    const url = typeof this.helpUrl === 'function' ? this.helpUrl() : this.helpUrl;
-    if (url) {
-      menuOptions.push(ScratchBlocks.ContextMenu.blockHelpOption(block));
-    }
-
-    // Show the menu
-    ScratchBlocks.ContextMenu.show(e, menuOptions, this.RTL);
-  };
-};
-const convertImagesToDataUrls = async svgElement => {
-  const images = svgElement.querySelectorAll('image');
-  const promises = [];
-  for (const img of images) {
-    const href = img.getAttribute('href') || img.getAttribute('xlink:href');
-    if (href && !href.startsWith('data:')) {
-      const promise = fetch(href).then(response => response.blob()).then(blob => new Promise(resolve => {
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          img.setAttribute('href', reader.result);
-          img.removeAttribute('xlink:href');
-          resolve();
-        };
-        reader.readAsDataURL(blob);
-      })).catch(err => {
-        console.warn('Failed to load image:', href, err);
-      });
-      promises.push(promise);
-    }
-  }
-  return Promise.all(promises);
-};
-const exportBlockAsImage = async (block, workspace) => {
-  try {
-    // Get the root block of the stack
-    const rootBlock = block.getRootBlock();
-
-    // Get the block group element
-    const blockGroup = rootBlock.getSvgRoot();
-    if (!blockGroup) {
-      console.error('Could not find block SVG');
-      return;
-    }
-
-    // Get bounding box
-    const bbox = blockGroup.getBBox();
-    const padding = 20;
-
-    // Create new SVG with proper namespaces and styling
-    const svgNS = 'http://www.w3.org/2000/svg';
-    const newSvg = document.createElementNS(svgNS, 'svg');
-    newSvg.setAttribute('xmlns', svgNS);
-    newSvg.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
-    newSvg.setAttribute('width', bbox.width + padding * 2);
-    newSvg.setAttribute('height', bbox.height + padding * 2);
-    newSvg.setAttribute('viewBox', "0 0 ".concat(bbox.width + padding * 2, " ").concat(bbox.height + padding * 2));
-
-    // Add defs for gradients and filters that blocks use
-    const defs = document.createElementNS(svgNS, 'defs');
-
-    // Copy defs from workspace (includes block shadows, gradients, etc)
-    const workspaceDefs = workspace.svgBlockCanvas_.querySelector('defs');
-    if (workspaceDefs) {
-      defs.innerHTML = workspaceDefs.innerHTML;
-    }
-    newSvg.appendChild(defs);
-
-    // Add style element for fonts
-    const style = document.createElementNS(svgNS, 'style');
-    style.textContent = "\n            text {\n                font-family: \"Helvetica Neue\", Helvetica, sans-serif;\n                font-size: 12pt;\n                font-weight: 500;\n                fill: white;\n            }\n            .blocklyText {\n                font-family: \"Helvetica Neue\", Helvetica, sans-serif;\n                font-size: 12pt;\n                font-weight: 500;\n                fill: white;\n            }\n            .blocklyEditableText {\n                font-family: \"Helvetica Neue\", Helvetica, sans-serif;\n                font-size: 12pt;\n                font-weight: 500;\n                fill: white;\n            }\n            .blocklyNonEditableText > text {\n                fill: white;\n            }\n            .blocklyEditableText > .blocklyText {\n                fill: black !important;\n            }\n            .blocklyDropdownText {\n                fill: white;\n            }\n        ";
-    newSvg.appendChild(style);
-
-    // Clone and transform the block
-    const clonedBlock = blockGroup.cloneNode(true);
-    const transform = "translate(".concat(padding - bbox.x, ", ").concat(padding - bbox.y, ")");
-    clonedBlock.setAttribute('transform', transform);
-    newSvg.appendChild(clonedBlock);
-
-    // Convert all image URLs to data URLs
-    await convertImagesToDataUrls(newSvg);
-
-    // Serialize SVG
-    const serializer = new XMLSerializer();
-    let svgString = serializer.serializeToString(newSvg);
-
-    // Create canvas for conversion
-    const canvas = document.createElement('canvas');
-    const scale = 3; // Higher quality for crisp text
-    canvas.width = (bbox.width + padding * 2) * scale;
-    canvas.height = (bbox.height + padding * 2) * scale;
-    const ctx = canvas.getContext('2d');
-
-    // Create image from SVG
-    const img = new Image();
-    const blob = new Blob([svgString], {
-      type: 'image/svg+xml;charset=utf-8'
-    });
-    const url = URL.createObjectURL(blob);
-    img.onload = () => {
-      // Enable better rendering
-      ctx.imageSmoothingEnabled = true;
-      ctx.imageSmoothingQuality = 'high';
-
-      // Draw image at higher resolution
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-      // Convert to PNG and download
-      canvas.toBlob(pngBlob => {
-        const downloadUrl = URL.createObjectURL(pngBlob);
-        const link = document.createElement('a');
-        const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
-        link.download = "block-".concat(timestamp, ".png");
-        link.href = downloadUrl;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        // Cleanup
-        URL.revokeObjectURL(downloadUrl);
-        URL.revokeObjectURL(url);
-      }, 'image/png');
-    };
-    img.onerror = err => {
-      console.error('Error loading image:', err);
-      URL.revokeObjectURL(url);
-      alert('Failed to export block. Please try again.');
-    };
-    img.src = url;
-  } catch (error) {
-    console.error('Error exporting block:', error);
-    alert('Failed to export block as image: ' + error.message);
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (setupBlockExport);
-
-/***/ }),
-
 /***/ "./src/lib/block-search.js":
 /*!*********************************!*\
   !*** ./src/lib/block-search.js ***!
@@ -40127,7 +39952,6 @@ class BlockSearch {
         for (const origin of trustedExtensionOrigins) {
           if (message.includes(origin)) {
             setTimeout(() => {
-              console.log('⚡ Rebuilding metadata...');
               this.buildExtensionMetadata();
             }, 1500);
             break;

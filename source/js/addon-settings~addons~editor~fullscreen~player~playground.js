@@ -413,7 +413,7 @@ const manifest = {
   "userscripts": [{
     "url": "userscript.js"
   }],
-  "enabledByDefault": false
+  "enabledByDefault": true
 };
 /* harmony default export */ __webpack_exports__["default"] = (manifest);
 
