@@ -217,7 +217,15 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 const THEME_KEY = 'tw:theme';
 const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 const getInitialDarkMode = () => {
-  return true; // Always return true to force dark mode
+  try {
+    const item = localStorage.getItem(THEME_KEY);
+    if (item !== null) {
+      return item === 'dark';
+    }
+  } catch (e) {
+    // ignore
+  }
+  return darkMediaQuery.matches;
 };
 const darkModeStylesheet = document.createElement('style');
 darkModeStylesheet.textContent = _raw_loader_tw_theme_dark_css__WEBPACK_IMPORTED_MODULE_1___default.a;
@@ -228,7 +236,7 @@ const ThemeHOC = function ThemeHOC(WrappedComponent) {
       this.handleQueryChange = this.handleQueryChange.bind(this);
       this.handleClickTheme = this.handleClickTheme.bind(this);
       this.state = {
-        dark: true // Force dark mode
+        dark: getInitialDarkMode()
       };
     }
     componentDidMount() {
@@ -240,7 +248,7 @@ const ThemeHOC = function ThemeHOC(WrappedComponent) {
     }
     componentDidUpdate() {
       try {
-        localStorage.setItem(THEME_KEY, 'dark'); // Always save as dark
+        localStorage.setItem(THEME_KEY, this.state.dark ? 'dark' : 'light');
       } catch (e) {
         // ignore
       }
@@ -253,24 +261,30 @@ const ThemeHOC = function ThemeHOC(WrappedComponent) {
       }
     }
     updateDark() {
-      const dark = true; // Force dark mode
-      document.body.setAttribute('theme', 'dark');
-      if (!darkModeStylesheet.parentNode) {
+      const dark = this.state.dark;
+      document.body.setAttribute('theme', dark ? 'dark' : 'light');
+      if (dark && !darkModeStylesheet.parentNode) {
         // Append at the start of <body> we override scratch-gui styles in <head>
         // but are overridden by addon styles at the end of <body>
         document.body.insertBefore(darkModeStylesheet, document.body.firstChild);
+      } else if (!dark && darkModeStylesheet.parentNode) {
+        darkModeStylesheet.parentNode.removeChild(darkModeStylesheet);
       }
     }
     handleQueryChange() {
-      // Do nothing - keep dark mode
+      this.setState({
+        dark: darkMediaQuery.matches
+      });
     }
     handleClickTheme() {
-      // Do nothing - prevent theme switching
+      this.setState(state => ({
+        dark: !state.dark
+      }));
     }
     render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedComponent, _extends({
         onClickTheme: this.handleClickTheme,
-        isDark: true // Always pass true
+        isDark: this.state.dark
       }, this.props));
     }
   }
@@ -618,18 +632,20 @@ const arkideDevs = [{
   text: 'Insomnia (Co-Owner, Main art lead)',
   image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=insomnia64",
   href: "https://arkide.site/profile?user=insomnia64"
-}, {
-  text: 'w9pti (Moderator)',
-  image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=w9pti",
-  href: "https://arkide.site/profile?user=w9pti"
-}, {
+},
+//{
+//    text: 'w9pti (Moderator)',
+//    image: `http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=w9pti`,
+//    href: "https://arkide.site/profile?user=w9pti",
+//},
+{
   text: 'battman (Creator of the old mascot)',
   image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=battman",
   href: "https://arkide.site/profile?user=battman"
 }, {
-  text: 'snowyy (Ark but its his alt account)',
-  image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=snowyy",
-  href: "https://arkide.site/profile?user=snowyy"
+  text: 'cosmic (Ark but its his alt account)',
+  image: "http://arkideapi.arc360hub.com/api/v1/users/getpfp?username=cosmic",
+  href: "https://arkide.site/profile?user=cosmic"
 }];
 const pmPullRequestDevelopers = [
 // these people made a PR that got merged, or got a dev to add something they made
