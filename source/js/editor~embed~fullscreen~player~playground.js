@@ -44837,10 +44837,10 @@ const menuItems = [{
   helpLink: 'https://scratch.mit.edu/vernier'
 }, {
   name: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-    defaultMessage: "PenguinMod Extra Extensions",
+    defaultMessage: "ArkIDE Extra Extensions",
     id: "pm.extraLibraryExtensions.name"
   }),
-  href: 'https://extensions.penguinmod.com/?editor=true',
+  href: 'https://extensions.arkide.site/?editor=true',
   extensionId: 'special_penguinmodExtensionLibrary',
   iconURL: _penguinmod_library_svg__WEBPACK_IMPORTED_MODULE_39___default.a,
   description: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
@@ -44880,11 +44880,11 @@ const menuItems = [{
 }, {
   // not really an extension, but it's easiest to present it as one
   name: 'ExtForge',
-  href: 'https://jwklong.github.io/extforge',
+  href: 'https://extforge.arkide.site',
   extensionId: 'special_extforge',
   iconURL: _penguinmod_extforge_svg__WEBPACK_IMPORTED_MODULE_41___default.a,
   description: 'Create extensions with a block-based UI.',
-  extDeveloper: 'jwklong',
+  extDeveloper: 'jwklong, Updated by Ark',
   isNew: true,
   tags: ['extcreate'],
   featured: true
