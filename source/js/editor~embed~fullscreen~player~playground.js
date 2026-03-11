@@ -3133,7 +3133,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .settings-modal_modal-content_2bE7f {\n    max-width: max(60%, 750px);\n} body.disable-blur * {\n    backdrop-filter: none !important;\n    -webkit-backdrop-filter: none !important;\n} .settings-modal_body_cAUJ0 {\n    background: rgba(255, 255, 255, 0.74);\n    backdrop-filter: blur(10px);\n    -webkit-backdrop-filter: blur(10px);\n    padding: 1.5rem 2.25rem;\n    min-height: 900px; /* Add minimum height */\n    max-height: calc(100vh - 250px);\n    overflow: hidden; /* Change from auto to hidden since tab-content will handle scrolling */\n} [theme=\"dark\"] .settings-modal_body_cAUJ0 {\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n    background: rgba(17, 17, 17, 0.74); /* Made semi-transparent - adjust if needed */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n} /* For small screens, such as in the embed */ @media (max-height: 600px) {\n    .settings-modal_modal-content_2bE7f {\n        margin: 50px auto;\n    }\n    .settings-modal_body_cAUJ0 {\n        max-height: calc(100vh - 150px);\n    }\n} .settings-modal_setting_PxhNM {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n} .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #e8dbff;\n} .settings-modal_setting_PxhNM:hover,\n.settings-modal_setting_PxhNM:focus-within {\n    background: #ddcaf5;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #1e162c71;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM:hover,\n[theme=\"dark\"] .settings-modal_setting_PxhNM:focus-within {\n    background: #2d2041a1;\n} .settings-modal_label_2Phuq {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n} .settings-modal_label-unset-height_3uoDx {\n    height: initial;\n} .settings-modal_setting_PxhNM table {\n    border-collapse: collapse;\n} .settings-modal_setting_PxhNM tr,\n.settings-modal_setting_PxhNM td,\n.settings-modal_setting_PxhNM th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n} .settings-modal_checkbox_1dXwG {\n    margin-right: 0.5rem;\n} .settings-modal_help-icon_2FTix {\n    border: 0;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./help-black.svg */ "./src/components/tw-settings-modal/help-black.svg")) + ");\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n} [theme=\"dark\"] .settings-modal_help-icon_2FTix {\n    background-image: url(" + escape(__webpack_require__(/*! ./help-white.svg */ "./src/components/tw-settings-modal/help-white.svg")) + ");\n} .settings-modal_custom-stage-size_3I0AA {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    height: initial;\n} .settings-modal_custom-stage-size-container_2OBYk {\n    display: flex;\n    align-items: center;\n} .settings-modal_custom-stage-size_3I0AA > * {\n    margin-right: 0.5rem;\n} .settings-modal_custom-stage-size-button_3koc0 {\n    margin: 8px;\n    background: white;\n    border-radius: 10px;\n    font-size: 40px;\n    width: 168px;\n    height: 126px;\n    border: 4px solid rgba(0, 0, 0, 0.1);\n    outline: 4px white solid;\n} [theme=\"dark\"] .settings-modal_custom-stage-size-button_3koc0 {\n    outline-color: var(--ui-primary, hsl(258 100% 95%));\n    background: var(--ui-primary, hsl(258 100% 95%));\n    border-color: rgba(255, 255, 255, 0.1);\n} .settings-modal_custom-stage-size-button_3koc0[data-widescreen=\"true\"] {\n    width: 224px;\n} .settings-modal_custom-stage-size-button_3koc0[data-square=\"true\"] {\n    width: 126px;\n} .settings-modal_custom-stage-size-button_3koc0[data-selected=\"true\"] {\n    border-color: hsla(261, 100%, 50%, 1);\n} .settings-modal_custom-stage-size-button_3koc0:active {\n    border-color: hsla(261, 100%, 50%, 0.35);\n} .settings-modal_custom-stage-size-input_2ivQT {\n    width: 80px;\n    margin: 3px 8px;\n} .settings-modal_info_1a5yx {\n    margin-bottom: 0.25rem;\n} .settings-modal_header_3lDNd {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n} .settings-modal_divider_7euKA {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n} .settings-modal_button_15QCA {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: hsla(261, 100%, 50%, 1);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n} .settings-modal_button_15QCA:active, .settings-modal_button_15QCA:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n} .settings-modal_warning_2xSC8 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(255, 197, 38);\n    color: black;\n} [theme=\"dark\"] .settings-modal_warning_2xSC8 {\n    background: rgb(114, 65, 0);\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_summary_jE5Vl {\n    cursor: pointer;\n} .settings-modal_dropdown_JkJtU {\n    margin-right: 4px;\n} details[open] .settings-modal_dropdown_JkJtU {\n    transform: rotate(90deg);\n} /* Project Size Tracker Styles */ .settings-modal_project-size-container_3h_2S {\n    padding: 1rem;\n    margin: 0.5rem 0;\n    border-radius: 6px;\n    background: rgba(115, 76, 255, 0.1);\n    border: 2px solid rgba(76, 151, 255, 0.3);\n} [theme=\"dark\"] .settings-modal_project-size-container_3h_2S {\n    background: rgba(139, 76, 255, 0.15);\n    border-color: rgba(115, 76, 255, 0.4);\n} .settings-modal_project-size-header_1YrhY {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-value_WKeoW {\n    font-size: 1.25rem;\n    color: hsla(261, 100%, 50%, 1);\n} [theme=\"dark\"] .settings-modal_project-size-value_WKeoW {\n    color: #8c6cff;\n} .settings-modal_project-size-bar-container_174EJ {\n    position: relative;\n    width: 100%;\n    height: 24px;\n    background: rgba(0, 0, 0, 0.1);\n    border-radius: 12px;\n    overflow: hidden;\n    margin-bottom: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-bar-container_174EJ {\n    background: rgba(255, 255, 255, 0.1);\n} .settings-modal_project-size-bar_24e50 {\n    height: 100%;\n    border-radius: 12px;\n    transition: all 0.3s ease;\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    padding-right: 8px;\n    color: white;\n    font-size: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-bar-safe_3KHc_ {\n    background: linear-gradient(90deg, #7c4cff, #b05cff);\n} .settings-modal_project-size-bar-warning_1v3v7 {\n    background: linear-gradient(90deg, #ffab19, #ffc837);\n} .settings-modal_project-size-bar-danger_3i1sa {\n    background: linear-gradient(90deg, #ff6680, #ff8fa3);\n} .settings-modal_project-size-info_3ObpS {\n    font-size: 0.875rem;\n    color: #575E75;\n    margin-top: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-info_3ObpS {\n    color: #aaa;\n} .settings-modal_project-size-warning-text_1AIn2 {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 171, 25, 0.2);\n    border: 1px solid rgba(255, 171, 25, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-warning-text_1AIn2 {\n    background: rgba(255, 171, 25, 0.15);\n    border-color: rgba(255, 171, 25, 0.4);\n} .settings-modal_project-size-danger-text_2Kyof {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 102, 128, 0.2);\n    border: 1px solid rgba(255, 102, 128, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-danger-text_2Kyof {\n    background: rgba(255, 102, 128, 0.15);\n    border-color: rgba(255, 102, 128, 0.4);\n} .settings-modal_tab-container_2rNl- {\n    display: flex;\n    gap: 1.5rem;\n    min-height: 400px;\n    height: 100%; /* Make it fill the body */\n} .settings-modal_sidebar_1lMEg {\n    display: flex;\n    flex-direction: column;\n    gap: 0.25rem;\n    min-width: 180px;\n    padding-right: 1rem;\n    border-right: 1px solid var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n    flex-shrink: 0; /* Prevent sidebar from shrinking */\n} [theme=\"dark\"] .settings-modal_sidebar_1lMEg {\n    border-right-color: rgba(255, 255, 255, 0.2);\n} .settings-modal_tab-button_3HCfI {\n    background: transparent;\n    border: none;\n    padding: 0.75rem 1rem;\n    text-align: left;\n    cursor: pointer;\n    border-radius: 4px;\n    font-family: inherit;\n    font-size: 14px;\n    color: #575E75;\n    transition: background-color 0.2s ease;\n} [theme=\"dark\"] .settings-modal_tab-button_3HCfI {\n    color: #aaa;\n} .settings-modal_tab-button_3HCfI:hover {\n    background: rgba(0, 0, 0, 0.05);\n} [theme=\"dark\"] .settings-modal_tab-button_3HCfI:hover {\n    background: rgba(255, 255, 255, 0.05);\n} .settings-modal_tab-button-active_26f4D {\n    background: #eedbff;\n    color: #575E75;\n    font-weight: bold;\n} [theme=\"dark\"] .settings-modal_tab-button-active_26f4D {\n    background: #1e162c71;\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_tab-content_roO78 {\n    flex: 1;\n    overflow-y: auto;\n    max-height: none; \n    padding-right: 0.5rem;\n} /* For small screens */ @media (max-width: 1068px) {\n    .settings-modal_tab-container_2rNl- {\n        flex-direction: column;\n    }\n    \n    .settings-modal_sidebar_1lMEg {\n        flex-direction: row;\n        overflow-x: auto;\n        border-right: none;\n        border-bottom: 1px solid var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n        padding-right: 0;\n        padding-bottom: 0.5rem;\n        min-width: auto;\n    }\n    \n    [theme=\"dark\"] .settings-modal_sidebar_1lMEg {\n        border-bottom-color: rgba(255, 255, 255, 0.2);\n    }\n    \n    .settings-modal_tab-button_3HCfI {\n        white-space: nowrap;\n    }\n}", ""]);
+exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .settings-modal_modal-content_2bE7f {\n    max-width: max(60%, 750px);\n} body.disable-blur * {\n    backdrop-filter: none !important;\n    -webkit-backdrop-filter: none !important;\n} .settings-modal_body_cAUJ0 {\n    background: rgba(255, 255, 255, 0.74);\n    backdrop-filter: blur(10px);\n    -webkit-backdrop-filter: blur(10px);\n    padding: 1.5rem 2.25rem;\n    min-height: 900px; /* Add minimum height */\n    max-height: calc(100vh - 250px);\n    overflow: hidden; /* Change from auto to hidden since tab-content will handle scrolling */\n} [theme=\"dark\"] .settings-modal_body_cAUJ0 {\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n    background: rgba(17, 17, 17, 0.74); /* Made semi-transparent - adjust if needed */\n    backdrop-filter: blur(10px); /* Add blur effect */\n    -webkit-backdrop-filter: blur(10px); /* Safari support */\n} /* For small screens, such as in the embed */ @media (max-height: 600px) {\n    .settings-modal_modal-content_2bE7f {\n        margin: 50px auto;\n    }\n    .settings-modal_body_cAUJ0 {\n        max-height: calc(100vh - 150px);\n    }\n} .settings-modal_setting_PxhNM {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n} .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #e8dbff;\n} .settings-modal_setting_PxhNM:hover,\n.settings-modal_setting_PxhNM:focus-within {\n    background: #ddcaf5;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: #4f00d872;\n} [theme=\"dark\"] .settings-modal_setting_PxhNM:hover,\n[theme=\"dark\"] .settings-modal_setting_PxhNM:focus-within {\n    background: #2d2041a1;\n} .settings-modal_label_2Phuq {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n} .settings-modal_label-unset-height_3uoDx {\n    height: initial;\n} .settings-modal_setting_PxhNM table {\n    border-collapse: collapse;\n} .settings-modal_setting_PxhNM tr,\n.settings-modal_setting_PxhNM td,\n.settings-modal_setting_PxhNM th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n} .settings-modal_checkbox_1dXwG {\n    margin-right: 0.5rem;\n} .settings-modal_help-icon_2FTix {\n    border: 0;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./help-black.svg */ "./src/components/tw-settings-modal/help-black.svg")) + ");\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n} [theme=\"dark\"] .settings-modal_help-icon_2FTix {\n    background-image: url(" + escape(__webpack_require__(/*! ./help-white.svg */ "./src/components/tw-settings-modal/help-white.svg")) + ");\n} .settings-modal_custom-stage-size_3I0AA {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    height: initial;\n} .settings-modal_custom-stage-size-container_2OBYk {\n    display: flex;\n    align-items: center;\n} .settings-modal_custom-stage-size_3I0AA > * {\n    margin-right: 0.5rem;\n} .settings-modal_custom-stage-size-button_3koc0 {\n    margin: 8px;\n    background: white;\n    border-radius: 10px;\n    font-size: 40px;\n    width: 168px;\n    height: 126px;\n    border: 4px solid rgba(0, 0, 0, 0.1);\n    outline: 4px white solid;\n} [theme=\"dark\"] .settings-modal_custom-stage-size-button_3koc0 {\n    outline-color: var(--ui-primary, hsl(258 100% 95%));\n    background: var(--ui-primary, hsl(258 100% 95%));\n    border-color: rgba(255, 255, 255, 0.1);\n} .settings-modal_custom-stage-size-button_3koc0[data-widescreen=\"true\"] {\n    width: 224px;\n} .settings-modal_custom-stage-size-button_3koc0[data-square=\"true\"] {\n    width: 126px;\n} .settings-modal_custom-stage-size-button_3koc0[data-selected=\"true\"] {\n    border-color: hsla(261, 100%, 50%, 1);\n} .settings-modal_custom-stage-size-button_3koc0:active {\n    border-color: hsla(261, 100%, 50%, 0.35);\n} .settings-modal_custom-stage-size-input_2ivQT {\n    width: 80px;\n    margin: 3px 8px;\n} .settings-modal_info_1a5yx {\n    margin-bottom: 0.25rem;\n} .settings-modal_header_3lDNd {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n} .settings-modal_divider_7euKA {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n} .settings-modal_button_15QCA {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: hsla(261, 100%, 50%, 1);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n} .settings-modal_button_15QCA:active, .settings-modal_button_15QCA:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n} .settings-modal_warning_2xSC8 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(255, 197, 38);\n    color: black;\n} [theme=\"dark\"] .settings-modal_warning_2xSC8 {\n    background: rgb(114, 65, 0);\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_summary_jE5Vl {\n    cursor: pointer;\n} .settings-modal_dropdown_JkJtU {\n    margin-right: 4px;\n} details[open] .settings-modal_dropdown_JkJtU {\n    transform: rotate(90deg);\n} /* Project Size Tracker Styles */ .settings-modal_project-size-container_3h_2S {\n    padding: 1rem;\n    margin: 0.5rem 0;\n    border-radius: 6px;\n    background: rgba(115, 76, 255, 0.1);\n    border: 2px solid rgba(76, 151, 255, 0.3);\n} [theme=\"dark\"] .settings-modal_project-size-container_3h_2S {\n    background: rgba(139, 76, 255, 0.15);\n    border-color: rgba(115, 76, 255, 0.4);\n} .settings-modal_project-size-header_1YrhY {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-value_WKeoW {\n    font-size: 1.25rem;\n    color: hsla(261, 100%, 50%, 1);\n} [theme=\"dark\"] .settings-modal_project-size-value_WKeoW {\n    color: #8c6cff;\n} .settings-modal_project-size-bar-container_174EJ {\n    position: relative;\n    width: 100%;\n    height: 24px;\n    background: rgba(0, 0, 0, 0.1);\n    border-radius: 12px;\n    overflow: hidden;\n    margin-bottom: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-bar-container_174EJ {\n    background: rgba(255, 255, 255, 0.1);\n} .settings-modal_project-size-bar_24e50 {\n    height: 100%;\n    border-radius: 12px;\n    transition: all 0.3s ease;\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    padding-right: 8px;\n    color: white;\n    font-size: 0.75rem;\n    font-weight: bold;\n} .settings-modal_project-size-bar-safe_3KHc_ {\n    background: linear-gradient(90deg, #7c4cff, #b05cff);\n} .settings-modal_project-size-bar-warning_1v3v7 {\n    background: linear-gradient(90deg, #ffab19, #ffc837);\n} .settings-modal_project-size-bar-danger_3i1sa {\n    background: linear-gradient(90deg, #ff6680, #ff8fa3);\n} .settings-modal_project-size-info_3ObpS {\n    font-size: 0.875rem;\n    color: #575E75;\n    margin-top: 0.5rem;\n} [theme=\"dark\"] .settings-modal_project-size-info_3ObpS {\n    color: #aaa;\n} .settings-modal_project-size-warning-text_1AIn2 {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 171, 25, 0.2);\n    border: 1px solid rgba(255, 171, 25, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-warning-text_1AIn2 {\n    background: rgba(255, 171, 25, 0.15);\n    border-color: rgba(255, 171, 25, 0.4);\n} .settings-modal_project-size-danger-text_2Kyof {\n    margin-top: 0.5rem;\n    padding: 0.5rem;\n    border-radius: 4px;\n    font-size: 0.875rem;\n    background: rgba(255, 102, 128, 0.2);\n    border: 1px solid rgba(255, 102, 128, 0.5);\n} [theme=\"dark\"] .settings-modal_project-size-danger-text_2Kyof {\n    background: rgba(255, 102, 128, 0.15);\n    border-color: rgba(255, 102, 128, 0.4);\n} .settings-modal_tab-container_2rNl- {\n    display: flex;\n    gap: 1.5rem;\n    min-height: 400px;\n    height: 100%; /* Make it fill the body */\n} .settings-modal_sidebar_1lMEg {\n    display: flex;\n    flex-direction: column;\n    gap: 0.25rem;\n    min-width: 180px;\n    padding-right: 1rem;\n    border-right: 1px solid var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n    flex-shrink: 0; /* Prevent sidebar from shrinking */\n} [theme=\"dark\"] .settings-modal_sidebar_1lMEg {\n    border-right-color: rgba(255, 255, 255, 0.2);\n} .settings-modal_tab-button_3HCfI {\n    background: transparent;\n    border: none;\n    padding: 0.75rem 1rem;\n    text-align: left;\n    cursor: pointer;\n    border-radius: 4px;\n    font-family: inherit;\n    font-size: 14px;\n    color: #575E75;\n    transition: background-color 0.2s ease;\n} [theme=\"dark\"] .settings-modal_tab-button_3HCfI {\n    color: #aaa;\n} .settings-modal_tab-button_3HCfI:hover {\n    background: rgba(0, 0, 0, 0.05);\n} [theme=\"dark\"] .settings-modal_tab-button_3HCfI:hover {\n    background: rgba(255, 255, 255, 0.05);\n} .settings-modal_tab-button-active_26f4D {\n    background: #eedbff;\n    color: #575E75;\n    font-weight: bold;\n} [theme=\"dark\"] .settings-modal_tab-button-active_26f4D {\n    background: #4f00d872;\n    color: var(--text-primary, hsla(225, 15%, 40%, 1));\n} .settings-modal_tab-content_roO78 {\n    flex: 1;\n    overflow-y: auto;\n    max-height: none; \n    padding-right: 0.5rem;\n} /* For small screens */ @media (max-width: 1068px) {\n    .settings-modal_tab-container_2rNl- {\n        flex-direction: column;\n    }\n    \n    .settings-modal_sidebar_1lMEg {\n        flex-direction: row;\n        overflow-x: auto;\n        border-right: none;\n        border-bottom: 1px solid var(--ui-tertiary, hsla(0, 100%, 100%, 1));\n        padding-right: 0;\n        padding-bottom: 0.5rem;\n        min-width: auto;\n    }\n    \n    [theme=\"dark\"] .settings-modal_sidebar_1lMEg {\n        border-bottom-color: rgba(255, 255, 255, 0.2);\n    }\n    \n    .settings-modal_tab-button_3HCfI {\n        white-space: nowrap;\n    }\n\n    .settings-modal_bold_20idu {\n        font-weight: bold;\n    }\n}", ""]);
 
 // exports
 exports.locals = {
@@ -3193,7 +3193,8 @@ exports.locals = {
 	"tab-button-active": "settings-modal_tab-button-active_26f4D",
 	"tabButtonActive": "settings-modal_tab-button-active_26f4D",
 	"tab-content": "settings-modal_tab-content_roO78",
-	"tabContent": "settings-modal_tab-content_roO78"
+	"tabContent": "settings-modal_tab-content_roO78",
+	"bold": "settings-modal_bold_20idu"
 };
 
 /***/ }),
@@ -23634,6 +23635,14 @@ const SettingsModalComponent = props => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
     defaultMessage: "Project Information",
     id: "pm.settingsModal.projectInfo"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButton, {
+      [_settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabButtonActive]: activeTab === 'help'
+    }),
+    onClick: () => setActiveTab('help')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+    defaultMessage: "Help",
+    id: "pm.settingsModal.help"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: _settings_modal_css__WEBPACK_IMPORTED_MODULE_11___default.a.tabContent
   }, activeTab === 'render' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, !props.isEmbedded && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomStageSize, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CustomFPS, {
@@ -23672,7 +23681,7 @@ const SettingsModalComponent = props => {
     onChange: props.onInterpolationChange
   })), activeTab === 'projectInfo' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ProjectSizeTracker, {
     vm: props.vm
-  }))))));
+  })), activeTab === 'help' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, "Help about new ArkIDE Editor Features:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, "New shapes section in the costume editor:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "The new \"Font Awesome\" section in the shapes selector is a new thing that adds over 1600 new icons to the editor by using the Font Awesome library of SVG Icons, so they can be edited and colored to your liking, you just click on one of them you like in the big list (or search) then click again on the one you clicked but on the \"Font Awesome\" row this time. Then you can draw them in your workspace, you can stretch them out or ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("strong", null, "hold shift while drawing them to make them the correct aspect ratio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, "Screenshot Tool:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "The screenshot tool allows you to capture images of your project at any time. You can access it from the toolbar or by clicking the button in the header of the project canavas. Very simple to use."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, "Toolbox search and pinning:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "The toolbox now includes a search function that allows you to quickly find specific blocks. You can also pin frequently used blocks to the top of the toolbox for easy access by right clicking your wanted block and clicking on \"Pin Block\". (Yes if you remove an extension that you pinned a block from, our code will figure it out for you.)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "If you would like other help things being added, please report it to our discord or github! Hope this helps you figure out any of our new features!!"))))));
 };
 SettingsModalComponent.propTypes = {
   intl: react_intl__WEBPACK_IMPORTED_MODULE_0__["intlShape"],
@@ -25384,18 +25393,11 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
     for (const category of this.props.vm.runtime._blockInfo) {
       this.handleExtensionAdded(category);
     }
-    // Setup block export functionality
-    // setupBlockExport(this.ScratchBlocks, this.workspace);
-    // Setup block export functionality
-    // setupBlockExport(this.ScratchBlocks, this.workspace);
-
-    // Setup pin/unpin functionality for toolbox blocks
     const setupPinUnpin = (ScratchBlocks, getToolboxXMLFn, updateToolboxStateFn) => {
       const originalShowContextMenu = ScratchBlocks.BlockSvg.prototype.showContextMenu_;
       ScratchBlocks.BlockSvg.prototype.showContextMenu_ = function (e) {
         const block = this;
         if (block.workspace.isFlyout) {
-          const menuOptions = [];
           const blockXML = ScratchBlocks.Xml.domToText(ScratchBlocks.Xml.blockToDom(block));
           const {
             isBlockPinned,
@@ -25403,27 +25405,71 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
             unpinBlock
           } = __webpack_require__(/*! ../lib/pinned-blocks-storage */ "./src/lib/pinned-blocks-storage.js");
           const isPinned = isBlockPinned(blockXML);
-          menuOptions.push({
-            enabled: true,
-            text: isPinned ? 'Unpin Block' : 'Pin Block',
-            callback: () => {
-              if (isPinned) {
-                unpinBlock(blockXML);
-              } else {
-                pinBlock(blockXML);
+          const originalShow = ScratchBlocks.ContextMenu.show;
+          ScratchBlocks.ContextMenu.show = function (event, options, rtl) {
+            ScratchBlocks.ContextMenu.show = originalShow;
+            options.push({
+              enabled: true,
+              text: isPinned ? 'Unpin Block' : 'Pin Block',
+              callback: () => {
+                if (isPinned) {
+                  unpinBlock(blockXML);
+                } else {
+                  pinBlock(blockXML);
+                }
+                const toolboxXML = getToolboxXMLFn();
+                if (toolboxXML) {
+                  updateToolboxStateFn(toolboxXML);
+                }
               }
-              const toolboxXML = getToolboxXMLFn();
-              if (toolboxXML) {
-                updateToolboxStateFn(toolboxXML);
-              }
-            }
-          });
-          ScratchBlocks.ContextMenu.show(e, menuOptions, this.RTL);
+            });
+            originalShow.call(this, event, options, rtl);
+          };
+          originalShowContextMenu.call(this, e);
         } else {
           originalShowContextMenu.call(this, e);
         }
       };
     };
+    const applyFlyoutBlur = () => {
+      const flyout = this.workspace.getFlyout();
+      const flyoutSvg = flyout.svgGroup_;
+      if (!flyoutSvg) return;
+      const blurDiv = document.createElement('div');
+      blurDiv.className = 'flyout-blur-overlay';
+      blurDiv.style.cssText = "\n        position: absolute;\n        top: 0;\n        left: 0;\n        backdrop-filter: blur(10px);\n        -webkit-backdrop-filter: blur(10px);\n        pointer-events: none;\n        z-index: 0;\n        transition: width 0.2s, height 0.2s;\n    ";
+      const container = this.blocks.querySelector('.injectionDiv') || this.blocks;
+      container.style.position = 'relative';
+      container.appendChild(blurDiv);
+      const syncBlur = () => {
+        const rect = flyoutSvg.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        blurDiv.style.left = "".concat(rect.left - containerRect.left, "px");
+        blurDiv.style.top = "".concat(rect.top - containerRect.top, "px");
+        blurDiv.style.width = "".concat(rect.width, "px");
+        blurDiv.style.height = "".concat(rect.height, "px");
+      };
+      syncBlur();
+      this.workspace.addChangeListener(syncBlur);
+      window.addEventListener('resize', syncBlur);
+      // Apply blur to context menu when it appears
+      const observer = new MutationObserver(() => {
+        const menu = document.querySelector('.blocklyWidgetDiv .goog-menu');
+        if (menu && !menu.dataset.blurApplied) {
+          menu.dataset.blurApplied = 'true';
+          menu.style.backdropFilter = 'blur(12px)';
+          menu.style.webkitBackdropFilter = 'blur(12px)';
+          menu.style.background = 'rgba(255, 255, 255, 0.35)';
+          menu.style.border = '1px solid rgba(0, 0, 0, 0.08)';
+        }
+      });
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      this.menuBlurObserver = observer;
+    };
+    setTimeout(applyFlyoutBlur, 200);
     setupPinUnpin(this.ScratchBlocks, this.getToolboxXML.bind(this), this.props.updateToolboxState);
   }
   shouldComponentUpdate(nextProps, nextState) {
@@ -25471,6 +25517,9 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
     this.workspace.dispose();
     clearTimeout(this.toolboxUpdateTimeout);
     this.props.vm.setInEditor(false);
+    if (this.menuBlurObserver) {
+      this.menuBlurObserver.disconnect();
+    }
   }
   requestToolboxUpdate() {
     clearTimeout(this.toolboxUpdateTimeout);
@@ -26024,7 +26073,7 @@ Blocks.defaultOptions = {
   },
   colours: {
     workspace: '#F9F9F9',
-    flyout: '#F9F9F9',
+    flyout: 'rgba(249, 249, 249, 0.45)',
     toolbox: '#FFFFFF',
     toolboxSelected: '#E9EEF2',
     scrollbar: '#CECDCE',

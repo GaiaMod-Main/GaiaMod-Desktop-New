@@ -12,7 +12,7 @@ let discordClient = null;
 let discordConnected = false;
 let updateAvailable = false;
 
-const APP_VERSION = '2.13.6';
+const APP_VERSION = '2.13.7';
 const DISCORD_CLIENT_ID = '1442337181208281239';
 
 // Lets retry that commit
@@ -428,7 +428,8 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      partition: 'persist:arkide'
     }
   });
 
