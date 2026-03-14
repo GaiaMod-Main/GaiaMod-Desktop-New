@@ -12,7 +12,7 @@ let discordClient = null;
 let discordConnected = false;
 let updateAvailable = false;
 
-const APP_VERSION = '2.13.7';
+const APP_VERSION = '2.13.8';
 const DISCORD_CLIENT_ID = '1442337181208281239';
 
 // Lets retry that commit
