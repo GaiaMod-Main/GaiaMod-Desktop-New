@@ -1599,7 +1599,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .cloud-variable-badge_badge_2kZVK {\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border: 1px solid #b9d6ff;\n    background-color: #dbebff;\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n    border-radius: 1rem;\n} [theme=\"dark\"] .cloud-variable-badge_badge_2kZVK {\n    border-color: #2b2052;\n    background-color: #1e162c;\n} .cloud-variable-badge_title_2xJoL {\n    display: flex;\n    align-items: center;\n    gap: 0.5rem;\n    font-weight: bold;\n} [theme=\"dark\"] .cloud-variable-badge_cloud-icon_1JP1e {\n    filter: invert(100%);\n} .cloud-variable-badge_servers_1fLAL {\n    display: flex;\n    gap: 0.5rem;\n    align-items: center;\n} .cloud-variable-badge_server_3s9y9 {\n    border: 1px solid var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15));\n    padding: 0.25rem 0.5rem;\n    margin: 0;\n    background: none;\n    border-radius: 1rem;\n} .cloud-variable-badge_server_3s9y9.cloud-variable-badge_selected_3ZyWW {\n    background-color: hsla(261, 100%, 50%, 1);\n    color: hsla(0, 100%, 100%, 1);\n}\n", ""]);
+exports.push([module.i, "/* #5100ff */ /* lighter version of #5100ff */ /* even lighter version */ /* 90% transparent version of motion-primary */ /* #FFFFFF */ /* #575E75 */ /* #5100ff */ /* darker version */ /* 35% transparent version of motion-primary */ /* 15% transparent version */ /* keep this as-is (used for dark mode contrast) */ /* #5100ff */ /* #3d00c7 */ /* #CF63CF */ /* #BD42BD */ /* #FFAB19 */ /* #FF8C1A */ /* #0FBD8C */ /* #0FBD8C */ /* #FF8C1A */ /* #FFB366 */ /* #FF8C1A */ /* #5100ff */ /* darker version */ /* 35% transparent */ /* opaque version for white bg */ /* lighter highlight of #5100ff */ .cloud-variable-badge_badge_2kZVK {\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border: 1px solid #b9d6ff;\n    background-color: #dbebff;\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n    border-radius: 1rem;\n} [theme=\"dark\"] .cloud-variable-badge_badge_2kZVK {\n    border-color: #2b2052;\n    background-color: #1e162c;\n} .cloud-variable-badge_title_2xJoL {\n    display: flex;\n    align-items: center;\n    gap: 0.5rem;\n    font-weight: bold;\n} [theme=\"dark\"] .cloud-variable-badge_cloud-icon_1JP1e {\n    filter: invert(100%);\n} .cloud-variable-badge_servers_1fLAL {\n    display: flex;\n    gap: 0.5rem;\n    align-items: center;\n} .cloud-variable-badge_server_3s9y9 {\n    border: 1px solid hsla(0, 0%, 0%, 0.15);\n    padding: 0.25rem 0.5rem;\n    margin: 0;\n    background: none;\n    border-radius: 1rem;\n} .cloud-variable-badge_server_3s9y9.cloud-variable-badge_selected_3ZyWW {\n    background-color: hsla(261, 100%, 50%, 1);\n    color: hsla(0, 100%, 100%, 1);\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1993,7 +1993,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const hosts = [{
   name: 'US East',
-  cloudHost: 'wss://clouddata.turbowarp.org'
+  cloudHost: 'wss://clouddata.arkide.site'
 }, {
   name: 'EU',
   cloudHost: 'wss://clouddata-eu.turbowarp.org',
@@ -4183,7 +4183,7 @@ Interface.propTypes = {
   extraProjectInfo: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
     accepted: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
     isRemix: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-    remixId: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    remixId: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
     tooLarge: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
     author: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
     releaseDate: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape(Date),
