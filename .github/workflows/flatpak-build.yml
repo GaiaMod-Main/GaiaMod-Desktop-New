@@ -13,6 +13,10 @@ jobs:
     permissions:
       contents: write
 
+    strategy:
+      matrix:
+        arch: [x64, arm64]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -39,11 +43,14 @@ jobs:
           mkdir -p build-input
           cd build-input
 
-          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}.AppImage"
+          if [ "${{ matrix.arch }}" = "arm64" ]; then
+            APPIMAGE_NAME="ArkIDE-${{ github.event.inputs.version }}-arm64.AppImage"
+          else
+            APPIMAGE_NAME="ArkIDE-${{ github.event.inputs.version }}.AppImage"
+          fi
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
 
-          echo "Downloading AppImage from: ${DOWNLOAD_URL}"
-
+          echo "Downloading ${{ matrix.arch }} AppImage from: ${DOWNLOAD_URL}"
           if ! wget "${DOWNLOAD_URL}" -O arkide.AppImage; then
             echo "Failed to download AppImage. Available assets:"
             gh release view "v${{ github.event.inputs.version }}" --json assets -q '.assets[].name'
@@ -103,18 +110,44 @@ jobs:
 
           echo "Flatpak test completed successfully!"
 
-      - name: Upload to Release
+      - name: Upload bundle as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flatpak-bundle-${{ matrix.arch }}
+          path: com.arkide.desktop.flatpak
+          retention-days: 30
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download x64 bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: flatpak-bundle-x64
+          path: bundles/x64
+
+      - name: Download arm64 bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: flatpak-bundle-arm64
+          path: bundles/arm64
+
+      - name: Rename bundles
+        run: |
+          mv bundles/x64/com.arkide.desktop.flatpak bundles/com.arkide.desktop-x64.flatpak
+          mv bundles/arm64/com.arkide.desktop.flatpak bundles/com.arkide.desktop-arm64.flatpak
+
+      - name: Upload both bundles to Release
         uses: softprops/action-gh-release@v1
         with:
-          files: com.arkide.desktop.flatpak
+          files: |
+            bundles/com.arkide.desktop-x64.flatpak
+            bundles/com.arkide.desktop-arm64.flatpak
           tag_name: v${{ github.event.inputs.version }}
           fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload bundle as artifact (backup)
-        uses: actions/upload-artifact@v4
-        with:
-          name: flatpak-bundle
-          path: com.arkide.desktop.flatpak
-          retention-days: 30
