@@ -1992,15 +1992,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const hosts = [{
-  name: 'US East',
+  name: 'Cloudflare Worldwide',
   cloudHost: 'wss://clouddata.arkide.site'
-}, {
-  name: 'EU',
-  cloudHost: 'wss://clouddata-eu.turbowarp.org',
-  provider: {
-    name: '9gr',
-    href: 'https://scratch.mit.edu/users/9gr/'
-  }
 }];
 const CloudVariableBadge = props => {
   const selectedHost = hosts.find(i => i.cloudHost === props.cloudHost);

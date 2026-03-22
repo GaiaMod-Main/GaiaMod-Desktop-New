@@ -12,4 +12,5 @@ contextBridge.exposeInMainWorld('electronAPI', {
   getDiscordStatus: () => ipcRenderer.invoke('discord-status'),
   autoDownloadUpdate: (version) => ipcRenderer.invoke('auto-download-update', version),
   onDownloadProgress: (callback) => ipcRenderer.on('download-progress', (event, percent) => callback(percent)),
+  getAppVersion: () => ipcRenderer.invoke('get-app-version'),
 });

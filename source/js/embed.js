@@ -418,6 +418,52 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(/*#__PURE__*/react__WEBP
   onProjectLoaded: onProjectLoaded,
   routingStyle: "none"
 }), _app_target__WEBPACK_IMPORTED_MODULE_10__["default"]);
+const injectVolumeSlider = () => {
+  const controls = document.querySelector('[class*="controls_controls-container"]');
+  if (!controls) {
+    setTimeout(injectVolumeSlider, 300);
+    return;
+  }
+  if (document.getElementById('ark-volume-slider')) return;
+  const container = document.createElement('div');
+  container.id = 'ark-volume-slider';
+  container.style.cssText = 'display:flex;align-items:center;gap:6px;padding:0 8px;';
+  const icon = document.createElement('span');
+  icon.textContent = '🔊';
+  icon.style.cssText = 'font-size:14px;cursor:pointer;user-select:none;';
+  const slider = document.createElement('input');
+  slider.type = 'range';
+  slider.min = '0';
+  slider.max = '100';
+  slider.value = '100';
+  slider.style.cssText = 'width:80px;cursor:pointer;accent-color:#4C97FF;';
+  slider.addEventListener('input', () => {
+    const vol = Number(slider.value) / 100;
+    if (vm && vm.runtime && vm.runtime.audioEngine) {
+      vm.runtime.audioEngine.inputNode.gain.value = vol;
+    }
+  });
+  let muted = false;
+  let lastVol = 100;
+  icon.addEventListener('click', () => {
+    if (muted) {
+      slider.value = lastVol;
+      slider.dispatchEvent(new Event('input'));
+      icon.textContent = '🔊';
+      muted = false;
+    } else {
+      lastVol = slider.value;
+      slider.value = 0;
+      slider.dispatchEvent(new Event('input'));
+      icon.textContent = '🔇';
+      muted = true;
+    }
+  });
+  container.appendChild(icon);
+  container.appendChild(slider);
+  controls.insertAdjacentElement('afterend', container);
+};
+injectVolumeSlider();
 if (urlParams.has('addons')) {
   Object(_addons_entry__WEBPACK_IMPORTED_MODULE_8__["default"])();
 }

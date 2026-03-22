@@ -14,14 +14,16 @@
   },
   "build": {
     "appId": "com.arc.arkide",
-    "productName": "Ark IDE",
+    "productName": "ArkIDE",
     "files": [
       "main.js",
       "preload.js",
       "source/**/*",
       "package.json",
       "assets/**/*",
-      "settings.html"
+      "settings.html",
+      "close.svg",
+      "version.txt"
     ],
     "publish": {
       "provider": "github",

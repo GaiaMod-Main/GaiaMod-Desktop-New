@@ -12,10 +12,8 @@ let discordClient = null;
 let discordConnected = false;
 let updateAvailable = false;
 
-const APP_VERSION = '2.13.9';
+const APP_VERSION = fs.readFileSync(path.join(__dirname, 'version.txt'), 'utf8').trim();
 const DISCORD_CLIENT_ID = '1442337181208281239';
-
-// Lets retry that commit
 
 function initDiscordRPC() {
   if (discordClient) return Promise.resolve(true);
@@ -434,7 +432,13 @@ function createWindow() {
   });
 
   Menu.setApplicationMenu(null);
-  mainWindow.loadFile('source/editor.html');
+  const { pathToFileURL } = require('url');
+
+  const editorPath = path.join(__dirname, 'source/editor.html');
+  const editorURL = new URL(pathToFileURL(editorPath).href);
+  editorURL.searchParams.set('desktop', 'true');
+
+  mainWindow.loadURL(editorURL.toString());
 
   mainWindow.on('page-title-updated', (event) => {
     event.preventDefault();
@@ -443,47 +447,9 @@ function createWindow() {
   mainWindow.webContents.on('did-finish-load', () => {
     setTimeout(() => {
       mainWindow.webContents.executeJavaScript(`
-        (function() {
-          const textsToRemove = ['See Project Page', 'Back to Home', 'Upload'];
-          let isRemoving = false;
-          
-          function removeButtons() {
-            if (isRemoving) return;
-            isRemoving = true;
-            
-            const elements = document.querySelectorAll('span, div, button, a');
-            
-            for (let el of elements) {
-              const text = el.textContent.trim();
-              
-              if (el.hasAttribute && el.hasAttribute('data-settings-btn')) continue;
-              
-              if (text.toLowerCase().includes('save')) continue;
-              
-              if (text === 'Login' && el.children.length === 0) {
-                try {
-                  el.textContent = '';
-                } catch(e) {}
-                continue;
-              }
-              
-              if (textsToRemove.includes(text)) {
-                try {
-                  el.remove();
-                } catch(e) {}
-              }
-            }
-            
-            isRemoving = false;
-          }
-          
-          removeButtons();
-          setTimeout(removeButtons, 500);
-          setTimeout(removeButtons, 1500);
-          setTimeout(removeButtons, 3000);
-        })();
+
       `);
-    }, 1000);
+    }, 10);
 
     setTimeout(() => {
       mainWindow.webContents.executeJavaScript(`
@@ -556,11 +522,11 @@ function createSettingsWindow() {
   }
 
   settingsWindow = new BrowserWindow({
-    width: 600,
-    height: 850,
+    width: 700,
+    height: 650,
     parent: mainWindow,
     modal: false,
-    frame: true,
+    frame: false,
     icon: path.join(__dirname, 'assets/icons/icon.png'),
     webPreferences: {
       nodeIntegration: false,
@@ -675,6 +641,7 @@ ipcMain.handle('check-updates', async () => {
     return { error: error.message };
   }
 });
+ipcMain.handle('get-app-version', () => APP_VERSION);
 
 ipcMain.on('open-url', (event, url) => {
   require('electron').shell.openExternal(url);
