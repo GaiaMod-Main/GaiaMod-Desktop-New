@@ -21,78 +21,69 @@ jobs:
             appimage-suffix: ""
           - name: aarch64
             appimage-suffix: "-arm64"
-    
+
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Install flatpak and dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y flatpak flatpak-builder squashfs-tools
-      
+
       - name: Add flathub remote
         run: |
           flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-      
+
       - name: Install runtimes and SDK
         run: |
           flatpak install -y --user flathub org.freedesktop.Platform/${{ matrix.arch.name }}/23.08
           flatpak install -y --user flathub org.freedesktop.Sdk/${{ matrix.arch.name }}/23.08
           flatpak install -y --user flathub org.electronjs.Electron2.BaseApp/${{ matrix.arch.name }}/23.08
-      
+
       - name: Download and extract AppImage
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p build-input
           cd build-input
-          
+
           echo "Downloading ${{ matrix.arch.name }} AppImage for version ${{ github.event.inputs.version }}..."
-          
-          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}${{ matrix.arch.appimage-suffix }}.AppImage"
+
+          APPIMAGE_NAME="ArkIDE-${{ github.event.inputs.version }}${{ matrix.arch.appimage-suffix }}.AppImage"
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
-          
+
           echo "Attempting to download from: ${DOWNLOAD_URL}"
-          
+
           if ! wget "${DOWNLOAD_URL}" -O arkide.AppImage; then
             echo "Failed to download AppImage. Checking available assets..."
             gh release view "v${{ github.event.inputs.version }}" --json assets -q '.assets[].name'
             exit 1
           fi
-          
+
           echo "AppImage downloaded successfully!"
           ls -lh arkide.AppImage
-          
+
           echo "Extracting AppImage..."
           chmod +x arkide.AppImage
-          
+
           if [ "${{ matrix.arch.name }}" = "x86_64" ]; then
-            # For x86_64, we can run it directly
             ./arkide.AppImage --appimage-extract
           else
-            # For ARM64, extract manually without execution
             echo "Extracting ARM64 AppImage manually..."
-            
-            # Find the ELF offset where squashfs starts
-            # Look for the squashfs magic bytes (hsqs or sqsh)
+
             OFFSET=$(LC_ALL=C grep -aboP '\x68\x73\x71\x73|\x73\x71\x73\x68' arkide.AppImage | head -n1 | cut -d: -f1)
-            
+
             if [ -z "$OFFSET" ]; then
               echo "Could not find squashfs magic, trying alternative method..."
-              # Try using binwalk-like approach - look for common offset
-              OFFSET=$(strings arkide.AppImage | grep -a "^[0-9]*$" | head -n1)
-              
-              if [ -z "$OFFSET" ]; then
-                echo "Trying to extract entire AppImage as squashfs..."
-                # Last resort: use unsquashfs with scan
-                unsquashfs -dest squashfs-root arkide.AppImage 2>/dev/null || {
-                  echo "ERROR: Could not extract AppImage"
-                  exit 1
-                }
-              fi
+              unsquashfs -dest squashfs-root arkide.AppImage 2>/dev/null || {
+                echo "ERROR: Could not extract AppImage"
+                exit 1
+              }
             fi
-            
+
             if [ -n "$OFFSET" ] && [ ! -d "squashfs-root" ]; then
               echo "Found squashfs at offset: $OFFSET"
               dd if=arkide.AppImage of=arkide.squashfs bs=1 skip=$OFFSET 2>/dev/null
@@ -100,95 +91,117 @@ jobs:
               rm -f arkide.squashfs
             fi
           fi
-          
+
           if [ ! -d "squashfs-root" ]; then
             echo "ERROR: Failed to extract AppImage!"
             exit 1
           fi
-          
+
           echo "Moving contents..."
           mv squashfs-root/* .
           rm -rf squashfs-root arkide.AppImage
-          
+
           if [ ! -f "ark-ide" ]; then
             echo "ERROR: ark-ide executable not found!"
             ls -la
             exit 1
           fi
-          
+
           chmod +x ark-ide
           echo "Build input prepared successfully for ${{ matrix.arch.name }}!"
           ls -la | head -20
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
-      
-      - name: Setup repo directory
-        run: |
-          mkdir -p gh-pages/repo
-          cd gh-pages/repo
-          
-          if [ ! -f "config" ]; then
-            echo "Initializing new OSTree repository..."
-            ostree init --mode=archive-z2 --repo=.
-            mkdir -p refs/remotes refs/heads
-            echo "Repository initialized successfully!"
-          else
-            echo "Repository already exists, skipping initialization"
-          fi
-          
-          ostree summary -u --repo=. --gpg-sign= || echo "No refs yet, that's okay for first build"
 
       - name: Set up QEMU for ARM64 cross-compilation
         if: matrix.arch.name == 'aarch64'
         uses: docker/setup-qemu-action@v3
         with:
           platforms: arm64
-      
+
       - name: Enable binfmt support for ARM64
         if: matrix.arch.name == 'aarch64'
         run: |
           sudo apt-get install -y qemu-user-static binfmt-support
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-          
-          # Verify ARM64 emulation is working
+
           echo "Testing ARM64 emulation..."
           docker run --rm --platform linux/arm64 alpine uname -m
-          
-          # Verify qemu-aarch64-static is registered
+
           cat /proc/sys/fs/binfmt_misc/qemu-aarch64 || echo "Registering qemu-aarch64..."
 
       - name: Build Flatpak for ${{ matrix.arch.name }}
         run: |
           echo "Building Flatpak for ${{ matrix.arch.name }}..."
-          flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} build-dir .flatpak/com.arkide.desktop.json
-          
-          echo "Flatpak built for ${{ matrix.arch.name }} and added to repository!"
-      
-      - name: Update repo metadata
+          flatpak-builder --user --force-clean --repo=repo --arch=${{ matrix.arch.name }} build-dir .flatpak/com.arkide.desktop.json
+          echo "Flatpak built for ${{ matrix.arch.name }}!"
+
+      - name: Create bundle
         run: |
-          cd gh-pages/repo
-          
-          if ostree refs --repo=. 2>/dev/null | grep -q .; then
-            echo "Updating summary for existing refs..."
-            ostree summary -u --repo=. --gpg-sign=
-          else
-            echo "No refs found yet, creating empty summary..."
-            ostree summary -u --repo=. --gpg-sign= || true
+          flatpak build-bundle repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }}
+
+      - name: Upload bundle as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flatpak-repo-${{ matrix.arch.name }}
+          path: |
+            repo/
+            com.arkide.desktop-${{ matrix.arch.name }}.flatpak
+          retention-days: 7
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Download x86_64 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: flatpak-repo-x86_64
+          path: artifacts/x86_64
+
+      - name: Download aarch64 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: flatpak-repo-aarch64
+          path: artifacts/aarch64
+
+      - name: Install flatpak
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y flatpak
+
+      - name: Merge repos into gh-pages
+        run: |
+          mkdir -p gh-pages/repo
+
+          if [ ! -f "gh-pages/repo/config" ]; then
+            echo "Initializing new OSTree repository..."
+            ostree init --mode=archive-z2 --repo=gh-pages/repo
           fi
-          
-          touch summary
-          echo "Repository metadata updated for ${{ matrix.arch.name }}!"
-      
+
+          echo "Merging x86_64 repo..."
+          ostree pull-local --repo=gh-pages/repo artifacts/x86_64/repo
+
+          echo "Merging aarch64 repo..."
+          ostree pull-local --repo=gh-pages/repo artifacts/aarch64/repo
+
+          echo "Updating summary..."
+          ostree summary -u --repo=gh-pages/repo --gpg-sign=
+
+          echo "Repo merge complete!"
+
       - name: Create flatpakrepo file
         run: |
           OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          
+
           cat > gh-pages/arkide.flatpakrepo <<EOF
           [Flatpak Repo]
           Title=ArkIDE Repository
@@ -199,11 +212,11 @@ jobs:
           Icon=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/icon.png
           GPGVerify=false
           EOF
-      
+
       - name: Create installation instructions page
         run: |
           OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          
+
           cat > gh-pages/index.html <<EOF
           <!DOCTYPE html>
           <html lang="en">
@@ -265,82 +278,85 @@ jobs:
           <body>
               <h1>🚀 ArkIDE Flatpak Repository</h1>
               <p>Install ArkIDE directly from our official Flatpak repository.</p>
-              
+
               <div class="info">
                   <strong>✨ Multi-Architecture Support:</strong> Available for x86_64 and ARM64 (aarch64) systems!
               </div>
-              
+
               <div class="warning">
                   <strong>⚠️ Important:</strong> This repository is not GPG-signed. Only install if you trust this source.
               </div>
-              
+
               <h2>Quick Install (Recommended)</h2>
               <p>Add the repository and install in one command:</p>
               <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
           flatpak install --user arkide com.arkide.desktop</code></pre>
-              
+
               <p><em>Flatpak will automatically install the correct version for your architecture (x86_64 or ARM64).</em></p>
-              
+
               <h2>Alternative: Use .flatpakrepo file</h2>
               <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/arkide.flatpakrepo</code></pre>
-              
+
               <h2>Run ArkIDE</h2>
               <pre><code>flatpak run com.arkide.desktop</code></pre>
-              
+
               <h2>Update</h2>
               <p>Get the latest version:</p>
               <pre><code>flatpak update com.arkide.desktop</code></pre>
-              
+
               <h2>Uninstall</h2>
               <pre><code>flatpak uninstall com.arkide.desktop
           flatpak remote-delete arkide</code></pre>
-              
+
               <div style="margin-top: 40px;">
                   <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
                   <a href="https://github.com/${{ github.repository }}" class="button">View on GitHub</a>
               </div>
-              
+
               <h2>Supported Architectures</h2>
               <ul>
                   <li><strong>x86_64</strong> - Standard Intel/AMD processors</li>
                   <li><strong>ARM64 (aarch64)</strong> - ARM-based systems (Raspberry Pi 4/5, Apple Silicon via Asahi Linux, etc.)</li>
               </ul>
-              
+
               <h2>Manual Installation Steps</h2>
               <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
               <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo</code></pre>
-              
+
               <p><strong>Step 2:</strong> Install ArkIDE</p>
               <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
           </body>
           </html>
           EOF
-          
+
           echo "Installation page created!"
-      
+
       - name: Copy icon for repo
         run: |
           cp assets/icons/icon.png gh-pages/icon.png || echo "No icon found, skipping"
-      
+
+      - name: Copy release bundles to gh-pages
+        run: |
+          cp artifacts/x86_64/com.arkide.desktop-x86_64.flatpak gh-pages/
+          cp artifacts/aarch64/com.arkide.desktop-aarch64.flatpak gh-pages/
+
       - name: Commit and push to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd gh-pages
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Update Flatpak repository for version ${{ github.event.inputs.version }} (${{ matrix.arch.name }})" || echo "No changes to commit"
+          git commit -m "Update Flatpak repository for version ${{ github.event.inputs.version }}" || echo "No changes to commit"
           git push origin gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Create bundle as backup
-        run: |
-          flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }}
-      
-      - name: Upload to Release
+
+      - name: Upload both bundles to Release
         uses: softprops/action-gh-release@v1
         with:
-          files: com.arkide.desktop-${{ matrix.arch.name }}.flatpak
+          files: |
+            artifacts/x86_64/com.arkide.desktop-x86_64.flatpak
+            artifacts/aarch64/com.arkide.desktop-aarch64.flatpak
           tag_name: v${{ github.event.inputs.version }}
           fail_on_unmatched_files: true
         env:
