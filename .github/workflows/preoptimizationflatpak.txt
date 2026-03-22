@@ -12,97 +12,125 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+      
       - name: Install flatpak and dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y flatpak flatpak-builder
-
+      
       - name: Add flathub remote
         run: |
           flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-
+      
       - name: Install runtimes and SDK
         run: |
           flatpak install -y --user flathub org.freedesktop.Platform//23.08
           flatpak install -y --user flathub org.freedesktop.Sdk//23.08
           flatpak install -y --user flathub org.electronjs.Electron2.BaseApp//23.08
-
+      
       - name: Download and extract AppImage
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p build-input
           cd build-input
-
+          
+          echo "Downloading AppImage for version ${{ github.event.inputs.version }}..."
+          
+          # Correct AppImage name format: Ark.IDE-x.x.x.AppImage
           APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}.AppImage"
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
-
-          echo "Downloading AppImage from: ${DOWNLOAD_URL}"
-
+          
+          echo "Attempting to download from: ${DOWNLOAD_URL}"
+          
           if ! wget "${DOWNLOAD_URL}" -O arkide.AppImage; then
-            echo "Failed to download AppImage. Available assets:"
+            echo "Failed to download AppImage. Checking available assets..."
             gh release view "v${{ github.event.inputs.version }}" --json assets -q '.assets[].name'
             exit 1
           fi
-
+          
+          echo "AppImage downloaded successfully!"
+          ls -lh arkide.AppImage
+          
           echo "Extracting AppImage..."
           chmod +x arkide.AppImage
           ./arkide.AppImage --appimage-extract
-
+          
+          echo "Moving contents..."
           mv squashfs-root/* .
           rm -rf squashfs-root arkide.AppImage
-
+          
+          echo "Verifying ark-ide executable exists..."
           if [ ! -f "ark-ide" ]; then
-            echo "ERROR: ark-ide executable not found! Contents of build-input:"
+            echo "ERROR: ark-ide executable not found!"
+            echo "Contents of build-input:"
             ls -la
             exit 1
           fi
-
+          
           chmod +x ark-ide
           echo "Build input prepared successfully!"
-
+          ls -la
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: Verify Flatpak manifest exists
         run: |
-          for f in ".flatpak/com.arkide.desktop.json" ".flatpak/com.arkide.desktop.desktop"; do
-            if [ ! -f "$f" ]; then
-              echo "ERROR: $f not found!"
-              exit 1
-            fi
-          done
+          if [ ! -f ".flatpak/com.arkide.desktop.json" ]; then
+            echo "ERROR: .flatpak/com.arkide.desktop.json not found!"
+            exit 1
+          fi
+          
+          if [ ! -f ".flatpak/com.arkide.desktop.desktop" ]; then
+            echo "ERROR: .flatpak/com.arkide.desktop.desktop not found!"
+            exit 1
+          fi
+          
           echo "Flatpak manifest files found!"
-
-      - name: Build Flatpak and create bundle
+      
+      - name: Build Flatpak
         run: |
           echo "Building Flatpak..."
           flatpak-builder --user --force-clean --repo=repo build-dir .flatpak/com.arkide.desktop.json
-
-          echo "Creating bundle..."
-          flatpak build-bundle repo com.arkide.desktop.flatpak com.arkide.desktop
-
-          if [ ! -f "com.arkide.desktop.flatpak" ]; then
-            echo "ERROR: Bundle file not found after creation!"
+          
+          if [ $? -ne 0 ]; then
+            echo "ERROR: Flatpak build failed!"
             exit 1
           fi
-
+          
+          echo "Flatpak built successfully!"
+      
+      - name: Create bundle
+        run: |
+          echo "Creating Flatpak bundle..."
+          flatpak build-bundle repo com.arkide.desktop.flatpak com.arkide.desktop
+          
+          if [ ! -f "com.arkide.desktop.flatpak" ]; then
+            echo "ERROR: Bundle creation failed!"
+            exit 1
+          fi
+          
           echo "Bundle created successfully!"
           ls -lh com.arkide.desktop.flatpak
-
+      
       - name: Test Flatpak installation
         run: |
           echo "Testing Flatpak installation..."
           flatpak install -y --user com.arkide.desktop.flatpak
-
+          
+          echo "Verifying installation..."
+          flatpak list --user | grep arkide
+          
+          echo "Checking installed files..."
+          flatpak run --command=sh com.arkide.desktop -c "ls -la /app/arkide/ | head -20"
+          
           echo "Verifying ark-ide executable..."
-          flatpak run --command=sh com.arkide.desktop -c \
-            "test -x /app/arkide/ark-ide && echo 'Executable found and is executable' || (echo 'ERROR: Executable not found or not executable'; exit 1)"
-
+          flatpak run --command=sh com.arkide.desktop -c "test -x /app/arkide/ark-ide && echo 'Executable found and is executable' || echo 'ERROR: Executable not found or not executable'"
+          
           echo "Flatpak test completed successfully!"
-
+      
       - name: Upload to Release
         uses: softprops/action-gh-release@v1
         with:
@@ -111,7 +139,7 @@ jobs:
           fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      
       - name: Upload bundle as artifact (backup)
         uses: actions/upload-artifact@v4
         with:
