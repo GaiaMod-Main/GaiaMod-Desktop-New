@@ -189,6 +189,9 @@ jobs:
 
           for arch in x86_64 aarch64; do
             echo "Merging ${arch} repo..."
+            # Ensure source repo has required dirs before pulling
+            mkdir -p artifacts/${arch}/repo/refs/remotes
+            mkdir -p artifacts/${arch}/repo/refs/heads
             ostree pull-local --repo=gh-pages/repo artifacts/${arch}/repo
           done
 
