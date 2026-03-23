@@ -173,10 +173,10 @@ jobs:
           name: flatpak-repo-aarch64
           path: artifacts/aarch64
 
-      - name: Install flatpak
+      - name: Install flatpak and ostree
         run: |
           sudo apt-get update
-          sudo apt-get install -y flatpak
+          sudo apt-get install -y flatpak ostree
 
       - name: Merge repos into gh-pages
         run: |
@@ -187,11 +187,10 @@ jobs:
             ostree init --mode=archive-z2 --repo=gh-pages/repo
           fi
 
-          echo "Merging x86_64 repo..."
-          ostree pull-local --repo=gh-pages/repo artifacts/x86_64/repo
-
-          echo "Merging aarch64 repo..."
-          ostree pull-local --repo=gh-pages/repo artifacts/aarch64/repo
+          for arch in x86_64 aarch64; do
+            echo "Merging ${arch} repo..."
+            ostree pull-local --repo=gh-pages/repo artifacts/${arch}/repo
+          done
 
           echo "Updating summary..."
           ostree summary -u --repo=gh-pages/repo --gpg-sign=
