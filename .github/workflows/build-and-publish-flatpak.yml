@@ -50,7 +50,7 @@ jobs:
           
           echo "Downloading ${{ matrix.arch.name }} AppImage for version ${{ github.event.inputs.version }}..."
           
-          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}${{ matrix.arch.appimage-suffix }}.AppImage"
+          APPIMAGE_NAME="ArkIDE-${{ github.event.inputs.version }}${{ matrix.arch.appimage-suffix }}.AppImage"
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
           
           echo "Attempting to download from: ${DOWNLOAD_URL}"
