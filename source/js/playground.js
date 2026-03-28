@@ -600,7 +600,18 @@ const TWProjectMetaFetcherHOC = function TWProjectMetaFetcherHOC(WrappedComponen
           this.props.onSetDescription(instructions, credits);
         }
         if (rawData.public === true) {
-          this.props.onSetExtraProjectInfo(!rawData.softRejected, String(rawData.remix) !== '0', String(rawData.remix), false, authorName, new Date(rawData.lastUpdate), rawData.lastUpdate !== rawData.date);
+          /*
+          this.props.onSetExtraProjectInfo(
+              !rawData.softRejected,
+              String(rawData.remix) !== '0',
+              String(rawData.remix),
+              false,
+              authorName,
+              new Date(rawData.lastUpdate),
+              rawData.lastUpdate !== rawData.date
+          );
+          */
+
           if (String(rawData.remix) !== '0') {
             // this is a remix, find the original project
             fetchProjectMeta(rawData.remix).then(remixProject => {
