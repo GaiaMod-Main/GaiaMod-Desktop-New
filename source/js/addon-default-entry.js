@@ -19,6 +19,25 @@ exports.push([module.i, ".sa-color-picker {\n  display: flex;\n}\n\n.sa-color-pi
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./src/addons/addons/copy-reporter/style.css":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/css-loader!./src/addons/addons/copy-reporter/style.css ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sa-copy-reporter-icon {\n  cursor: pointer;\n  float: right;\n  display: block;\n  user-select: none;\n  filter: var(--editorDarkMode-accent-filter, none);\n  width: 100%;\n  height: 14px;\n  margin-top: 2px;\n  padding-top: 2px;\n  border-top: dashed 1px #575e75;\n}\n\n.valueReportBox {\n  user-select: text;\n  display: block;\n  text-align: center;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./src/addons/addons/editor-comment-previews/userstyle.css":
 /*!*******************************************************************************************!*\
   !*** ./node_modules/css-loader!./src/addons/addons/editor-comment-previews/userstyle.css ***!
@@ -114,25 +133,6 @@ exports.push([module.i, ".sa-folders-contextmenu-item {\n  max-width: 250px;\n  
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/js-viewer/userstyle.css":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/js-viewer/userstyle.css ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "[dir=\"ltr\"] .sa-js-viewer-container {\n  margin-right: 0.2rem;\n}\n\n[dir=\"rtl\"] .sa-js-viewer-container {\n  margin-left: 0.2rem;\n}\n\n.sa-js-viewer-interface {\n  display: none;\n  position: absolute;\n  z-index: 492;\n  flex-direction: column;\n  width: 650px;\n  height: 450px;\n  background-color: white;\n}\n\n[theme=\"dark\"] .sa-js-viewer-interface {\n  background: rgb(17, 17, 17);\n}\n\n.sa-js-viewer-interface [class*=\"card_header-buttons_\"] {\n  background-color: #2938be;\n  border-color: #3c3aa8;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.sa-js-viewer-interface h1 {\n  padding: 10px;\n  z-index: 10;\n  width: calc(100% - 20px);\n  font-size: 20px;\n  margin: 0;\n  color: white;\n  cursor: move;\n  user-select: none;\n}\n\n.sa-js-viewer-code {\n  flex: 1;\n  overflow: auto;\n  padding: 15px;\n  box-sizing: border-box;\n  font-family: monospace;\n  font-size: 13px;\n  line-height: 1.6;\n  white-space: pre;\n  background: rgb(17, 17, 17);\n  color: #d4d4d4;\n  cursor: auto;\n}\n\n.sa-js-viewer-code::-webkit-scrollbar {\n  width: 12px;\n  height: 12px;\n}\n\n.sa-js-viewer-code::-webkit-scrollbar-track {\n  background: #2d2d2d;\n}\n\n.sa-js-viewer-code::-webkit-scrollbar-thumb {\n  background: #555;\n  border-radius: 6px;\n}\n\n.sa-js-viewer-code::-webkit-scrollbar-thumb:hover {\n  background: #666;\n}\n.code-line {\n  display: flex;\n  transition: background-color 0.1s ease;\n}\n\n.code-line:hover {\n  background-color: rgba(255, 255, 255, 0.1);\n}\n\n.line-number {\n  color: #858585;\n  margin-right: 15px;\n  user-select: none;\n  min-width: 35px;\n  text-align: right;\n}\n\n.line-content {\n  flex: 1;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js!./src/addons/addons/middle-click-popup/userstyle.css":
 /*!**************************************************************************************!*\
   !*** ./node_modules/css-loader!./src/addons/addons/middle-click-popup/userstyle.css ***!
@@ -183,7 +183,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".sa-onion-button {\n  position: relative;\n}\n.sa-onion-button:focus-within {\n  background-color: hsla(256, 100%, 50%, 0.2);\n}\n[theme=\"dark\"] .sa-onion-image {\n  filter: brightness(0) invert(0.8);\n}\n.sa-onion-button[data-enabled=\"true\"] .sa-onion-image {\n  filter: brightness(0) invert(1);\n}\n.sa-onion-button[data-enabled=\"true\"] {\n  background-color: #2600ff;\n}\n\n.sa-onion-group {\n  position: relative;\n  flex-direction: row;\n}\n\n.sa-onion-settings-wrapper {\n  position: absolute;\n  justify-items: center;\n  left: 50%;\n  width: 1.95rem;\n  height: 1.95rem;\n  display: grid;\n}\n\n.sa-onion-settings {\n  position: absolute;\n  bottom: 100%;\n  /* based on the styles for the color dropdown */\n  padding: 4px;\n  border-radius: 4px;\n  border: 1px solid var(--paint-ui-pane-border, #ddd);\n  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);\n  transition-property: bottom, opacity;\n  transition-duration: 500ms;\n  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n  opacity: 0;\n  pointer-events: none;\n  background: var(--ui-primary, white);\n  min-height: 100%;\n  min-width: 100%;\n  display: flex;\n  flex-direction: column;\n  gap: 0.25em;\n}\n.sa-onion-settings[data-visible=\"true\"] {\n  bottom: calc(100% + 22px);\n  pointer-events: auto;\n  opacity: 1;\n}\n\n.sa-onion-settings-line {\n  display: flex;\n  justify-content: flex-end;\n  align-items: baseline;\n  gap: 0.25em;\n}\n\n.sa-onion-settings-input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  text-align: center;\n  border: 0;\n  background: transparent;\n  -moz-appearance: textfield;\n  border: 0;\n  outline: 0;\n}\n\n.sa-onion-settings-input::-webkit-outer-spin-button,\n.sa-onion-settings-input::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n.sa-onion-settings-tip {\n  position: absolute;\n  bottom: 0;\n  transform: translateY(100%);\n  right: calc(50% - 7px);\n}\n.sa-onion-settings-polygon {\n  fill: var(--ui-primary, white);\n  stroke: var(--paint-ui-pane-border, #ddd);\n}\n\n.sa-onion-settings-label {\n  white-space: nowrap;\n}\n", ""]);
+exports.push([module.i, ".sa-onion-button {\n  position: relative;\n}\n.sa-onion-button:focus-within {\n  background-color: hsla(194, 100%, 50%, 0.2);\n}\n[theme=\"dark\"] .sa-onion-image {\n  filter: brightness(0) invert(0.8);\n}\n.sa-onion-button[data-enabled=\"true\"] .sa-onion-image {\n  filter: brightness(0) invert(1);\n}\n.sa-onion-button[data-enabled=\"true\"] {\n  background-color: #2D2DD2;\n}\n\n.sa-onion-group {\n  position: relative;\n  flex-direction: row;\n}\n\n.sa-onion-settings-wrapper {\n  position: absolute;\n  justify-items: center;\n  left: 50%;\n  width: 1.95rem;\n  height: 1.95rem;\n  display: grid;\n}\n\n.sa-onion-settings {\n  position: absolute;\n  bottom: 100%;\n  /* based on the styles for the color dropdown */\n  padding: 4px;\n  border-radius: 4px;\n  border: 1px solid var(--paint-ui-pane-border, #ddd);\n  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);\n  transition-property: bottom, opacity;\n  transition-duration: 500ms;\n  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n  opacity: 0;\n  pointer-events: none;\n  background: var(--ui-primary, white);\n  min-height: 100%;\n  min-width: 100%;\n  display: flex;\n  flex-direction: column;\n  gap: 0.25em;\n}\n.sa-onion-settings[data-visible=\"true\"] {\n  bottom: calc(100% + 22px);\n  pointer-events: auto;\n  opacity: 1;\n}\n\n.sa-onion-settings-line {\n  display: flex;\n  justify-content: flex-end;\n  align-items: baseline;\n  gap: 0.25em;\n}\n\n.sa-onion-settings-input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  text-align: center;\n  border: 0;\n  background: transparent;\n  -moz-appearance: textfield;\n  border: 0;\n  outline: 0;\n}\n\n.sa-onion-settings-input::-webkit-outer-spin-button,\n.sa-onion-settings-input::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n.sa-onion-settings-tip {\n  position: absolute;\n  bottom: 0;\n  transform: translateY(100%);\n  right: calc(50% - 7px);\n}\n.sa-onion-settings-polygon {\n  fill: var(--ui-primary, white);\n  stroke: var(--paint-ui-pane-border, #ddd);\n}\n\n.sa-onion-settings-label {\n  white-space: nowrap;\n}\n", ""]);
 
 // exports
 
@@ -266,6 +266,19 @@ exports.push([module.i, "[class*=\"blocks_blocks_\"] .blocklyFlyout:has(.blockly
 
 /***/ }),
 
+/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/copy-reporter/copy.svg":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/copy-reporter/copy.svg ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxLDguOTRhMS4zMSwxLjMxLDAsMCwwLS4wNi0uMjdsMC0uMDlhMS4wNywxLjA3LDAsMCwwLS4xOS0uMjhoMGwtNi02aDBhMS4wNywxLjA3LDAsMCwwLS4yOC0uMTkuMzIuMzIsMCwwLDAtLjA5LDBBLjg4Ljg4LDAsMCwwLDE0LjA1LDJIMTBBMywzLDAsMCwwLDcsNVY2SDZBMywzLDAsMCwwLDMsOVYxOWEzLDMsMCwwLDAsMywzaDhhMywzLDAsMCwwLDMtM1YxOGgxYTMsMywwLDAsMCwzLTNWOVMyMSw5LDIxLDguOTRaTTE1LDUuNDEsMTcuNTksOEgxNmExLDEsMCwwLDEtMS0xWk0xNSwxOWExLDEsMCwwLDEtMSwxSDZhMSwxLDAsMCwxLTEtMVY5QTEsMSwwLDAsMSw2LDhIN3Y3YTMsMywwLDAsMCwzLDNoNVptNC00YTEsMSwwLDAsMS0xLDFIMTBhMSwxLDAsMCwxLTEtMVY1YTEsMSwwLDAsMSwxLTFoM1Y3YTMsMywwLDAsMCwzLDNoM1oiIGZpbGw9IiM1NzVlNzUiLz48L3N2Zz4K");
+
+/***/ }),
+
 /***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/editor-devtools/icon--close.svg":
 /*!*************************************************************************************************!*\
   !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/editor-devtools/icon--close.svg ***!
@@ -289,45 +302,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHdpZHRoPSIyNCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMCA0SDRjLTEuMSAwLTEuOTkuOS0xLjk5IDJMMiAxOGMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjhjMC0xLjEtLjktMi0yLTJoLThsLTItMnoiLz48L3N2Zz4=");
-
-/***/ }),
-
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/close.svg":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/close.svg ***!
-  \*******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDcuNDggNy40OCIgc3R5bGU9InRyYW5zZm9ybTpyb3RhdGUoNDVkZWcpIj48cGF0aCBkPSJNMy43NCA2LjQ4VjFNMSAzLjc0aDUuNDgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNmZmY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDoycHgiLz48L3N2Zz4=");
-
-/***/ }),
-
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/code.svg":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/code.svg ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRkOTdmZiI+CiAgPHBhdGggZD0iTTkuNCAxNi42TDQuOCAxMmw0LjYtNC42TDggNmwtNiA2IDYgNiAxLjQtMS40em01LjIgMGw0LjYtNC42LTQuNi00LjZMMTYgNmw2IDYtNiA2LTEuNC0xLjR6Ii8+Cjwvc3ZnPg==");
-
-/***/ }),
-
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/refresh.svg":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/refresh.svg ***!
-  \*********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjIuNjggMTIuMmExLjYgMS42IDAgMCAxLTEuMjcuNjNoLTcuNjlhMS41OSAxLjU5IDAgMCAxLTEuMTYtMi41OGwxLjEyLTEuNDFhNC44MiA0LjgyIDAgMCAwLTMuMTQtLjc3IDQuMzEgNC4zMSAwIDAgMC0yIC44QTQuMjUgNC4yNSAwIDAgMCA3LjIgMTAuNmE1LjA2IDUuMDYgMCAwIDAgLjU0IDQuNjJBNS41OCA1LjU4IDAgMCAwIDEyIDE3Ljc0YTIuMjYgMi4yNiAwIDAgMS0uMTYgNC41MkExMC4yNSAxMC4yNSAwIDAgMSAzLjc0IDE4YTEwLjE0IDEwLjE0IDAgMCAxLTEuNDktOS4yMiA5LjcgOS43IDAgMCAxIDIuODMtNC4xNEE5LjkyIDkuOTIgMCAwIDEgOS42NiAyLjVhMTAuNjYgMTAuNjYgMCAwIDEgNy43MiAxLjY4bDEuMDgtMS4zNWExLjU3IDEuNTcgMCAwIDEgMS4yNC0uNiAxLjYgMS42IDAgMCAxIDEuNTQgMS4yMWwxLjcgNy4zN2ExLjU3IDEuNTcgMCAwIDEtLjI2IDEuMzlaIiBzdHlsZT0iZmlsbDojZmZmIi8+PHBhdGggZD0iTTIxLjM4IDExLjgzaC03LjYxYS41OS41OSAwIDAgMS0uNDMtMWwxLjc1LTIuMTlhNS45IDUuOSAwIDAgMC00LjctMS41OCA1LjA3IDUuMDcgMCAwIDAtNC4xMSAzLjE3QTYgNiAwIDAgMCA3IDE1Ljc3YTYuNTEgNi41MSAwIDAgMCA1IDIuOTIgMS4zMSAxLjMxIDAgMCAxLS4wOCAyLjYyIDkuMyA5LjMgMCAwIDEtNy4zNS0zLjgyIDkuMTYgOS4xNiAwIDAgMS0xLjQtOC4zN0E4LjUxIDguNTEgMCAwIDEgNS43MSA1LjRhOC43NiA4Ljc2IDAgMCAxIDQuMTEtMS45MiA5LjcxIDkuNzEgMCAwIDEgNy43NSAyLjA3bDEuNjctMi4xYS41OS41OSAwIDAgMSAxIC4yMUwyMiAxMS4wOGEuNTkuNTkgMCAwIDEtLjYyLjc1WiIgc3R5bGU9ImZpbGw6I2ZmZiIvPjwvc3ZnPg==");
 
 /***/ }),
 
@@ -425,16 +399,12 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async _ref => {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   if (!addon.tab.redux.state) return console.warn("Redux is not available!");
   addon.tab.redux.initialize();
   addon.tab.redux.addEventListener("statechanged", _ref2 => {
-    let {
-      detail
-    } = _ref2;
+    let detail = _ref2.detail;
     if (addon.self.disabled) return;
     const e = detail;
     if (!e.action || e.action.type !== "scratch-paint/clipboard/SET") return;
@@ -481,10 +451,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _block_duplicate_module_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block-duplicate/module.js */ "./src/addons/addons/block-duplicate/module.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   const update = () => {
     _block_duplicate_module_js__WEBPACK_IMPORTED_MODULE_0__["setCherryPicking"](!addon.self.disabled, addon.settings.get("invertDrag"));
   };
@@ -629,10 +597,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module.js */ "./src/addons/addons/block-duplicate/module.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   const update = () => {
     _module_js__WEBPACK_IMPORTED_MODULE_0__["setDuplication"](!addon.self.disabled);
   };
@@ -640,6 +606,278 @@ __webpack_require__.r(__webpack_exports__);
   addon.self.addEventListener("reenabled", update);
   update();
   _module_js__WEBPACK_IMPORTED_MODULE_0__["load"](addon);
+});
+
+/***/ }),
+
+/***/ "./src/addons/addons/block-pins/_runtime_entry.js":
+/*!********************************************************!*\
+  !*** ./src/addons/addons/block-pins/_runtime_entry.js ***!
+  \********************************************************/
+/*! exports provided: resources */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
+/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/block-pins/userscript.js");
+/* generated by pull.js */
+
+const resources = {
+  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"]
+};
+
+/***/ }),
+
+/***/ "./src/addons/addons/block-pins/userscript.js":
+/*!****************************************************!*\
+  !*** ./src/addons/addons/block-pins/userscript.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Block Pinning
+// By: SharkPool
+
+/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
+  let addon = _ref.addon;
+  const Blockly = await addon.tab.traps.getBlockly();
+  const vm = addon.tab.traps.vm;
+  const categoryIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MC42OTIiIGhlaWdodD0iNzAuNjkyIiB2aWV3Qm94PSIwIDAgNzAuNjkyIDcwLjY5MiI+PHBhdGggZD0iTTAgMzUuMzQ2QzAgMTUuODI1IDE1LjgyNSAwIDM1LjM0NiAwczM1LjM0NiAxNS44MjUgMzUuMzQ2IDM1LjM0Ni0xNS44MjUgMzUuMzQ2LTM1LjM0NiAzNS4zNDZTMCA1NC44NjcgMCAzNS4zNDYiIGZpbGw9IiNjNWJmOTYiLz48cGF0aCBkPSJNNC42NTYgMzUuMzQ2YzAtMTYuOTUgMTMuNzQtMzAuNjkgMzAuNjktMzAuNjlzMzAuNjkgMTMuNzQgMzAuNjkgMzAuNjktMTMuNzQgMzAuNjktMzAuNjkgMzAuNjktMzAuNjktMTMuNzQtMzAuNjktMzAuNjkiIGZpbGw9IiNmZmY3YzIiLz48cGF0aCBkPSJNNDguOTU2IDQ0LjAwMyA1MSA1MC4wMmwtNi4wMTctMi4wNDVMMzQuMTY4IDM3LjE2Yy0xLjg3MyAxLjY1NS02LjAwNyA1LjE1MS03LjMwMyA1LjAxOS0yLjM4Ny0uMjQ0LTEuODg5LTIuOTQ3LTIuMDQ4LTUuMzc2LS4xNTgtMi40MyAxLjQ3MS0zLjQ0IDEuNDcxLTMuNDRsLTUuODc5LTUuODhhMi40NSAyLjQ1IDAgMCAxIDAtMy40NjFsNC42MzMtNC42MzNhMi40NSAyLjQ1IDAgMCAxIDMuNDYxIDBsNi4wNyA2LjA3czIuMTQ5LTIuMDAzIDMuOTAyLTJjMS43NTMuMDAyIDUuNjY0LjA3NSA1LjMyMyAyLjAxMy0uMjM1IDEuMzMyLTQuMTExIDUuOTYtNS42MzkgNy43MzV6IiBmaWxsPSIjNDQ1MjczIi8+PC9zdmc+";
+  const category = document.createElementNS("http://www.w3.org/1999/xml", "category");
+  category.setAttribute("name", "Pinned");
+  category.setAttribute("id", "pinned");
+  category.setAttribute("colour", "#ffffff");
+  category.setAttribute("secondaryColour", "#ffffff");
+  category.setAttribute("iconURI", categoryIcon);
+  const gap = document.createElementNS("http://www.w3.org/1999/xml", "sep");
+  gap.setAttribute("gap", "36");
+  let populateInit = 0; // counts up to 3, any 'populate' call while this is less than 3 will update the toolbox
+  let pins = loadPins();
+  const autoLoadExtPins = addon.settings.get("autoLoadExts");
+  function findExtensionPins() {
+    const extUrls = [];
+    const manager = vm.extensionManager;
+    const loadedExts = manager._loadedExtensions;
+    loadedExts.keys().forEach(id => {
+      if (pins.some(b => b.startsWith(id))) {
+        const meta = loadedExts.get(id);
+        if (meta.startsWith("extension_")) {
+          // built-in extension
+          extUrls.push(id);
+        } else {
+          // external extension
+          const index = parseInt(meta.split(".")[1]);
+          extUrls.push(manager.workerURLs[index]);
+        }
+      }
+    });
+    return extUrls;
+  }
+  function loadPins() {
+    try {
+      const item = localStorage.getItem("ADDONS_BLOCK-PINS");
+      if (!item) return [];
+      const testPins = JSON.parse(item);
+      if (Array.isArray(testPins.blocks) && Array.isArray(testPins.exts)) {
+        // load required extensions
+        const manager = vm.extensionManager;
+        for (const ext of testPins.exts) {
+          try {
+            const isURL = new URL(ext);
+            manager.securityManager.canLoadExtensionFromProject(ext).then(isUnsandbox => {
+              manager.loadExtensionURL(ext);
+            });
+          } catch (_unused) {
+            // not a URL, must be a built-in
+            manager.loadExtensionIdSync(ext);
+          }
+        }
+        return testPins.blocks;
+      } else {
+        return [];
+      }
+    } catch (_unused2) {
+      console.warn("Malformed Block Pins!");
+      localStorage.removeItem("ADDONS_BLOCK-PINS");
+      return [];
+    }
+  }
+  function storePins() {
+    const requiredExtensions = autoLoadExtPins ? findExtensionPins() : [];
+    localStorage.setItem("ADDONS_BLOCK-PINS", JSON.stringify({
+      blocks: pins,
+      exts: requiredExtensions
+    }));
+  }
+  const createMenuItem = (text, enabled, callback) => {
+    // so amazing, saves like, 20 lines
+    return {
+      text,
+      enabled,
+      callback
+    };
+  };
+  const createLabel = text => {
+    const label = document.createElementNS("http://www.w3.org/1999/xml", "label");
+    label.setAttribute("text", text);
+    return label;
+  };
+  const specifyType = block => {
+    let type = block.type;
+    if (type === "data_variable" || type === "data_listcontents") {
+      type += "||v||" + block.getVars()[0];
+    } else if (type === "procedures_call") {
+      type += "||p||" + block.getProcCode();
+    }
+    return type;
+  };
+  const getBlockByType = (type, ws) => {
+    const typeMeta = type.split("||");
+    const blocks = Object.values(ws.blockDB_);
+    if (typeMeta.length === 1) return blocks.find(b => b.type === type);else {
+      const candidates = blocks.filter(b => b.type === typeMeta[0]);
+      for (const test of candidates) {
+        if (typeMeta[1] === "p") {
+          if (test.getProcCode() === typeMeta[2]) return test;
+        }
+        if (typeMeta[1] === "v") {
+          if (test.getVars()[0] === typeMeta[2]) return test;
+        }
+      }
+      return null;
+    }
+  };
+  const populateCategory = () => {
+    category.innerHTML = ""; // flush out blocks
+
+    if (pins.length) {
+      const flyoutWS = Blockly.mainWorkspace.getFlyout().workspace_;
+      const blocksXML = [];
+      let successes = 0;
+      for (const type of pins) {
+        const block = getBlockByType(type, flyoutWS);
+        if (block) {
+          successes++;
+          blocksXML.push(Blockly.Xml.blockToDom(block));
+        } else {
+          console.warn("Pins Addon -- Could not find block with type: " + type);
+        }
+      }
+      if (blocksXML.length === 0) blocksXML.push(createLabel("No Pinned Blocks!"));else if (successes !== pins.length) blocksXML.push(createLabel("Some Pins Could Not Load!"));
+      category.append(...blocksXML, gap);
+    } else {
+      category.append(createLabel("No Pinned Blocks!"), gap);
+    }
+  };
+  const updatePinCategory = () => {
+    populateCategory();
+    const toolbox = Blockly.mainWorkspace.getToolbox();
+    toolbox.populate_(toolbox.workspace_.options.languageTree);
+    storePins();
+  };
+  const toggleBlockPin = (block, isPinning, forceOrder) => {
+    const oldLength = pins.length;
+    const type = specifyType(block);
+    const index = pins.indexOf(type);
+    if (isPinning) {
+      switch (forceOrder) {
+        case "top":
+          pins.splice(index, 1);
+          pins = [type, ...pins];
+          break;
+        case "bottom":
+          pins.splice(index, 1);
+          pins.push(type);
+          break;
+        case "category":
+          {
+            const toolbox = Blockly.mainWorkspace.getToolbox();
+            const flyoutWS = Blockly.mainWorkspace.getFlyout().workspace_;
+            const categories = toolbox.categoryMenu_.categories_.map(c => c.id_);
+            const getCategoryInd = id => {
+              const block = getBlockByType(id, flyoutWS);
+              let cateID = block.category_;
+              if (cateID === "data") cateID = "variables";else if (cateID === "data-lists") cateID = "lists";else if (cateID === null) cateID = "myBlocks";
+              return categories.indexOf(cateID);
+            };
+            pins = pins.sort((a, b) => getCategoryInd(a) - getCategoryInd(b));
+            break;
+          }
+        default:
+          if (index === -1) pins.push(type);
+      }
+    } else if (index > -1) {
+      pins.splice(index, 1);
+    }
+    if (oldLength !== pins.length || forceOrder) updatePinCategory();
+  };
+  const ogShowCtxMenu = Blockly.BlockSvg.prototype.showContextMenu_;
+  Blockly.BlockSvg.prototype.showContextMenu_ = function (e) {
+    if (this.workspace.options.readOnly || !this.contextMenu) return;
+    let shouldPatchClasses = false;
+
+    // Save the current block in a variable for use in closures.
+    var block = this;
+    var menuOptions = [];
+    if (this.isDeletable() && this.isMovable() && block.isInFlyout) {
+      if (pins.includes(specifyType(block))) {
+        shouldPatchClasses = true;
+        menuOptions.push(createMenuItem("Move to Top", true, () => toggleBlockPin(block, true, "top")), createMenuItem("Move to Bottom", true, () => toggleBlockPin(block, true, "bottom")), createMenuItem("Organize by Category", true, () => toggleBlockPin("", true, "category")), createMenuItem("Pin", false, () => {}), createMenuItem("Unpin", true, () => toggleBlockPin(block, false)));
+      } else {
+        menuOptions.push(createMenuItem("Pin", true, () => toggleBlockPin(block, true)), createMenuItem("Unpin", false, () => {}));
+      }
+      menuOptions.push(createMenuItem("Unpin All", pins.length, () => {
+        pins = [];
+        updatePinCategory();
+      }));
+    } else {
+      ogShowCtxMenu.call(this, e);
+      return;
+    }
+    if (this.customContextMenu) this.customContextMenu(menuOptions);
+    Blockly.ContextMenu.show(e, menuOptions, this.RTL);
+    Blockly.ContextMenu.currentBlock = this;
+    if (shouldPatchClasses) {
+      // since we have to patch the context meny generator, we cant use
+      // addon apis to fancify the menu. So, recreate it here:
+      const menuItems = Blockly.WidgetDiv.DIV.querySelectorAll("div[class^=\"goog-menuitem-content\"]");
+      /* Unpin item */
+      menuItems[3].parentNode.style.borderTop = "1px solid rgba(0, 0, 0, 0.15)";
+    }
+    ;
+  };
+  const ogPopulate = Blockly.Toolbox.CategoryMenu.prototype.populate;
+  Blockly.Toolbox.CategoryMenu.prototype.populate = function (newTree) {
+    if (populateInit < 3) {
+      populateInit++;
+      setTimeout(() => {
+        // 1 second is a good buffer
+        populateCategory();
+        const toolbox = Blockly.mainWorkspace.getToolbox();
+        if (!toolbox) return;
+        toolbox.populate_(toolbox.workspace_.options.languageTree);
+      }, 1000);
+    }
+    newTree.insertBefore(category, newTree.firstElementChild);
+    ogPopulate.call(this, newTree);
+  };
+  vm.runtime.on("PROJECT_LOADED", () => {
+    populateInit = 0;
+  });
+  if (!autoLoadExtPins) vm.runtime.on("EXTENSION_ADDED", () => {
+    populateInit = 2;
+  });
+  vm.runtime.on("EXTENSION_REMOVED", extId => {
+    // remove blocks in the removed extension from pins
+    pins = pins.filter(t => !t.startsWith(extId));
+    populateInit = 2;
+  });
+  addon.self.addEventListener("disabled", () => {
+    localStorage.removeItem("ADDONS_BLOCK-PINS");
+  });
 });
 
 /***/ }),
@@ -672,14 +910,18 @@ const resources = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 /* eslint-disable */
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   const ScratchBlocks = await addon.tab.traps.getBlockly();
   const vm = addon.tab.traps.vm;
   let blockSwitches = {};
@@ -1437,21 +1679,29 @@ __webpack_require__.r(__webpack_exports__);
       }
       if (opcodeData.mutate) {
         const mutation = xml.querySelector("mutation");
-        for (const [key, value] of Object.entries(opcodeData.mutate)) {
+        for (const _ref2 of Object.entries(opcodeData.mutate)) {
+          var _ref3 = _slicedToArray(_ref2, 2);
+          const key = _ref3[0];
+          const value = _ref3[1];
           mutation.setAttribute(key, value);
         }
       }
       if (opcodeData.createInputs) {
-        for (const [inputName, inputData] of Object.entries(opcodeData.createInputs)) {
+        for (const _ref4 of Object.entries(opcodeData.createInputs)) {
+          var _ref5 = _slicedToArray(_ref4, 2);
+          const inputName = _ref5[0];
+          const inputData = _ref5[1];
           const valueElement = document.createElement("value");
           valueElement.setAttribute("name", inputName);
-          const shadowElement = document.createElement("shadow");
-          shadowElement.setAttribute("type", inputData.shadowType);
-          const shadowFieldElement = document.createElement("field");
-          shadowFieldElement.setAttribute("name", getShadowFieldName(inputData.shadowType));
-          shadowFieldElement.innerText = callIfFunction(inputData.value);
-          shadowElement.appendChild(shadowFieldElement);
-          valueElement.appendChild(shadowElement);
+          if (inputData.shadowType) {
+            const shadowElement = document.createElement("shadow");
+            shadowElement.setAttribute("type", inputData.shadowType);
+            const shadowFieldElement = document.createElement("field");
+            shadowFieldElement.setAttribute("name", getShadowFieldName(inputData.shadowType));
+            shadowFieldElement.innerText = callIfFunction(inputData.value);
+            shadowElement.appendChild(shadowFieldElement);
+            valueElement.appendChild(shadowElement);
+          }
           xml.appendChild(valueElement);
         }
       }
@@ -1622,17 +1872,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (async _ref => {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   // 250-ms rate limit
   const rateLimiter = new _libraries_common_cs_rate_limiter_js__WEBPACK_IMPORTED_MODULE_1__["default"](250);
   const getColor = element => {
-    const {
-      children
-    } = element.parentElement;
+    const children = element.parentElement.children;
     // h: 0 - 360
     const h = children[1].getAttribute("aria-valuenow");
     // s: 0 - 1
@@ -1648,9 +1894,7 @@ __webpack_require__.r(__webpack_exports__);
     // The only way to reliably set color is to invoke eye dropper via click()
     // then faking that the eye dropper reported the value.
     const onEyeDropperClosed = _ref2 => {
-      let {
-        detail
-      } = _ref2;
+      let detail = _ref2.detail;
       if (detail.action.type !== "scratch-gui/color-picker/DEACTIVATE_COLOR_PICKER") return;
       addon.tab.redux.removeEventListener("statechanged", onEyeDropperClosed);
       setTimeout(() => {
@@ -1658,9 +1902,7 @@ __webpack_require__.r(__webpack_exports__);
       }, 50);
     };
     const onEyeDropperOpened = _ref3 => {
-      let {
-        detail
-      } = _ref3;
+      let detail = _ref3.detail;
       if (detail.action.type !== "scratch-gui/color-picker/ACTIVATE_COLOR_PICKER") return;
       addon.tab.redux.removeEventListener("statechanged", onEyeDropperOpened);
       addon.tab.redux.addEventListener("statechanged", onEyeDropperClosed);
@@ -1702,9 +1944,7 @@ __webpack_require__.r(__webpack_exports__);
     });
     saColorPickerColor.addEventListener("input", () => rateLimiter.limit(() => setColor(saColorPickerText.value = saColorPickerColor.value, element)));
     saColorPickerText.addEventListener("change", () => {
-      const {
-        value
-      } = saColorPickerText;
+      const value = saColorPickerText.value;
       if (!Object(_libraries_common_cs_normalize_color_js__WEBPACK_IMPORTED_MODULE_0__["getHexRegex"])().test(value)) return;
       setColor(saColorPickerColor.value = Object(_libraries_common_cs_normalize_color_js__WEBPACK_IMPORTED_MODULE_0__["normalizeHex"])(value), element);
     });
@@ -1743,6 +1983,107 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/addons/addons/copy-reporter/_runtime_entry.js":
+/*!***********************************************************!*\
+  !*** ./src/addons/addons/copy-reporter/_runtime_entry.js ***!
+  \***********************************************************/
+/*! exports provided: resources */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
+/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/copy-reporter/userscript.js");
+/* harmony import */ var _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./style.css */ "./node_modules/css-loader/index.js!./src/addons/addons/copy-reporter/style.css");
+/* harmony import */ var _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _url_loader_copy_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader!./copy.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/copy-reporter/copy.svg");
+/* generated by pull.js */
+
+
+
+const resources = {
+  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  "style.css": _css_loader_style_css__WEBPACK_IMPORTED_MODULE_1___default.a,
+  "copy.svg": _url_loader_copy_svg__WEBPACK_IMPORTED_MODULE_2__["default"]
+};
+
+/***/ }),
+
+/***/ "./src/addons/addons/copy-reporter/userscript.js":
+/*!*******************************************************!*\
+  !*** ./src/addons/addons/copy-reporter/userscript.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
+  addon.tab.createEditorContextMenu(ctx => {
+    const className = ctx.type === "monitor_large" ? "monitor_large-value" : "monitor_value";
+    const element = ctx.target.querySelector("[class*='".concat(className, "_']"));
+    if (element.innerText.length !== 0) {
+      navigator.clipboard.writeText(element.innerText);
+    }
+  }, {
+    className: "copy",
+    types: ["monitor_default", "monitor_large", "monitor_slider"],
+    position: "monitor",
+    order: 0,
+    label: msg("copy-value")
+  });
+
+  // add button to reporter bubble
+  const ScratchBlocks = await addon.tab.traps.getBlockly();
+
+  // https://github.com/PenguinMod/PenguinMod-Blocks/blob/develop/core/workspace_svg.js#L1017C1
+  ScratchBlocks.WorkspaceSvg.prototype.reportValue = function (id, value, isError) {
+    var block = this.getBlockById(id);
+    if (!block) {
+      throw 'Tried to report value on block that does not exist.';
+    }
+    ScratchBlocks.DropDownDiv.hideWithoutAnimation();
+    ScratchBlocks.DropDownDiv.clearContent();
+    var contentDiv = ScratchBlocks.DropDownDiv.getContentDiv();
+    var valueReportBox = ScratchBlocks.goog.dom.createElement('div');
+    valueReportBox.setAttribute('class', 'valueReportBox');
+    if (typeof value !== 'object' || value === null || typeof value.toReporterContent !== 'function') {
+      valueReportBox.textContent = String(value);
+    } else {
+      valueReportBox.appendChild(value.toReporterContent());
+    }
+    if (!addon.self.disabled) {
+      // use to get focus and event priority
+      valueReportBox.setAttribute("tabindex", "0");
+      // if the user pressed Ctrl+C, prevent propagation to Blockly
+      valueReportBox.onkeydown = event => {
+        if ((event.altKey || event.ctrlKey || event.metaKey) && event.code === "KeyC") {
+          event.stopPropagation();
+        }
+      };
+      if (value && value.length !== 0) {
+        const copyButton = document.createElement("img");
+        copyButton.setAttribute("role", "button");
+        copyButton.setAttribute("tabindex", "0");
+        copyButton.setAttribute("alt", msg("copy-to-clipboard"));
+        copyButton.setAttribute("src", addon.self.getResource("/copy.svg")) /* rewritten by pull.js */;
+        copyButton.classList.add("sa-copy-reporter-icon");
+        addon.tab.displayNoneWhileDisabled(copyButton);
+        copyButton.onclick = () => navigator.clipboard.writeText(value);
+        valueReportBox.appendChild(copyButton);
+      }
+    }
+    contentDiv.appendChild(valueReportBox);
+    ScratchBlocks.DropDownDiv.setColour(ScratchBlocks.Colours.valueReportBackground, isError ? ScratchBlocks.Colours.blockError : ScratchBlocks.Colours.valueReportBorder);
+    ScratchBlocks.DropDownDiv.showPositionedByBlock(this, block);
+  };
+});
+
+/***/ }),
+
 /***/ "./src/addons/addons/editor-animations/_runtime_entry.js":
 /*!***************************************************************!*\
   !*** ./src/addons/addons/editor-animations/_runtime_entry.js ***!
@@ -1776,9 +2117,7 @@ __webpack_require__.r(__webpack_exports__);
 // By: reflow <https://github.com/mgikdev>
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
+  let addon = _ref.addon;
   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const addonKey = "addonAnimations-";
   const animationTypes = {
@@ -2229,9 +2568,7 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
+  let addon = _ref.addon;
   const ScratchBlocks = await addon.tab.traps.getBlockly();
 
   // Rerender the dragged block when updating the insertion marker
@@ -2337,10 +2674,8 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   const vm = addon.tab.traps.vm;
   const updateStyles = () => {
     previewInner.classList.toggle("sa-comment-preview-delay", addon.settings.get("delay") !== "none");
@@ -3398,12 +3733,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DevTools_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DevTools.js */ "./src/addons/addons/editor-devtools/DevTools.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg,
-    safeMsg: m
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg,
+    m = _ref.safeMsg;
   const devTools = new _DevTools_js__WEBPACK_IMPORTED_MODULE_0__["default"](addon, msg, m);
   devTools.init();
 });
@@ -3444,11 +3777,9 @@ const resources = {
 __webpack_require__.r(__webpack_exports__);
 /* eslint-disable */
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   const Blockly = await addon.tab.traps.getBlockly();
   const vm = addon.tab.traps.vm;
   const SCRATCH_ITEMS_TO_HIDE = ["RENAME_VARIABLE_ID", "DELETE_VARIABLE_ID", "NEW_BROADCAST_MESSAGE_ID",
@@ -3663,12 +3994,8 @@ __webpack_require__.r(__webpack_exports__);
       item,
       score: rank(item, index)
     })).sort((_ref2, _ref3) => {
-      let {
-        score: scoreA
-      } = _ref2;
-      let {
-        score: scoreB
-      } = _ref3;
+      let scoreA = _ref2.score;
+      let scoreB = _ref3.score;
       return Math.max(0, scoreB) - Math.max(0, scoreA);
     });
   }
@@ -3685,21 +4012,18 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
     if (needToUpdateDOM && previousSearchedItems.length > 0) {
-      for (const {
-        item
-      } of previousSearchedItems) {
+      for (const _ref4 of previousSearchedItems) {
+        const item = _ref4.item;
         item.element.remove();
       }
-      for (const {
-        item
-      } of searchedItems) {
+      for (const _ref5 of searchedItems) {
+        const item = _ref5.item;
         blocklyDropdownMenu.appendChild(item.element);
       }
     }
-    for (const {
-      item,
-      score
-    } of searchedItems) {
+    for (const _ref6 of searchedItems) {
+      const item = _ref6.item;
+      const score = _ref6.score;
       item.element.hidden = score < 0;
     }
   }
@@ -3722,9 +4046,8 @@ __webpack_require__.r(__webpack_exports__);
           return;
         }
       }
-      for (const {
-        item
-      } of searchedItems) {
+      for (const _ref7 of searchedItems) {
+        const item = _ref7.item;
         if (!item.element.hidden) {
           selectItem(item.element, true);
           break;
@@ -3774,6 +4097,342 @@ __webpack_require__.r(__webpack_exports__);
       name: ((_searchBar = searchBar) === null || _searchBar === void 0 ? void 0 : _searchBar.value.trim()) || ""
     }), message];
   }
+});
+
+/***/ }),
+
+/***/ "./src/addons/addons/editor-tweaks/_runtime_entry.js":
+/*!***********************************************************!*\
+  !*** ./src/addons/addons/editor-tweaks/_runtime_entry.js ***!
+  \***********************************************************/
+/*! exports provided: resources */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
+/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/editor-tweaks/userscript.js");
+/* generated by pull.js */
+
+const resources = {
+  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"]
+};
+
+/***/ }),
+
+/***/ "./src/addons/addons/editor-tweaks/userscript.js":
+/*!*******************************************************!*\
+  !*** ./src/addons/addons/editor-tweaks/userscript.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Editor Tweaks
+// By: SharkPool
+
+/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
+  let addon = _ref.addon;
+  const Blockly = await addon.tab.traps.getBlockly();
+  const vm = addon.tab.traps.vm;
+
+  // addon settings
+  let oldCkbxEnabled = true,
+    oldToolboxScrolls = true,
+    oldBlocksGlow = true,
+    oldExpandBtnSz = 1;
+  let ckbxEnabled = true,
+    toolboxScrolls = true,
+    blocksGlow = true,
+    expandBtnSz = 1;
+  let workspaceRefreshCache = 0;
+
+  // patch variables and functions
+  const ogWS2Dom = Blockly.Xml.workspaceToDom;
+  const ogMutatorBuilder = Blockly.scratchBlocksUtils.generateMutatorShadow;
+  const ogSetShadowDom = ScratchBlocks.RenderedConnection.prototype.setShadowDom;
+  const ogStartScrollAnim = Blockly.Flyout.prototype.startScrollAnimation;
+  const ogGlowFuncs = {
+    run: Blockly.BlockSvg.prototype.setGlowStack,
+    error: Blockly.BlockSvg.prototype.setErrorStack,
+    replace1: Blockly.BlockSvg.prototype.highlightForReplacement,
+    replace2: Blockly.BlockSvg.prototype.highlightShapeForInput
+  };
+  const fixedWorkspace2Dom = function fixedWorkspace2Dom() {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    const dom = ogWS2Dom.call(this, ...args);
+    if (!args[0].isFlyout) return dom;
+
+    // we only want to edit the flyout
+    const domArray = Array.from(dom.children);
+    for (const item of domArray) {
+      if (item.localName !== "block") continue;
+      for (const input of Array.from(item.children)) {
+        // clear checkboxes
+        if (input.localName !== "value") continue;
+        const shadow = input.firstChild;
+        if (shadow.getAttribute("type") === "checkbox") shadow.remove();
+      }
+    }
+    return dom;
+  };
+  const fixedSetShadowDom = function fixedSetShadowDom() {
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+    // prevent checkboxes from respawning
+    if (this.sourceBlock_.isInFlyout) {
+      if (args[0] && args[0].getAttribute("type") === "checkbox") {
+        this.shadowDom_ = null;
+        queueMicrotask(() => {
+          const shadowBlock = this.targetBlock();
+          if (shadowBlock) shadowBlock.dispose();
+        });
+        return;
+      }
+    }
+    return ogSetShadowDom.call(this, ...args);
+  };
+
+  // internals
+  function updateAllBlocks(flyoutOnly) {
+    const workspace = Blockly.getMainWorkspace();
+    if (workspace) {
+      if (!flyoutOnly && vm.editingTarget) vm.emitWorkspaceUpdate();
+      const flyout = workspace.getFlyout();
+      if (flyout) {
+        const flyoutWorkspace = flyout.getWorkspace();
+        Blockly.Xml.clearWorkspaceAndLoadFromXml(Blockly.Xml.workspaceToDom(flyoutWorkspace), flyoutWorkspace);
+        workspace.getToolbox().refreshSelection();
+        workspace.toolboxRefreshEnabled_ = true;
+      }
+    }
+  }
+  function requestAddonState() {
+    ckbxEnabled = addon.settings.get("checkboxesEnabled");
+    toolboxScrolls = addon.settings.get("toolboxScrolling");
+    blocksGlow = addon.settings.get("blocksGlow");
+    expandBtnSz = addon.settings.get("expandableButtonSize") / 100;
+    Blockly.Procedures.ADDON_SP_CHECKBOXES_DISABLED = !ckbxEnabled;
+  }
+  function applyChanges() {
+    requestAddonState();
+    toggleCheckboxes();
+    toggleToolBoxScroll();
+    toggleBlockGlow();
+    setExpandableSize();
+    if (workspaceRefreshCache > 0) updateAllBlocks(2 > workspaceRefreshCache);
+    workspaceRefreshCache = 0;
+  }
+  function toggleCheckboxes() {
+    if (oldCkbxEnabled === ckbxEnabled) return;
+    oldCkbxEnabled = ckbxEnabled;
+    workspaceRefreshCache++;
+    Blockly.Xml.workspaceToDom = ckbxEnabled ? ogWS2Dom : fixedWorkspace2Dom;
+    Blockly.RenderedConnection.prototype.setShadowDom = ckbxEnabled ? ogSetShadowDom : fixedSetShadowDom;
+    Blockly.scratchBlocksUtils.generateMutatorShadow = ckbxEnabled ? ogMutatorBuilder : function () {
+      for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+        args[_key3] = arguments[_key3];
+      }
+      if (args[1] === "checkbox") return;
+      ogCheckboxBlockInit.call(this, ...args);
+    };
+    Blockly.Blocks["control_expandableIf"].fillInBlock = Blockly.scratchBlocksUtils.generateMutatorShadow;
+    Blockly.Blocks["operator_expandableBool"].fillInBlock = Blockly.scratchBlocksUtils.generateMutatorShadow;
+  }
+  function toggleToolBoxScroll() {
+    if (oldToolboxScrolls === toolboxScrolls) return;
+    oldToolboxScrolls = toolboxScrolls;
+    Blockly.Flyout.prototype.startScrollAnimation = toolboxScrolls ? ogStartScrollAnim : function () {
+      this.scrollTime = -1;
+      this.scrollStart = this.scrollTarget;
+      this.stepScrollAnimation(performance.now());
+    };
+  }
+  function toggleBlockGlow() {
+    if (oldBlocksGlow === blocksGlow) return;
+    oldBlocksGlow = blocksGlow;
+    if (blocksGlow) return;
+    const workspace = Blockly.getMainWorkspace();
+    if (!workspace) {
+      console.warn("Editor Tweaks: Error -- Could not remove glow from workspace");
+      oldBlocksGlow = undefined;
+      return;
+    }
+
+    // these are shared across workspaces, remove to save RAM
+    workspace.options.stackGlowBlur.parentNode.remove();
+    workspace.options.stackGlowBlurError.parentNode.remove();
+    workspace.options.stackReplaceGlow.remove();
+    const applyToOuterStack = (topBlock, func) => {
+      func(topBlock);
+      let nextBlock = topBlock.getNextBlock();
+      while (nextBlock !== null) {
+        func(nextBlock);
+        nextBlock = nextBlock.getNextBlock();
+      }
+    };
+
+    // patch glow functions to not... glow. Instead give a lighter indicator
+    const BlockSvgProto = Blockly.BlockSvg.prototype;
+    BlockSvgProto.setGlowStack = blocksGlow ? ogGlowFuncs.run : function (isGlowingStack) {
+      this.isGlowingStack_ = isGlowingStack;
+      this.getSvgRoot().removeAttribute("filter"); //remove old glow
+
+      if (isGlowingStack) applyToOuterStack(this, block => {
+        block.svgPath_.classList.remove("blocklyPath");
+        block.svgPath_.setAttribute("stroke", "#fff200");
+        block.svgPath_.setAttribute("stroke-width", "5");
+      });else applyToOuterStack(this, block => {
+        block.svgPath_.classList.add("blocklyPath");
+        block.svgPath_.setAttribute("stroke", block.colourTertiary_);
+        block.svgPath_.removeAttribute("stroke-width");
+      });
+    };
+    BlockSvgProto.setErrorStack = blocksGlow ? ogGlowFuncs.error : function (isGlowingStack) {
+      this.isGlowingStack_ = isGlowingStack;
+      this.getSvgRoot().removeAttribute("filter"); //remove old glow
+
+      if (isGlowingStack) applyToOuterStack(this, block => {
+        block.svgPath_.classList.remove("blocklyPath");
+        block.svgPath_.setAttribute("stroke", "#ff0000");
+        block.svgPath_.setAttribute("stroke-width", "5");
+      });else applyToOuterStack(this, block => {
+        block.svgPath_.classList.add("blocklyPath");
+        block.svgPath_.setAttribute("stroke", block.colourTertiary_);
+        block.svgPath_.removeAttribute("stroke-width");
+      });
+    };
+    BlockSvgProto.highlightForReplacement = blocksGlow ? ogGlowFuncs.replace1 : function (adding) {
+      this.getSvgRoot().removeAttribute("filter"); //remove old glow
+      if (adding) {
+        this.svgPath_.classList.remove("blocklyPath");
+        this.svgPath_.setAttribute("stroke", "#fff");
+        this.svgPath_.setAttribute("stroke-width", "6");
+      } else {
+        this.svgPath_.classList.add("blocklyPath");
+        this.svgPath_.setAttribute("stroke", this.colourTertiary_);
+        this.svgPath_.removeAttribute("stroke-width");
+      }
+    };
+    BlockSvgProto.highlightShapeForInput = blocksGlow ? ogGlowFuncs.replace2 : function (connection, adding) {
+      const input = this.getInputWithConnection(connection);
+      if (!input) throw 'No input found for the connection';
+      if (!input.outlinePath) return;
+      input.outlinePath.removeAttribute("filter"); //remove old glow
+      if (adding) {
+        input.outlinePath.classList.remove("blocklyPath");
+        input.outlinePath.setAttribute("stroke", "#fff");
+        input.outlinePath.setAttribute("stroke-width", "5");
+      } else {
+        input.outlinePath.classList.add("blocklyPath");
+        input.outlinePath.setAttribute("stroke", this.colourTertiary_);
+        input.outlinePath.removeAttribute("stroke-width");
+      }
+    };
+  }
+  function setExpandableSize() {
+    if (oldExpandBtnSz === expandBtnSz) return;
+    oldExpandBtnSz = expandBtnSz;
+    workspaceRefreshCache = 2;
+
+    // override these, ripped from the Blocks Repo with minor changes
+    const addImg = Blockly.FieldExpandableAdd.prototype.BTN_IMG;
+    Blockly.FieldExpandableAdd.prototype.init = function () {
+      if (this.fieldGroup_) return;
+      Blockly.FieldExpandableAdd.superClass_.init.call(this);
+      if (expandBtnSz === 0 && this.sourceBlock_) {
+        const input = this.sourceBlock_.inputList.find(i => i.fieldRow.includes(this));
+        if (input) {
+          // we dont want to hide labels or other fields:
+          if (input.fieldRow.length > 2) {
+            for (const field of input.fieldRow) {
+              if (field instanceof Blockly.FieldExpandableAdd || field instanceof Blockly.FieldExpandableRemove) field.setVisible(false);
+            }
+          } else {
+            input.setVisible(false);
+          }
+        }
+      }
+      const ratio = Blockly.BlockSvg.FIELD_HEIGHT / 32 * expandBtnSz;
+      this.size_.width = Blockly.BlockSvg.FIELD_HEIGHT * expandBtnSz;
+      this.size_.height *= expandBtnSz;
+      this.overrideSep = 1;
+      this.boxGroup_ = Blockly.utils.createSvgElement('g', {}, null);
+      this.box_ = Blockly.utils.createSvgElement('rect', {
+        'x': 0,
+        'y': 0,
+        'rx': 4,
+        'ry': 4,
+        'width': this.size_.width,
+        'height': this.size_.height,
+        'fill': "#00000000",
+        'stroke': "#00000035",
+        'cursor': this.CURSOR
+      }, this.boxGroup_);
+      this.icon_ = Blockly.utils.createSvgElement('image', {
+        'x': 5 * ratio,
+        'y': 5 * ratio,
+        'width': this.size_.width / 1.5,
+        'height': this.size_.height / 1.5,
+        'xlink:href': addImg,
+        'href': addImg
+      }, this.boxGroup_);
+      this.fieldGroup_.insertBefore(this.boxGroup_, this.textElement_);
+    };
+    const removeImg = Blockly.FieldExpandableRemove.prototype.BTN_IMG;
+    Blockly.FieldExpandableRemove.prototype.init = function () {
+      if (this.fieldGroup_) return;
+      Blockly.FieldExpandableRemove.superClass_.init.call(this);
+      const ratio = Blockly.BlockSvg.FIELD_HEIGHT / 32 * expandBtnSz;
+      this.size_.width = Blockly.BlockSvg.FIELD_HEIGHT * expandBtnSz;
+      this.size_.height *= expandBtnSz;
+      this.overrideSep = 1;
+      this.boxGroup_ = Blockly.utils.createSvgElement('g', {}, null);
+      this.box_ = Blockly.utils.createSvgElement('rect', {
+        'x': 0,
+        'y': 0,
+        'rx': 4,
+        'ry': 4,
+        'width': this.size_.width,
+        'height': this.size_.height,
+        'fill': "#00000000",
+        'stroke': "#00000035",
+        'cursor': this.CURSOR
+      }, this.boxGroup_);
+      this.icon_ = Blockly.utils.createSvgElement('image', {
+        'x': 5 * ratio,
+        'y': 5 * ratio,
+        'width': this.size_.width / 1.5,
+        'height': this.size_.height / 1.5,
+        'xlink:href': removeImg,
+        'href': removeImg
+      }, this.boxGroup_);
+      this.fieldGroup_.insertBefore(this.boxGroup_, this.textElement_);
+    };
+
+    // fix block chin height
+    Blockly.Blocks['control_expandableIf'].fixupButtons = function () {
+      const expandableInput = this.getInput("");
+      this.inputList.splice(this.inputList.indexOf(expandableInput), 1);
+      this.inputList.push(expandableInput);
+      expandableInput.setAlign(1);
+      const hiddenBtn = expandableInput.fieldRow[0];
+      hiddenBtn.size_.width = 0.5;
+      hiddenBtn.size_.height = (Blockly.BlockSvg.INPUT_SHAPE_HEIGHT + 16) * expandBtnSz;
+      hiddenBtn.setVisible(false);
+    };
+  }
+  addon.self.addEventListener("reenabled", applyChanges);
+  addon.settings.addEventListener("change", applyChanges);
+  addon.self.addEventListener("disabled", () => {
+    ckbxEnabled = true, expandBtnSz = 1;
+    applyChanges();
+  });
+  applyChanges();
 });
 
 /***/ }),
@@ -3864,11 +4523,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    msg,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    msg = _ref.msg,
+    console = _ref.console;
   const Blockly = await addon.tab.traps.getBlockly();
   class FindBar {
     constructor() {
@@ -4049,6 +4706,7 @@ __webpack_require__.r(__webpack_exports__);
       let myBlocks = [];
       let myBlocksByProcCode = {};
       let topBlocks = this.workspace.getTopBlocks();
+      let labelBlocks = Object.values(this.workspace.blockDB_).filter(b => b.type.startsWith("jwProto_") || b.type.startsWith("lmscomments_"));
 
       /**
        * @param cls
@@ -4056,7 +4714,7 @@ __webpack_require__.r(__webpack_exports__);
        * @param root
        * @returns BlockItem
        */
-      function addBlock(cls, txt, root) {
+      function addBlock(cls, txt, root, optData) {
         let id = root.id ? root.id : root.getId ? root.getId() : null;
         let clone = myBlocksByProcCode[txt];
         if (clone) {
@@ -4067,18 +4725,21 @@ __webpack_require__.r(__webpack_exports__);
           return clone;
         }
         let items = new _blockly_BlockItem_js__WEBPACK_IMPORTED_MODULE_0__["default"](cls, txt, id, 0);
+        if (optData) items.customData = optData;
         items.y = root.getRelativeToSurfaceXY ? root.getRelativeToSurfaceXY().y : null;
         myBlocks.push(items);
         myBlocksByProcCode[txt] = items;
         return items;
       }
-      function getDescFromField(root) {
-        let fields = root.inputList[0];
-        let desc;
-        for (const fieldRow of fields.fieldRow) {
-          desc = (desc ? desc + " " : "") + fieldRow.getText();
+      function getDescFromField(root, optRecurse) {
+        let desc = "";
+        if (optRecurse) desc = root.toString();else {
+          let fields = root.inputList[0];
+          for (const fieldRow of fields.fieldRow) {
+            desc += fieldRow.getText() + " ";
+          }
         }
-        return desc;
+        return desc.trim();
       }
       for (const root of topBlocks) {
         if (root.type === "procedures_definition" || root.type === "procedures_definition_return") {
@@ -4114,6 +4775,23 @@ __webpack_require__.r(__webpack_exports__);
           addBlock("event", getDescFromField(root), root); // "when I start as a clone"
           continue;
         }
+
+        // fall through
+        if (root.type.startsWith("jwProto_") || root.type.startsWith("lmscomments_")) {
+          continue;
+        }
+        if (root.startHat_) {
+          // custom, unrecognized hat
+          addBlock("customHat", getDescFromField(root, true), root, {
+            color: root.colour_
+          });
+          continue;
+        }
+
+        // orphan block stack/reporter
+        addBlock(root.outputConnection ? "customOutput" : "customStack", getDescFromField(root, true), root, {
+          color: root.colour_
+        });
       }
       let map = this.workspace.getVariableMap();
       let vars = map.getVariablesOfType("");
@@ -4128,15 +4806,24 @@ __webpack_require__.r(__webpack_exports__);
       for (const event of events) {
         addBlock("receive", "event " + event.eventName, event.block).eventName = event.eventName;
       }
+      for (const root of labelBlocks) {
+        addBlock("label", getDescFromField(root, true), root, {
+          color: "#707070"
+        });
+      }
       const clsOrder = {
         flag: 0,
         receive: 1,
         event: 2,
-        define: 3,
-        var: 4,
-        VAR: 5,
-        list: 6,
-        LIST: 7
+        customHat: 3,
+        define: 4,
+        var: 5,
+        VAR: 6,
+        list: 7,
+        LIST: 8,
+        label: 9,
+        customStack: 10,
+        customOutput: 11
       };
       myBlocks.sort((a, b) => {
         let t = clsOrder[a.cls] - clsOrder[b.cls];
@@ -4280,6 +4967,18 @@ __webpack_require__.r(__webpack_exports__);
       };
       if (proc.cls === "flag") {
         item.className = "sa-find-flag";
+      } else if (proc.customData) {
+        var _proc$customData$colo;
+        const color = (_proc$customData$colo = proc.customData.color) !== null && _proc$customData$colo !== void 0 ? _proc$customData$colo : "#ff0000";
+        item.style.color = color;
+        item.onmouseenter = () => {
+          item.style.color = "#fff";
+          item.style.background = color;
+        };
+        item.onmouseleave = () => {
+          item.style.color = color;
+          item.style.background = "transparent";
+        };
       } else {
         const colorId = colorIds[proc.cls];
         item.className = "sa-block-color sa-block-color-".concat(colorId);
@@ -4625,12 +5324,16 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   // The basic premise of how this addon works is relative simple.
   // scratch-gui renders the sprite selectors and asset selectors in a hierarchy like this:
   // <SelectorHOC>
@@ -4833,10 +5536,9 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
     };
   };
   const fixTargetOrder = () => {
-    const {
-      items,
-      changed
-    } = fixOrderOfItemsInFolders(vm.runtime.targets);
+    const _fixOrderOfItemsInFol = fixOrderOfItemsInFolders(vm.runtime.targets),
+      items = _fixOrderOfItemsInFol.items,
+      changed = _fixOrderOfItemsInFol.changed;
     if (changed) {
       vm.runtime.targets = items;
       vm.emitTargetsUpdate();
@@ -4844,10 +5546,9 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
   };
   const fixCostumeOrder = function fixCostumeOrder() {
     let target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : vm.editingTarget;
-    const {
-      items,
-      changed
-    } = fixOrderOfItemsInFolders(target.sprite.costumes);
+    const _fixOrderOfItemsInFol2 = fixOrderOfItemsInFolders(target.sprite.costumes),
+      items = _fixOrderOfItemsInFol2.items,
+      changed = _fixOrderOfItemsInFol2.changed;
     if (changed) {
       target.sprite.costumes = items;
       vm.emitTargetsUpdate();
@@ -4855,10 +5556,9 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
   };
   const fixSoundOrder = function fixSoundOrder() {
     let target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : vm.editingTarget;
-    const {
-      items,
-      changed
-    } = fixOrderOfItemsInFolders(target.sprite.sounds);
+    const _fixOrderOfItemsInFol3 = fixOrderOfItemsInFolders(target.sprite.sounds),
+      items = _fixOrderOfItemsInFol3.items,
+      changed = _fixOrderOfItemsInFol3.changed;
     if (changed) {
       target.sprite.sounds = items;
       vm.emitTargetsUpdate();
@@ -4935,7 +5635,9 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
         const item = items[i];
         const width = PREVIEW_SIZE / 2;
         const height = PREVIEW_SIZE / 2;
-        const [x, y] = PREVIEW_POSITIONS[i];
+        const _PREVIEW_POSITIONS$i = _slicedToArray(PREVIEW_POSITIONS[i], 2),
+          x = _PREVIEW_POSITIONS$i[0],
+          y = _PREVIEW_POSITIONS$i[1];
         let src;
         if (item.asset) {
           // TW: We can be 100% certain that escaping here is unnecessary
@@ -5532,15 +6234,13 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
       return r;
     };
     const abstractReorder = (_ref2, itemIndex, newIndex) => {
-      let {
-        guiItems,
-        getAll,
-        set,
-        rename,
-        getVMItemFromGUIItem,
-        zeroIndexed,
-        onFolderChanged
-      } = _ref2;
+      let guiItems = _ref2.guiItems,
+        getAll = _ref2.getAll,
+        set = _ref2.set,
+        rename = _ref2.rename,
+        getVMItemFromGUIItem = _ref2.getVMItemFromGUIItem,
+        zeroIndexed = _ref2.zeroIndexed,
+        onFolderChanged = _ref2.onFolderChanged;
       // First index depends on zeroIndexed
       itemIndex = clamp(itemIndex, zeroIndexed ? 0 : 1, zeroIndexed ? guiItems.length - 1 : guiItems.length);
       newIndex = clamp(newIndex, zeroIndexed ? 0 : 1, zeroIndexed ? guiItems.length - 1 : guiItems.length);
@@ -5824,371 +6524,6 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
     verifySortableHOC(sortableHOCInstance);
     patchSortableHOC(sortableHOCInstance.constructor, TYPE_ASSETS);
     sortableHOCInstance.saInitialSetup();
-  }
-});
-
-/***/ }),
-
-/***/ "./src/addons/addons/js-viewer/_runtime_entries.js":
-/*!*********************************************************!*\
-  !*** ./src/addons/addons/js-viewer/_runtime_entries.js ***!
-  \*********************************************************/
-/*! exports provided: resources */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
-/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/js-viewer/userscript.js");
-/* harmony import */ var _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./userstyle.css */ "./node_modules/css-loader/index.js!./src/addons/addons/js-viewer/userstyle.css");
-/* harmony import */ var _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _url_loader_icons_close_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! url-loader!./icons/close.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/close.svg");
-/* harmony import */ var _url_loader_icons_code_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! url-loader!./icons/code.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/code.svg");
-/* harmony import */ var _url_loader_icons_refresh_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! url-loader!./icons/refresh.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/js-viewer/icons/refresh.svg");
-/* generated by pull.js */
-
-
-
-
-
-const resources = {
-  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "userstyle.css": _css_loader_userstyle_css__WEBPACK_IMPORTED_MODULE_1___default.a,
-  "icons/close.svg": _url_loader_icons_close_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-  "icons/code.svg": _url_loader_icons_code_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-  "icons/refresh.svg": _url_loader_icons_refresh_svg__WEBPACK_IMPORTED_MODULE_4__["default"]
-};
-
-/***/ }),
-
-/***/ "./src/addons/addons/js-viewer/userscript.js":
-/*!***************************************************!*\
-  !*** ./src/addons/addons/js-viewer/userscript.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
-  const vm = addon.tab.traps.vm;
-  await new Promise(resolve => {
-    if (vm.editingTarget) return resolve();
-    vm.runtime.once("PROJECT_LOADED", resolve);
-  });
-  const ScratchBlocks = await addon.tab.traps.getBlockly();
-  const iconReplacements = {
-    "event_whenflagclicked": "flag",
-    "event_whenkeypressed": "key",
-    "looks_costume": "costume",
-    "looks_backdrop": "backdrop",
-    "sound_sounds_menu": "sound",
-    "motion_pointtowards_menu": "sprite",
-    "sensing_touchingobjectmenu": "sprite",
-    "sensing_distancetomenu": "sprite",
-    "sensing_keyoptions": "key",
-    "control_stop": "stop"
-  };
-
-  // Create the button
-  const viewerButtonOuter = document.createElement("div");
-  viewerButtonOuter.className = "sa-js-viewer-container";
-  const viewerButton = document.createElement("div");
-  viewerButton.className = addon.tab.scratchClass("button_outlined-button", "stage-header_stage-button");
-  const viewerButtonContent = document.createElement("div");
-  viewerButtonContent.className = addon.tab.scratchClass("button_content");
-  const viewerButtonImage = document.createElement("img");
-  viewerButtonImage.className = addon.tab.scratchClass("stage-header_stage-button-icon");
-  viewerButtonImage.draggable = false;
-  viewerButtonImage.src = addon.self.getResource("/icons/code.svg") /* rewritten by pull.js */;
-  viewerButtonContent.appendChild(viewerButtonImage);
-  viewerButton.appendChild(viewerButtonContent);
-  viewerButtonOuter.appendChild(viewerButton);
-
-  // Create the interface
-  const interfaceContainer = document.createElement("div");
-  interfaceContainer.className = addon.tab.scratchClass("card_card", {
-    others: "sa-js-viewer-interface"
-  });
-  interfaceContainer.style.display = "none";
-  const interfaceHeader = document.createElement("div");
-  interfaceHeader.className = addon.tab.scratchClass("card_header-buttons");
-  const title = document.createElement("h1");
-  title.textContent = "JavaScript Viewer (READ ONLY)";
-  title.style.cssText = "padding: 10px; font-size: 20px; margin: 0; color: white; cursor: move;";
-  const closeButton = document.createElement("div");
-  closeButton.className = addon.tab.scratchClass("card_shrink-expand-button");
-  closeButton.innerHTML = "<img src=\"".concat(addon.self.getResource("/icons/close.svg") /* rewritten by pull.js */, "\" style=\"width: 20px; height: 20px;\"><div style=\"font-size: 10px; color: white; margin-top: 2px;\">Close</div>");
-  const refreshButton = document.createElement("div");
-  refreshButton.className = addon.tab.scratchClass("card_shrink-expand-button");
-  refreshButton.innerHTML = "<img src=\"".concat(addon.self.getResource("/icons/refresh.svg") /* rewritten by pull.js */, "\" style=\"width: 20px; height: 20px;\"><div style=\"font-size: 10px; color: white; margin-top: 2px;\">Refresh</div>");
-  refreshButton.title = "Refresh code view";
-  const buttonContainer = document.createElement("div");
-  buttonContainer.className = addon.tab.scratchClass("card_header-buttons-right");
-  buttonContainer.appendChild(refreshButton);
-  buttonContainer.appendChild(closeButton);
-  interfaceHeader.appendChild(title);
-  interfaceHeader.appendChild(buttonContainer);
-  const codeContainer = document.createElement("div");
-  codeContainer.className = "sa-js-viewer-code";
-  codeContainer.style.cssText = "width: 100%; height: 100%; overflow: auto; padding: 15px; box-sizing: border-box; font-family: monospace; font-size: 13px; line-height: 1.6; white-space: pre; background: #1e1e1e; color: #d4d4d4;";
-  interfaceContainer.appendChild(interfaceHeader);
-  interfaceContainer.appendChild(codeContainer);
-  document.body.appendChild(interfaceContainer);
-
-  // Dragging functionality
-  let isDragging = false;
-  let dragOffsetX = 0;
-  let dragOffsetY = 0;
-  title.addEventListener("mousedown", e => {
-    isDragging = true;
-    dragOffsetX = e.clientX - interfaceContainer.offsetLeft;
-    dragOffsetY = e.clientY - interfaceContainer.offsetTop;
-  });
-  document.addEventListener("mousemove", e => {
-    if (isDragging) {
-      const x = e.clientX - dragOffsetX;
-      const y = e.clientY - dragOffsetY;
-      interfaceContainer.style.left = Math.max(0, x) + "px";
-      interfaceContainer.style.top = Math.max(0, y) + "px";
-    }
-  });
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-  });
-
-  // Show/hide interface
-  viewerButton.addEventListener("click", () => {
-    interfaceContainer.style.display = "flex";
-    updateCodeView();
-  });
-  closeButton.addEventListener("click", () => {
-    interfaceContainer.style.display = "none";
-  });
-  refreshButton.addEventListener("click", () => {
-    updateCodeView();
-  });
-
-  // Helper functions
-  const getBlockById = (target, id) => {
-    return target.blocks.getBlock(id) || vm.runtime.flyoutBlocks.getBlock(id);
-  };
-  const getInputValue = (target, input) => {
-    if (!input) return "";
-    if (input.block) {
-      const inputBlock = getBlockById(target, input.block);
-      if (inputBlock) {
-        return formatBlock(target, inputBlock);
-      }
-    }
-    if (input.shadow) {
-      const shadowBlock = getBlockById(target, input.shadow);
-      if (shadowBlock) {
-        return formatBlock(target, shadowBlock);
-      }
-    }
-    return "";
-  };
-  const formatBlock = (target, block) => {
-    if (!block) return "";
-
-    // Handle special blocks
-    if (block.opcode === "text") {
-      var _block$fields$TEXT;
-      const text = ((_block$fields$TEXT = block.fields.TEXT) === null || _block$fields$TEXT === void 0 ? void 0 : _block$fields$TEXT.value) || "";
-      return "\"".concat(text.replace(/"/g, '\\"'), "\"");
-    }
-    if (block.opcode === "math_number") {
-      var _block$fields$NUM;
-      return ((_block$fields$NUM = block.fields.NUM) === null || _block$fields$NUM === void 0 ? void 0 : _block$fields$NUM.value) || "0";
-    }
-    if (block.opcode === "data_variable") {
-      var _block$fields$VARIABL;
-      return ((_block$fields$VARIABL = block.fields.VARIABLE) === null || _block$fields$VARIABL === void 0 ? void 0 : _block$fields$VARIABL.value) || "variable";
-    }
-    if (block.opcode === "data_listcontents") {
-      var _block$fields$LIST;
-      return ((_block$fields$LIST = block.fields.LIST) === null || _block$fields$LIST === void 0 ? void 0 : _block$fields$LIST.value) || "list";
-    }
-    if (block.opcode === "argument_reporter_string_number" || block.opcode === "argument_reporter_boolean") {
-      var _block$fields$VALUE;
-      return ((_block$fields$VALUE = block.fields.VALUE) === null || _block$fields$VALUE === void 0 ? void 0 : _block$fields$VALUE.value) || "parameter";
-    }
-    if (block.opcode === "colour_picker") {
-      var _block$fields$COLOUR;
-      return ((_block$fields$COLOUR = block.fields.COLOUR) === null || _block$fields$COLOUR === void 0 ? void 0 : _block$fields$COLOUR.value) || "#000000";
-    }
-
-    // Get block name from Blockly definition
-    let blockName = block.opcode;
-    const blockDef = ScratchBlocks.Blocks[block.opcode];
-
-    // Replace icons/images with text
-    if (blockDef && blockDef.init) {
-      try {
-        let jsonData;
-        const fakeBlock = {
-          jsonInit(data) {
-            jsonData = data;
-          }
-        };
-        blockDef.init.call(fakeBlock);
-        if (jsonData && jsonData.message0) {
-          blockName = jsonData.message0.replace(/%\d+/g, match => {
-            var _jsonData$args;
-            const argNum = parseInt(match.slice(1)) - 1;
-            const arg = (_jsonData$args = jsonData.args0) === null || _jsonData$args === void 0 ? void 0 : _jsonData$args[argNum];
-
-            // Check if this is an image/icon that should be replaced
-            if (arg && arg.type === "field_image") {
-              const replacement = iconReplacements[block.opcode];
-              return replacement ? replacement : "";
-            }
-            return "";
-          });
-        }
-      } catch (e) {
-        // Fallback to opcode
-      }
-    }
-
-    // Handle procedure calls
-    if (block.opcode === "procedures_call") {
-      var _block$mutation;
-      blockName = ((_block$mutation = block.mutation) === null || _block$mutation === void 0 ? void 0 : _block$mutation.proccode) || "customBlock";
-      blockName = blockName.replace(/%[nbs]/g, "(...)");
-    }
-
-    // Add field values and inputs
-    const parts = [blockName];
-
-    // Add fields (exclude hidden/collapse fields)
-    for (const fieldName in block.fields) {
-      const field = block.fields[fieldName];
-      if (field.value !== undefined && fieldName !== "VARIABLE" && fieldName !== "LIST" && !fieldName.toLowerCase().includes("hidden") && !fieldName.toLowerCase().includes("collapse")) {
-        parts.push("[".concat(field.value, "]"));
-      }
-    }
-
-    // Add inputs (exclude hidden inputs)
-    for (const inputName in block.inputs) {
-      if (!inputName.toLowerCase().includes("hidden")) {
-        const inputValue = getInputValue(target, block.inputs[inputName]);
-        if (inputValue) {
-          parts.push("(".concat(inputValue, ")"));
-        }
-      }
-    }
-    return parts.join(" ");
-  };
-  const generateCodeForBlock = function generateCodeForBlock(target, blockId) {
-    let indent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-    const block = getBlockById(target, blockId);
-    if (!block) return [];
-    const indentStr = "  ".repeat(indent);
-    const lines = [];
-    const blockText = formatBlock(target, block);
-
-    // Check if this is a C-block (has substack) - ignore hidden inputs
-    const hasSubstack = Object.keys(block.inputs).some(key => key.startsWith("SUBSTACK") && !key.includes("hidden"));
-    if (hasSubstack) {
-      // Remove hidden field values from blockText
-      const cleanBlockText = blockText.replace(/\[(?:TRUE|FALSE)\]/g, '').replace(/\s+/g, ' ').trim();
-      lines.push("".concat(indentStr).concat(cleanBlockText, " {"));
-
-      // Handle all SUBSTACK inputs (SUBSTACK, SUBSTACK2, SUBSTACK3, etc.)
-      const substackKeys = Object.keys(block.inputs).filter(key => key.startsWith("SUBSTACK") && !key.includes("hidden")).sort();
-      substackKeys.forEach((key, index) => {
-        if (index > 0) {
-          lines.push("".concat(indentStr, "} else {"));
-        }
-        const substackId = block.inputs[key].block;
-        if (substackId) {
-          lines.push(...generateCodeForScript(target, substackId, indent + 1));
-        }
-      });
-      lines.push("".concat(indentStr, "}"));
-    } else {
-      lines.push("".concat(indentStr).concat(blockText));
-    }
-    return lines;
-  };
-  const generateCodeForScript = function generateCodeForScript(target, startBlockId) {
-    let indent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-    const lines = [];
-    let currentBlockId = startBlockId;
-    while (currentBlockId) {
-      const block = getBlockById(target, currentBlockId);
-      if (!block) break;
-      lines.push(...generateCodeForBlock(target, currentBlockId, indent));
-      currentBlockId = block.next;
-    }
-    return lines;
-  };
-  const updateCodeView = () => {
-    const target = vm.editingTarget;
-    if (!target) {
-      codeContainer.innerHTML = '<div class="code-line">// No sprite selected</div>';
-      return;
-    }
-    const scripts = [];
-    const blocks = target.blocks._blocks;
-
-    // Find all top-level blocks (hat blocks)
-    for (const blockId in blocks) {
-      const block = blocks[blockId];
-      if (block.topLevel) {
-        const scriptLines = generateCodeForScript(target, blockId);
-        if (scriptLines.length > 0) {
-          scripts.push(scriptLines.join("\n"));
-        }
-      }
-    }
-    if (scripts.length === 0) {
-      codeContainer.innerHTML = '<div class="code-line">// No scripts found</div>';
-    } else {
-      const allLines = scripts.join("\n\n").split("\n");
-      const numberedLines = allLines.map((line, index) => {
-        const lineNumber = (index + 1).toString().padStart(3, " ");
-        return "<div class=\"code-line\"><span class=\"line-number\">".concat(lineNumber, "</span><span class=\"line-content\">").concat(line || " ", "</span></div>");
-      }).join("");
-      codeContainer.innerHTML = numberedLines;
-    }
-  };
-
-  // Auto-update on workspace changes
-  const workspace = Blockly.getMainWorkspace();
-  workspace.addChangeListener(() => {
-    if (interfaceContainer.style.display !== "none") {
-      updateCodeView();
-    }
-  });
-
-  // Update when switching sprites
-  vm.on("targetsUpdate", () => {
-    if (interfaceContainer.style.display !== "none") {
-      updateCodeView();
-    }
-  });
-
-  // Add button to stage header
-  while (true) {
-    await addon.tab.waitForElement('[class*="stage-header_stage-size-row"]', {
-      markAsSeen: true,
-      reduxEvents: ["scratch-gui/mode/SET_PLAYER", "scratch-gui/mode/SET_FULL_SCREEN"]
-    });
-    if (addon.tab.editorMode === "editor") {
-      addon.tab.appendToSharedSpace({
-        space: "stageHeader",
-        element: viewerButtonOuter,
-        order: 1
-      });
-    }
   }
 });
 
@@ -8386,11 +8721,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    msg,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    msg = _ref.msg,
+    console = _ref.console;
   const Blockly = await addon.tab.traps.getBlockly();
   const vm = addon.tab.traps.vm;
   const PREVIEW_LIMIT = 50;
@@ -8842,11 +9175,9 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async _ref => {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   const types = ["sound", "costume"];
   addon.tab.createEditorContextMenu(ctx => {
     const target = addon.tab.traps.vm.editingTarget;
@@ -8930,11 +9261,9 @@ function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" 
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 /* eslint-disable */ // FUCK OFF FOR THE LOVE OF CHRIST
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    msg,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    msg = _ref.msg,
+    console = _ref.console;
   return; // !! The addon deletes blocks randomly and so can not inject itself !!
   // make migrating code between tabs possible at all
   let selectedTab = -1;
@@ -8963,12 +9292,11 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
   // goofy i know, but it makes vscode understand so
   /** @type {import('../../../../../scratch-vm/src/index')} */
   const vm = addon.tab.traps.vm;
-  const {
-    Blocks,
-    Variable,
-    RenderedTarget,
-    Comment
-  } = vm.exports;
+  const _vm$exports = vm.exports,
+    Blocks = _vm$exports.Blocks,
+    Variable = _vm$exports.Variable,
+    RenderedTarget = _vm$exports.RenderedTarget,
+    Comment = _vm$exports.Comment;
   const ogEmitUpdate = vm.emitWorkspaceUpdate;
   vm.emitWorkspaceUpdate = function () {
     if (!tabs[selectedTab]) return "<xml xmlns=\"http://www.w3.org/1999/xhtml\">\n                                      <variables></variables>\n                                    </xml>";
@@ -9293,15 +9621,11 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
     return scripts.includes(top);
   }
   function selectTab(idx) {
-    const {
-      element: tab
-    } = tabs[idx];
+    const tab = tabs[idx].element;
     selectedTab = idx;
     for (const meta of tabs) {
       if (!meta) continue;
-      const {
-        element: tab
-      } = meta;
+      const tab = meta.element;
       tab.classList.remove('selected');
       tab.classList.remove('unselected');
       tab.classList.add('unselected');
@@ -9585,12 +9909,16 @@ const resources = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   const paper = await addon.tab.traps.getPaper();
   const paintEditorCanvasContainer = await addon.tab.waitForElement("[class^='paint-editor_canvas-container']");
   try {
@@ -9776,7 +10104,10 @@ __webpack_require__.r(__webpack_exports__);
     return [referenceColor[0] * weighted, referenceColor[1] * weighted, referenceColor[2] * weighted];
   };
   const toHexColor = _ref2 => {
-    let [red, green, blue] = _ref2;
+    let _ref3 = _slicedToArray(_ref2, 3),
+      red = _ref3[0],
+      green = _ref3[1],
+      blue = _ref3[2];
     const r = Math.round(red).toString(16).padStart(2, "0");
     const g = Math.round(green).toString(16).padStart(2, "0");
     const b = Math.round(blue).toString(16).padStart(2, "0");
@@ -9784,10 +10115,9 @@ __webpack_require__.r(__webpack_exports__);
   };
   const getPaperColorTint = (color, isBefore) => toHexColor(getTint(color.red * 255, color.green * 255, color.blue * 255, isBefore));
   const tintRaster = (raster, isBefore) => {
-    const {
-      width,
-      height
-    } = raster.canvas;
+    const _raster$canvas = raster.canvas,
+      width = _raster$canvas.width,
+      height = _raster$canvas.height;
     const context = raster.context;
     // TODO: check to see if this is a performance issue
     const imageData = context.getImageData(0, 0, width, height);
@@ -9821,10 +10151,8 @@ __webpack_require__.r(__webpack_exports__);
   };
   const rasterizeVector = root => {
     const bounds = root.strokeBounds;
-    const {
-      width,
-      height
-    } = bounds;
+    const width = bounds.width,
+      height = bounds.height;
 
     // Some browsers experience extremely poor performance when this value exceeds 3840.
     const MAX_SIZE = 3000;
@@ -9871,10 +10199,8 @@ __webpack_require__.r(__webpack_exports__);
     return raster;
   };
   const makeVectorOnion = (opacity, costume, asset, isBefore) => new Promise((resolve, reject) => {
-    const {
-      rotationCenterX,
-      rotationCenterY
-    } = costume;
+    const rotationCenterX = costume.rotationCenterX,
+      rotationCenterY = costume.rotationCenterY;
     // https://github.com/LLK/scratch-paint/blob/cdf0afc217633e6cfb8ba90ea4ae38b79882cf6c/src/containers/paper-canvas.jsx#L196-L218
     asset = asset.split(/<\s*svg:/).join("<");
     asset = asset.split(/<\/\s*svg:/).join("</");
@@ -9956,10 +10282,8 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
   const makeRasterOnion = (opacity, costume, asset, isBefore) => new Promise((resolve, reject) => {
-    let {
-      rotationCenterX,
-      rotationCenterY
-    } = costume;
+    let rotationCenterX = costume.rotationCenterX,
+      rotationCenterY = costume.rotationCenterY;
     const image = new Image();
     image.onload = () => {
       const paperCenter = getPaperCenter();
@@ -10035,12 +10359,10 @@ __webpack_require__.r(__webpack_exports__);
           opacity
         });
       }
-      const onions = await Promise.all(layersToCreate.map(_ref3 => {
-        let {
-          index,
-          isBefore,
-          opacity
-        } = _ref3;
+      const onions = await Promise.all(layersToCreate.map(_ref4 => {
+        let index = _ref4.index,
+          isBefore = _ref4.isBefore,
+          opacity = _ref4.opacity;
         const onionCostume = costumes[index];
         const onionAsset = vm.getCostume(index);
         if (onionCostume.dataFormat === "svg") {
@@ -10113,9 +10435,8 @@ __webpack_require__.r(__webpack_exports__);
     return el;
   };
   const createButton = function createButton() {
-    let {
-      useButtonTag
-    } = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    let _ref5 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      useButtonTag = _ref5.useButtonTag;
     const el = document.createElement(useButtonTag ? "button" : "span");
     el.className = "sa-onion-button";
     el.setAttribute("role", "button");
@@ -10381,9 +10702,7 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
+  let addon = _ref.addon;
   // Wait until the paint editor is loaded
   await addon.tab.traps.getPaper();
   const defaultBrush = 10;
@@ -10474,6 +10793,12 @@ const resources = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 // Gradient Maker Addon
 // By: SharkPool
 /* harmony default export */ __webpack_exports__["default"] = (async function () {
@@ -10504,7 +10829,10 @@ __webpack_require__.r(__webpack_exports__);
       const name = child.classList.toString();
       if (classes[name] === undefined) classes[name] = 1;else classes[name] = 0;
     }
-    for (const [cls, count] of Object.entries(classes)) {
+    for (const _ref of Object.entries(classes)) {
+      var _ref2 = _slicedToArray(_ref, 2);
+      const cls = _ref2[0];
+      const count = _ref2[1];
       if (count) selectedClassName = cls;else unselectedClassName = cls;
     }
   }
@@ -10575,11 +10903,9 @@ __webpack_require__.r(__webpack_exports__);
     if (swatch) swatch.style.background = encodeGradHTML(settings);
   }
   function paperGrad2CSS(paperGrad) {
-    const {
-      gradient,
-      origin,
-      destination
-    } = paperGrad;
+    const gradient = paperGrad.gradient,
+      origin = paperGrad.origin,
+      destination = paperGrad.destination;
     if (!gradient || !origin || !destination) return null;
     const stops = gradient.stops.map(s => "".concat(s.color.toCSS(true), " ").concat(Math.round(s.offset * 100), "%"));
     if (gradient.radial) return "radial-gradient(circle, ".concat(stops.join(", "), ")");else return "linear-gradient(".concat(position2Angle(destination, origin), "deg, ").concat(stops.join(", "), ")");
@@ -10593,11 +10919,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   }
   function decodeSelectedGrad(item, draggableDiv, settingsDiv) {
-    const {
-      gradient,
-      origin,
-      destination
-    } = extractGradient(item[modalStorage.path]);
+    const _extractGradient = extractGradient(item[modalStorage.path]),
+      gradient = _extractGradient.gradient,
+      origin = _extractGradient.origin,
+      destination = _extractGradient.destination;
     if (!gradient || !origin || !destination) return draggableDiv.append(createDraggable(), createDraggable());
 
     // create draggables
@@ -10751,12 +11076,15 @@ __webpack_require__.r(__webpack_exports__);
 
   /* GUI Utils */
   function getButtonURI(name, dontCompile) {
-    const themeHex = isPM ? "#3835ff" : document.documentElement.style.getPropertyValue("--looks-secondary") || "#ff4c4c";
+    const themeHex = isPM ? "#00c3ff" : document.documentElement.style.getPropertyValue("--looks-secondary") || "#ff4c4c";
     const guiSVG = guiIMGS[name].replace("red", themeHex);
     if (dontCompile) return guiSVG;else return "data:image/svg+xml;base64," + btoa(guiSVG);
   }
   function showSelectedGrad(item) {
-    const [fillSwatch, outlineSwatch] = document.querySelectorAll("div[class^=color-button_color-button_] div[class^=color-button_color-button-swatch_]");
+    const _document$querySelect = document.querySelectorAll("div[class^=color-button_color-button_] div[class^=color-button_color-button-swatch_]"),
+      _document$querySelect2 = _slicedToArray(_document$querySelect, 2),
+      fillSwatch = _document$querySelect2[0],
+      outlineSwatch = _document$querySelect2[1];
     const outCSSGrad = paperGrad2CSS(extractGradient(item.strokeColor));
     if (outlineSwatch) {
       if (outCSSGrad) outlineSwatch.style.background = outCSSGrad;else if (!item.strokeColor || item.strokeWidth === 0) outlineSwatch.style.background = "#fff";
@@ -10769,11 +11097,9 @@ __webpack_require__.r(__webpack_exports__);
         fillSwatch.style.background = fillCSSGrad;
 
         // update cache
-        const {
-          gradient,
-          destination,
-          origin
-        } = fillGrad;
+        const gradient = fillGrad.gradient,
+          destination = fillGrad.destination,
+          origin = fillGrad.origin;
         modalStorage._gradCache = {
           gradient,
           settings: {
@@ -10946,7 +11272,7 @@ __webpack_require__.r(__webpack_exports__);
     div.append(createBtn, deleteBtn, title1, select, title2, dirBtn);
   }
   function genButtonTable(div) {
-    const themeHex = isPM ? "#3835ff" : document.documentElement.style.getPropertyValue("--looks-secondary") || "#ff4c4c";
+    const themeHex = isPM ? "#00c3ff" : document.documentElement.style.getPropertyValue("--looks-secondary") || "#ff4c4c";
     const btnStyle = "color: #fff; font-weight: 600; text-align: center; padding: 10px; margin: 10px 5px; border: solid 2px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15)); border-radius: 5px; background: ".concat(themeHex, "; transition: transform 0.2s;");
     const enterBtn = document.createElement("button");
     enterBtn.id = "enter";
@@ -10982,10 +11308,10 @@ __webpack_require__.r(__webpack_exports__);
     };
     const container = document.createElement("div");
     container.classList.add("SP-gradient-maker");
-    container.setAttribute("style", "position: absolute; z-index: 9999; pointer-events: auto; background-color: rgba(0,0,0,.1); width: 100%; height: 100vh;");
+    container.setAttribute("style", "position: absolute; z-index: 9999; pointer-events: auto; background-color: transparent; width: 100%; height: 100vh;");
     const modal = document.createElement("div");
     modal.classList.add("gradient-modal");
-    modal.setAttribute("style", "color: var(--paint-text-primary, #575e75); width: 450px; height: 260px; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--ui-secondary, hsla(215, 75%, 95%, 1)); border: solid 2px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15)); border-radius: 5px; padding: 15px;");
+    modal.setAttribute("style", "pointer-events: auto; color: var(--paint-text-primary, #575e75); width: 450px; height: 260px; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--ui-secondary, hsla(215, 75%, 95%, 1)); border: solid 2px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15)); border-radius: 5px; padding: 15px;");
     modalStorage.modal = modal;
     const title = document.createElement("span");
     title.setAttribute("style", "display: block; text-align: center; justify-content: center; border-bottom: solid 2px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15)); padding-bottom: 10px; margin: 0 25px 0 25px; font-weight: 600;\"");
@@ -11015,17 +11341,19 @@ __webpack_require__.r(__webpack_exports__);
     document.body.appendChild(container);
     if ((_paint$selectedItems = paint.selectedItems) !== null && _paint$selectedItems !== void 0 && _paint$selectedItems.length) decodeSelectedGrad(paint.selectedItems[0], draggables, settings);else if (oldCache) decodeFromCache(oldCache.settings, draggables, settings);else draggables.append(createDraggable(), createDraggable());
     updateDisplay();
+    container.addEventListener("click", e => {
+      if (e.target.getAttribute("class") === "SP-gradient-maker") container.remove();
+      e.stopPropagation();
+    });
   }
   function startListenerWorker() {
     let lastMode, lastSelected, lastModals;
     ReduxStore.subscribe(() => {
       const paint = ReduxStore.getState().scratchPaint;
       if (!paint || (paint === null || paint === void 0 ? void 0 : paint.format) === undefined || (paint === null || paint === void 0 ? void 0 : paint.format) === null) return;
-      const {
-        mode,
-        selectedItems,
-        modals
-      } = paint;
+      const mode = paint.mode,
+        selectedItems = paint.selectedItems,
+        modals = paint.modals;
 
       // no bitmap support :(
       if (paint.format.startsWith("BITMAP")) {
@@ -11120,9 +11448,7 @@ __webpack_require__.r(__webpack_exports__);
 // By: SharkPool
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
+  let addon = _ref.addon;
   let ogDrawSelected;
   let handleSize = 8,
     handleShape = "square";
@@ -11270,9 +11596,7 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
+  let addon = _ref.addon;
   // Wait until the paint editor is loaded
   await addon.tab.traps.getPaper();
   const updateToolbar = enabled => {
@@ -11393,11 +11717,11 @@ __webpack_require__.r(__webpack_exports__);
       params: "sy"
     }, "br", {
       title: "width",
-      input: "monitor",
+      input: "number",
       params: "width"
     }, {
       title: "height",
-      input: "monitor",
+      input: "number",
       params: "height"
     }, "br", {
       title: "Group Scaling",
@@ -11613,7 +11937,7 @@ __webpack_require__.r(__webpack_exports__);
 
   /* GUI Utils */
   function getButtonURI(name, dontCompile) {
-    const themeHex = isPM ? "#3835ff" : document.documentElement.style.getPropertyValue("--looks-secondary") || "#ff4c4c";
+    const themeHex = isPM ? "#2D2DD2" : document.documentElement.style.getPropertyValue("--looks-secondary") || "#ff4c4c";
     const guiSVG = guiIMGS[name].replaceAll("red", themeHex);
     if (dontCompile) return guiSVG;else return "data:image/svg+xml;base64," + btoa(guiSVG);
   }
@@ -11752,7 +12076,7 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   }
   function getToolFunc(name) {
-    const isX = name.endsWith("x");
+    const isX = name.endsWith("x") || name.endsWith("width");
     switch (name) {
       case "Position/x":
       case "Position/y":
@@ -11780,6 +12104,18 @@ __webpack_require__.r(__webpack_exports__);
             value /= item[panelTag].sy;
             item[panelTag].sy *= value;
           }
+          scaleItem(item, value, isX, modalStorage["groupScale"], modalStorage["strokeScale"]);
+        };
+      case "Scaling/width":
+      case "Scaling/height":
+        return (item, value) => {
+          if (!item[panelTag]) item[panelTag] = structuredClone(valueObserverObj);
+          const currentScale = item.getBounds()[isX ? "width" : "height"];
+
+          // determine the delta needed to move the currentScale to value
+          value = value * 2 / currentScale;
+          if (!value) value = epsilon;
+          if (isX) item[panelTag].sx *= value;else item[panelTag].sy *= value;
           scaleItem(item, value, isX, modalStorage["groupScale"], modalStorage["strokeScale"]);
         };
       case "Skewing/x":
@@ -11944,11 +12280,7 @@ __webpack_require__.r(__webpack_exports__);
     modalStorage.sessionStore = {};
     const modal = document.createElement("div");
     modal.classList.add("costume-tool-modal");
-
-    // Check if dark mode
-    const isDarkMode = document.body.getAttribute('theme') === 'dark';
-    const backgroundColor = isDarkMode ? "rgba(40, 40, 40, 0.72)" : "rgba(239, 241, 245, 0.72)";
-    modal.setAttribute("style", "color: var(--paint-text-primary, #575e75); width: 275px; height: 350px; z-index: 99999; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: ".concat(backgroundColor, "; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: solid 2px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15)); border-radius: 5px; padding: 15px;"));
+    modal.setAttribute("style", "color: var(--paint-text-primary, #575e75); width: 275px; height: 350px; z-index: 99999; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--ui-secondary, hsla(215, 75%, 95%, 1)); border: solid 2px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15)); border-radius: 5px; padding: 15px;");
     modal.id = "draggable";
     const title = document.createElement("span");
     title.setAttribute("style", "display: block; text-align: center; justify-content: center; border-bottom: solid 2px var(--ui-black-transparent, hsla(0, 0%, 0%, 0.15)); padding-bottom: 10px; margin: 0 25px 0 25px; font-weight: 600;");
@@ -11974,7 +12306,7 @@ __webpack_require__.r(__webpack_exports__);
     });
     const toolDisplay = document.createElement("div");
     toolDisplay.id = "tool-display";
-    toolDisplay.setAttribute("style", "display: block; overflow-y: scroll; width: auto; height: 300px; margin-top: 15px; background: var(--ui-white); border: solid 2px grey; border-radius: 5px;");
+    toolDisplay.setAttribute("style", "display: block; overflow-y: scroll;width: auto;height: 300px; margin-top: 15px;background: var(--ui-white);border: solid 2px grey;border-radius: 5px;");
     modalStorage.toolDiv = toolDisplay;
     generateToolDisplay();
     modal.append(title, closeBtn, toolDisplay);
@@ -12100,11 +12432,9 @@ function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    msg,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    msg = _ref.msg,
+    console = _ref.console;
   const brand = Symbol();
   const setIsPicking = picking => document.body.classList.toggle("sa-stage-color-picker-picking", picking);
 
@@ -12207,10 +12537,12 @@ const resources = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "modifiedCreateAllInputs", function() { return modifiedCreateAllInputs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "modifiedUpdateDeclarationProcCode", function() { return modifiedUpdateDeclarationProcCode; });
-// https://github.com/scratchfoundation/scratch-blocks/blob/f210e042988b91bcdc2abeca7a2d85e178edadb2/blocks_vertical/procedures.js#L205
+// https://github.com/PenguinMod/PenguinMod-Blocks/blob/a92e9599ad2820ddda8b668a1d254931537be43e/blocks_vertical/procedures.js#L293
 function modifiedCreateAllInputs(connectionMap) {
+  this.createIcon_();
+
   // Split the proc into components, by %n, %b, %s and %l (ignoring escaped).
-  var procComponents = this.procCode_.split(/(?=[^\\]%[nbsl])/);
+  var procComponents = this.procCode_.split(/(?=[^\\]%[nbslc])/);
   procComponents = procComponents.map(function (c) {
     return c.trim(); // Strip whitespace.
   });
@@ -12219,17 +12551,23 @@ function modifiedCreateAllInputs(connectionMap) {
   var argumentCount = 0;
   for (var i = 0, component; component = procComponents[i]; i++) {
     var labelText;
+    var argumentType = component.substring(1, 2);
+    var id = this.argumentIds_[argumentCount];
     // Don't treat %l as an argument
-    if (component.substring(0, 1) == "%" && component.substring(1, 2) !== "l") {
-      var argumentType = component.substring(1, 2);
+    if (component.substring(0, 1) == '%' && ['n', 's', 'b', 'c'].includes(argumentType) && id) {
+      /*
       if (!(argumentType == "n" || argumentType == "b" || argumentType == "s")) {
         throw new Error("Found an custom procedure with an invalid type: " + argumentType);
       }
+      */
       labelText = component.substring(2).trim();
-      var id = this.argumentIds_[argumentCount];
-      var input = this.appendValueInput(id);
-      if (argumentType == "b") {
-        input.setCheck("Boolean");
+      if (argumentType == 'c') {
+        var input = this.appendStatementInput(id);
+      } else {
+        var input = this.appendValueInput(id);
+      }
+      if (argumentType == 'b') {
+        input.setCheck('Boolean');
       }
       this.populateArgument_(argumentType, argumentCount, connectionMap, id, input);
       argumentCount++;
@@ -12243,7 +12581,7 @@ function modifiedCreateAllInputs(connectionMap) {
   this.procCode_ = this.procCode_.replace(/%l /g, "");
 }
 
-//https://github.com/scratchfoundation/scratch-blocks/blob/f210e042988b91bcdc2abeca7a2d85e178edadb2/blocks_vertical/procedures.js#L565
+//https://github.com/PenguinMod/PenguinMod-Blocks/blob/a92e9599ad2820ddda8b668a1d254931537be43e/blocks_vertical/procedures.js#L716
 function modifiedUpdateDeclarationProcCode() {
   let prefixLabels = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
   this.procCode_ = "";
@@ -12257,16 +12595,22 @@ function modifiedUpdateDeclarationProcCode() {
     if (input.type == 5) {
       // replaced Blocky.DUMMY_VALUE with 5
       this.procCode_ += (prefixLabels ? "%l " : "") + input.fieldRow[0].getValue(); // modified to prepend %l delimiter, which prevents label merging
-    } else if (input.type == 1) {
-      // replaced Blocky.INPUT_VALUE with 1
+    } else if (input.type == 1 || input.type == 3) {
+      // replaced Blocky.INPUT_VALUE with 1 and Blockly.NEXT_STATEMENT with 3
       // Inspect the argument editor.
       var target = input.connection.targetBlock();
-      this.displayNames_.push(target.getFieldValue("TEXT"));
+      this.displayNames_.push(target.getFieldValue('TEXT'));
       this.argumentIds_.push(input.name);
-      if (target.type == "argument_editor_boolean") {
-        this.procCode_ += "%b";
-      } else {
-        this.procCode_ += "%s";
+      switch (target.type) {
+        case 'argument_editor_string_number':
+          this.procCode_ += '%s';
+          break;
+        case 'argument_editor_boolean':
+          this.procCode_ += '%b';
+          break;
+        case 'argument_editor_command':
+          this.procCode_ += "%c";
+          break;
       }
     } else {
       throw new Error("Unexpected input type on a procedure mutator root: " + input.type);
@@ -12286,12 +12630,16 @@ function modifiedUpdateDeclarationProcCode() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modified_funcs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modified-funcs.js */ "./src/addons/addons/reorder-custom-inputs/modified-funcs.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   function createArrow(direction, callback) {
     const path = direction === "left" ? "M 17 13 L 9 21 L 17 30" : "M 9 13 L 17 21 L 9 30";
     Blockly.WidgetDiv.DIV.insertAdjacentHTML("beforeend", "\n            <svg width=\"20px\" height=\"40px\" \n                 style=\"left: ".concat(direction === "left" ? "calc(50% - 20px)" : "calc(50% + 20px)", "\" \n                 class=\"blocklyTextShiftArrow\">\n                <path d=\"").concat(path, "\" fill=\"none\" stroke=\"#FF661A\" stroke-width=\"2\"></path>\n            </svg>"));
@@ -12304,19 +12652,20 @@ __webpack_require__.r(__webpack_exports__);
     if (this.inputList.length === 1) {
       return;
     }
+    const cannotRemove = i => i == 0 && this.inputList[1].type == Blockly.NEXT_STATEMENT;
     var inputNameToRemove = null;
     for (var n = 0; n < this.inputList.length; n++) {
       var input = this.inputList[n];
       if (input.connection) {
         var target = input.connection.targetBlock();
         if (target.getField(field.name) == field) {
+          if (cannotRemove(n)) return;
           inputNameToRemove = input.name;
         }
       } else {
-        for (var j = 0; j < input.fieldRow.length; j++) {
-          if (input.fieldRow[j] == field) {
-            inputNameToRemove = input.name;
-          }
+        if (input.fieldRow[0] == field) {
+          if (cannotRemove(n)) return;
+          inputNameToRemove = input.name;
         }
       }
     }
@@ -12350,8 +12699,11 @@ __webpack_require__.r(__webpack_exports__);
     };
   }
   function getFieldInputNameAndIndex(field, inputList) {
-    for (const [i, input] of inputList.entries()) {
+    for (const _ref2 of inputList.entries()) {
       var _input$connection$tar;
+      var _ref3 = _slicedToArray(_ref2, 2);
+      const i = _ref3[0];
+      const input = _ref3[1];
       const isTargetField = input.connection ? ((_input$connection$tar = input.connection.targetBlock()) === null || _input$connection$tar === void 0 ? void 0 : _input$connection$tar.getField(field.name)) === field : input.fieldRow.includes(field);
       if (isTargetField) {
         return {
@@ -12368,7 +12720,11 @@ __webpack_require__.r(__webpack_exports__);
     if (!(inputNameToShift && newPosition >= 0 && newPosition <= initialInputListLength)) {
       return false;
     }
+    const original = procedureBlock.inputList.find(input => input.name === inputNameToShift);
     const originalPosition = procedureBlock.inputList.findIndex(input => input.name === inputNameToShift);
+    if (newPosition == 0 && original.type === 3 /*Blockly.NEXT_STATEMENT*/ || originalPosition == 0 && procedureBlock.inputList[newPosition].type === 3 /*Blockly.NEXT_STATEMENT*/) {
+      return false;
+    }
     const itemToMove = procedureBlock.inputList.splice(originalPosition, 1)[0];
     procedureBlock.inputList.splice(newPosition, 0, itemToMove);
     Blockly.Events.disable();
@@ -12394,10 +12750,9 @@ __webpack_require__.r(__webpack_exports__);
 
     // if inputList length is 1 there's nowhere to shift the input so we can simply return
     if (proc.inputList.length <= 1) return;
-    const {
-      name,
-      index
-    } = getFieldInputNameAndIndex(field, proc.inputList);
+    const _getFieldInputNameAnd = getFieldInputNameAndIndex(field, proc.inputList),
+      name = _getFieldInputNameAnd.name,
+      index = _getFieldInputNameAnd.index;
     const newPosition = direction === "left" ? index - 1 : index + 1;
     shiftInput(proc, name, newPosition);
   }
@@ -12417,7 +12772,10 @@ __webpack_require__.r(__webpack_exports__);
     procedureDeclaration.createAllInputs_ = originalCreateAllInputs;
     procedureDeclaration.onChangeFn = originalUpdateDeclarationProcCode;
     procedureDeclaration.removeFieldCallback = originalRemoveFieldCallback;
-    for (const [inputFnName, originalFn] of Object.entries(originalAddFns)) {
+    for (const _ref4 of Object.entries(originalAddFns)) {
+      var _ref5 = _slicedToArray(_ref4, 2);
+      const inputFnName = _ref5[0];
+      const originalFn = _ref5[1];
       procedureDeclaration[inputFnName] = originalFn;
     }
   }
@@ -12582,7 +12940,7 @@ __webpack_require__.r(__webpack_exports__);
       e.stopPropagation();
     });
     const searchBtn = document.createElement("button");
-    searchBtn.setAttribute("style", "border: none; border-radius: 5px; padding: 10px 20px; margin: 10px 0 0; background: rgb(98, 0, 255); cursor: pointer; font-weight: 600; font-size: 0.85rem; color: white;");
+    searchBtn.setAttribute("style", "border: none; border-radius: 5px; padding: 10px 20px; margin: 10px 0 0; background: hsla(194, 100%, 50%, 1); cursor: pointer; font-weight: 600; font-size: 0.85rem; color: white;");
     searchBtn.textContent = "Search";
     searchBtn.addEventListener("click", async e => {
       var _htmlText$match, _htmlText$match2, _htmlText$match3;
@@ -12720,9 +13078,7 @@ __webpack_require__.r(__webpack_exports__);
 // Toolbox Category Drag
 // By: SharkPool
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
+  let addon = _ref.addon;
   // wait for scratchblocks to be defined
   await addon.tab.traps.getBlockly();
   const COMMENT_TRAPPER_ID = "--Category_Order_ADDON-config";
@@ -12789,7 +13145,15 @@ __webpack_require__.r(__webpack_exports__);
       try {
         categoryOrdering = JSON.parse(storedOrder);
         setTimeout(forceRefreshToolbox, 100);
-      } catch (_unused) {}
+      } catch (_unused) {
+        // Blockly might not be availiable, wait until it is
+        vm.once("workspaceUpdate", () => {
+          try {
+            categoryOrdering = JSON.parse(storedOrder);
+            setTimeout(forceRefreshToolbox, 100);
+          } catch (_unused2) {}
+        });
+      }
     }
   });
   function findOrderingComment(optParse) {
@@ -12839,7 +13203,7 @@ __webpack_require__.r(__webpack_exports__);
     toolbox.populate_(workspace.options.languageTree);
     toolbox.position();
   }
-  function initDragDroper(clickEvent) {
+  function initDragDroper(clickEvent, blocklyToolboxDiv) {
     const draggedCat = clickEvent.target.closest("div[class=\"scratchCategoryMenuRow\"]");
     if (!draggedCat) return;
     const categoryList = blocklyToolboxDiv.querySelectorAll("div[class*=\"scratchCategoryMenuRow\"]");
@@ -12921,18 +13285,30 @@ __webpack_require__.r(__webpack_exports__);
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
   }
-
-  /* Check for Long (500ms) Presses to not confuse with Selecting Categories */
-  const blocklyToolboxDiv = document.querySelector("div[class*=\"blocklyToolboxDiv\"");
-  blocklyToolboxDiv.addEventListener("mousedown", e => {
-    const longPressTimer = setTimeout(() => initDragDroper(e), 500);
-    const cancel = () => clearTimeout(longPressTimer);
-    document.addEventListener("mouseup", cancel, {
-      once: true
+  function activateBlocklyListener() {
+    /* Check for Long (500ms) Presses to not confuse with Selecting Categories */
+    const blocklyToolboxDiv = document.querySelector("div[class*=\"blocklyToolboxDiv\"");
+    if (!blocklyToolboxDiv) return;
+    blocklyToolboxDiv.addEventListener("mousedown", e => {
+      const longPressTimer = setTimeout(() => initDragDroper(e, blocklyToolboxDiv), 500);
+      const cancel = () => clearTimeout(longPressTimer);
+      document.addEventListener("mouseup", cancel, {
+        once: true
+      });
+      document.addEventListener("mouseleave", cancel, {
+        once: true
+      });
     });
-    document.addEventListener("mouseleave", cancel, {
-      once: true
-    });
+  }
+  let wasInEditor, inEditor;
+  ReduxStore.subscribe(() => {
+    const state = ReduxStore.getState().scratchGui;
+    wasInEditor = inEditor;
+    inEditor = !state.mode.isPlayerOnly;
+    if (inEditor && !wasInEditor) {
+      wasInEditor = inEditor;
+      queueMicrotask(activateBlocklyListener);
+    }
   });
 });
 
@@ -12987,9 +13363,7 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
+  let addon = _ref.addon;
   let chunkSize = addon.settings.get("quality");
   const updateChunkSize = () => {
     ReduxStore.dispatch({
@@ -13021,13 +13395,24 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHexRegex", function() { return getHexRegex; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalizeHex", function() { return normalizeHex; });
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 const getHexRegex = () => /^#?[0-9a-fA-F]{3,8}$/;
 const normalizeHex = input => {
   let hex = String(input);
   if (!getHexRegex().test(hex)) return "#000000";
   if (!hex.startsWith("#")) hex = "#".concat(hex);
   if (hex.length === 4) {
-    const [_, r, g, b] = hex;
+    const _hex = hex,
+      _hex2 = _slicedToArray(_hex, 4),
+      _ = _hex2[0],
+      r = _hex2[1],
+      g = _hex2[2],
+      b = _hex2[3];
     hex = "#".concat(r).concat(r).concat(g).concat(g).concat(b).concat(b);
   }
   return hex.toLowerCase();

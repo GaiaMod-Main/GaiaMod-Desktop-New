@@ -50,43 +50,43 @@ jobs:
           
           echo "Downloading ${{ matrix.arch.name }} AppImage for version ${{ github.event.inputs.version }}..."
           
-          APPIMAGE_NAME="ArkIDE-${{ github.event.inputs.version }}${{ matrix.arch.appimage-suffix }}.AppImage"
+          APPIMAGE_NAME="GaiaMod-${{ github.event.inputs.version }}${{ matrix.arch.appimage-suffix }}.AppImage"
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
           
           echo "Attempting to download from: ${DOWNLOAD_URL}"
           
-          if ! wget "${DOWNLOAD_URL}" -O arkide.AppImage; then
+          if ! wget "${DOWNLOAD_URL}" -O gaiamod.AppImage; then
             echo "Failed to download AppImage. Checking available assets..."
             gh release view "v${{ github.event.inputs.version }}" --json assets -q '.assets[].name'
             exit 1
           fi
           
           echo "AppImage downloaded successfully!"
-          ls -lh arkide.AppImage
+          ls -lh gaiamod.AppImage
           
           echo "Extracting AppImage..."
-          chmod +x arkide.AppImage
+          chmod +x gaiamod.AppImage
           
           if [ "${{ matrix.arch.name }}" = "x86_64" ]; then
             # For x86_64, we can run it directly
-            ./arkide.AppImage --appimage-extract
+            ./gaiamod.AppImage --appimage-extract
           else
             # For ARM64, extract manually without execution
             echo "Extracting ARM64 AppImage manually..."
             
             # Find the ELF offset where squashfs starts
             # Look for the squashfs magic bytes (hsqs or sqsh)
-            OFFSET=$(LC_ALL=C grep -aboP '\x68\x73\x71\x73|\x73\x71\x73\x68' arkide.AppImage | head -n1 | cut -d: -f1)
+            OFFSET=$(LC_ALL=C grep -aboP '\x68\x73\x71\x73|\x73\x71\x73\x68' gaiamod.AppImage | head -n1 | cut -d: -f1)
             
             if [ -z "$OFFSET" ]; then
               echo "Could not find squashfs magic, trying alternative method..."
               # Try using binwalk-like approach - look for common offset
-              OFFSET=$(strings arkide.AppImage | grep -a "^[0-9]*$" | head -n1)
+              OFFSET=$(strings gaiamod.AppImage | grep -a "^[0-9]*$" | head -n1)
               
               if [ -z "$OFFSET" ]; then
                 echo "Trying to extract entire AppImage as squashfs..."
                 # Last resort: use unsquashfs with scan
-                unsquashfs -dest squashfs-root arkide.AppImage 2>/dev/null || {
+                unsquashfs -dest squashfs-root gaiamod.AppImage 2>/dev/null || {
                   echo "ERROR: Could not extract AppImage"
                   exit 1
                 }
@@ -95,9 +95,9 @@ jobs:
             
             if [ -n "$OFFSET" ] && [ ! -d "squashfs-root" ]; then
               echo "Found squashfs at offset: $OFFSET"
-              dd if=arkide.AppImage of=arkide.squashfs bs=1 skip=$OFFSET 2>/dev/null
-              unsquashfs -dest squashfs-root arkide.squashfs
-              rm -f arkide.squashfs
+              dd if=gaiamod.AppImage of=gaiamod.squashfs bs=1 skip=$OFFSET 2>/dev/null
+              unsquashfs -dest squashfs-root gaiamod.squashfs
+              rm -f gaiamod.squashfs
             fi
           fi
           
@@ -108,15 +108,15 @@ jobs:
           
           echo "Moving contents..."
           mv squashfs-root/* .
-          rm -rf squashfs-root arkide.AppImage
+          rm -rf squashfs-root gaiamod.AppImage
           
-          if [ ! -f "ark-ide" ]; then
-            echo "ERROR: ark-ide executable not found!"
+          if [ ! -f "gaiamod" ]; then
+            echo "ERROR: gaiamod executable not found!"
             ls -la
             exit 1
           fi
           
-          chmod +x ark-ide
+          chmod +x gaiamod
           echo "Build input prepared successfully for ${{ matrix.arch.name }}!"
           ls -la | head -20
         env:
@@ -166,7 +166,7 @@ jobs:
       - name: Build Flatpak for ${{ matrix.arch.name }}
         run: |
           echo "Building Flatpak for ${{ matrix.arch.name }}..."
-          flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} build-dir .flatpak/com.arkide.desktop.json
+          flatpak-builder --user --force-clean --repo=gh-pages/repo --arch=${{ matrix.arch.name }} build-dir .flatpak/com.gaiamod.desktop.json
           
           echo "Flatpak built for ${{ matrix.arch.name }} and added to repository!"
       
@@ -189,13 +189,13 @@ jobs:
         run: |
           OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
           
-          cat > gh-pages/arkide.flatpakrepo <<EOF
+          cat > gh-pages/gaiamod.flatpakrepo <<EOF
           [Flatpak Repo]
-          Title=ArkIDE Repository
+          Title=GaiaMod Repository
           Url=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
           Homepage=https://github.com/${{ github.repository }}
-          Comment=Official ArkIDE Flatpak repository (x86_64 and ARM64)
-          Description=Install ArkIDE directly from our repository
+          Comment=Official GaiaMod Flatpak repository (x86_64 and ARM64)
+          Description=Install GaiaMod directly from our repository
           Icon=https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/icon.png
           GPGVerify=false
           EOF
@@ -210,7 +210,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>ArkIDE Flatpak Repository</title>
+              <title>GaiaMod Flatpak Repository</title>
               <style>
                   body {
                       font-family: system-ui, -apple-system, sans-serif;
@@ -263,8 +263,8 @@ jobs:
               </style>
           </head>
           <body>
-              <h1>🚀 ArkIDE Flatpak Repository</h1>
-              <p>Install ArkIDE directly from our official Flatpak repository.</p>
+              <h1>🚀 GaiaMod Flatpak Repository</h1>
+              <p>Install GaiaMod directly from our official Flatpak repository.</p>
               
               <div class="info">
                   <strong>✨ Multi-Architecture Support:</strong> Available for x86_64 and ARM64 (aarch64) systems!
@@ -276,27 +276,27 @@ jobs:
               
               <h2>Quick Install (Recommended)</h2>
               <p>Add the repository and install in one command:</p>
-              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
-          flatpak install --user arkide com.arkide.desktop</code></pre>
+              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify gaiamod https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo
+          flatpak install --user gaiamod com.gaiamod.desktop</code></pre>
               
               <p><em>Flatpak will automatically install the correct version for your architecture (x86_64 or ARM64).</em></p>
               
               <h2>Alternative: Use .flatpakrepo file</h2>
-              <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/arkide.flatpakrepo</code></pre>
+              <pre><code>flatpak install --user https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/gaiamod.flatpakrepo</code></pre>
               
-              <h2>Run ArkIDE</h2>
-              <pre><code>flatpak run com.arkide.desktop</code></pre>
+              <h2>Run GaiaMod</h2>
+              <pre><code>flatpak run com.gaiamod.desktop</code></pre>
               
               <h2>Update</h2>
               <p>Get the latest version:</p>
-              <pre><code>flatpak update com.arkide.desktop</code></pre>
+              <pre><code>flatpak update com.gaiamod.desktop</code></pre>
               
               <h2>Uninstall</h2>
-              <pre><code>flatpak uninstall com.arkide.desktop
-          flatpak remote-delete arkide</code></pre>
+              <pre><code>flatpak uninstall com.gaiamod.desktop
+          flatpak remote-delete gaiamod</code></pre>
               
               <div style="margin-top: 40px;">
-                  <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
+                  <a href="gaiamod.flatpakrepo" class="button">Download .flatpakrepo file</a>
                   <a href="https://github.com/${{ github.repository }}" class="button">View on GitHub</a>
               </div>
               
@@ -308,10 +308,10 @@ jobs:
               
               <h2>Manual Installation Steps</h2>
               <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
-              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo</code></pre>
+              <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify gaiamod https://${OWNER_LOWER}.github.io/${{ github.event.repository.name }}/repo</code></pre>
               
-              <p><strong>Step 2:</strong> Install ArkIDE</p>
-              <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
+              <p><strong>Step 2:</strong> Install GaiaMod</p>
+              <pre><code>flatpak install --user gaiamod com.gaiamod.desktop</code></pre>
           </body>
           </html>
           EOF
@@ -335,12 +335,12 @@ jobs:
       
       - name: Create bundle as backup
         run: |
-          flatpak build-bundle gh-pages/repo com.arkide.desktop-${{ matrix.arch.name }}.flatpak com.arkide.desktop --arch=${{ matrix.arch.name }}
+          flatpak build-bundle gh-pages/repo com.gaiamod.desktop-${{ matrix.arch.name }}.flatpak com.gaiamod.desktop --arch=${{ matrix.arch.name }}
       
       - name: Upload to Release
         uses: softprops/action-gh-release@v1
         with:
-          files: com.arkide.desktop-${{ matrix.arch.name }}.flatpak
+          files: com.gaiamod.desktop-${{ matrix.arch.name }}.flatpak
           tag_name: v${{ github.event.inputs.version }}
           fail_on_unmatched_files: true
         env:

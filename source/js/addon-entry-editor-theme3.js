@@ -121,6 +121,12 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libraries_common_cs_text_color_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../libraries/common/cs/text-color.esm.js */ "./src/addons/libraries/common/cs/text-color.esm.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 const dataUriRegex = new RegExp("^data:image/svg\\+xml;base64,([A-Za-z0-9+/=]*)$");
 const extensionsCategory = {
@@ -179,10 +185,8 @@ const categories = [{
   colorId: "more"
 }, extensionsCategory, twCategory, saCategory];
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   const Blockly = await addon.tab.traps.getBlockly();
   const originalColors = JSON.parse(JSON.stringify(Blockly.Colours));
   originalColors.sa = {
@@ -264,6 +268,7 @@ const categories = [{
     return tertiaryColor(category);
   };
   const textColor = field => {
+    if (field.sourceBlock_.textColour) return field.sourceBlock_.textColour;
     if (addon.self.disabled || textMode() === "white") return "#ffffff";
     if (textMode() === "black") return "#000000";
     if (field) return field.sourceBlock_.getColourTertiary();
@@ -430,12 +435,15 @@ const categories = [{
     for (const category of categories) {
       // CSS variables are used for compatibility with other addons
       const prefix = "--editorTheme3-".concat(category.colorId);
-      for (const [name, value] of Object.entries({
+      for (const _ref2 of Object.entries({
         primary: primaryColor(category),
         secondary: secondaryColor(category),
         tertiary: tertiaryColor(category),
         field: fieldBackground(category)
       })) {
+        var _ref3 = _slicedToArray(_ref2, 2);
+        const name = _ref3[0];
+        const value = _ref3[1];
         document.documentElement.style.setProperty("".concat(prefix, "-").concat(name), value);
       }
 

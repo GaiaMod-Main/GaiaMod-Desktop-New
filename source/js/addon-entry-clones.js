@@ -107,11 +107,9 @@ module.exports = __webpack_require__.p + "static/assets/8a30520407ffdf5b0e7e06e4
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   const vm = addon.tab.traps.vm;
   let showIconOnly = addon.settings.get("showicononly");
   if (addon.tab.redux.state && addon.tab.redux.state.scratchGui.stageSize.stageSize === "small") {
@@ -167,28 +165,10 @@ __webpack_require__.r(__webpack_exports__);
     showIconOnly = addon.settings.get("showicononly");
     doCloneChecks(true);
   });
-  const oldStep = vm.runtime._step;
-  vm.runtime._step = function () {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    const ret = oldStep.call(this, ...args);
-    doCloneChecks();
-    return ret;
-  };
-
-  /*
-  if (addon.self.enabledLate) {
-    // Clone count might be inaccurate if the user deleted sprites
-    // before enabling the addon
-    let count = 0;
-    for (let target of vm.runtime.targets) {
-      if (!target.isOriginal) ++count;
-    }
-    vm.runtime._cloneCounter = count;
-  }
-  */
-
+  vm.runtime.on("targetWasCreated", (_, originalTarget) => {
+    if (originalTarget) doCloneChecks();
+  });
+  vm.runtime.on("targetWasRemoved", doCloneChecks);
   while (true) {
     await addon.tab.waitForElement('[class*="controls_controls-container"]', {
       markAsSeen: true,

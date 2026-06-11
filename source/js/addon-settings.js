@@ -149,79 +149,17 @@ var GUI =
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/playground/addon-settings.jsx","vendors~addon-settings~credits~editor~embed~fullscreen~player~playground","addon-settings~addons~editor~fullscreen~player~playground"]);
+/******/ 	deferredModules.push(["./src/playground/addon-settings.jsx","vendors~addon-settings~credits~editor~embed~fullscreen~player~playground","vendors~addon-settings~editor~embed~fullscreen~player~playground","addon-settings~addons~editor~fullscreen~player~playground"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/classnames/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/classnames/index.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if ( true && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return classNames;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-}());
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/addons/settings/settings.css":
-/*!*************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/addons/settings/settings.css ***!
-  \*************************************************************************************************************************/
+/***/ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/addons/settings/settings.css":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/cache-loader/dist/cjs.js??ref--5-1!./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/src??postcss!./src/addons/settings/settings.css ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -231,127 +169,190 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/**\n * Copyright (C) 2021 Thomas Weber\n *\n * This program is free software: you can redistribute it and/or modify\n * it under the terms of the GNU General Public License version 3 as\n * published by the Free Software Foundation.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n * GNU General Public License for more details.\n *\n * You should have received a copy of the GNU General Public License\n * along with this program.  If not, see <https://www.gnu.org/licenses/>.\n */\n\n/* #5100ff */\n\n/* lighter version of #5100ff */\n\n/* even lighter version */\n\n/* 90% transparent version of motion-primary */\n\n/* #FFFFFF */\n\n/* #575E75 */\n\n/* #5100ff */\n\n/* darker version */\n\n/* 35% transparent version of motion-primary */\n\n/* 15% transparent version */\n\n/* keep this as-is (used for dark mode contrast) */\n\n/* #5100ff */\n\n/* #3d00c7 */\n\n/* #CF63CF */\n\n/* #BD42BD */\n\n/* #FFAB19 */\n\n/* #FF8C1A */\n\n/* #0FBD8C */\n\n/* #0FBD8C */\n\n/* #FF8C1A */\n\n/* #FFB366 */\n\n/* #FF8C1A */\n\n/* #5100ff */\n\n/* darker version */\n\n/* 35% transparent */\n\n/* opaque version for white bg */\n\n/* lighter highlight of #5100ff */\n\nbody {\n    background-color: white;\n    color: black;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    margin: 0;\n}\n\nbody[theme=\"dark\"] {\n    background-color: #222222;\n    color: white;\n    color-scheme: dark;\n}\n\na[href] {\n    color: #2a67eb;\n    text-decoration: underline;\n}\n\n[theme=\"dark\"] a[href] {\n    color: #6d9bff;\n}\n\na:active, a:focus {\n    outline: none;\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n}\n\n.settings_container_1qNQ3 {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    overflow: hidden;\n}\n\n.settings_section_31t4Q {\n    max-width: 1280px;\n    margin: auto;\n}\n\n.settings_header_Y9USz {\n    position: relative;\n    padding: 8px 20px;\n    background-color: #fcfcfc;\n    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n}\n\n[theme=\"dark\"] .settings_header_Y9USz {\n    background-color: #222222;\n}\n\n@media (max-width: 700px) {\n    .settings_header_Y9USz {\n        padding-left: 5px;\n        padding-right: 5px;\n    }\n}\n\n.settings_header_Y9USz .settings_section_31t4Q {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.settings_button_2ovv0 {\n    color: #000;\n    background: #efefef;\n    border: 1px solid #acacac;\n    padding: 8px 12px;\n    border-radius: 4px;\n    outline: none;\n    height: 32px;\n    font-family: inherit;\n    font-size: 14px;\n    transition: 0.25s ease;\n    transition-property: background;\n    display: flex;\n    align-items: center;\n}\n\n[theme=\"dark\"] .settings_button_2ovv0 {\n    color: #fff;\n    background: #222222;\n    border-color: #000;\n}\n\n.settings_button_2ovv0:hover {\n    background: #aaaaaa;\n}\n\n[theme=\"dark\"] .settings_button_2ovv0:hover {\n    background: #151515;\n}\n\n.settings_button_2ovv0:active, .settings_button_2ovv0:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n}\n\n.settings_search-container_24OhB {\n    display: flex;\n    background-color: #f0f0f0;\n    color: #222;\n    border: 1px solid #cecece;\n    border-radius: 4px;\n}\n\n.settings_search-container_24OhB:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n}\n\n.settings_search-input_9LNCl {\n    color: inherit;\n    width: 150px;\n    height: 16px;\n    padding: 10px 0 10px 15px;\n    border: none;\n    outline: none;\n    background-color: transparent;\n    font-size: 14px;\n}\n\n/* legacy edge */\n\n.settings_search-input_9LNCl::-ms-clear {\n    display: none;\n}\n\n.settings_search-button_LceHy {\n    height: 36px;\n    width: 36px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./icons/search.svg */ "./src/addons/settings/icons/search.svg")) + ");\n    background-repeat: no-repeat;\n    background-position: center;\n}\n\n[theme=\"dark\"] .settings_search-container_24OhB {\n    color: white;\n    background-color: #111111;\n    border-color: #222222;\n}\n\n.settings_search-input_9LNCl:not([value=\"\"]) ~ .settings_search-button_LceHy {\n    background-image: url(" + escape(__webpack_require__(/*! ./icons/clear.svg */ "./src/addons/settings/icons/clear.svg")) + ") !important;\n}\n\n.settings_feedback-button-outer_3RXeq {\n    background: #f0f0f0;\n    border: 1px solid #cecece;\n    color: #333 !important;\n    height: 36px;\n    box-sizing: border-box;\n    border-radius: 4px;\n    padding: 0 12px;\n    margin-left: 10px;\n    font-size: 12px;\n    outline: none;\n    display: flex;\n    align-items: center;\n    text-decoration: none !important;\n}\n\n[theme=\"dark\"] .settings_feedback-button-outer_3RXeq {\n    background-color: white;\n    border-color: white;\n}\n\n.settings_feedback-button-outer_3RXeq:active, .settings_feedback-button-outer_3RXeq:focus-within {\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n}\n\n.settings_feedback-button-inner_2h_ch {\n    text-decoration: none;\n    font-weight: bold;\n    text-align: center;\n}\n\n[theme=\"dark\"] .settings_search-button_LceHy,\n[theme=\"dark\"] .settings_addon-group-expand_1G6_X,\n[theme=\"dark\"] .settings_extension-image_1HlEn,\n[theme=\"dark\"] .settings_reset-button_1onc- img,\n[theme=\"dark\"] .settings_reset-setting-button_-WLwd img {\n    filter: invert(100%);\n}\n\n.settings_addons_2LLFF {\n    overflow-y: auto;\n    overflow-x: hidden;\n    padding: 10px 20px;\n    height: 100%;\n}\n\n@media (max-width: 700px) {\n    .settings_addons_2LLFF {\n        padding-left: 5px;\n        padding-right: 5px;\n    }\n}\n\n.settings_addon-group_3d-ZB {\n    margin: 0 0 10px 0;\n}\n\n.settings_addon-group-name_1h56B {\n    background: none;\n    border: none;\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.settings_addon-group-name_1h56B::after {\n    margin-left: 16px;\n    content: '';\n    border-top: 1px solid #cfcfcf;\n    width: 100px;\n    flex: 1;\n}\n\n[theme=\"dark\"] .settings_addon-group-name_1h56B::after {\n    border-color: #333;\n}\n\n.settings_addon-group-expand_1G6_X {\n    width: 24px;\n    height: 24px;\n    margin-right: 8px;\n    border-radius: 5px;\n}\n\n.settings_addon-group-expand_1G6_X[data-open=\"true\"] {\n    transform: scaleY(-1);\n}\n\n.settings_addon-group-name_1h56B:hover .settings_addon-group-expand_1G6_X {\n    background: #ccc;\n}\n\n.settings_addon_3Oi_z {\n    background: #f7f7f7;\n    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n    border: 1px solid #cfcfcf;\n    border-radius: 5px;\n    margin: 10px 0 10px 0;\n    font-size: 14px;\n}\n\n.settings_addon-dirty_2o20T {\n    background: #ffeedf;\n}\n\n[theme=\"dark\"] .settings_addon_3Oi_z {\n    background-color: #2a2a2a;\n    border-color: #333;\n}\n\n[theme=\"dark\"] .settings_addon-dirty_2o20T {\n    background: rgb(39, 50, 53);\n}\n\n.settings_addon-header_271wJ {\n    padding: 0 10px;\n    height: 50px;\n    display: flex;\n    align-items: center;\n}\n\n.settings_extension-image_1HlEn {\n    height: 16px;\n    width: 16px;\n    margin-right: 8px;\n}\n\n.settings_addon-title_6MhRl {\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    white-space: nowrap;\n}\n\n.settings_addon-switch_2bf3g {\n    margin-right: 8px;\n}\n\n.settings_addon-title-text_3QjlP {\n\n}\n\n.settings_addon-id_2EeZw {\n    margin-left: 10px;\n}\n\n.settings_inline-description_SovV9 {\n    margin-left: 10px;\n    color: gray;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n\n.settings_addon-operations_28nBd {\n    margin-left: auto;\n    padding-left: 4px;\n    display: flex;\n    align-items: center;\n}\n\n.settings_reset-button_1onc- {\n    display: flex;\n    border-radius: 4px;\n    cursor: pointer;\n    border: none;\n    background-color: transparent;\n}\n\n.settings_reset-button_1onc-:hover {\n    background: rgba(0, 0, 0, 0.05);\n}\n\n.settings_reset-button_1onc-:active, .settings_reset-button_1onc-:focus-within {\n    outline: none;\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n}\n\n.settings_reset-button-image_2Tgqe {\n    padding: 1px 0;\n    height: 16px;\n    width: 16px;\n}\n\n[theme=\"dark\"] .settings_reset-button_1onc-:hover {\n    background: rgba(255, 255, 255, 0.05);\n}\n\n.settings_switch_2V1f5 {\n    display: block;\n    background: #111;\n    width: 40px;\n    height: 20px;\n    border: none;\n    border-radius: 10px;\n    position: relative;\n    cursor: pointer;\n    transition: 0.25s ease;\n    transition-property: background;\n}\n\n.settings_switch_2V1f5[state=\"on\"] {\n    background: hsla(261, 100%, 50%, 1);\n}\n\n.settings_switch_2V1f5::before {\n    content: \"\";\n    position: absolute;\n    display: block;\n    width: 10px;\n    height: 10px;\n    background: #fff;\n    border-radius: 5px;\n    top: 5px;\n    left: 5px;\n    transition: 0.25s ease;\n    transition-property: background, left;\n}\n\n[theme=\"dark\"] .settings_switch_2V1f5::before {\n    background: #aaa;\n}\n\n.settings_switch_2V1f5[state=\"on\"]::before {\n    background: #fff;\n    left: 25px;\n}\n\n.settings_switch_2V1f5:active, .settings_switch_2V1f5:focus-within {\n    outline: none;\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n}\n\n.settings_tag-container_3yFc4 {\n    display: flex;\n    align-items: center;\n}\n\n.settings_tag_1c-GO {\n    border-radius: 4px;\n    padding: 2px 5px;\n    margin-left: 10px;\n    border-bottom: 2px solid #111;\n    white-space: nowrap;\n}\n\n.settings_tag-recommended_2k7Kt {\n    color: white;\n    background-color: #175ef8;\n    border-color: #0e44b8;\n}\n\n.settings_tag-theme_PbNiB {\n    color: black;\n    background-color: #9ad4cf;\n    border-color: #628f8c;\n}\n\n.settings_tag-beta_26ywj {\n    color: white;\n    background-color: #fd662b;\n    border-color: #d84a12;\n}\n\n.settings_tag-easter-egg_2M8qE {\n    color: black;\n    background-color: #b9f38d;\n    border-color: #8fce5e;\n}\n\n.settings_tag-new_1g9ff {\n    color: white;\n    background: #b117f8;\n    border-color: #6f0073;\n}\n\n.settings_tag-danger_2g6El {\n    color: white;\n    background: #fd2b2b;\n    border-color: #d81212;\n}\n\n@media (max-width: 550px) {\n    .settings_tag_1c-GO:not(.settings_tag-beta_26ywj) {\n        display: none;\n    }\n}\n\n.settings_addon-details_2CKwd {\n    padding: 0 20px;\n    margin-bottom: 10px;\n    color: #111;\n}\n\n[theme=\"dark\"] .settings_addon-details_2CKwd {\n    color: #ddd;\n}\n\n.settings_credit-container_2mHq7 {\n\n}\n\n.settings_credit-title_3f-yX {\n    padding-right: 5px;\n}\n\n.settings_credit_3grR6 {\n\n}\n\n.settings_description_2MbZo {\n\n}\n\n.settings_notice_2q6Z2 {\n    color: black;\n    padding: 10px;\n    border-radius: 5px;\n    font-weight: bold;\n    margin: 10px 0;\n    display: flex;\n    align-items: center;\n    background: rgba(154, 212, 207, 0.7);\n}\n\n.settings_notice-icon_2lAT7 {\n    height: 16px;\n    width: 16px;\n    margin-right: 10px;\n}\n\n.settings_setting-container_2BA7o {\n    margin-top: 10px;\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n}\n\n.settings_setting_2i2j- {\n    margin: 10px;\n    margin-right: 30px;\n    min-height: 35px;\n    display: flex;\n    align-items: center;\n    flex-wrap: wrap;\n}\n\n.settings_setting-label_2w3mJ {\n    font-weight: bold;\n    text-transform: uppercase;\n    color: #555;\n    font-size: 12px;\n    margin-right: 10px;\n}\n\n[theme=\"dark\"] .settings_setting-label_2w3mJ {\n    color: #aaa;\n}\n\n.settings_setting_2i2j- input {\n    color: #000;\n    background: #efefef;\n    border: 1px solid #acacac;\n    padding: 8px 12px;\n    border-radius: 4px;\n    transition: 0.25s ease;\n    transition-property: background;\n}\n\n[theme=\"dark\"] .settings_setting_2i2j- input {\n    color: #fff;\n    background: #222222;\n    border: 1px solid #000;\n}\n\n.settings_setting_2i2j- input:focus, .settings_setting_2i2j- input:active {\n    outline: none;\n    border-color: hsla(261, 100%, 50%, 1);\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n}\n\n.settings_setting_2i2j- input[type=\"checkbox\"] {\n    height: 20px;\n    width: 20px;\n    padding: 0;\n    appearance: none;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    background-color: white;\n    background-size: 20px 20px;\n    background-position: center center;\n}\n\n.settings_setting_2i2j- input[type=\"checkbox\"]:checked {\n    border-color: hsla(261, 100%, 50%, 1);\n    background-color: hsla(261, 100%, 50%, 1);\n    background-image: url(" + escape(__webpack_require__(/*! ./icons/check.svg */ "./src/addons/settings/icons/check.svg")) + ");\n}\n\n.settings_setting_2i2j- input[type=\"checkbox\"]:hover:not(:focus) {\n    border-color: hsla(261, 100%, 39%, 1);\n}\n\n.settings_setting_2i2j- input[type=\"checkbox\"]:checked:hover {\n    border-color: hsla(261, 100%, 39%, 1);\n}\n\n.settings_setting_2i2j- input[type=\"number\"] {\n    border-radius: 20px 0 0 20px;\n    font-size: 14px;\n    width: 75px;\n    height: 35px;\n    box-sizing: border-box;\n}\n\n.settings_setting_2i2j- input[type=\"color\"] {\n    height: 30px;\n    width: 100px;\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n    outline: none;\n    border: 1px solid transparent;\n    border-radius: 4px 0px 0px 4px;\n}\n\n.settings_reset-setting-button_-WLwd {\n    border-radius: 0 4px 4px 0px;\n    box-sizing: border-box;\n    height: 30px;\n}\n\n.settings_reset-setting-button_-WLwd img {\n    width: 20px;\n    height: 20px;\n}\n\n.settings_reset-setting-button_-WLwd[data-for-text-input=\"true\"] {\n    height: 35px;\n    border-radius: 0 20px 20px 0;\n}\n\n.settings_select_sIZno {\n    display: flex;\n}\n\n.settings_select-option_32Zqa {\n    cursor: pointer;\n    padding: 10px;\n    margin: 0;\n    background: transparent;\n    border: none;\n    background: #f0f0f0;\n    color: #000;\n    border: 1px solid #aaa;\n    border-right-width: 0;\n    transition: 0.25s ease;\n    transition-property: color, background, border;\n}\n\n[theme=\"dark\"] .settings_select-option_32Zqa {\n    color: #fff;\n    background: #222222;\n    border-color: #000000;\n}\n\n.settings_select-option_32Zqa:first-child {\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px;\n}\n\n.settings_select-option_32Zqa:last-child {\n    border-top-right-radius: 4px;\n    border-bottom-right-radius: 4px;\n    border-right-width: 1px;\n}\n\n.settings_select-option_32Zqa.settings_selected_38WtW {\n    color: white;\n    background: hsla(261, 100%, 50%, 1);\n}\n\n.settings_select-option_32Zqa:active, .settings_select-option_32Zqa:focus-within {\n    outline: none;\n    box-shadow: 0 0 0 3px hsla(261, 100%, 50%, 0.35);\n    z-index: 10;\n}\n\n.settings_presets_3zawV {\n    width: 100%;\n}\n\n.settings_preset-button_3zYV3 {\n    margin-right: 10px;\n}\n\n.settings_footer_jjys0 {\n    color: #444;\n}\n\n[theme=\"dark\"] .settings_footer_jjys0 {\n    color: #aaa;\n}\n\n.settings_unsupported-container_2vhiH {\n    margin-bottom: 10px;\n}\n\n.settings_unsupported-addon_1p57c {\n    padding-left: 5px;\n}\n\n.settings_version_2_cDA {\n    margin-bottom: 10px;\n    cursor: pointer;\n}\n\n.settings_footer-buttons_xTSXH {\n    margin-bottom: 10px;\n    display: flex;\n}\n\n.settings_footer-buttons_xTSXH > .settings_button_2ovv0 {\n    margin-right: 10px;\n}\n\n.settings_reset-all-button_2Q-Zi {\n\n}\n\n.settings_export-button_2PWOM {\n\n}\n\n.settings_import-button_1NMJN {\n\n}\n\n.settings_no-results_3bDSs {\n    text-align: center;\n    font-style: italic;\n}\n\n.settings_dirty-outer_WmNYy {\n    display: flex;\n    position: absolute;\n    top: calc(100% - 8px);\n    left: 0;\n    width: calc(100% - 20px);\n    margin-left: 10px;\n    z-index: 10;\n    justify-content: center;\n    animation: settings_dirty-appear_2Rcif 0.2s ease;\n    pointer-events: none;\n}\n\n.settings_dirty-inner_2tglM {\n    padding: 8px;\n    background: #ffeedf;\n    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n    border: 1px solid #cfcfcf;\n    border-radius: 4px;\n    pointer-events: auto;\n    display: flex;\n    align-items: center;\n    text-align: center;\n}\n\n[theme=\"dark\"] .settings_dirty-inner_2tglM {\n    background: rgb(39, 50, 53);\n    border-color: #222;\n}\n\n.settings_dirty-button_2adjE {\n    margin-left: 6px;\n}\n\n@keyframes settings_dirty-appear_2Rcif {\n    from {\n        transform: translateY(-100%);\n    }\n    to {\n        transform: translateY(0);\n    }\n}\n", ""]);
+exports.push([module.i, "/**\n * Copyright (C) 2021 Thomas Weber\n *\n * This program is free software: you can redistribute it and/or modify\n * it under the terms of the GNU General Public License version 3 as\n * published by the Free Software Foundation.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n * GNU General Public License for more details.\n *\n * You should have received a copy of the GNU General Public License\n * along with this program.  If not, see <https://www.gnu.org/licenses/>.\n */\n\nbody[coloraccent=\"Gaia Blue\"] {\n--ui-modal-overlay: hsla(240, 100%, 65%, 0.9); /* 90% transparent version of motion-primary */\n\n--motion-primary: hsla(240, 65%, 50%, 1); /* #00c3ff */\n--motion-tertiary: hsla(240, 65%, 30%, 1); /* #007bc7 */\n--motion-transparent: hsla(240, 100%, 50%, 0.35); /* 35% transparent version of motion-primary */\n--motion-light-transparent: hsla(237, 100%, 39%, 0.15); /* 15% transparent version of motion-primary */\n\n/* opt-in theme overrides */\n--motion-primary-dark: hsla(240, 65%, 40%, 1); /*top bar color when in dark mode*/\n--motion-dark-transparent: hsla(240, 65%, 40%, 0.40); /*top bar color when in dark mode*/\n\n--red-primary: hsla(240, 65%, 50%, 1); /* #00c3ff */\n--red-tertiary: hsla(240, 65%, 30%, 1); /* #007bc7 */\n\n--extensions-primary: hsla(240, 100%, 50%, 1);\n--extensions-tertiary: hsla(237, 100%, 39%, 1);\n--extensions-transparent: hsla(240, 100%, 50%, 0.35); /* 35% transparent version of extensions-primary */\n--extensions-light: hsla(237, 100%, 39%, 1); /* opaque version of extensions-transparent, on white bg */\n\n--drop-highlight: hsla(240, 100%, 77%, 1); /* lighter than motion-primary */\n\n--menu-bar-background: var(--motion-primary);\n--menu-bar-background-dark: var(--motion-primary-dark);\n\n--menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Lime Green\"] {\n    --motion-primary: hsla(92, 91%, 53%, 1); /* #00c3ff */\n    --motion-tertiary: hsla(92, 80%, 43%, 1); /* #007bc7 */\n    --motion-transparent: hsla(92, 92%, 53%, 0.35); /* 35% transparent version of motion-primary */\n    --motion-light-transparent: hsla(92, 80%, 43%, 0.15); /* 15% transparent version of motion-primary */\n\n    --paint-motion-primary: hsla(92, 91%, 53%, 1); /* #00c3ff */\n    --paint-motion-tertiary: hsla(92, 80%, 43%, 1); /* #007bc7 */\n    --paint-motion-transparent: hsla(92, 92%, 53%, 0.35); /* 35% transparent version of motion-primary */\n\n    /* opt-in theme overrides */\n    --motion-primary-dark: hsla(84, 100%, 41%, 1); /*top bar color when in dark mode*/ /*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n    --motion-dark-transparent: hsla(84, 100%, 41%, 0.40); /*top bar color when in dark mode*/ /*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n\n    --extensions-primary: hsla(92, 91%, 53%, 1);\n    --extensions-tertiary: hsla(92, 80%, 43%, 1);\n    --extensions-transparent: hsla(92, 91%, 53%, 0.35); /* 35% transparent version of extensions-primary */\n    --extensions-light: hsla(92, 80%, 43%, 1); /* opaque version of extensions-transparent, on white bg */\n\n    --drop-highlight: hsla(92, 91%, 59%, 1); /* lighter than motion-primary */\n\n    /* menu bar colors */\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Light Blue\"] {\n    --motion-primary: hsla(194, 100%, 50%, 1);\n    --motion-tertiary: hsla(203, 100%, 39%, 1);\n    --motion-transparent: hsla(203, 100%, 39%, 0.35);\n    --motion-light-transparent: hsla(203, 100%, 39%, 0.15);\n\n    --paint-motion-primary: hsla(194, 100%, 50%, 1);\n    --paint-motion-tertiary: hsla(203, 100%, 39%, 1);\n    --paint-motion-transparent: hsla(203, 100%, 39%, 0.35);\n\n    --motion-primary-dark: #009CCC;\n    --motion-dark-transparent: #009CCC57;\n\n    --extensions-primary: hsla(194, 100%, 50%, 1);\n    --extensions-tertiary: hsla(203, 100%, 39%, 1);\n    --extensions-transparent: hsla(194, 100%, 50%, 0.35);\n    --extensions-light: hsla(203, 100%, 39%, 1);\n    \n    --drop-highlight: hsla(203, 100%, 39%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Red\"] {\n    --motion-primary: #ff4c4c;\n    --motion-tertiary: #cc3333;\n    --motion-transparent: #ff4c4c57;\n    --motion-light-transparent: #cc333326;\n\n    --paint-motion-primary: #ff4c4c;\n    --paint-motion-tertiary: #cc3333;\n    --paint-motion-transparent: #ff4c4c57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(10, 85%, 65%, 1);\n    --extensions-tertiary: hsla(10, 85%, 40%, 1);\n    --extensions-transparent: hsla(10, 85%, 65%, 0.35);\n    --extensions-light: hsla(10, 57%, 85%, 1);\n    \n    --drop-highlight: #ff8c8c;\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Blue\"] {\n    --motion-primary: hsla(215, 100%, 65%, 1);\n    --motion-tertiary: hsla(215, 60%, 50%, 1);\n    --motion-transparent: hsla(215, 100%, 65%, 0.35);\n    --motion-light-transparent: hsla(215, 60%, 50%, 0.15);\n\n    --paint-motion-primary: hsla(215, 100%, 65%, 1);\n    --paint-motion-tertiary: hsla(215, 60%, 50%, 1);\n    --paint-motion-transparent: hsla(215, 100%, 65%, 0.35);\n\n    --motion-primary-dark: #333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(163, 85%, 40%, 1);\n    --extensions-tertiary: hsla(163, 85%, 30%, 1);\n    --extensions-transparent: hsla(163, 85%, 40%, 0.35);\n    --extensions-light: hsla(163, 57%, 85%, 1);\n    \n    --drop-highlight: hsla(215, 100%, 77%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Corrupted Blue\"] {\n    --motion-primary: #625e97;\n    --motion-tertiary: hsla(203, 100%, 17%, 1);\n    --motion-transparent: hsla(215, 100%, 11%, 0.35);\n    --motion-light-transparent: hsla(203, 100%, 17%, 0.15);\n\n    --paint-motion-primary: #625e97;\n    --paint-motion-tertiary: hsla(203, 100%, 17%, 1);\n    --paint-motion-transparent: hsla(215, 100%, 11%, 0.35);\n\n    --motion-primary-dark: #2a293f;\n    --motion-dark-transparent: #2a293f57;\n\n    --extensions-primary: hsla(194, 100%, 50%, 1);\n    --extensions-tertiary: hsla(203, 100%, 39%, 1);\n    --extensions-transparent: hsla(194, 100%, 50%, 0.35);\n    --extensions-light: hsla(203, 100%, 39%, 1);\n    \n    --drop-highlight: hsla(240, 100%, 77%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Scratch\"] {\n    --motion-primary: hsla(260, 60%, 60%, 1);\n    --motion-tertiary: hsla(260, 42%, 51%, 1);\n    --motion-transparent: hsla(260, 60%, 60%, 0.35);\n    --motion-light-transparent: hsla(260, 42%, 51%, 0.15);\n\n    --paint-motion-primary: hsla(260, 60%, 60%, 1);\n    --paint-motion-tertiary: hsla(260, 42%, 51%, 1);\n    --paint-motion-transparent: hsla(260, 60%, 60%, 0.35);\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(163, 85%, 40%, 1);\n    --extensions-tertiary: hsla(163, 85%, 30%, 1);\n    --extensions-transparent: hsla(163, 85%, 40%, 0.35);\n    --extensions-light: hsla(163, 57%, 85%, 1);\n    \n    --drop-highlight: hsla(215, 100%, 77%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Magenta\"] {\n    --motion-primary: hsla(289, 100%, 54%, 1);\n    --motion-tertiary: hsla(289, 100%, 39%, 1);\n    --motion-transparent: hsla(289, 100%, 54%, 0.35);\n    --motion-light-transparent: hsla(289, 100%, 39%, 0.15);\n\n    --paint-motion-primary: hsla(289, 100%, 54%, 1);\n    --paint-motion-tertiary: hsla(289, 100%, 39%, 1);\n    --paint-motion-transparent: hsla(289, 100%, 54%, 0.35);\n\n    --motion-primary-dark: #57039c;\n    --motion-dark-transparent: #57039c57;\n\n    --extensions-primary: hsla(289, 100%, 50%, 1);\n    --extensions-tertiary: hsla(203, 100%, 39%, 1);\n    --extensions-transparent: hsla(194, 100%, 50%, 0.35);\n    --extensions-light: hsla(203, 100%, 39%, 1);\n    \n    --drop-highlight: hsla(289, 100%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Pink\"] {\n    --motion-primary: hsla(325, 60%, 60%, 1);\n    --motion-tertiary: hsla(325, 60%, 40%, 0.9);\n    --motion-transparent: hsla(325, 42%, 51%, 0.35);\n    --motion-light-transparent: hsla(325, 60%, 83%, 0.15);\n\n    --paint-motion-primary: hsla(289, 100%, 54%, 1);\n    --paint-motion-tertiary: hsla(289, 100%, 39%, 1);\n    --paint-motion-transparent: hsla(289, 100%, 54%, 0.35);\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(325, 60%, 60%, 1);\n    --extensions-tertiary: hsla(325, 60%, 60%, 1);\n    --extensions-transparent: hsla(325, 42%, 51%, 0.35);\n    --extensions-light: hsla(325, 60%, 83%, 1);\n    \n    --drop-highlight: hsla(325, 60%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Gray Purple\"] {\n    --motion-primary: hsla(244, 23%, 48%, 1);\n    --motion-tertiary: hsla(244, 23%, 38%, 0.9);\n    --motion-transparent: hsla(244, 23%, 48%, 0.35);\n    --motion-light-transparent: hsla(262, 22%, 59%, 0.15);\n\n    --paint-motion-primary: hsla(244, 23%, 48%, 1);\n    --paint-motion-tertiary: hsla(244, 23%, 39%, 1);\n    --paint-motion-transparent: hsla(244, 23%, 54%, 0.35);\n\n    --motion-primary-dark: hsla(243, 21%, 20%, 1);\n    --motion-dark-transparent: hsla(243, 21%, 20%, 0.40);\n\n    --extensions-primary: hsla(244, 23%, 48%, 1);\n    --extensions-tertiary: hsla(244, 23%, 38%, 0.9);\n    --extensions-transparent: hsla(244, 23%, 48%, 0.35);\n    --extensions-light: hsla(262, 22%, 59%, 1);\n    \n    --drop-highlight: hsla(262, 25%, 58%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Gold\"] {\n    --motion-primary: hsla(46, 100%, 64%, 1);\n    --motion-tertiary: hsla(46, 100%, 50%, 0.9);\n    --motion-transparent: hsla(46, 100%, 64%, 0.35);\n    --motion-light-transparent: hsla(46, 100%, 83%, 0.15);\n\n    --motion-primary-dark: hsla(46, 100%, 42%, 1);\n    --motion-dark-transparent: hsla(46, 100%, 42%, 0.40);\n\n    --extensions-primary: hsla(46, 100%, 60%, 1);\n    --extensions-tertiary: hsla(46, 100%, 50%, 1);\n    --extensions-transparent: hsla(46, 100%, 64%, 0.35);\n    --extensions-light: hsla(46, 100%, 83%, 1);\n    \n    --drop-highlight: hsla(46, 100%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Silver\"] {\n    --motion-primary: hsla(268, 0%, 73%, 1);\n    --motion-tertiary: hsla(268, 0%, 50%, 0.9);\n    --motion-transparent: hsla(268, 0%, 64%, 0.35);\n    --motion-light-transparent: hsla(268, 0%, 83%, 0.15);\n\n    --motion-primary-dark: hsla(268, 0%, 42%, 1);\n    --motion-dark-transparent: hsla(268, 0%, 42%, 0.40);\n\n    --extensions-primary: hsla(268, 0%, 60%, 1);\n    --extensions-tertiary: hsla(268, 0%, 50%, 1);\n    --extensions-transparent: hsla(268, 0%, 64%, 0.35);\n    --extensions-light: hsla(268, 0%, 83%, 1);\n    \n    --drop-highlight: hsla(268, 0%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Black\"] {\n    --motion-primary: hsla(268, 0%, 24%, 1);\n    --motion-tertiary: hsla(268, 0%, 20%, 0.9);\n    --motion-transparent: hsla(268, 0%, 23%, 0.35);\n    --motion-light-transparent: hsla(268, 0%, 30% 0.15);\n\n    --motion-primary-dark: hsla(268, 0%, 10%, 1);\n    --motion-dark-transparent: hsla(268, 0%, 10%, 0.40);\n\n    --extensions-primary: hsla(268, 0%, 24%, 1);\n    --extensions-tertiary: hsla(268, 0%, 20%, 1);\n    --extensions-transparent: hsla(268, 0%, 23%, 0.35);\n    --extensions-light: hsla(268, 0%, 30%, 1);\n    \n    --drop-highlight: hsla(268, 0%, 28%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Rainbow\"] {\n    --motion-primary: #ff4c4c;\n    --motion-tertiary: #cc3333;\n    --motion-transparent: #ff4c4c57;\n    --motion-light-transparent: #cc333326;\n\n    --paint-motion-primary: #ff4c4c;\n    --paint-motion-tertiary: #cc3333;\n    --paint-motion-transparent: #ff4c4c57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(10, 85%, 65%, 1);\n    --extensions-tertiary: hsla(10, 85%, 40%, 1);\n    --extensions-transparent: hsla(10, 85%, 65%, 0.35);\n    --extensions-light: hsla(10, 57%, 85%, 1);\n    \n    --drop-highlight: #ff8c8c;\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.75) 0%, rgba(255, 154, 0, 0.75) 10%, rgba(208, 222, 33, 0.75) 20%, rgba(79, 220, 74, 0.75) 30%, rgba(63, 218, 216, 0.75) 40%, rgba(47, 201, 226, 0.75) 50%, rgba(28, 127, 238, 0.75) 60%, rgba(95, 21, 242, 0.75) 70%, rgba(186, 12, 248, 0.75) 80%, rgba(251, 7, 217, 0.75) 90%, rgba(255, 0, 0, 0.75) 100%);\n}\n\nbody[coloraccent=\"Nebula\"] {\n    --motion-primary: oklab(0.55 0.08 -0.12);\n    --motion-tertiary: oklab(0.60 0.06 -0.10);\n    --motion-transparent: oklab(0.60 0.06 -0.12 / 0.75);\n    --motion-light-transparent: oklab(0.66 0.08 -0.12 / 0.75);\n\n    --paint-motion-primary: #865AF8;\n    --paint-motion-tertiary: #693FD6;\n    --paint-motion-transparent: #865AF857;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.60 0.06 -0.10);\n    --extensions-tertiary: oklab(0.50 0.12 0.04);\n    --extensions-transparent: oklab(0.60 0.06 -0.10 / 0.35);\n    --extensions-light: oklab(0.70 0.04 -0.08);\n    \n    --drop-highlight: oklab(0.55 0.08 -0.12);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.25 0.02 -0.08 / 0.9) 0%, oklab(0.35 0.08 -0.12 / 0.85) 15%, oklab(0.45 0.12 -0.08 / 0.8) 30%, oklab(0.55 0.15 0.02 / 0.8) 50%, oklab(0.65 0.08 0.08 / 0.8) 70%, oklab(0.75 0.02 0.12 / 0.8) 85%, oklab(0.85 -0.02 0.08 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Cosmic\"] {\n    --motion-primary: oklab(0.68 0.15 -0.08);\n    --motion-tertiary: oklab(0.72 0.12 -0.06);\n    --motion-transparent: oklab(0.68 0.15 -0.08 / 0.75);\n    --motion-light-transparent: oklab(0.78 0.15 -0.08 / 0.75);\n\n    --paint-motion-primary: #D36CC6;\n    --paint-motion-tertiary: #A8459C;\n    --paint-motion-transparent: #D36CC657;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.72 0.12 -0.06);\n    --extensions-tertiary: oklab(0.65 0.08 -0.12);\n    --extensions-transparent: oklab(0.72 0.12 -0.06 / 0.35);\n    --extensions-light: oklab(0.78 0.08 -0.04);\n    \n    --drop-highlight: oklab(0.68 0.15 -0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.45 0.08 -0.15 / 0.8) 0%, oklab(0.55 0.12 -0.12 / 0.8) 20%, oklab(0.65 0.15 -0.08 / 0.8) 40%, oklab(0.70 0.12 -0.04 / 0.8) 60%, oklab(0.65 0.05 -0.10 / 0.8) 80%, oklab(0.60 -0.02 -0.12 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Aurora\"] {\n    --motion-primary: oklab(0.70 -0.10 0.08);\n    --motion-primary-transparent: oklab(0.70 -0.10 0.08 / 0.75);\n    --motion-tertiary: oklab(0.75 -0.08 0.06);\n\t--motion-light-transparent: oklab(0.80 -0.10 0.08 / 0.75);\n\n    --paint-motion-primary: #6FB265;\n    --paint-motion-tertiary: #4B8C41;\n    --paint-motion-transparent: #6FB26557;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.75 -0.08 0.06);\n    --extensions-tertiary: oklab(0.65 -0.06 -0.08);\n    --extensions-transparent: oklab(0.75 -0.08 0.06 / 0.35);\n    --extensions-light: oklab(0.80 -0.04 0.04);\n    \n    --drop-highlight: oklab(0.70 -0.10 0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.65 -0.12 0.10 / 0.8) 0%, oklab(0.70 -0.10 0.05 / 0.8) 20%, oklab(0.65 -0.08 -0.05 / 0.8) 40%, oklab(0.60 -0.06 -0.10 / 0.8) 60%, oklab(0.55 0.02 -0.12 / 0.8) 80%, oklab(0.60 0.08 -0.08 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Mint\"] {\n    --motion-primary: oklab(0.78 -0.12 0.08);\n    --motion-primary-transparent: oklab(0.78 -0.12 0.08 / 0.75);\n    --motion-tertiary: oklab(0.80 -0.10 0.06);\n\t--motion-light-transparent: oklab(0.85 -0.12 0.08 / 0.75);\n\n    --paint-motion-primary: #75D07E;\n    --paint-motion-tertiary: #50A859;\n    --paint-motion-transparent: #75D07E57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.80 -0.10 0.06);\n    --extensions-tertiary: oklab(0.75 -0.08 -0.02);\n    --extensions-transparent: oklab(0.80 -0.10 0.06 / 0.35);\n    --extensions-light: oklab(0.85 -0.06 0.04);\n    \n    --drop-highlight: oklab(0.78 -0.12 0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.75 -0.14 0.10 / 0.8) 0%, oklab(0.78 -0.12 0.08 / 0.8) 20%, oklab(0.80 -0.10 0.04 / 0.8) 40%, oklab(0.82 -0.08 0.00 / 0.8) 60%, oklab(0.80 -0.06 -0.04 / 0.8) 80%, oklab(0.75 -0.04 -0.08 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Cherry\"] {\n    --motion-primary: oklab(0.70 0.18 0.08);\n    --motion-primary-transparent: oklab(0.70 0.18 0.08 / 0.75);\n    --motion-tertiary: oklab(0.72 0.16 0.10);\n\t--motion-light-transparent: oklab(0.82 0.18 0.08 / 0.75);\n\n    --paint-motion-primary: #FF605F;\n    --paint-motion-tertiary: #C43130;\n    --paint-motion-transparent: #FF605F57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.72 0.16 0.10);\n    --extensions-tertiary: oklab(0.68 0.14 0.04);\n    --extensions-transparent: oklab(0.72 0.16 0.10 / 0.35);\n    --extensions-light: oklab(0.78 0.12 0.12);\n    \n     --drop-highlight: oklab(0.70 0.18 0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image:\n        linear-gradient(90deg, oklab(0.65 0.20 0.06 / 0.8) 0%, oklab(0.70 0.18 0.08 / 0.8) 20%, oklab(0.72 0.16 0.12 / 0.8) 40%, oklab(0.75 0.14 0.14 / 0.8) 60%, oklab(0.78 0.12 0.08 / 0.8) 80%, oklab(0.80 0.08 0.04 / 0.8) 100%);\n}\n\nbody[coloraccent=\"NIGHTMARE\"] {\n--motion-primary: #5E0000;\n--motion-tertiary: #470000; /* #007bc7 */\n--motion-transparent: #540000; /* 35% transparent version of motion-primary */\n--motion-light-transparent: #8F0000; /* 15% transparent version of motion-primary */\n\n    --paint-motion-primary: #ff0000;\n    --paint-motion-tertiary: #d60000;\n    --paint-motion-transparent: #ff000057;\n\n    --motion-primary-dark: #3D0000;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: rgb(0, 0, 0);\n    --extensions-tertiary: rgb(47, 8, 0);\n    --extensions-transparent: hsla(0, 0%, 0%, 0.35);\n    --extensions-light: rgb(255, 141, 119);\n    \n    --drop-highlight: #000000;\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Partytime\"] {\n--ui-modal-overlay: #FF5EFC90; /* 90% transparent version of motion-primary */\n\n--motion-primary: #CAB5F5; /* #00c3ff */\n--motion-tertiary: #9E7FDE; /* #007bc7 */\n--motion-transparent: #CAB5F535; /* 35% transparent version of motion-primary */\n--motion-light-transparent: #DFD4F515; /* 15% transparent version of motion-primary */\n\n/* opt-in theme overrides */\n--motion-primary-dark: #866ABF; /*top bar color when in dark mode*/\n--motion-dark-transparent: #866ABF40; /*top bar color when in dark mode*/\n\n--red-primary: #CAB5F5; /* #00c3ff */\n--red-tertiary: #9E7FDE; /* #007bc7 */\n\n--extensions-primary: #FF00CC;\n--extensions-tertiary: #CC009E;\n--extensions-transparent: #FF00CC35; /* 35% transparent version of extensions-primary */\n--extensions-light: #FF73E3; /* opaque version of extensions-transparent, on white bg */\n\n--drop-highlight: #DFD4F5; /* lighter than motion-primary */\n\n--menu-bar-background: var(--motion-primary);\n--menu-bar-background-dark: var(--motion-primary-dark);\n\n--menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"custom\"] {\n    \n}\n\n/* #E5F0FF */\n\n/* #E9F1FC */\n\n/* #D9E3F2 */\n\n/* 90% transparent version of motion-primary */\n\n/* #FFFFFF */\n\n/* 25% transparent version of ui-white */\n\n/* 25% transparent version of ui-white */\n\n/* 25% transparent version of ui-white */\n\n/* #FFFFFF */\n\n/* #FFFFFF */\n\n/* 15% transparent version of black */\n\n/* #FFFFFF */\n\n/* #FFFFFF */\n\n/* 15% transparent version of black */\n\n/* #575E75 */\n\n/* #00c3ff */\n\n/* #007bc7 */\n\n/* 35% transparent version of motion-primary */\n\n/* 15% transparent version of motion-primary */\n\n/* opt-in theme overrides */\n\n/*top bar color when in dark mode*/\n\n/*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n\n/*top bar color when in dark mode*/\n\n/*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n\n/* #00c3ff */\n\n/* #007bc7 */\n\n/* #CF63CF */\n\n/* #BD42BD */\n\n/* #FFAB19 */\n\n/* #FF8C1A */\n\n/* #0FBD8C */\n\n/* #0FBD8C */\n\n/* #FF8C1A */\n\n/* #FFB366 */\n\n/* #FF8C1A */\n\n/* 35% transparent version of extensions-primary */\n\n/* opaque version of extensions-transparent, on white bg */\n\n/* lighter than motion-primary */\n\nbody {\n    background-color: white;\n    color: black;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    margin: 0;\n}\n\nbody[theme=\"dark\"] {\n    background-color: #222222;\n    color: white;\n    color-scheme: dark;\n}\n\na[href] {\n    color: #2a67eb;\n    text-decoration: underline;\n}\n\n[theme=\"dark\"] a[href] {\n    color: #6d9bff;\n}\n\na:active, a:focus {\n    outline: none;\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n}\n\n.settings_container_3vJ_s {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    overflow: hidden;\n}\n\n.settings_section_3XEVc {\n    max-width: 1280px;\n    margin: auto;\n}\n\n.settings_header_HXeeT {\n    position: relative;\n    padding: 8px 20px;\n    background-color: #fcfcfc;\n    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n}\n\n[theme=\"dark\"] .settings_header_HXeeT {\n    background-color: #222222;\n}\n\n@media (max-width: 700px) {\n    .settings_header_HXeeT {\n        padding-left: 5px;\n        padding-right: 5px;\n    }\n}\n\n.settings_header_HXeeT .settings_section_3XEVc {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.settings_button_3Zf4L {\n    color: #000;\n    background: #efefef;\n    border: 1px solid #acacac;\n    padding: 8px 12px;\n    border-radius: 4px;\n    outline: none;\n    height: 32px;\n    font-family: inherit;\n    font-size: 14px;\n    transition: 0.25s ease;\n    transition-property: background;\n    display: flex;\n    align-items: center;\n}\n\n[theme=\"dark\"] .settings_button_3Zf4L {\n    color: #fff;\n    background: #222222;\n    border-color: #000;\n}\n\n.settings_button_3Zf4L:hover {\n    background: #aaaaaa;\n}\n\n[theme=\"dark\"] .settings_button_3Zf4L:hover {\n    background: #151515;\n}\n\n.settings_button_3Zf4L:active, .settings_button_3Zf4L:focus-within {\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n}\n\n.settings_search-container_14AR7 {\n    display: flex;\n    background-color: #f0f0f0;\n    color: #222;\n    border: 1px solid #cecece;\n    border-radius: 4px;\n}\n\n.settings_search-container_14AR7:focus-within {\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n}\n\n.settings_search-input_1OS9U {\n    color: inherit;\n    width: 150px;\n    height: 16px;\n    padding: 10px 0 10px 15px;\n    border: none;\n    outline: none;\n    background-color: transparent;\n    font-size: 14px;\n}\n\n/* legacy edge */\n\n.settings_search-input_1OS9U::-ms-clear {\n    display: none;\n}\n\n.settings_search-button_1PO4j {\n    height: 36px;\n    width: 36px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    background-color: transparent;\n    background-image: url(" + escape(__webpack_require__(/*! ./icons/search.svg */ "./src/addons/settings/icons/search.svg")) + ");\n    background-repeat: no-repeat;\n    background-position: center;\n}\n\n[theme=\"dark\"] .settings_search-container_14AR7 {\n    color: white;\n    background-color: #111111;\n    border-color: #222222;\n}\n\n.settings_search-input_1OS9U:not([value=\"\"]) ~ .settings_search-button_1PO4j {\n    background-image: url(" + escape(__webpack_require__(/*! ./icons/clear.svg */ "./src/addons/settings/icons/clear.svg")) + ") !important;\n}\n\n.settings_feedback-button-outer_3BvjT {\n    background: #f0f0f0;\n    border: 1px solid #cecece;\n    color: #333 !important;\n    height: 36px;\n    box-sizing: border-box;\n    border-radius: 4px;\n    padding: 0 12px;\n    margin-left: 10px;\n    font-size: 12px;\n    outline: none;\n    display: flex;\n    align-items: center;\n    text-decoration: none !important;\n}\n\n[theme=\"dark\"] .settings_feedback-button-outer_3BvjT {\n    background-color: white;\n    border-color: white;\n}\n\n.settings_feedback-button-outer_3BvjT:active, .settings_feedback-button-outer_3BvjT:focus-within {\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n}\n\n.settings_feedback-button-inner_1iiHA {\n    text-decoration: none;\n    font-weight: bold;\n    text-align: center;\n}\n\n[theme=\"dark\"] .settings_search-button_1PO4j,\n[theme=\"dark\"] .settings_addon-group-expand_3rkIa,\n[theme=\"dark\"] .settings_extension-image_2jXeB,\n[theme=\"dark\"] .settings_reset-button_1rOZQ img,\n[theme=\"dark\"] .settings_reset-setting-button_3Eb_D img {\n    filter: invert(100%);\n}\n\n.settings_addons_WnqmP {\n    overflow-y: auto;\n    overflow-x: hidden;\n    padding: 10px 20px;\n    height: 100%;\n}\n\n@media (max-width: 700px) {\n    .settings_addons_WnqmP {\n        padding-left: 5px;\n        padding-right: 5px;\n    }\n}\n\n.settings_addon-group_2YNj5 {\n    margin: 0 0 10px 0;\n}\n\n.settings_addon-group-name_3z8E3 {\n    background: none;\n    border: none;\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.settings_addon-group-name_3z8E3::after {\n    margin-left: 16px;\n    content: '';\n    border-top: 1px solid #cfcfcf;\n    width: 100px;\n    flex: 1;\n}\n\n[theme=\"dark\"] .settings_addon-group-name_3z8E3::after {\n    border-color: #333;\n}\n\n.settings_addon-group-expand_3rkIa {\n    width: 24px;\n    height: 24px;\n    margin-right: 8px;\n    border-radius: 5px;\n}\n\n.settings_addon-group-expand_3rkIa[data-open=\"true\"] {\n    transform: scaleY(-1);\n}\n\n.settings_addon-group-name_3z8E3:hover .settings_addon-group-expand_3rkIa {\n    background: #ccc;\n}\n\n.settings_addon_2zhVU {\n    background: #f7f7f7;\n    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n    border: 1px solid #cfcfcf;\n    border-radius: 5px;\n    margin: 10px 0 10px 0;\n    font-size: 14px;\n}\n\n.settings_addon-dirty_TnKY5 {\n    background: #ffeedf;\n}\n\n[theme=\"dark\"] .settings_addon_2zhVU {\n    background-color: #2a2a2a;\n    border-color: #333;\n}\n\n[theme=\"dark\"] .settings_addon-dirty_TnKY5 {\n    background: rgb(39, 50, 53);\n}\n\n.settings_addon-header_2QwGV {\n    padding: 0 10px;\n    height: 50px;\n    display: flex;\n    align-items: center;\n}\n\n.settings_extension-image_2jXeB {\n    height: 16px;\n    width: 16px;\n    margin-right: 8px;\n}\n\n.settings_addon-title_1bgsn {\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    white-space: nowrap;\n}\n\n.settings_addon-switch_2apOl {\n    margin-right: 8px;\n}\n\n.settings_addon-title-text_Q9wTc {\n\n}\n\n.settings_addon-id_1l36Y {\n    margin-left: 10px;\n}\n\n.settings_inline-description_1zx5M {\n    margin-left: 10px;\n    color: gray;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n\n.settings_addon-operations_29Iap {\n    margin-left: auto;\n    padding-left: 4px;\n    display: flex;\n    align-items: center;\n}\n\n.settings_reset-button_1rOZQ {\n    display: flex;\n    border-radius: 4px;\n    cursor: pointer;\n    border: none;\n    background-color: transparent;\n}\n\n.settings_reset-button_1rOZQ:hover {\n    background: rgba(0, 0, 0, 0.05);\n}\n\n.settings_reset-button_1rOZQ:active, .settings_reset-button_1rOZQ:focus-within {\n    outline: none;\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n}\n\n.settings_reset-button-image_2T0au {\n    padding: 1px 0;\n    height: 16px;\n    width: 16px;\n}\n\n[theme=\"dark\"] .settings_reset-button_1rOZQ:hover {\n    background: rgba(255, 255, 255, 0.05);\n}\n\n.settings_switch_3uQIK {\n    display: block;\n    background: #111;\n    width: 40px;\n    height: 20px;\n    border: none;\n    border-radius: 10px;\n    position: relative;\n    cursor: pointer;\n    transition: 0.25s ease;\n    transition-property: background;\n}\n\n.settings_switch_3uQIK[state=\"on\"] {\n    background: var(--motion-primary, hsla(240, 65%, 50%, 1));\n}\n\n.settings_switch_3uQIK::before {\n    content: \"\";\n    position: absolute;\n    display: block;\n    width: 10px;\n    height: 10px;\n    background: #fff;\n    border-radius: 5px;\n    top: 5px;\n    left: 5px;\n    transition: 0.25s ease;\n    transition-property: background, left;\n}\n\n[theme=\"dark\"] .settings_switch_3uQIK::before {\n    background: #aaa;\n}\n\n.settings_switch_3uQIK[state=\"on\"]::before {\n    background: #fff;\n    left: 25px;\n}\n\n.settings_switch_3uQIK:active, .settings_switch_3uQIK:focus-within {\n    outline: none;\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n}\n\n.settings_tag-container_2c2bM {\n    display: flex;\n    align-items: center;\n}\n\n.settings_tag_7BYRi {\n    border-radius: 4px;\n    padding: 2px 5px;\n    margin-left: 10px;\n    border-bottom: 2px solid #111;\n    white-space: nowrap;\n}\n\n.settings_tag-recommended_2NobT {\n    color: white;\n    background-color: #175ef8;\n    border-color: #0e44b8;\n}\n\n.settings_tag-theme_2OxTA {\n    color: black;\n    background-color: #9ad4cf;\n    border-color: #628f8c;\n}\n\n.settings_tag-beta_3l83I {\n    color: white;\n    background-color: #fd662b;\n    border-color: #d84a12;\n}\n\n.settings_tag-easter-egg_9f6db {\n    color: black;\n    background-color: #b9f38d;\n    border-color: #8fce5e;\n}\n\n.settings_tag-new_2UTQQ {\n    color: white;\n    background: #b117f8;\n    border-color: #6f0073;\n}\n\n.settings_tag-newsettings_2L8lL {\n    color: white;\n    background: #b117f8;\n    border-color: #6f0073;\n}\n\n.settings_tag-danger_3yaCL {\n    color: white;\n    background: #fd2b2b;\n    border-color: #d81212;\n}\n\n.settings_tag-penguinmod_zfGpG {\n    color: white;\n    background: #00c3ff;\n    border-color: #006280;\n}\n\n.settings_tag-dinosaurmod_30ztO {\n    color: white;\n    background: #80f41a;\n    border-color: #43800e;\n}\n\n.settings_tag-snailide_1E91Q {\n    color: white;\n    background: #cc00ff;\n    border-color: #660080;\n}\n\n.settings_tag-electramod_14fEF {\n    color: white;\n    background: #625e97;\n    border-color: #2f2d48;\n}\n\n.settings_tag-gaiamod_1AgeO {\n    color: white;\n    background: #2d2dd2;\n    border-color: #1b1b80;\n}\n\n.settings_tag-othermods_3ZOFC {\n    color: white;\n    background: #ad4e00;\n    border-color: #552600;\n}\n\n@media (max-width: 550px) {\n    .settings_tag_7BYRi:not(.settings_tag-beta_3l83I) {\n        display: none;\n    }\n}\n\n.settings_addon-details_34Bpn {\n    padding: 0 20px;\n    margin-bottom: 10px;\n    color: #111;\n}\n\n[theme=\"dark\"] .settings_addon-details_34Bpn {\n    color: #ddd;\n}\n\n.settings_credit-container_2f-MG {\n\n}\n\n.settings_credit-title_2ndRT {\n    padding-right: 5px;\n}\n\n.settings_credit_d1cAU {\n\n}\n\n.settings_description_1SX5a {\n\n}\n\n.settings_notice_1Yx9M {\n    color: black;\n    padding: 10px;\n    border-radius: 5px;\n    font-weight: bold;\n    margin: 10px 0;\n    display: flex;\n    align-items: center;\n    background: rgba(154, 212, 207, 0.7);\n}\n\n.settings_notice-icon_2Y3NN {\n    height: 16px;\n    width: 16px;\n    margin-right: 10px;\n}\n\n.settings_setting-container_2hi13 {\n    margin-top: 10px;\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n}\n\n.settings_setting_qydbq {\n    margin: 10px;\n    margin-right: 30px;\n    min-height: 35px;\n    display: flex;\n    align-items: center;\n    flex-wrap: wrap;\n}\n\n.settings_setting-label_kOihj {\n    font-weight: bold;\n    text-transform: uppercase;\n    color: #555;\n    font-size: 12px;\n    margin-right: 10px;\n}\n\n[theme=\"dark\"] .settings_setting-label_kOihj {\n    color: #aaa;\n}\n\n.settings_setting_qydbq input {\n    color: #000;\n    background: #efefef;\n    border: 1px solid #acacac;\n    padding: 8px 12px;\n    border-radius: 4px;\n    transition: 0.25s ease;\n    transition-property: background;\n}\n\n[theme=\"dark\"] .settings_setting_qydbq input {\n    color: #fff;\n    background: #222222;\n    border: 1px solid #000;\n}\n\n.settings_setting_qydbq input:focus, .settings_setting_qydbq input:active {\n    outline: none;\n    border-color: var(--motion-primary, hsla(240, 65%, 50%, 1));\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n}\n\n.settings_setting_qydbq input[type=\"checkbox\"] {\n    height: 20px;\n    width: 20px;\n    padding: 0;\n    appearance: none;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    background-color: white;\n    background-size: 20px 20px;\n    background-position: center center;\n}\n\n.settings_setting_qydbq input[type=\"checkbox\"]:checked {\n    border-color: var(--motion-primary, hsla(240, 65%, 50%, 1));\n    background-color: var(--motion-primary, hsla(240, 65%, 50%, 1));\n    background-image: url(" + escape(__webpack_require__(/*! ./icons/check.svg */ "./src/addons/settings/icons/check.svg")) + ");\n}\n\n.settings_setting_qydbq input[type=\"checkbox\"]:hover:not(:focus) {\n    border-color: var(--motion-tertiary, hsla(240, 65%, 30%, 1));\n}\n\n.settings_setting_qydbq input[type=\"checkbox\"]:checked:hover {\n    border-color: var(--motion-tertiary, hsla(240, 65%, 30%, 1));\n}\n\n.settings_setting_qydbq input[type=\"number\"] {\n    border-radius: 20px 0 0 20px;\n    font-size: 14px;\n    width: 75px;\n    height: 35px;\n    box-sizing: border-box;\n}\n\n.settings_setting_qydbq input[type=\"color\"] {\n    height: 30px;\n    width: 100px;\n    box-sizing: border-box;\n    padding: 0;\n    margin: 0;\n    outline: none;\n    border: 1px solid transparent;\n    border-radius: 4px 0px 0px 4px;\n}\n\n.settings_reset-setting-button_3Eb_D {\n    border-radius: 0 4px 4px 0px;\n    box-sizing: border-box;\n    height: 30px;\n}\n\n.settings_reset-setting-button_3Eb_D img {\n    width: 20px;\n    height: 20px;\n}\n\n.settings_reset-setting-button_3Eb_D[data-for-text-input=\"true\"] {\n    height: 35px;\n    border-radius: 0 20px 20px 0;\n}\n\n.settings_select_3gkhn {\n    display: flex;\n}\n\n.settings_select-option_1kghH {\n    cursor: pointer;\n    padding: 10px;\n    margin: 0;\n    background: transparent;\n    border: none;\n    background: #f0f0f0;\n    color: #000;\n    border: 1px solid #aaa;\n    border-right-width: 0;\n    transition: 0.25s ease;\n    transition-property: color, background, border;\n}\n\n[theme=\"dark\"] .settings_select-option_1kghH {\n    color: #fff;\n    background: #222222;\n    border-color: #000000;\n}\n\n.settings_select-option_1kghH:first-child {\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px;\n}\n\n.settings_select-option_1kghH:last-child {\n    border-top-right-radius: 4px;\n    border-bottom-right-radius: 4px;\n    border-right-width: 1px;\n}\n\n.settings_select-option_1kghH.settings_selected_216ME {\n    color: white;\n    background: var(--motion-primary, hsla(240, 65%, 50%, 1));\n}\n\n.settings_select-option_1kghH:active, .settings_select-option_1kghH:focus-within {\n    outline: none;\n    box-shadow: 0 0 0 3px var(--motion-transparent, hsla(240, 100%, 50%, 0.35));\n    z-index: 10;\n}\n\n.settings_presets_VTsxF {\n    width: 100%;\n}\n\n.settings_preset-button_2AjAU {\n    margin-right: 10px;\n}\n\n.settings_footer_1gjVj {\n    color: #444;\n}\n\n[theme=\"dark\"] .settings_footer_1gjVj {\n    color: #aaa;\n}\n\n.settings_unsupported-container_3HTJ- {\n    margin-bottom: 10px;\n}\n\n.settings_unsupported-addon_SHirC {\n    padding-left: 5px;\n}\n\n.settings_version_3uqkC {\n    margin-bottom: 10px;\n    cursor: pointer;\n}\n\n.settings_footer-buttons_1qdL9 {\n    margin-bottom: 10px;\n    display: flex;\n}\n\n.settings_footer-buttons_1qdL9 > .settings_button_3Zf4L {\n    margin-right: 10px;\n}\n\n.settings_reset-all-button_1sZUk {\n\n}\n\n.settings_export-button_pOzkO {\n\n}\n\n.settings_import-button_nCk8B {\n\n}\n\n.settings_no-results_21WJ5 {\n    text-align: center;\n    font-style: italic;\n}\n\n.settings_dirty-outer_1v5px {\n    display: flex;\n    position: absolute;\n    top: calc(100% - 8px);\n    left: 0;\n    width: calc(100% - 20px);\n    margin-left: 10px;\n    z-index: 10;\n    justify-content: center;\n    animation: settings_dirty-appear_rQ_S_ 0.2s ease;\n    pointer-events: none;\n}\n\n.settings_dirty-inner_2AjRe {\n    padding: 8px;\n    background: #ffeedf;\n    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n    border: 1px solid #cfcfcf;\n    border-radius: 4px;\n    pointer-events: auto;\n    display: flex;\n    align-items: center;\n    text-align: center;\n}\n\n[theme=\"dark\"] .settings_dirty-inner_2AjRe {\n    background: rgb(39, 50, 53);\n    border-color: #222;\n}\n\n.settings_dirty-button_48luC {\n    margin-left: 6px;\n}\n\n@keyframes settings_dirty-appear_rQ_S_ {\n    from {\n        transform: translateY(-100%);\n    }\n    to {\n        transform: translateY(0);\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "settings_container_1qNQ3",
-	"section": "settings_section_31t4Q",
-	"header": "settings_header_Y9USz",
-	"button": "settings_button_2ovv0",
-	"search-container": "settings_search-container_24OhB",
-	"searchContainer": "settings_search-container_24OhB",
-	"search-input": "settings_search-input_9LNCl",
-	"searchInput": "settings_search-input_9LNCl",
-	"search-button": "settings_search-button_LceHy",
-	"searchButton": "settings_search-button_LceHy",
-	"feedback-button-outer": "settings_feedback-button-outer_3RXeq",
-	"feedbackButtonOuter": "settings_feedback-button-outer_3RXeq",
-	"feedback-button-inner": "settings_feedback-button-inner_2h_ch",
-	"feedbackButtonInner": "settings_feedback-button-inner_2h_ch",
-	"addon-group-expand": "settings_addon-group-expand_1G6_X",
-	"addonGroupExpand": "settings_addon-group-expand_1G6_X",
-	"extension-image": "settings_extension-image_1HlEn",
-	"extensionImage": "settings_extension-image_1HlEn",
-	"reset-button": "settings_reset-button_1onc-",
-	"resetButton": "settings_reset-button_1onc-",
-	"reset-setting-button": "settings_reset-setting-button_-WLwd",
-	"resetSettingButton": "settings_reset-setting-button_-WLwd",
-	"addons": "settings_addons_2LLFF",
-	"addon-group": "settings_addon-group_3d-ZB",
-	"addonGroup": "settings_addon-group_3d-ZB",
-	"addon-group-name": "settings_addon-group-name_1h56B",
-	"addonGroupName": "settings_addon-group-name_1h56B",
-	"addon": "settings_addon_3Oi_z",
-	"addon-dirty": "settings_addon-dirty_2o20T",
-	"addonDirty": "settings_addon-dirty_2o20T",
-	"addon-header": "settings_addon-header_271wJ",
-	"addonHeader": "settings_addon-header_271wJ",
-	"addon-title": "settings_addon-title_6MhRl",
-	"addonTitle": "settings_addon-title_6MhRl",
-	"addon-switch": "settings_addon-switch_2bf3g",
-	"addonSwitch": "settings_addon-switch_2bf3g",
-	"addon-title-text": "settings_addon-title-text_3QjlP",
-	"addonTitleText": "settings_addon-title-text_3QjlP",
-	"addon-id": "settings_addon-id_2EeZw",
-	"addonId": "settings_addon-id_2EeZw",
-	"inline-description": "settings_inline-description_SovV9",
-	"inlineDescription": "settings_inline-description_SovV9",
-	"addon-operations": "settings_addon-operations_28nBd",
-	"addonOperations": "settings_addon-operations_28nBd",
-	"reset-button-image": "settings_reset-button-image_2Tgqe",
-	"resetButtonImage": "settings_reset-button-image_2Tgqe",
-	"switch": "settings_switch_2V1f5",
-	"tag-container": "settings_tag-container_3yFc4",
-	"tagContainer": "settings_tag-container_3yFc4",
-	"tag": "settings_tag_1c-GO",
-	"tag-recommended": "settings_tag-recommended_2k7Kt",
-	"tagRecommended": "settings_tag-recommended_2k7Kt",
-	"tag-theme": "settings_tag-theme_PbNiB",
-	"tagTheme": "settings_tag-theme_PbNiB",
-	"tag-beta": "settings_tag-beta_26ywj",
-	"tagBeta": "settings_tag-beta_26ywj",
-	"tag-easter-egg": "settings_tag-easter-egg_2M8qE",
-	"tagEasterEgg": "settings_tag-easter-egg_2M8qE",
-	"tag-new": "settings_tag-new_1g9ff",
-	"tagNew": "settings_tag-new_1g9ff",
-	"tag-danger": "settings_tag-danger_2g6El",
-	"tagDanger": "settings_tag-danger_2g6El",
-	"addon-details": "settings_addon-details_2CKwd",
-	"addonDetails": "settings_addon-details_2CKwd",
-	"credit-container": "settings_credit-container_2mHq7",
-	"creditContainer": "settings_credit-container_2mHq7",
-	"credit-title": "settings_credit-title_3f-yX",
-	"creditTitle": "settings_credit-title_3f-yX",
-	"credit": "settings_credit_3grR6",
-	"description": "settings_description_2MbZo",
-	"notice": "settings_notice_2q6Z2",
-	"notice-icon": "settings_notice-icon_2lAT7",
-	"noticeIcon": "settings_notice-icon_2lAT7",
-	"setting-container": "settings_setting-container_2BA7o",
-	"settingContainer": "settings_setting-container_2BA7o",
-	"setting": "settings_setting_2i2j-",
-	"setting-label": "settings_setting-label_2w3mJ",
-	"settingLabel": "settings_setting-label_2w3mJ",
-	"select": "settings_select_sIZno",
-	"select-option": "settings_select-option_32Zqa",
-	"selectOption": "settings_select-option_32Zqa",
-	"selected": "settings_selected_38WtW",
-	"presets": "settings_presets_3zawV",
-	"preset-button": "settings_preset-button_3zYV3",
-	"presetButton": "settings_preset-button_3zYV3",
-	"footer": "settings_footer_jjys0",
-	"unsupported-container": "settings_unsupported-container_2vhiH",
-	"unsupportedContainer": "settings_unsupported-container_2vhiH",
-	"unsupported-addon": "settings_unsupported-addon_1p57c",
-	"unsupportedAddon": "settings_unsupported-addon_1p57c",
-	"version": "settings_version_2_cDA",
-	"footer-buttons": "settings_footer-buttons_xTSXH",
-	"footerButtons": "settings_footer-buttons_xTSXH",
-	"reset-all-button": "settings_reset-all-button_2Q-Zi",
-	"resetAllButton": "settings_reset-all-button_2Q-Zi",
-	"export-button": "settings_export-button_2PWOM",
-	"exportButton": "settings_export-button_2PWOM",
-	"import-button": "settings_import-button_1NMJN",
-	"importButton": "settings_import-button_1NMJN",
-	"no-results": "settings_no-results_3bDSs",
-	"noResults": "settings_no-results_3bDSs",
-	"dirty-outer": "settings_dirty-outer_WmNYy",
-	"dirtyOuter": "settings_dirty-outer_WmNYy",
-	"dirty-appear": "settings_dirty-appear_2Rcif",
-	"dirtyAppear": "settings_dirty-appear_2Rcif",
-	"dirty-inner": "settings_dirty-inner_2tglM",
-	"dirtyInner": "settings_dirty-inner_2tglM",
-	"dirty-button": "settings_dirty-button_2adjE",
-	"dirtyButton": "settings_dirty-button_2adjE"
+	"container": "settings_container_3vJ_s",
+	"section": "settings_section_3XEVc",
+	"header": "settings_header_HXeeT",
+	"button": "settings_button_3Zf4L",
+	"search-container": "settings_search-container_14AR7",
+	"searchContainer": "settings_search-container_14AR7",
+	"search-input": "settings_search-input_1OS9U",
+	"searchInput": "settings_search-input_1OS9U",
+	"search-button": "settings_search-button_1PO4j",
+	"searchButton": "settings_search-button_1PO4j",
+	"feedback-button-outer": "settings_feedback-button-outer_3BvjT",
+	"feedbackButtonOuter": "settings_feedback-button-outer_3BvjT",
+	"feedback-button-inner": "settings_feedback-button-inner_1iiHA",
+	"feedbackButtonInner": "settings_feedback-button-inner_1iiHA",
+	"addon-group-expand": "settings_addon-group-expand_3rkIa",
+	"addonGroupExpand": "settings_addon-group-expand_3rkIa",
+	"extension-image": "settings_extension-image_2jXeB",
+	"extensionImage": "settings_extension-image_2jXeB",
+	"reset-button": "settings_reset-button_1rOZQ",
+	"resetButton": "settings_reset-button_1rOZQ",
+	"reset-setting-button": "settings_reset-setting-button_3Eb_D",
+	"resetSettingButton": "settings_reset-setting-button_3Eb_D",
+	"addons": "settings_addons_WnqmP",
+	"addon-group": "settings_addon-group_2YNj5",
+	"addonGroup": "settings_addon-group_2YNj5",
+	"addon-group-name": "settings_addon-group-name_3z8E3",
+	"addonGroupName": "settings_addon-group-name_3z8E3",
+	"addon": "settings_addon_2zhVU",
+	"addon-dirty": "settings_addon-dirty_TnKY5",
+	"addonDirty": "settings_addon-dirty_TnKY5",
+	"addon-header": "settings_addon-header_2QwGV",
+	"addonHeader": "settings_addon-header_2QwGV",
+	"addon-title": "settings_addon-title_1bgsn",
+	"addonTitle": "settings_addon-title_1bgsn",
+	"addon-switch": "settings_addon-switch_2apOl",
+	"addonSwitch": "settings_addon-switch_2apOl",
+	"addon-title-text": "settings_addon-title-text_Q9wTc",
+	"addonTitleText": "settings_addon-title-text_Q9wTc",
+	"addon-id": "settings_addon-id_1l36Y",
+	"addonId": "settings_addon-id_1l36Y",
+	"inline-description": "settings_inline-description_1zx5M",
+	"inlineDescription": "settings_inline-description_1zx5M",
+	"addon-operations": "settings_addon-operations_29Iap",
+	"addonOperations": "settings_addon-operations_29Iap",
+	"reset-button-image": "settings_reset-button-image_2T0au",
+	"resetButtonImage": "settings_reset-button-image_2T0au",
+	"switch": "settings_switch_3uQIK",
+	"tag-container": "settings_tag-container_2c2bM",
+	"tagContainer": "settings_tag-container_2c2bM",
+	"tag": "settings_tag_7BYRi",
+	"tag-recommended": "settings_tag-recommended_2NobT",
+	"tagRecommended": "settings_tag-recommended_2NobT",
+	"tag-theme": "settings_tag-theme_2OxTA",
+	"tagTheme": "settings_tag-theme_2OxTA",
+	"tag-beta": "settings_tag-beta_3l83I",
+	"tagBeta": "settings_tag-beta_3l83I",
+	"tag-easter-egg": "settings_tag-easter-egg_9f6db",
+	"tagEasterEgg": "settings_tag-easter-egg_9f6db",
+	"tag-new": "settings_tag-new_2UTQQ",
+	"tagNew": "settings_tag-new_2UTQQ",
+	"tag-newsettings": "settings_tag-newsettings_2L8lL",
+	"tagNewsettings": "settings_tag-newsettings_2L8lL",
+	"tag-danger": "settings_tag-danger_3yaCL",
+	"tagDanger": "settings_tag-danger_3yaCL",
+	"tag-penguinmod": "settings_tag-penguinmod_zfGpG",
+	"tagPenguinmod": "settings_tag-penguinmod_zfGpG",
+	"tag-dinosaurmod": "settings_tag-dinosaurmod_30ztO",
+	"tagDinosaurmod": "settings_tag-dinosaurmod_30ztO",
+	"tag-snailide": "settings_tag-snailide_1E91Q",
+	"tagSnailide": "settings_tag-snailide_1E91Q",
+	"tag-electramod": "settings_tag-electramod_14fEF",
+	"tagElectramod": "settings_tag-electramod_14fEF",
+	"tag-gaiamod": "settings_tag-gaiamod_1AgeO",
+	"tagGaiamod": "settings_tag-gaiamod_1AgeO",
+	"tag-othermods": "settings_tag-othermods_3ZOFC",
+	"tagOthermods": "settings_tag-othermods_3ZOFC",
+	"addon-details": "settings_addon-details_34Bpn",
+	"addonDetails": "settings_addon-details_34Bpn",
+	"credit-container": "settings_credit-container_2f-MG",
+	"creditContainer": "settings_credit-container_2f-MG",
+	"credit-title": "settings_credit-title_2ndRT",
+	"creditTitle": "settings_credit-title_2ndRT",
+	"credit": "settings_credit_d1cAU",
+	"description": "settings_description_1SX5a",
+	"notice": "settings_notice_1Yx9M",
+	"notice-icon": "settings_notice-icon_2Y3NN",
+	"noticeIcon": "settings_notice-icon_2Y3NN",
+	"setting-container": "settings_setting-container_2hi13",
+	"settingContainer": "settings_setting-container_2hi13",
+	"setting": "settings_setting_qydbq",
+	"setting-label": "settings_setting-label_kOihj",
+	"settingLabel": "settings_setting-label_kOihj",
+	"select": "settings_select_3gkhn",
+	"select-option": "settings_select-option_1kghH",
+	"selectOption": "settings_select-option_1kghH",
+	"selected": "settings_selected_216ME",
+	"presets": "settings_presets_VTsxF",
+	"preset-button": "settings_preset-button_2AjAU",
+	"presetButton": "settings_preset-button_2AjAU",
+	"footer": "settings_footer_1gjVj",
+	"unsupported-container": "settings_unsupported-container_3HTJ-",
+	"unsupportedContainer": "settings_unsupported-container_3HTJ-",
+	"unsupported-addon": "settings_unsupported-addon_SHirC",
+	"unsupportedAddon": "settings_unsupported-addon_SHirC",
+	"version": "settings_version_3uqkC",
+	"footer-buttons": "settings_footer-buttons_1qdL9",
+	"footerButtons": "settings_footer-buttons_1qdL9",
+	"reset-all-button": "settings_reset-all-button_1sZUk",
+	"resetAllButton": "settings_reset-all-button_1sZUk",
+	"export-button": "settings_export-button_pOzkO",
+	"exportButton": "settings_export-button_pOzkO",
+	"import-button": "settings_import-button_nCk8B",
+	"importButton": "settings_import-button_nCk8B",
+	"no-results": "settings_no-results_21WJ5",
+	"noResults": "settings_no-results_21WJ5",
+	"dirty-outer": "settings_dirty-outer_1v5px",
+	"dirtyOuter": "settings_dirty-outer_1v5px",
+	"dirty-appear": "settings_dirty-appear_rQ_S_",
+	"dirtyAppear": "settings_dirty-appear_rQ_S_",
+	"dirty-inner": "settings_dirty-inner_2AjRe",
+	"dirtyInner": "settings_dirty-inner_2AjRe",
+	"dirty-button": "settings_dirty-button_48luC",
+	"dirtyButton": "settings_dirty-button_48luC"
 };
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/lib/normalize.css":
-/*!**************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/lib/normalize.css ***!
-  \**************************************************************************************************************/
+/***/ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/button/button.css":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/cache-loader/dist/cjs.js??ref--5-1!./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/src??postcss!./src/components/button/button.css ***!
+  \***************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/*$form-radius: calc($space / 2);*/\n\n/* layout contants from `layout-constants.js` */\n\n.button_outlined-button_2f510 {\n    cursor: pointer;\n    border-radius: calc(0.75rem / 2);\n    font-weight: bold;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding-left: .75rem;\n    padding-right: .75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.button_icon_JhCuM {\n    height: 1.5rem;\n}\n\n[dir=\"ltr\"] .button_icon_JhCuM {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .button_icon_JhCuM {\n    margin-left: .5rem;\n}\n\n.button_content_3y79K {\n    white-space: nowrap;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"outlined-button": "button_outlined-button_2f510",
+	"outlinedButton": "button_outlined-button_2f510",
+	"icon": "button_icon_JhCuM",
+	"content": "button_content_3y79K"
+};
+
+/***/ }),
+
+/***/ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tag-button/tag-button.css":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/cache-loader/dist/cjs.js??ref--5-1!./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/src??postcss!./src/components/tag-button/tag-button.css ***!
+  \***********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body[coloraccent=\"Gaia Blue\"] {\n--ui-modal-overlay: hsla(240, 100%, 65%, 0.9); /* 90% transparent version of motion-primary */\n\n--motion-primary: hsla(240, 65%, 50%, 1); /* #00c3ff */\n--motion-tertiary: hsla(240, 65%, 30%, 1); /* #007bc7 */\n--motion-transparent: hsla(240, 100%, 50%, 0.35); /* 35% transparent version of motion-primary */\n--motion-light-transparent: hsla(237, 100%, 39%, 0.15); /* 15% transparent version of motion-primary */\n\n/* opt-in theme overrides */\n--motion-primary-dark: hsla(240, 65%, 40%, 1); /*top bar color when in dark mode*/\n--motion-dark-transparent: hsla(240, 65%, 40%, 0.40); /*top bar color when in dark mode*/\n\n--red-primary: hsla(240, 65%, 50%, 1); /* #00c3ff */\n--red-tertiary: hsla(240, 65%, 30%, 1); /* #007bc7 */\n\n--extensions-primary: hsla(240, 100%, 50%, 1);\n--extensions-tertiary: hsla(237, 100%, 39%, 1);\n--extensions-transparent: hsla(240, 100%, 50%, 0.35); /* 35% transparent version of extensions-primary */\n--extensions-light: hsla(237, 100%, 39%, 1); /* opaque version of extensions-transparent, on white bg */\n\n--drop-highlight: hsla(240, 100%, 77%, 1); /* lighter than motion-primary */\n\n--menu-bar-background: var(--motion-primary);\n--menu-bar-background-dark: var(--motion-primary-dark);\n\n--menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Lime Green\"] {\n    --motion-primary: hsla(92, 91%, 53%, 1); /* #00c3ff */\n    --motion-tertiary: hsla(92, 80%, 43%, 1); /* #007bc7 */\n    --motion-transparent: hsla(92, 92%, 53%, 0.35); /* 35% transparent version of motion-primary */\n    --motion-light-transparent: hsla(92, 80%, 43%, 0.15); /* 15% transparent version of motion-primary */\n\n    --paint-motion-primary: hsla(92, 91%, 53%, 1); /* #00c3ff */\n    --paint-motion-tertiary: hsla(92, 80%, 43%, 1); /* #007bc7 */\n    --paint-motion-transparent: hsla(92, 92%, 53%, 0.35); /* 35% transparent version of motion-primary */\n\n    /* opt-in theme overrides */\n    --motion-primary-dark: hsla(84, 100%, 41%, 1); /*top bar color when in dark mode*/ /*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n    --motion-dark-transparent: hsla(84, 100%, 41%, 0.40); /*top bar color when in dark mode*/ /*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n\n    --extensions-primary: hsla(92, 91%, 53%, 1);\n    --extensions-tertiary: hsla(92, 80%, 43%, 1);\n    --extensions-transparent: hsla(92, 91%, 53%, 0.35); /* 35% transparent version of extensions-primary */\n    --extensions-light: hsla(92, 80%, 43%, 1); /* opaque version of extensions-transparent, on white bg */\n\n    --drop-highlight: hsla(92, 91%, 59%, 1); /* lighter than motion-primary */\n\n    /* menu bar colors */\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Light Blue\"] {\n    --motion-primary: hsla(194, 100%, 50%, 1);\n    --motion-tertiary: hsla(203, 100%, 39%, 1);\n    --motion-transparent: hsla(203, 100%, 39%, 0.35);\n    --motion-light-transparent: hsla(203, 100%, 39%, 0.15);\n\n    --paint-motion-primary: hsla(194, 100%, 50%, 1);\n    --paint-motion-tertiary: hsla(203, 100%, 39%, 1);\n    --paint-motion-transparent: hsla(203, 100%, 39%, 0.35);\n\n    --motion-primary-dark: #009CCC;\n    --motion-dark-transparent: #009CCC57;\n\n    --extensions-primary: hsla(194, 100%, 50%, 1);\n    --extensions-tertiary: hsla(203, 100%, 39%, 1);\n    --extensions-transparent: hsla(194, 100%, 50%, 0.35);\n    --extensions-light: hsla(203, 100%, 39%, 1);\n    \n    --drop-highlight: hsla(203, 100%, 39%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Red\"] {\n    --motion-primary: #ff4c4c;\n    --motion-tertiary: #cc3333;\n    --motion-transparent: #ff4c4c57;\n    --motion-light-transparent: #cc333326;\n\n    --paint-motion-primary: #ff4c4c;\n    --paint-motion-tertiary: #cc3333;\n    --paint-motion-transparent: #ff4c4c57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(10, 85%, 65%, 1);\n    --extensions-tertiary: hsla(10, 85%, 40%, 1);\n    --extensions-transparent: hsla(10, 85%, 65%, 0.35);\n    --extensions-light: hsla(10, 57%, 85%, 1);\n    \n    --drop-highlight: #ff8c8c;\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Blue\"] {\n    --motion-primary: hsla(215, 100%, 65%, 1);\n    --motion-tertiary: hsla(215, 60%, 50%, 1);\n    --motion-transparent: hsla(215, 100%, 65%, 0.35);\n    --motion-light-transparent: hsla(215, 60%, 50%, 0.15);\n\n    --paint-motion-primary: hsla(215, 100%, 65%, 1);\n    --paint-motion-tertiary: hsla(215, 60%, 50%, 1);\n    --paint-motion-transparent: hsla(215, 100%, 65%, 0.35);\n\n    --motion-primary-dark: #333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(163, 85%, 40%, 1);\n    --extensions-tertiary: hsla(163, 85%, 30%, 1);\n    --extensions-transparent: hsla(163, 85%, 40%, 0.35);\n    --extensions-light: hsla(163, 57%, 85%, 1);\n    \n    --drop-highlight: hsla(215, 100%, 77%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Corrupted Blue\"] {\n    --motion-primary: #625e97;\n    --motion-tertiary: hsla(203, 100%, 17%, 1);\n    --motion-transparent: hsla(215, 100%, 11%, 0.35);\n    --motion-light-transparent: hsla(203, 100%, 17%, 0.15);\n\n    --paint-motion-primary: #625e97;\n    --paint-motion-tertiary: hsla(203, 100%, 17%, 1);\n    --paint-motion-transparent: hsla(215, 100%, 11%, 0.35);\n\n    --motion-primary-dark: #2a293f;\n    --motion-dark-transparent: #2a293f57;\n\n    --extensions-primary: hsla(194, 100%, 50%, 1);\n    --extensions-tertiary: hsla(203, 100%, 39%, 1);\n    --extensions-transparent: hsla(194, 100%, 50%, 0.35);\n    --extensions-light: hsla(203, 100%, 39%, 1);\n    \n    --drop-highlight: hsla(240, 100%, 77%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Scratch\"] {\n    --motion-primary: hsla(260, 60%, 60%, 1);\n    --motion-tertiary: hsla(260, 42%, 51%, 1);\n    --motion-transparent: hsla(260, 60%, 60%, 0.35);\n    --motion-light-transparent: hsla(260, 42%, 51%, 0.15);\n\n    --paint-motion-primary: hsla(260, 60%, 60%, 1);\n    --paint-motion-tertiary: hsla(260, 42%, 51%, 1);\n    --paint-motion-transparent: hsla(260, 60%, 60%, 0.35);\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(163, 85%, 40%, 1);\n    --extensions-tertiary: hsla(163, 85%, 30%, 1);\n    --extensions-transparent: hsla(163, 85%, 40%, 0.35);\n    --extensions-light: hsla(163, 57%, 85%, 1);\n    \n    --drop-highlight: hsla(215, 100%, 77%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Magenta\"] {\n    --motion-primary: hsla(289, 100%, 54%, 1);\n    --motion-tertiary: hsla(289, 100%, 39%, 1);\n    --motion-transparent: hsla(289, 100%, 54%, 0.35);\n    --motion-light-transparent: hsla(289, 100%, 39%, 0.15);\n\n    --paint-motion-primary: hsla(289, 100%, 54%, 1);\n    --paint-motion-tertiary: hsla(289, 100%, 39%, 1);\n    --paint-motion-transparent: hsla(289, 100%, 54%, 0.35);\n\n    --motion-primary-dark: #57039c;\n    --motion-dark-transparent: #57039c57;\n\n    --extensions-primary: hsla(289, 100%, 50%, 1);\n    --extensions-tertiary: hsla(203, 100%, 39%, 1);\n    --extensions-transparent: hsla(194, 100%, 50%, 0.35);\n    --extensions-light: hsla(203, 100%, 39%, 1);\n    \n    --drop-highlight: hsla(289, 100%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Pink\"] {\n    --motion-primary: hsla(325, 60%, 60%, 1);\n    --motion-tertiary: hsla(325, 60%, 40%, 0.9);\n    --motion-transparent: hsla(325, 42%, 51%, 0.35);\n    --motion-light-transparent: hsla(325, 60%, 83%, 0.15);\n\n    --paint-motion-primary: hsla(289, 100%, 54%, 1);\n    --paint-motion-tertiary: hsla(289, 100%, 39%, 1);\n    --paint-motion-transparent: hsla(289, 100%, 54%, 0.35);\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(325, 60%, 60%, 1);\n    --extensions-tertiary: hsla(325, 60%, 60%, 1);\n    --extensions-transparent: hsla(325, 42%, 51%, 0.35);\n    --extensions-light: hsla(325, 60%, 83%, 1);\n    \n    --drop-highlight: hsla(325, 60%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Gray Purple\"] {\n    --motion-primary: hsla(244, 23%, 48%, 1);\n    --motion-tertiary: hsla(244, 23%, 38%, 0.9);\n    --motion-transparent: hsla(244, 23%, 48%, 0.35);\n    --motion-light-transparent: hsla(262, 22%, 59%, 0.15);\n\n    --paint-motion-primary: hsla(244, 23%, 48%, 1);\n    --paint-motion-tertiary: hsla(244, 23%, 39%, 1);\n    --paint-motion-transparent: hsla(244, 23%, 54%, 0.35);\n\n    --motion-primary-dark: hsla(243, 21%, 20%, 1);\n    --motion-dark-transparent: hsla(243, 21%, 20%, 0.40);\n\n    --extensions-primary: hsla(244, 23%, 48%, 1);\n    --extensions-tertiary: hsla(244, 23%, 38%, 0.9);\n    --extensions-transparent: hsla(244, 23%, 48%, 0.35);\n    --extensions-light: hsla(262, 22%, 59%, 1);\n    \n    --drop-highlight: hsla(262, 25%, 58%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Gold\"] {\n    --motion-primary: hsla(46, 100%, 64%, 1);\n    --motion-tertiary: hsla(46, 100%, 50%, 0.9);\n    --motion-transparent: hsla(46, 100%, 64%, 0.35);\n    --motion-light-transparent: hsla(46, 100%, 83%, 0.15);\n\n    --motion-primary-dark: hsla(46, 100%, 42%, 1);\n    --motion-dark-transparent: hsla(46, 100%, 42%, 0.40);\n\n    --extensions-primary: hsla(46, 100%, 60%, 1);\n    --extensions-tertiary: hsla(46, 100%, 50%, 1);\n    --extensions-transparent: hsla(46, 100%, 64%, 0.35);\n    --extensions-light: hsla(46, 100%, 83%, 1);\n    \n    --drop-highlight: hsla(46, 100%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Silver\"] {\n    --motion-primary: hsla(268, 0%, 73%, 1);\n    --motion-tertiary: hsla(268, 0%, 50%, 0.9);\n    --motion-transparent: hsla(268, 0%, 64%, 0.35);\n    --motion-light-transparent: hsla(268, 0%, 83%, 0.15);\n\n    --motion-primary-dark: hsla(268, 0%, 42%, 1);\n    --motion-dark-transparent: hsla(268, 0%, 42%, 0.40);\n\n    --extensions-primary: hsla(268, 0%, 60%, 1);\n    --extensions-tertiary: hsla(268, 0%, 50%, 1);\n    --extensions-transparent: hsla(268, 0%, 64%, 0.35);\n    --extensions-light: hsla(268, 0%, 83%, 1);\n    \n    --drop-highlight: hsla(268, 0%, 64%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Black\"] {\n    --motion-primary: hsla(268, 0%, 24%, 1);\n    --motion-tertiary: hsla(268, 0%, 20%, 0.9);\n    --motion-transparent: hsla(268, 0%, 23%, 0.35);\n    --motion-light-transparent: hsla(268, 0%, 30% 0.15);\n\n    --motion-primary-dark: hsla(268, 0%, 10%, 1);\n    --motion-dark-transparent: hsla(268, 0%, 10%, 0.40);\n\n    --extensions-primary: hsla(268, 0%, 24%, 1);\n    --extensions-tertiary: hsla(268, 0%, 20%, 1);\n    --extensions-transparent: hsla(268, 0%, 23%, 0.35);\n    --extensions-light: hsla(268, 0%, 30%, 1);\n    \n    --drop-highlight: hsla(268, 0%, 28%, 1);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Rainbow\"] {\n    --motion-primary: #ff4c4c;\n    --motion-tertiary: #cc3333;\n    --motion-transparent: #ff4c4c57;\n    --motion-light-transparent: #cc333326;\n\n    --paint-motion-primary: #ff4c4c;\n    --paint-motion-tertiary: #cc3333;\n    --paint-motion-transparent: #ff4c4c57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: hsla(10, 85%, 65%, 1);\n    --extensions-tertiary: hsla(10, 85%, 40%, 1);\n    --extensions-transparent: hsla(10, 85%, 65%, 0.35);\n    --extensions-light: hsla(10, 57%, 85%, 1);\n    \n    --drop-highlight: #ff8c8c;\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.75) 0%, rgba(255, 154, 0, 0.75) 10%, rgba(208, 222, 33, 0.75) 20%, rgba(79, 220, 74, 0.75) 30%, rgba(63, 218, 216, 0.75) 40%, rgba(47, 201, 226, 0.75) 50%, rgba(28, 127, 238, 0.75) 60%, rgba(95, 21, 242, 0.75) 70%, rgba(186, 12, 248, 0.75) 80%, rgba(251, 7, 217, 0.75) 90%, rgba(255, 0, 0, 0.75) 100%);\n}\n\nbody[coloraccent=\"Nebula\"] {\n    --motion-primary: oklab(0.55 0.08 -0.12);\n    --motion-tertiary: oklab(0.60 0.06 -0.10);\n    --motion-transparent: oklab(0.60 0.06 -0.12 / 0.75);\n    --motion-light-transparent: oklab(0.66 0.08 -0.12 / 0.75);\n\n    --paint-motion-primary: #865AF8;\n    --paint-motion-tertiary: #693FD6;\n    --paint-motion-transparent: #865AF857;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.60 0.06 -0.10);\n    --extensions-tertiary: oklab(0.50 0.12 0.04);\n    --extensions-transparent: oklab(0.60 0.06 -0.10 / 0.35);\n    --extensions-light: oklab(0.70 0.04 -0.08);\n    \n    --drop-highlight: oklab(0.55 0.08 -0.12);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.25 0.02 -0.08 / 0.9) 0%, oklab(0.35 0.08 -0.12 / 0.85) 15%, oklab(0.45 0.12 -0.08 / 0.8) 30%, oklab(0.55 0.15 0.02 / 0.8) 50%, oklab(0.65 0.08 0.08 / 0.8) 70%, oklab(0.75 0.02 0.12 / 0.8) 85%, oklab(0.85 -0.02 0.08 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Cosmic\"] {\n    --motion-primary: oklab(0.68 0.15 -0.08);\n    --motion-tertiary: oklab(0.72 0.12 -0.06);\n    --motion-transparent: oklab(0.68 0.15 -0.08 / 0.75);\n    --motion-light-transparent: oklab(0.78 0.15 -0.08 / 0.75);\n\n    --paint-motion-primary: #D36CC6;\n    --paint-motion-tertiary: #A8459C;\n    --paint-motion-transparent: #D36CC657;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.72 0.12 -0.06);\n    --extensions-tertiary: oklab(0.65 0.08 -0.12);\n    --extensions-transparent: oklab(0.72 0.12 -0.06 / 0.35);\n    --extensions-light: oklab(0.78 0.08 -0.04);\n    \n    --drop-highlight: oklab(0.68 0.15 -0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.45 0.08 -0.15 / 0.8) 0%, oklab(0.55 0.12 -0.12 / 0.8) 20%, oklab(0.65 0.15 -0.08 / 0.8) 40%, oklab(0.70 0.12 -0.04 / 0.8) 60%, oklab(0.65 0.05 -0.10 / 0.8) 80%, oklab(0.60 -0.02 -0.12 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Aurora\"] {\n    --motion-primary: oklab(0.70 -0.10 0.08);\n    --motion-primary-transparent: oklab(0.70 -0.10 0.08 / 0.75);\n    --motion-tertiary: oklab(0.75 -0.08 0.06);\n\t--motion-light-transparent: oklab(0.80 -0.10 0.08 / 0.75);\n\n    --paint-motion-primary: #6FB265;\n    --paint-motion-tertiary: #4B8C41;\n    --paint-motion-transparent: #6FB26557;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.75 -0.08 0.06);\n    --extensions-tertiary: oklab(0.65 -0.06 -0.08);\n    --extensions-transparent: oklab(0.75 -0.08 0.06 / 0.35);\n    --extensions-light: oklab(0.80 -0.04 0.04);\n    \n    --drop-highlight: oklab(0.70 -0.10 0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.65 -0.12 0.10 / 0.8) 0%, oklab(0.70 -0.10 0.05 / 0.8) 20%, oklab(0.65 -0.08 -0.05 / 0.8) 40%, oklab(0.60 -0.06 -0.10 / 0.8) 60%, oklab(0.55 0.02 -0.12 / 0.8) 80%, oklab(0.60 0.08 -0.08 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Mint\"] {\n    --motion-primary: oklab(0.78 -0.12 0.08);\n    --motion-primary-transparent: oklab(0.78 -0.12 0.08 / 0.75);\n    --motion-tertiary: oklab(0.80 -0.10 0.06);\n\t--motion-light-transparent: oklab(0.85 -0.12 0.08 / 0.75);\n\n    --paint-motion-primary: #75D07E;\n    --paint-motion-tertiary: #50A859;\n    --paint-motion-transparent: #75D07E57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.80 -0.10 0.06);\n    --extensions-tertiary: oklab(0.75 -0.08 -0.02);\n    --extensions-transparent: oklab(0.80 -0.10 0.06 / 0.35);\n    --extensions-light: oklab(0.85 -0.06 0.04);\n    \n    --drop-highlight: oklab(0.78 -0.12 0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: linear-gradient(90deg, oklab(0.75 -0.14 0.10 / 0.8) 0%, oklab(0.78 -0.12 0.08 / 0.8) 20%, oklab(0.80 -0.10 0.04 / 0.8) 40%, oklab(0.82 -0.08 0.00 / 0.8) 60%, oklab(0.80 -0.06 -0.04 / 0.8) 80%, oklab(0.75 -0.04 -0.08 / 0.8) 100%);\n}\n\nbody[coloraccent=\"Cherry\"] {\n    --motion-primary: oklab(0.70 0.18 0.08);\n    --motion-primary-transparent: oklab(0.70 0.18 0.08 / 0.75);\n    --motion-tertiary: oklab(0.72 0.16 0.10);\n\t--motion-light-transparent: oklab(0.82 0.18 0.08 / 0.75);\n\n    --paint-motion-primary: #FF605F;\n    --paint-motion-tertiary: #C43130;\n    --paint-motion-transparent: #FF605F57;\n\n    --motion-primary-dark: #333333;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: oklab(0.72 0.16 0.10);\n    --extensions-tertiary: oklab(0.68 0.14 0.04);\n    --extensions-transparent: oklab(0.72 0.16 0.10 / 0.35);\n    --extensions-light: oklab(0.78 0.12 0.12);\n    \n     --drop-highlight: oklab(0.70 0.18 0.08);\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image:\n        linear-gradient(90deg, oklab(0.65 0.20 0.06 / 0.8) 0%, oklab(0.70 0.18 0.08 / 0.8) 20%, oklab(0.72 0.16 0.12 / 0.8) 40%, oklab(0.75 0.14 0.14 / 0.8) 60%, oklab(0.78 0.12 0.08 / 0.8) 80%, oklab(0.80 0.08 0.04 / 0.8) 100%);\n}\n\nbody[coloraccent=\"NIGHTMARE\"] {\n--motion-primary: #5E0000;\n--motion-tertiary: #470000; /* #007bc7 */\n--motion-transparent: #540000; /* 35% transparent version of motion-primary */\n--motion-light-transparent: #8F0000; /* 15% transparent version of motion-primary */\n\n    --paint-motion-primary: #ff0000;\n    --paint-motion-tertiary: #d60000;\n    --paint-motion-transparent: #ff000057;\n\n    --motion-primary-dark: #3D0000;\n    --motion-dark-transparent: #33333357;\n\n    --extensions-primary: rgb(0, 0, 0);\n    --extensions-tertiary: rgb(47, 8, 0);\n    --extensions-transparent: hsla(0, 0%, 0%, 0.35);\n    --extensions-light: rgb(255, 141, 119);\n    \n    --drop-highlight: #000000;\n\n    --menu-bar-background: var(--motion-primary);\n    --menu-bar-background-dark: var(--motion-primary-dark);\n\n    --menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"Partytime\"] {\n--ui-modal-overlay: #FF5EFC90; /* 90% transparent version of motion-primary */\n\n--motion-primary: #CAB5F5; /* #00c3ff */\n--motion-tertiary: #9E7FDE; /* #007bc7 */\n--motion-transparent: #CAB5F535; /* 35% transparent version of motion-primary */\n--motion-light-transparent: #DFD4F515; /* 15% transparent version of motion-primary */\n\n/* opt-in theme overrides */\n--motion-primary-dark: #866ABF; /*top bar color when in dark mode*/\n--motion-dark-transparent: #866ABF40; /*top bar color when in dark mode*/\n\n--red-primary: #CAB5F5; /* #00c3ff */\n--red-tertiary: #9E7FDE; /* #007bc7 */\n\n--extensions-primary: #FF00CC;\n--extensions-tertiary: #CC009E;\n--extensions-transparent: #FF00CC35; /* 35% transparent version of extensions-primary */\n--extensions-light: #FF73E3; /* opaque version of extensions-transparent, on white bg */\n\n--drop-highlight: #DFD4F5; /* lighter than motion-primary */\n\n--menu-bar-background: var(--motion-primary);\n--menu-bar-background-dark: var(--motion-primary-dark);\n\n--menu-bar-background-image: none;\n}\n\nbody[coloraccent=\"custom\"] {\n    \n}\n\n/* #E5F0FF */\n\n/* #E9F1FC */\n\n/* #D9E3F2 */\n\n/* 90% transparent version of motion-primary */\n\n/* #FFFFFF */\n\n/* 25% transparent version of ui-white */\n\n/* 25% transparent version of ui-white */\n\n/* 25% transparent version of ui-white */\n\n/* #FFFFFF */\n\n/* #FFFFFF */\n\n/* 15% transparent version of black */\n\n/* #FFFFFF */\n\n/* #FFFFFF */\n\n/* 15% transparent version of black */\n\n/* #575E75 */\n\n/* #00c3ff */\n\n/* #007bc7 */\n\n/* 35% transparent version of motion-primary */\n\n/* 15% transparent version of motion-primary */\n\n/* opt-in theme overrides */\n\n/*top bar color when in dark mode*/\n\n/*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n\n/*top bar color when in dark mode*/\n\n/*when it doesn't work. change back: hsla(92, 91%, 53%, 1)*/\n\n/* #00c3ff */\n\n/* #007bc7 */\n\n/* #CF63CF */\n\n/* #BD42BD */\n\n/* #FFAB19 */\n\n/* #FF8C1A */\n\n/* #0FBD8C */\n\n/* #0FBD8C */\n\n/* #FF8C1A */\n\n/* #FFB366 */\n\n/* #FF8C1A */\n\n/* 35% transparent version of extensions-primary */\n\n/* opaque version of extensions-transparent, on white bg */\n\n/* lighter than motion-primary */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/*$form-radius: calc($space / 2);*/\n\n/* layout contants from `layout-constants.js` */\n\n.tag-button_tag-button_3MxU5 {\n    padding: .625rem 1rem;\n    margin-bottom: 6px;\n    background: var(--motion-primary, hsla(240, 65%, 50%, 1));\n    border-radius: 1.375rem;\n    color: hsla(0, 100%, 100%, 1);\n    height: 2.5rem;\n}\n\n.tag-button_tag-button-icon_3VB4Q {\n    max-width: 1rem;\n    max-height: 1rem;\n}\n\n.tag-button_active_1IIH9 {\n    background: hsla(30, 100%, 55%, 1);\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"tag-button": "tag-button_tag-button_3MxU5",
+	"tagButton": "tag-button_tag-button_3MxU5",
+	"tag-button-icon": "tag-button_tag-button-icon_3VB4Q",
+	"tagButtonIcon": "tag-button_tag-button-icon_3VB4Q",
+	"active": "tag-button_active_1IIH9"
+};
+
+/***/ }),
+
+/***/ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/lib/normalize.css":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/cache-loader/dist/cjs.js??ref--5-1!./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/src??postcss!./src/lib/normalize.css ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -367,375 +368,6 @@ exports.push([module.i, "/*! normalize.css v3.0.3 | MIT License | github.com/nec
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/lib/url/escape.js":
-/*!***************************************************!*\
-  !*** ./node_modules/css-loader/lib/url/escape.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/decode-uri-component/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/decode-uri-component/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var token = '%[a-f0-9]{2}';
-var singleMatcher = new RegExp('(' + token + ')|([^%]+?)', 'gi');
-var multiMatcher = new RegExp('(' + token + ')+', 'gi');
-
-function decodeComponents(components, split) {
-	try {
-		// Try to decode the entire string first
-		return [decodeURIComponent(components.join(''))];
-	} catch (err) {
-		// Do nothing
-	}
-
-	if (components.length === 1) {
-		return components;
-	}
-
-	split = split || 1;
-
-	// Split the array in 2 parts
-	var left = components.slice(0, split);
-	var right = components.slice(split);
-
-	return Array.prototype.concat.call([], decodeComponents(left), decodeComponents(right));
-}
-
-function decode(input) {
-	try {
-		return decodeURIComponent(input);
-	} catch (err) {
-		var tokens = input.match(singleMatcher) || [];
-
-		for (var i = 1; i < tokens.length; i++) {
-			input = decodeComponents(tokens, i).join('');
-
-			tokens = input.match(singleMatcher) || [];
-		}
-
-		return input;
-	}
-}
-
-function customDecodeURIComponent(input) {
-	// Keep track of all the replacements and prefill the map with the `BOM`
-	var replaceMap = {
-		'%FE%FF': '\uFFFD\uFFFD',
-		'%FF%FE': '\uFFFD\uFFFD'
-	};
-
-	var match = multiMatcher.exec(input);
-	while (match) {
-		try {
-			// Decode as big chunks as possible
-			replaceMap[match[0]] = decodeURIComponent(match[0]);
-		} catch (err) {
-			var result = decode(match[0]);
-
-			if (result !== match[0]) {
-				replaceMap[match[0]] = result;
-			}
-		}
-
-		match = multiMatcher.exec(input);
-	}
-
-	// Add `%C2` at the end of the map to make sure it does not replace the combinator before everything else
-	replaceMap['%C2'] = '\uFFFD';
-
-	var entries = Object.keys(replaceMap);
-
-	for (var i = 0; i < entries.length; i++) {
-		// Replace all decoded components
-		var key = entries[i];
-		input = input.replace(new RegExp(key, 'g'), replaceMap[key]);
-	}
-
-	return input;
-}
-
-module.exports = function (encodedURI) {
-	if (typeof encodedURI !== 'string') {
-		throw new TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof encodedURI + '`');
-	}
-
-	try {
-		encodedURI = encodedURI.replace(/\+/g, ' ');
-
-		// Try the built in decoder first
-		return decodeURIComponent(encodedURI);
-	} catch (err) {
-		// Fallback to a more advanced decoder
-		return customDecodeURIComponent(encodedURI);
-	}
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/query-string/index.js":
-/*!********************************************!*\
-  !*** ./node_modules/query-string/index.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var strictUriEncode = __webpack_require__(/*! strict-uri-encode */ "./node_modules/strict-uri-encode/index.js");
-var objectAssign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
-var decodeComponent = __webpack_require__(/*! decode-uri-component */ "./node_modules/decode-uri-component/index.js");
-
-function encoderForArrayFormat(opts) {
-	switch (opts.arrayFormat) {
-		case 'index':
-			return function (key, value, index) {
-				return value === null ? [
-					encode(key, opts),
-					'[',
-					index,
-					']'
-				].join('') : [
-					encode(key, opts),
-					'[',
-					encode(index, opts),
-					']=',
-					encode(value, opts)
-				].join('');
-			};
-
-		case 'bracket':
-			return function (key, value) {
-				return value === null ? encode(key, opts) : [
-					encode(key, opts),
-					'[]=',
-					encode(value, opts)
-				].join('');
-			};
-
-		default:
-			return function (key, value) {
-				return value === null ? encode(key, opts) : [
-					encode(key, opts),
-					'=',
-					encode(value, opts)
-				].join('');
-			};
-	}
-}
-
-function parserForArrayFormat(opts) {
-	var result;
-
-	switch (opts.arrayFormat) {
-		case 'index':
-			return function (key, value, accumulator) {
-				result = /\[(\d*)\]$/.exec(key);
-
-				key = key.replace(/\[\d*\]$/, '');
-
-				if (!result) {
-					accumulator[key] = value;
-					return;
-				}
-
-				if (accumulator[key] === undefined) {
-					accumulator[key] = {};
-				}
-
-				accumulator[key][result[1]] = value;
-			};
-
-		case 'bracket':
-			return function (key, value, accumulator) {
-				result = /(\[\])$/.exec(key);
-				key = key.replace(/\[\]$/, '');
-
-				if (!result) {
-					accumulator[key] = value;
-					return;
-				} else if (accumulator[key] === undefined) {
-					accumulator[key] = [value];
-					return;
-				}
-
-				accumulator[key] = [].concat(accumulator[key], value);
-			};
-
-		default:
-			return function (key, value, accumulator) {
-				if (accumulator[key] === undefined) {
-					accumulator[key] = value;
-					return;
-				}
-
-				accumulator[key] = [].concat(accumulator[key], value);
-			};
-	}
-}
-
-function encode(value, opts) {
-	if (opts.encode) {
-		return opts.strict ? strictUriEncode(value) : encodeURIComponent(value);
-	}
-
-	return value;
-}
-
-function keysSorter(input) {
-	if (Array.isArray(input)) {
-		return input.sort();
-	} else if (typeof input === 'object') {
-		return keysSorter(Object.keys(input)).sort(function (a, b) {
-			return Number(a) - Number(b);
-		}).map(function (key) {
-			return input[key];
-		});
-	}
-
-	return input;
-}
-
-function extract(str) {
-	var queryStart = str.indexOf('?');
-	if (queryStart === -1) {
-		return '';
-	}
-	return str.slice(queryStart + 1);
-}
-
-function parse(str, opts) {
-	opts = objectAssign({arrayFormat: 'none'}, opts);
-
-	var formatter = parserForArrayFormat(opts);
-
-	// Create an object with no prototype
-	// https://github.com/sindresorhus/query-string/issues/47
-	var ret = Object.create(null);
-
-	if (typeof str !== 'string') {
-		return ret;
-	}
-
-	str = str.trim().replace(/^[?#&]/, '');
-
-	if (!str) {
-		return ret;
-	}
-
-	str.split('&').forEach(function (param) {
-		var parts = param.replace(/\+/g, ' ').split('=');
-		// Firefox (pre 40) decodes `%3D` to `=`
-		// https://github.com/sindresorhus/query-string/pull/37
-		var key = parts.shift();
-		var val = parts.length > 0 ? parts.join('=') : undefined;
-
-		// missing `=` should be `null`:
-		// http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
-		val = val === undefined ? null : decodeComponent(val);
-
-		formatter(decodeComponent(key), val, ret);
-	});
-
-	return Object.keys(ret).sort().reduce(function (result, key) {
-		var val = ret[key];
-		if (Boolean(val) && typeof val === 'object' && !Array.isArray(val)) {
-			// Sort object keys, not values
-			result[key] = keysSorter(val);
-		} else {
-			result[key] = val;
-		}
-
-		return result;
-	}, Object.create(null));
-}
-
-exports.extract = extract;
-exports.parse = parse;
-
-exports.stringify = function (obj, opts) {
-	var defaults = {
-		encode: true,
-		strict: true,
-		arrayFormat: 'none'
-	};
-
-	opts = objectAssign(defaults, opts);
-
-	if (opts.sort === false) {
-		opts.sort = function () {};
-	}
-
-	var formatter = encoderForArrayFormat(opts);
-
-	return obj ? Object.keys(obj).sort(opts.sort).map(function (key) {
-		var val = obj[key];
-
-		if (val === undefined) {
-			return '';
-		}
-
-		if (val === null) {
-			return encode(key, opts);
-		}
-
-		if (Array.isArray(val)) {
-			var result = [];
-
-			val.slice().forEach(function (val2) {
-				if (val2 === undefined) {
-					return;
-				}
-
-				result.push(formatter(key, val2, result.length));
-			});
-
-			return result.join('&');
-		}
-
-		return encode(key, opts) + '=' + encode(val, opts);
-	}).filter(function (x) {
-		return x.length > 0;
-	}).join('&') : '';
-};
-
-exports.parseUrl = function (str, opts) {
-	return {
-		url: str.split('?')[0] || '',
-		query: parse(extract(str), opts)
-	};
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/lib/tw-theme-dark.css":
 /*!*************************************************************!*\
   !*** ./node_modules/raw-loader!./src/lib/tw-theme-dark.css ***!
@@ -743,25 +375,7 @@ exports.parseUrl = function (str, opts) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* GUI */\n:root {\n    background: #111;\n    color: #eee;\n    color-scheme: dark;\n    /* see colors.csss */\n    --ui-primary: rgb(17, 17, 17);\n    --ui-secondary: rgb(30, 30, 30);\n    --ui-seccondary-opacity: rgba(30, 30, 30, 0.26);\n    --ui-tertiary: rgb(46, 46, 46);\n    --ui-modal-overlay: #333a;\n    --ui-black-transparent: rgba(255, 255, 255, 0.15);\n    --text-primary: #eee;\n    /* scratch-paint */\n    --paint-ui-pane-border: var(--ui-black-transparent);\n    --paint-text-primary: #eee;\n    --paint-form-border: var(--ui-black-transparent);\n}\n\n/* Blockly */\n.blocklySvg {\n    background-color: var(--ui-secondary) !important;\n    color-scheme: light;\n}\n[id^=\"blocklyGridPattern\"] > line {\n    stroke: #484848;\n}\n.blocklyFlyoutBackground {\n    fill: #1111117d;\n}\n.blocklyFlyout {\n  backdrop-filter: blur(10px);\n}\n.blocklyFlyoutLabelText {\n    fill: #ccc;\n}\n.blocklyFlyoutButton .blocklyText {\n    fill: #ccc;\n}\n.blocklyFlyoutButton:hover {\n    fill: #111;\n}\n/* blocklyFlyoutCheckboxPath stroke and blocklyFlyoutCheckbox fill must match */\n.blocklyFlyoutCheckboxPath {\n    stroke: #111;\n}\n.blocklyFlyoutCheckbox {\n    fill: #111;\n}\n.checked > .blocklyFlyoutCheckbox {\n    stroke: #a1c6fa;\n}\n.checked > .blocklyFlyoutCheckboxPath {\n    stroke: white;\n}\n.scratchCategoryMenu {\n    color: #ccc;\n}\n.blocklyToolboxDiv,\n.scratchCategoryMenu {\n    background: #111 !important;\n}\n.blocklyScrollbarHandle {\n    fill: #666;\n}\n.blocklyZoom {\n    filter: invert(100%);\n}\n.scratchCategoryMenuItem.categorySelected {\n    background: var(--ui-secondary);\n}\n.valueReportBox {\n    color: black;\n}\n.blocklyWidgetDiv {\n    color-scheme: light;\n}\n.blocklyWidgetDiv .goog-menu {\n    background: rgba(0, 0, 0, 0.35) !important;     /* transparent black for blur */\n    backdrop-filter: blur(12px) !important;\n    -webkit-backdrop-filter: blur(12px) !important;\n\n    border: 1px solid rgba(255, 255, 255, 0.1) !important; \n}\n.blocklyWidgetDiv .goog-menuitem {\n    color: var(--text-primary);\n}\n.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-content {\n    color: #666 !important;\n}\n.sa-blockly-menu-item-border {\n    border-top-color: var(--ui-black-transparent) !important;\n}\n.blocklyWidgetDiv .goog-menuitem.goog-menuitem-highlight {\n    background-color: rgba(31, 31, 31, 0.445);\n    border-color: transparent; /* remove border */\n}\n.scratchCommentText {\n    color: black;\n}\n.blocklyInsertionMarker > .blocklyPath {\n    fill: #ccc;\n}\n\n/* Other / Multipurpose */\n.Popover {\n    /* weird Chrome bug displays white bar above popovers with color-scheme: dark */\n    color-scheme: light;\n}\n.Popover-body {\n    background: var(--ui-secondary);\n    border-color: var(--ui-black-transparent);\n    color: var(--text-primary);\n}\n.Popover-tipShape {\n    fill: var(--ui-secondary);\n    stroke: var(--ui-black-transparent);\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/strict-uri-encode/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/strict-uri-encode/index.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-module.exports = function (str) {
-	return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
-		return '%' + c.charCodeAt(0).toString(16).toUpperCase();
-	});
-};
-
+module.exports = "/* GUI */\n:root {\n    background: #111;\n    color: #eee;\n    color-scheme: dark;\n    /* see colors.csss */\n    --ui-primary: rgb(17, 17, 17);\n    --ui-secondary: rgb(30, 30, 30);\n    --ui-tertiary: rgb(46, 46, 46);\n    --ui-modal-overlay: #333a;\n    --ui-black-transparent: rgba(255, 255, 255, 0.15);\n    --text-primary: #eee;\n    /* scratch-paint */\n    --paint-ui-pane-border: var(--ui-black-transparent);\n    --paint-text-primary: #eee;\n    --paint-form-border: var(--ui-black-transparent);\n}\n\n/* Blockly */\n.blocklySvg {\n    background-color: var(--ui-secondary) !important;\n    color-scheme: light;\n}\n[id^=\"blocklyGridPattern\"] > line {\n    stroke: #484848;\n}\n.blocklyFlyoutBackground {\n    fill: #111;\n}\n.blocklyFlyoutLabelText {\n    fill: #ccc;\n}\n.blocklyFlyoutButton .blocklyText {\n    fill: #ccc;\n}\n.blocklyFlyoutButton:hover {\n    fill: #111;\n}\n/* blocklyFlyoutCheckboxPath stroke and blocklyFlyoutCheckbox fill must match */\n.blocklyFlyoutCheckboxPath {\n    stroke: #111;\n}\n.blocklyFlyoutCheckbox {\n    fill: #111;\n}\n.checked > .blocklyFlyoutCheckbox {\n    stroke: #a1c6fa;\n}\n.checked > .blocklyFlyoutCheckboxPath {\n    stroke: white;\n}\n.scratchCategoryMenu {\n    color: #ccc;\n}\n.blocklyToolboxDiv,\n.scratchCategoryMenu {\n    background: #111 !important;\n}\n.blocklyScrollbarHandle {\n    fill: #666;\n}\n.blocklyZoom {\n    filter: invert(100%);\n}\n.scratchCategoryMenuItem.categorySelected {\n    background: var(--ui-secondary);\n}\n.valueReportBox {\n    color: black;\n}\n.blocklyWidgetDiv {\n    color-scheme: light;\n}\n.blocklyWidgetDiv .goog-menu {\n    background: var(--ui-primary);\n    border-color: var(--ui-black-transparent);\n}\n.blocklyWidgetDiv .goog-menuitem {\n    color: var(--text-primary);\n}\n.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-content {\n    color: hsla(0, 0%, 100%, .35) !important;\n}\n.sa-blockly-menu-item-border {\n    border-top-color: var(--ui-black-transparent) !important;\n}\n.blocklyWidgetDiv .goog-menuitem.goog-menuitem-highlight {\n    background-color: var(--ui-tertiary);\n    border-color: transparent; /* remove border */\n}\n.scratchCommentText {\n    color: black;\n}\n.blocklyInsertionMarker > .blocklyPath {\n    fill: #ccc;\n}\n\n/* Other / Multipurpose */\n.Popover {\n    /* weird Chrome bug displays white bar above popovers with color-scheme: dark */\n    color-scheme: light;\n}\n.Popover-body {\n    background: var(--ui-secondary);\n    border-color: var(--ui-black-transparent);\n    color: var(--text-primary);\n}\n.Popover-tipShape {\n    fill: var(--ui-secondary);\n    stroke: var(--ui-black-transparent);\n}\n"
 
 /***/ }),
 
@@ -1017,14 +631,113 @@ if (typeof queueMicrotask !== 'function') {
 
 /***/ }),
 
+/***/ "./src/addons/settings-store-redux-store.js":
+/*!**************************************************!*\
+  !*** ./src/addons/settings-store-redux-store.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _settings_store_singleton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settings-store-singleton */ "./src/addons/settings-store-singleton.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
+
+
+const initialState = {
+  settingsStore: _settings_store_singleton__WEBPACK_IMPORTED_MODULE_0__["default"]
+};
+function settingsReducer() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
+const store = Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(settingsReducer);
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+/***/ }),
+
+/***/ "./src/addons/settings/addon-tags.js":
+/*!*******************************************!*\
+  !*** ./src/addons/settings/addon-tags.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../lib/libraries/tag-messages.js */ "./src/lib/libraries/tag-messages.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  tag: 'delete',
+  intlLabel: ''
+}, {
+  tag: 'gaiamod',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].gaiamod,
+  color: '#2d2dd2'
+}, {
+  tag: 'electramod',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].electramod,
+  color: '#625e97'
+}, {
+  tag: 'dinosaurmod',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].dinosaurmod,
+  color: '#80f41a'
+}, {
+  tag: 'snailide',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].snailide,
+  color: '#cc00ff'
+}, {
+  tag: 'othermods',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].othermods,
+  color: '#ad4e00'
+}, {
+  tag: 'penguinmod',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].penguinmod,
+  color: '#00c3ff'
+},
+//{ tag: 'divider1', intlLabel: messages.scratch, type: 'divider' },
+{
+  tag: 'theme',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].theme,
+  color: '#9ad4cf'
+}, {
+  tag: 'recommended',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].recommended,
+  color: '#175ef8'
+}, {
+  tag: 'beta',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].beta,
+  color: '#fd662b'
+},
+//{ tag: 'divider2', intlLabel: messages.scratch, type: 'divider' },
+{
+  tag: 'new',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].new,
+  color: '#b117f8'
+}, {
+  tag: 'newSettings',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].newSettings,
+  color: '#b117f8'
+}, {
+  tag: 'danger',
+  intlLabel: _lib_libraries_tag_messages_js__WEBPACK_IMPORTED_MODULE_0__["default"].dangerous,
+  color: '#fd2b2b'
+}]);
+
+/***/ }),
+
 /***/ "./src/addons/settings/en.json":
 /*!*************************************!*\
   !*** ./src/addons/settings/en.json ***!
   \*************************************/
-/*! exports provided: title, credits, reset, resetAll, confirmResetAll, dirty, dirtyButton, presets, noCompiler, tagRecommended, tagDanger, tagTheme, tagBeta, tagNew, groupNew, groupOthers, groupDanger, search, noResults, export, import, unsupported, addonFeedback, enableDangerous, default */
+/*! exports provided: title, credits, reset, resetAll, confirmResetAll, dirty, dirtyButton, presets, noCompiler, tagRecommended, tagDanger, tagTheme, tagBeta, tagNew, tagPenguinmod, tagGaiamod, tagDinosaurmod, tagSnailIDE, tagElectramod, tagOtherMods, groupNew, groupOthers, groupDanger, search, noResults, export, import, unsupported, addonFeedback, enableDangerous, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"title\":\"Addon Settings\",\"credits\":\"Credits:\",\"reset\":\"Reset\",\"resetAll\":\"Reset all\",\"confirmResetAll\":\"Are you sure you want to reset all addon settings to their default values?\",\"dirty\":\"Reload tabs to apply settings.\",\"dirtyButton\":\"Reload now\",\"presets\":\"Presets\",\"noCompiler\":\"This addon only works when the compiler is disabled through the Advanced > Disable Compiler menu or using the \\\"Disable compiler in editor\\\" addon.\",\"tagRecommended\":\"Recommended\",\"tagDanger\":\"Dangerous\",\"tagTheme\":\"Theme\",\"tagBeta\":\"Beta\",\"tagNew\":\"New!\",\"groupNew\":\"New ({number})\",\"groupOthers\":\"Others ({number})\",\"groupDanger\":\"Dangerous ({number})\",\"search\":\"Search\",\"noResults\":\"No results.\",\"export\":\"Export settings\",\"import\":\"Import settings\",\"unsupported\":\"Some addons are not available in this browser:\",\"addonFeedback\":\"Addon Feedback\",\"enableDangerous\":\"This addon is dangerous and may intentionally DISABLE features. Most users SHOULD NOT enable this addon. Are you sure you want to enable it?\"}");
+module.exports = JSON.parse("{\"title\":\"Addon Settings\",\"credits\":\"Credits:\",\"reset\":\"Reset\",\"resetAll\":\"Reset all\",\"confirmResetAll\":\"Are you sure you want to reset all addon settings to their default values?\",\"dirty\":\"Reload tabs to apply settings.\",\"dirtyButton\":\"Reload now\",\"presets\":\"Presets\",\"noCompiler\":\"This addon only works when the compiler is disabled through the Advanced > Disable Compiler menu or using the \\\"Disable compiler in editor\\\" addon.\",\"tagRecommended\":\"Recommended\",\"tagDanger\":\"Dangerous\",\"tagTheme\":\"Theme\",\"tagBeta\":\"Beta\",\"tagNew\":\"New!\",\"tagPenguinmod\":\"Penguinmod\",\"tagGaiamod\":\"Gaiamod\",\"tagDinosaurmod\":\"Dinosaurmod\",\"tagSnailIDE\":\"Snail-IDE\",\"tagElectramod\":\"Electramod\",\"tagOtherMods\":\"Other Scratch Mods\",\"groupNew\":\"New ({number})\",\"groupOthers\":\"Others ({number})\",\"groupDanger\":\"Dangerous ({number})\",\"search\":\"Search\",\"noResults\":\"No results.\",\"export\":\"Export settings\",\"import\":\"Import settings\",\"unsupported\":\"Some addons are not available in this browser:\",\"addonFeedback\":\"Addon Feedback\",\"enableDangerous\":\"This addon is dangerous and may intentionally DISABLE features. Most users SHOULD NOT enable this addon. Are you sure you want to enable it?\"}");
 
 /***/ }),
 
@@ -1145,10 +858,9 @@ const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').
 const splitToWords = text => normalize(text).split(' ').filter(i => i);
 const parseTexts = texts => {
   const result = [];
-  for (const {
-    score,
-    text
-  } of texts) {
+  for (const _ref of texts) {
+    const score = _ref.score;
+    const text = _ref.text;
     result.push({
       score,
       words: splitToWords(text)
@@ -1216,7 +928,7 @@ class Search {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./settings.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/addons/settings/settings.css");
+var content = __webpack_require__(/*! !../../../node_modules/cache-loader/dist/cjs.js??ref--5-1!../../../node_modules/css-loader??ref--5-2!../../../node_modules/postcss-loader/src??postcss!./settings.css */ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/addons/settings/settings.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1282,6 +994,9 @@ var _generated_upstream_meta_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__
 /* harmony import */ var _polyfill__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_polyfill__WEBPACK_IMPORTED_MODULE_19__);
 /* harmony import */ var _lib_normalize_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../lib/normalize.css */ "./src/lib/normalize.css");
 /* harmony import */ var _lib_normalize_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_lib_normalize_css__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _containers_tag_button_jsx__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../containers/tag-button.jsx */ "./src/containers/tag-button.jsx");
+/* harmony import */ var _settings_store_redux_store__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../settings-store-redux-store */ "./src/addons/settings-store-redux-store.js");
+/* harmony import */ var _addon_tags_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./addon-tags.js */ "./src/addons/settings/addon-tags.js");
 const _excluded = ["onChange", "value"];
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
@@ -1291,6 +1006,12 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
 function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 /**
  * Copyright (C) 2021 Thomas Weber
  *
@@ -1329,6 +1050,11 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 
+
+
+//import LibraryComponent from './modified-library.jsx';
+
+
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable react/no-multi-comp */
@@ -1344,8 +1070,8 @@ if (locale !== 'en') {
     Object.assign(settingsTranslations, messages);
   }
 }
-document.title = "".concat(settingsTranslations.title, " - ArkIDE");
-const theme = 'dark';
+document.title = "".concat(settingsTranslations.title, " - GaiaMod");
+const theme = Object(_lib_tw_theme_hoc_jsx__WEBPACK_IMPORTED_MODULE_10__["getInitialDarkMode"])() ? 'dark' : 'light';
 document.body.setAttribute('theme', theme);
 let _throttleTimeout;
 const postThrottledSettingsChange = store => {
@@ -1362,7 +1088,10 @@ const postThrottledSettingsChange = store => {
 const filterAddonsBySupport = () => {
   const supported = {};
   const unsupported = {};
-  for (const [id, manifest] of Object.entries(_generated_addon_manifests__WEBPACK_IMPORTED_MODULE_4__["default"])) {
+  for (const _ref of Object.entries(_generated_addon_manifests__WEBPACK_IMPORTED_MODULE_4__["default"])) {
+    var _ref2 = _slicedToArray(_ref, 2);
+    const id = _ref2[0];
+    const manifest = _ref2[1];
     if (manifest.unsupported) {
       unsupported[id] = manifest;
     } else {
@@ -1374,10 +1103,9 @@ const filterAddonsBySupport = () => {
     unsupported
   };
 };
-const {
-  supported: supportedAddons,
-  unsupported: unsupportedAddons
-} = filterAddonsBySupport();
+const _filterAddonsBySuppor = filterAddonsBySupport(),
+  supportedAddons = _filterAddonsBySuppor.supported,
+  unsupportedAddons = _filterAddonsBySuppor.unsupported;
 const groupAddons = () => {
   const groups = {
     new: {
@@ -1410,10 +1138,8 @@ const groupAddons = () => {
   return groups;
 };
 const groupedAddons = groupAddons();
-const CreditList = _ref => {
-  let {
-    credits
-  } = _ref;
+const CreditList = _ref3 => {
+  let credits = _ref3.credits;
   return credits.map((author, index) => {
     const isLast = index === credits.length - 1;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1432,12 +1158,10 @@ CreditList.propTypes = {
     link: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
   }))
 };
-const Switch = _ref2 => {
-  let {
-      onChange,
-      value
-    } = _ref2,
-    props = _objectWithoutProperties(_ref2, _excluded);
+const Switch = _ref4 => {
+  let onChange = _ref4.onChange,
+    value = _ref4.value,
+    props = _objectWithoutProperties(_ref4, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", _extends({
     className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.switch,
     state: value ? 'on' : 'off',
@@ -1451,12 +1175,10 @@ Switch.propTypes = {
   onChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   value: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
-const Select = _ref3 => {
-  let {
-    onChange,
-    value,
-    values
-  } = _ref3;
+const Select = _ref5 => {
+  let onChange = _ref5.onChange,
+    value = _ref5.value,
+    values = _ref5.values;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.select
   }, values.map(potentialValue => {
@@ -1479,10 +1201,8 @@ Select.propTypes = {
     name: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
   }))
 };
-const Tags = _ref4 => {
-  let {
-    manifest
-  } = _ref4;
+const Tags = _ref6 => {
+  let manifest = _ref6.manifest;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagContainer
   }, manifest.tags.includes('recommended') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1495,7 +1215,79 @@ const Tags = _ref4 => {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagNew)
   }, settingsTranslations.tagNew), manifest.tags.includes('danger') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagDanger)
-  }, settingsTranslations.tagDanger));
+  }, settingsTranslations.tagDanger), manifest.tags.includes('penguinmod') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagPenguinmod),
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "5px"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://studio.penguinmod.com/favicon.ico",
+    style: {
+      width: "13px",
+      height: "13px"
+    },
+    alt: "PenguinMod Icon"
+  }), settingsTranslations.tagPenguinMod), manifest.tags.includes('gaiamod') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagGaiamod),
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "5px"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://gaiamod-main.github.io/favicon.ico",
+    style: {
+      width: "13px",
+      height: "13px"
+    },
+    alt: "GaiaMod Icon"
+  }), settingsTranslations.tagGaiamod), manifest.tags.includes('dinosaurmod') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagDinosaurmod),
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "5px"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://dinosaurmod.github.io/favicon.ico",
+    style: {
+      width: "13px",
+      height: "13px"
+    },
+    alt: "DinosaurMod Icon"
+  }), settingsTranslations.tagDinosaurMod), manifest.tags.includes('snailide') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagSnailIDE),
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "5px"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://snail-ide.js.org/favicon.ico",
+    style: {
+      width: "13px",
+      height: "13px"
+    },
+    alt: "Snail-IDE Icon"
+  }), settingsTranslations.tagSnailIDE), manifest.tags.includes('electramod') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagElectramod),
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "5px"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://electramod.vercel.app/favicon.ico",
+    style: {
+      width: "13px",
+      height: "13px"
+    },
+    alt: "ElectraMod Icon"
+  }), settingsTranslations.tagElectramod), manifest.tags.includes('othermods') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tag, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.tagOtherMods)
+  }, settingsTranslations.tagOtherMods));
 };
 Tags.propTypes = {
   manifest: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
@@ -1585,12 +1377,10 @@ ColorInput.propTypes = {
   onChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
   value: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
 };
-const ResetButton = _ref5 => {
-  let {
-    addonId,
-    settingId,
-    forTextInput
-  } = _ref5;
+const ResetButton = _ref7 => {
+  let addonId = _ref7.addonId,
+    settingId = _ref7.settingId,
+    forTextInput = _ref7.forTextInput;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.button, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.resetSettingButton),
     onClick: () => _settings_store_singleton__WEBPACK_IMPORTED_MODULE_11__["default"].setAddonSetting(addonId, settingId, null),
@@ -1606,12 +1396,10 @@ ResetButton.propTypes = {
   settingId: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   forTextInput: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
-const Setting = _ref6 => {
-  let {
-    addonId,
-    setting,
-    value
-  } = _ref6;
+const Setting = _ref8 => {
+  let addonId = _ref8.addonId,
+    setting = _ref8.setting,
+    value = _ref8.value;
   if (!_settings_store_singleton__WEBPACK_IMPORTED_MODULE_11__["default"].evaluateCondition(addonId, setting.if)) {
     return null;
   }
@@ -1650,11 +1438,9 @@ const Setting = _ref6 => {
     settingId: settingId
   })), setting.type === 'select' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, label, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Select, {
     value: value,
-    values: setting.potentialValues.map(_ref7 => {
-      let {
-        id,
-        name
-      } = _ref7;
+    values: setting.potentialValues.map(_ref9 => {
+      let id = _ref9.id,
+        name = _ref9.name;
       return {
         id,
         name: addonTranslations["".concat(addonId, "/@settings-select-").concat(settingId, "-").concat(id)] || name
@@ -1685,11 +1471,9 @@ Setting.propTypes = {
   }),
   value: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number])
 };
-const Notice = _ref8 => {
-  let {
-    type,
-    text
-  } = _ref8;
+const Notice = _ref0 => {
+  let type = _ref0.type,
+    text = _ref0.text;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.notice,
     type: type
@@ -1704,11 +1488,9 @@ Notice.propTypes = {
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
-const Presets = _ref9 => {
-  let {
-    addonId,
-    presets
-  } = _ref9;
+const Presets = _ref1 => {
+  let addonId = _ref1.addonId,
+    presets = _ref1.presets;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.setting, _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.presets)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1734,13 +1516,11 @@ Presets.propTypes = {
     values: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({})
   }))
 };
-const Addon = _ref0 => {
-  let {
-    id,
-    settings,
-    manifest,
-    extended
-  } = _ref0;
+const Addon = _ref10 => {
+  let id = _ref10.id,
+    settings = _ref10.settings,
+    manifest = _ref10.manifest,
+    extended = _ref10.extended;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.addon, {
       [_settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.addonDirty]: settings.dirty
@@ -1849,19 +1629,15 @@ const Dirty = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a
 Dirty.propTypes = {
   onReloadNow: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
-const UnsupportedAddons = _ref1 => {
-  let {
-    addons: addonList
-  } = _ref1;
+const UnsupportedAddons = _ref11 => {
+  let addonList = _ref11.addons;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.unsupportedContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.unsupportedText
-  }, settingsTranslations.unsupported), addonList.map((_ref10, index) => {
-    let {
-      id,
-      manifest
-    } = _ref10;
+  }, settingsTranslations.unsupported), addonList.map((_ref12, index) => {
+    let id = _ref12.id,
+      manifest = _ref12.manifest;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       key: id,
       className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.unsupportedAddon
@@ -1876,17 +1652,13 @@ UnsupportedAddons.propTypes = {
     })
   }))
 };
-const InternalAddonList = _ref11 => {
-  let {
-    addons,
-    extended
-  } = _ref11;
-  return addons.map(_ref12 => {
-    let {
-      id,
-      manifest,
-      state
-    } = _ref12;
+const InternalAddonList = _ref13 => {
+  let addons = _ref13.addons,
+    extended = _ref13.extended;
+  return addons.map(_ref14 => {
+    let id = _ref14.id,
+      manifest = _ref14.manifest,
+      state = _ref14.state;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Addon, {
       key: id,
       id: id,
@@ -1937,11 +1709,9 @@ AddonGroup.propTypes = {
   })).isRequired,
   extended: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
 };
-const addonToSearchItem = _ref13 => {
-  let {
-    id,
-    manifest
-  } = _ref13;
+const addonToSearchItem = _ref15 => {
+  let id = _ref15.id,
+    manifest = _ref15.manifest;
   const texts = new Set();
   const addText = (score, text) => {
     if (text) {
@@ -1992,10 +1762,8 @@ class AddonList extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
   render() {
     if (this.props.search) {
-      const addons = this.search.search(this.props.search).slice(0, 20).map(_ref14 => {
-        let {
-          index
-        } = _ref14;
+      const addons = this.search.search(this.props.search).slice(0, 20).map(_ref16 => {
+        let index = _ref16.index;
         return this.props.addons[index];
       });
       if (addons.length === 0) {
@@ -2008,12 +1776,13 @@ class AddonList extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         extended: this.props.extended
       }));
     }
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.entries(groupedAddons).map(_ref15 => {
-      let [id, {
-        label,
-        addons,
-        open
-      }] = _ref15;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.entries(groupedAddons).map(_ref17 => {
+      let _ref18 = _slicedToArray(_ref17, 2),
+        id = _ref18[0],
+        _ref18$ = _ref18[1],
+        label = _ref18$.label,
+        addons = _ref18$.addons,
+        open = _ref18$.open;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AddonGroup, {
         key: id,
         label: label,
@@ -2070,7 +1839,10 @@ class AddonSettingsComponent extends react__WEBPACK_IMPORTED_MODULE_0___default.
   }
   readFullAddonState() {
     const result = {};
-    for (const [id, manifest] of Object.entries(supportedAddons)) {
+    for (const _ref19 of Object.entries(supportedAddons)) {
+      var _ref20 = _slicedToArray(_ref19, 2);
+      const id = _ref20[0];
+      const manifest = _ref20[1];
       const enabled = _settings_store_singleton__WEBPACK_IMPORTED_MODULE_11__["default"].getAddonEnabled(id);
       const addonState = {
         enabled: enabled,
@@ -2086,11 +1858,10 @@ class AddonSettingsComponent extends react__WEBPACK_IMPORTED_MODULE_0___default.
     return result;
   }
   handleSettingStoreChanged(e) {
-    const {
-      addonId,
-      settingId,
-      value
-    } = e.detail;
+    const _e$detail = e.detail,
+      addonId = _e$detail.addonId,
+      settingId = _e$detail.settingId,
+      value = _e$detail.value;
     // If channels are unavailable, every change requires reload.
     const reloadRequired = e.detail.reloadRequired || !_channels__WEBPACK_IMPORTED_MODULE_12__["default"].changeChannel;
     this.setState(state => {
@@ -2197,16 +1968,20 @@ class AddonSettingsComponent extends react__WEBPACK_IMPORTED_MODULE_0___default.
     }
   }
   render() {
-    const addonState = Object.entries(supportedAddons).map(_ref16 => {
-      let [id, manifest] = _ref16;
+    const addonState = Object.entries(supportedAddons).map(_ref21 => {
+      let _ref22 = _slicedToArray(_ref21, 2),
+        id = _ref22[0],
+        manifest = _ref22[1];
       return {
         id,
         manifest,
         state: this.state[id]
       };
     });
-    const unsupported = Object.entries(unsupportedAddons).map(_ref17 => {
-      let [id, manifest] = _ref17;
+    const unsupported = Object.entries(unsupportedAddons).map(_ref23 => {
+      let _ref24 = _slicedToArray(_ref23, 2),
+        id = _ref24[0],
+        manifest = _ref24[1];
       return {
         id,
         manifest
@@ -2233,7 +2008,7 @@ class AddonSettingsComponent extends react__WEBPACK_IMPORTED_MODULE_0___default.
       className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.searchButton,
       onClick: this.handleClickSearchButton
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "https://discord.gg/aPRchS3Zdp",
+      href: "https://discord.gg/NZ9MBMYTZh",
       target: "_blank",
       rel: "noreferrer",
       className: _settings_css__WEBPACK_IMPORTED_MODULE_18___default.a.feedbackButtonOuter
@@ -2287,6 +2062,244 @@ AddonSettingsComponent.propTypes = {
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"ar\":{\"credits\":\"الاعتمادات:\",\"reset\":\"إعادة تعيين\",\"resetAll\":\"إعادة ضبط الجميع\"},\"ca\":{\"addonFeedback\":\"Comentaris del addon\",\"confirmResetAll\":\"Segur que vols restablir tota la configuració del addon als valors predeterminats?\",\"credits\":\"Crèdits:\",\"dirty\":\"Torna a carregar les pestanyes per aplicar la configuració.\",\"dirtyButton\":\"Recarrega ara\",\"enableDangerous\":\"Aquest addon és perillós i pot DESACTIVAR les funcions intencionadament. La majoria dels usuaris NO HAN d'activar aquest addon. Estas segur que voleu activar-lo?\",\"export\":\"Exporta configurament\",\"groupDanger\":\"Perillós ({number})\",\"groupNew\":\"Nou ({number})\",\"groupOthers\":\"Altres ({number})\",\"import\":\"Importa configurament\",\"noCompiler\":\"Aquest addon només funciona quan el compilador està desactivat mitjançant el menú Avançat > Desactiva el compilador o utilitzant el addon \\\"Desactiva el compilador a l'editor\\\".\",\"noResults\":\"Cap resultat.\",\"reset\":\"Restableix\",\"resetAll\":\"Restableix\",\"search\":\"Cerca\",\"tagDanger\":\"Perillos\",\"tagNew\":\"Nou!\",\"tagRecommended\":\"Recomanat\",\"tagTheme\":\"Tema\",\"title\":\"Configuració del addon\",\"unsupported\":\"Alguns addons no hi són disponibles en aquest navegador:\"},\"cs\":{\"addonFeedback\":\"Zpětná vazba doplňků\",\"confirmResetAll\":\"Jste si jisti, že chcete obnovit všechna nastavení doplňků na jejich výchozí hodnoty?\",\"credits\":\"Příspěvky:\",\"dirty\":\"Pro uložení nastavení obnovte stránku.\",\"dirtyButton\":\"Obnovte nyní\",\"enableDangerous\":\"Tento doplněk je nebezpečný a může úmyslně ZAKÁZAT funkce. Mnoho uživatelů by NEMĚLO tento doplněk povolovat. Jste si jisti, že to chcete povolit?\",\"export\":\"Exportovat nastavení\",\"groupDanger\":\"Nebezpečné ({number})\",\"groupNew\":\"Nové ({number})\",\"groupOthers\":\"Ostatní ({number})\",\"import\":\"Importovat nastavení\",\"noCompiler\":\"Tento doplněk funguje jen, když je kompilátor zakázán přes menu Pokročilé > Deaktivovat kompilátor nebo pomocí doplňku \\\"Zakázat kompilátor v editoru\\\".\",\"noResults\":\"Žádné výsledky.\",\"presets\":\"Šablony\",\"reset\":\"Obnovit\",\"resetAll\":\"Obnovit vše\",\"search\":\"Hledat\",\"tagDanger\":\"Nebezpečné\",\"tagNew\":\"Nové!\",\"tagRecommended\":\"Doporučeno\",\"tagTheme\":\"Téma\",\"title\":\"Nastavení doplňků\",\"unsupported\":\"Některé doplňky nejsou dostupné v tomto prohlížeči:\"},\"de\":{\"addonFeedback\":\"Feedback für Addons\",\"confirmResetAll\":\"Bist du sicher, dass du alle Addoneinstellungen auf ihre Standardwerte zurücksetzen willst?\",\"credits\":\"Danksagungen:\",\"dirty\":\"Lade die Tabs neu, um die Einstellungen anzuwenden.\",\"dirtyButton\":\"Jetzt neu laden\",\"enableDangerous\":\"Dieses Addon ist gefährlich und könnte gezielt Funktionen DEAKTIVIEREN. Die meisten Nutzer SOLLTEN NICHT dieses Addon aktivieren. Bist du sicher, dass du es willst?\",\"export\":\"Einstellungen Exportieren\",\"groupDanger\":\"Gefährlich ({number})\",\"groupNew\":\"Neu ({number})\",\"groupOthers\":\"Andere ({number})\",\"import\":\"Einstellungen Importieren\",\"noCompiler\":\"Dieses Addon funktioniert nur, wenn der Compiler über das \\\"Erweitert > Compiler ausschlten\\\"-Menü deaktiviert ist oder wenn das \\\"Disable compiler in editor\\\"-Addon aktiviert ist.\",\"noResults\":\"Keine Suchergebnisse.\",\"presets\":\"Voreinstellungen\",\"reset\":\"Zurücksetzen\",\"resetAll\":\"Alle zurücksetzen\",\"search\":\"Suchen\",\"tagDanger\":\"Gefährlich\",\"tagNew\":\"Neu!\",\"tagRecommended\":\"Empfohlen\",\"tagTheme\":\"Design\",\"title\":\"Addon-Einstellungen\",\"unsupported\":\"Manche Addons sind in diesem Browser nicht verfügbar:\"},\"es\":{\"addonFeedback\":\"Enviar comentarios sobre addons\",\"confirmResetAll\":\"¿Está seguro de que quiere reiniciar todos los addons a sus valores predeterminados?\",\"credits\":\"Créditos:\",\"dirty\":\"Recargue las pestañas para aplicar la configuración.\",\"dirtyButton\":\"Recargar ahora\",\"enableDangerous\":\"Este addon es peligroso y podría intencionalmente DESACTIVAR funciones. La mayoría de los usuarios NO DEBERÍAN activar este addon. ¿Está seguro de que lo quiere activar?\",\"export\":\"Exportar ajustes\",\"groupDanger\":\"Peligrosos ({number})\",\"groupNew\":\"Nuevos ({number})\",\"groupOthers\":\"Otros ({number})\",\"import\":\"Importar ajustes\",\"noCompiler\":\"Este addon solo funciona cuando el compilador está desactivado en el menú Avanzado > Desactivar compilador o usando el addon «Deshabilitar compilador en editor».\",\"noResults\":\"Sin resultados.\",\"reset\":\"Reiniciar\",\"resetAll\":\"Reiniciar todos\",\"search\":\"Buscar\",\"tagDanger\":\"Peligroso\",\"tagNew\":\"¡Nuevo!\",\"tagRecommended\":\"Recomendado\",\"tagTheme\":\"Tema\",\"title\":\"Ajustes de Addons\",\"unsupported\":\"Algunos addons no están disponibles en este navegador:\"},\"fi\":{\"addonFeedback\":\"Lisäosien Palaute\",\"confirmResetAll\":\"Oletko varma että haluat nollata kaikkien lisäosien asetukset oletukseen?\",\"credits\":\"Krediitit\",\"dirtyButton\":\"Lataa Sivu Uudelleen Nyt\",\"enableDangerous\":\"Tämä Lisäosa on vaarallinen ja saattaa tarkoituksella poistaa joitain ominaisuuksia käytöstä. useimpien käyttäjien EI PITÄISI Ottaa tätä lisäosaa käyttöön.Oletko varma että haluat sen käyttöön?\",\"export\":\"Tallenna Asetukset\",\"groupDanger\":\"Vaarallinen ( Yksi )\",\"groupNew\":\"{number}Uusi! ( Yksi ) \",\"groupOthers\":\"Muut (Yksi)\",\"import\":\"Tuo Asetukset\",\"noCompiler\":\"Tämä lisäosa toimii vain kun laatija on pois käytöstä,laatijan voi poistaa käytöstä Edistynyt Napista Sitten Paina Poista Laatija editorista lisäosa.\",\"noResults\":\"Ei Osumia\",\"presets\":\"Esiasetukset\",\"reset\":\"Resetoi\",\"resetAll\":\"Resetoi Kaikki\",\"search\":\"Etsi\",\"tagBeta\":\"Beta Ominaisuus\",\"tagDanger\":\"Vaarallinen\",\"tagNew\":\"Uusi!\",\"tagRecommended\":\"Suositeltu\",\"tagTheme\":\"Teema\",\"title\":\"Lisäosien Asetukset\",\"unsupported\":\"Jotkut Lisäosat eivät toimi tässä selaimessa:\"},\"fr\":{\"addonFeedback\":\"Commentaires sur les addons\",\"confirmResetAll\":\"Êtes-vous sûr de vouloir réinitialiser tous les paramètres des addons à leurs valeurs par défaut?\",\"credits\":\"Crédits:\",\"dirty\":\"Rechargez les onglets pour appliquer les paramètres.\",\"dirtyButton\":\"Recharger maintenant\",\"enableDangerous\":\"Cet addon est dangereux et va intentionnellement DÉSACTIVER certaines fonctionnalitées. La plupart des utilisateurs NE DOIVENT PAS activer cet addon. Êtes-vous sûr de vouloir l'activer ?\",\"export\":\"Exporter les paramètres\",\"groupDanger\":\"Dangereux ({number})\",\"groupOthers\":\"Autres ({number})\",\"import\":\"Importer les paramètres\",\"noCompiler\":\"Cet addon ne fonctionne que lorsque le compilateur est désactivé via le menu Avancé > Désactiver le compilateur ou en utilisant l'addon \\\"Désactiver le compilateur dans l'éditeur\\\".\",\"noResults\":\"Aucun résultat.\",\"presets\":\"Préconfigurations\",\"reset\":\"Réinitialiser\",\"resetAll\":\"Tout réinitialiser\",\"search\":\"Rechercher\",\"tagBeta\":\"Bêta\",\"tagDanger\":\"Dangereux\",\"tagNew\":\"Nouveau!\",\"tagRecommended\":\"Recommandé\",\"tagTheme\":\"Thème\",\"title\":\"Paramètres des addons\",\"unsupported\":\"Les addons suivants ne sont pas pris en charge par votre navigateur:\"},\"ga\":{\"title\":\"socruithe addon\"},\"he\":{\"credits\":\"נקודות זכות:\",\"reset\":\"אִתחוּל\",\"resetAll\":\"לאפס הכל\",\"tagBeta\":\"בטא\",\"tagNew\":\"חָדָשׁ!\"},\"hu\":{\"reset\":\"Visszaállítás\"},\"id\":{\"export\":\"Pengaturan Export\",\"import\":\"Pengaturan Import\",\"reset\":\"Mengatur Ulang \",\"search\":\"Cari\",\"tagRecommended\":\"Di Rekomendasikan\"},\"it\":{\"addonFeedback\":\"Feedback sull'Addon\",\"confirmResetAll\":\"Sei sicuro di voler riportare tutte le impostazioni dell'addon al loro stato iniziale?\",\"credits\":\"Autore/i:\",\"dirty\":\"Ricarica le schede del browser per applicare le nuove impostazioni.\",\"dirtyButton\":\"Ricarica ora\",\"enableDangerous\":\"Questo addon è pericoloso e può intenzionalmente DISABILITARE delle funzionalità. La maggior parte degli utenti NON DOVREBBE abilitare questo addon. Sei sicuro di volerlo abilitare?\",\"export\":\"Esporta le impostazioni\",\"groupDanger\":\"Pericolosi ({number})\",\"groupNew\":\"Nuovi ({number})\",\"groupOthers\":\"Altri ({number})\",\"import\":\"Importa le impostazioni\",\"noCompiler\":\"Questo addon funziona soltanto quando il compilatore è disabilitato usando il menu Impostazioni Avanzate > Disabilita Compilatore o l'addon \\\"Disabilita il compilatore nell'editor\\\".\",\"noResults\":\"Nessun risultato.\",\"presets\":\"Valori predefiniti\",\"reset\":\"Resetta\",\"resetAll\":\"Resetta tutto\",\"search\":\"Cerca\",\"tagDanger\":\"Pericoloso\",\"tagNew\":\"Nuovo!\",\"tagRecommended\":\"Raccomandato\",\"tagTheme\":\"Tema\",\"title\":\"Impostazioni Addon\",\"unsupported\":\"Alcuni addon non sono disponibili in questo browser:\"},\"ja\":{\"addonFeedback\":\"アドオンのフィードバック\",\"confirmResetAll\":\"アドオンの設定を削除し、デフォルトに戻します。よろしいですか？\",\"credits\":\"クレジット:\",\"dirty\":\"タブを再読み込みして設定を適用します\",\"dirtyButton\":\"すぐに再読み込みする\",\"enableDangerous\":\"このアドオンは危険で、意図的に機能を無効にする可能性があります。多くのユーザーは、このアドオンを有効にすべきではありません。本当に有効にしていいですか？\",\"export\":\"設定を保存する\",\"groupDanger\":\"危険({number})\",\"groupNew\":\"新機能({number})\",\"groupOthers\":\"その他({number})\",\"import\":\"設定を読み込む\",\"noCompiler\":\"このアドオンは、「高度な設定」→「コンパイラを無効にする」、またはアドオンの「エディタでコンパイラを無効にする」を使用してコンパイラを無効にしたときのみ機能します。\",\"noResults\":\"検索条件に一致する結果はありません。\",\"presets\":\"プリセット\",\"reset\":\"リセット\",\"resetAll\":\"全てリセットする\",\"search\":\"検索\",\"tagBeta\":\"ベータ版\",\"tagDanger\":\"危険\",\"tagNew\":\"新機能!\",\"tagRecommended\":\"おすすめ\",\"tagTheme\":\"テーマ\",\"title\":\"アドオン設定\",\"unsupported\":\"いくつかのアドオンがお使いのブラウザに対応していません:\"},\"ja-hira\":{\"addonFeedback\":\"アドオンのフィードバック\",\"confirmResetAll\":\"アドオンのせっていをさくじょして、もとにもどします。よろしいですか？\",\"credits\":\"クレジット:\",\"dirty\":\"タブをもういちどよみこんでせっていをてきおうします\",\"dirtyButton\":\"すぐにもういちどよみこむ\",\"export\":\"せっていをほぞんする\",\"groupDanger\":\"きけん({number})\",\"groupNew\":\"しんきのう({number})\",\"groupOthers\":\"そのほか({number})\",\"import\":\"せっていをよみこむ\",\"noResults\":\"検索条件(けんさくじょうけん)に一致(いっち)する結果(けっか)はありません。\",\"presets\":\"プリセット\",\"reset\":\"リセット\",\"resetAll\":\"すべてリセットする\",\"search\":\"けんさく\",\"tagBeta\":\"ベータばん\",\"tagDanger\":\"きけん\",\"tagNew\":\"しんきのう!\",\"tagRecommended\":\"おすすめ\",\"tagTheme\":\"テーマ\",\"title\":\"アドオンせってい\",\"unsupported\":\"いくつかのアドオンがおつかいのブラウザにたいおうしていません:\"},\"ko\":{\"addonFeedback\":\"애드온 피드백하기\",\"confirmResetAll\":\"정말로 애드온 설정을 기본값으로 초기화하시겠습니까?\",\"credits\":\"도움을 준 사람들 :\",\"dirty\":\"설정을 적용하려면 탭을 새로고침해야 합니다.\",\"dirtyButton\":\"즉시 재시작\",\"enableDangerous\":\"이 애드온은 위험하며 의도적으로 몇몇 기능을 비활성화할 수도 있습니다. 대부분의 사용자들은 이 애드온을 활성화 해서는 안됩니다. 정말로 활성화 하시겠습니까?\",\"export\":\"설정 내보내기\",\"groupDanger\":\"위험한 기능 ({number})\",\"groupNew\":\"새 기능 ({number})\",\"groupOthers\":\"기타 ({number})\",\"import\":\"설정 가져오기\",\"noCompiler\":\"이 애드온은 메뉴에서 고급 설정 > 컴파일러 비활성화 또는 \\\"에디터에서 컴파일러 비활성화\\\" 애드온을 통해서 컴파일러가 비활성화 되었을 때에만 작동합니다.\",\"noResults\":\"결과가 없습니다.\",\"presets\":\"프리셋\",\"reset\":\"초기화\",\"resetAll\":\"모두 초기화\",\"search\":\"검색\",\"tagBeta\":\"베타\",\"tagDanger\":\"위험한 기능\",\"tagNew\":\"새 기능!\",\"tagRecommended\":\"추천\",\"tagTheme\":\"테마\",\"title\":\"애드온 설정\",\"unsupported\":\"몇몇 애드온은 다음 브라우저에서 사용할 수 없습니다 :\"},\"lt\":{\"addonFeedback\":\"Įskiepių atsiliepimas\",\"confirmResetAll\":\"Ar jūs tikras kad norite nustatyti visus įskiepių nustatymus į jų numatytąsias vertes?\",\"credits\":\"Padėkos:\",\"dirty\":\"Perkrauk skirtukus nustatymų pritaikymui.\",\"dirtyButton\":\"Perkrauti dabar\",\"enableDangerous\":\"Šis įskiepis yra pavojingas ir gali tyčia IŠJUNGTI funkcijas. Dauguma naudotojų NETURĖTŲ įjungti šio priedo. Ar tikrai norite jį įjungti?\",\"export\":\"Eksportuoti nustatymus\",\"groupDanger\":\"Pavojingi ({number})\",\"groupNew\":\"Nauji ({number})\",\"groupOthers\":\"Kiti ({number})\",\"import\":\"Importuoti nustatymus\",\"noCompiler\":\"Šis priedas veikia tik tada, kai kompiliatorius išjungtas per meniu Išplėstinė > Išjungti kompiliatorių arba naudojant įskiepį \\\"Išjungti kompiliatorių redaktoriuje\\\".\",\"noResults\":\"Jokių rezultatų.\",\"presets\":\"Iš anksto nustatyti\",\"reset\":\"nustatyti iš naujo\",\"resetAll\":\"nustatyti viską iš naujo\",\"search\":\"Ieškoti\",\"tagDanger\":\"Pavojingas\",\"tagNew\":\"Naujiena!\",\"tagRecommended\":\"Rekomenduotas\",\"tagTheme\":\"Fonas\",\"title\":\"Įskiepių nustatymai\",\"unsupported\":\"Keletas įskiepių yra nepalaikomi šioje naršyklėje:\"},\"nl\":{\"addonFeedback\":\"Addonfeedback\",\"confirmResetAll\":\"Weet je zeker dat je alle addonsinstellingen wilt resetten naar hun standaardinstellingen?\",\"credits\":\"Dank aan:\",\"dirty\":\"Ververs tabbladen om instellingen toe te passen.\",\"dirtyButton\":\"Nu verversen\",\"enableDangerous\":\"Deze addon is gevaarlijk en kan opzettelijk functies UITSCHAKELEN. De meeste gebruikers moeten deze addon NIET gebruiken. Weet je zeker dat je het wilt inschakelen?\",\"export\":\"Instellingen exporteren\",\"groupDanger\":\"Gevaarlijk ({number})\",\"groupNew\":\"Nieuw ({number})\",\"groupOthers\":\"Anderen ({number})\",\"import\":\"Instellingen importeren\",\"noCompiler\":\"Deze addon werkt alleen als de compiler is uitgeschakeld, dit kun je doen in Geavanceerd > Compiler Uitschakelen of door de \\\"Compiler uitschakelen in editor\\\"-addon.\",\"noResults\":\"Geen resultaten.\",\"presets\":\"Voorinstellingen\",\"reset\":\"Resetten\",\"resetAll\":\"Alles resetten\",\"search\":\"Zoeken\",\"tagBeta\":\"Bèta\",\"tagDanger\":\"Gevaarlijk\",\"tagNew\":\"Nieuw!\",\"tagRecommended\":\"Aanbevolen\",\"tagTheme\":\"Thema\",\"title\":\"Addonsinstellingen\",\"unsupported\":\"Sommige addons zijn niet beschikbaar in deze browser:\"},\"pl\":{\"addonFeedback\":\"Opinia o dodatkach\",\"confirmResetAll\":\"Jesteś pewien, że chcesz zresetować wszystkie dodatki do ich domyślnych wartości?\",\"credits\":\"Podziękowania:\",\"dirty\":\"Odśwież karty, aby załączyć ustawienia.\",\"dirtyButton\":\"Odśwież teraz\",\"enableDangerous\":\"Ten dodatek jest niebezpieczny i może intencjonalnie WYŁĄCZYĆ funkcje. Większość użytkowników NIE POWINNA włączać tego dodatku. Czy jesteś pewien, że chcesz go włączyć?\",\"export\":\"Eksportuj ustawienia\",\"groupDanger\":\"Niebezpieczne ({number})\",\"groupNew\":\"Nowe ({number})\",\"groupOthers\":\"Inne ({number})\",\"import\":\"Importuj ustawienia\",\"noCompiler\":\"Ten dodatek działa tylko kiedy kompiler jest wyłączony poprzez Zaawansowane Ustawienia > Wyłącz Kompiler albo używając dodatku \\\"Wyłącz kompiler w edytorze\\\".\",\"noResults\":\"Brak wyników.\",\"presets\":\"Ustawienia wstępne\",\"reset\":\"Resetuj\",\"resetAll\":\"Resetuj wszystko\",\"search\":\"Szukaj\",\"tagDanger\":\"Niebezpieczne\",\"tagNew\":\"Nowość!\",\"tagRecommended\":\"Polecane\",\"tagTheme\":\"Motyw\",\"title\":\"Ustawienia Dodatków\",\"unsupported\":\"Niektóre dodatki nie są dostępne w tej przeglądarce:\"},\"pt\":{\"addonFeedback\":\"Dar Feedback sobre Addons\",\"confirmResetAll\":\"Tem certeza que quer restaurar todas as configurações de addons aos seus valores originais?\",\"credits\":\"Créditos:\",\"dirtyButton\":\"Recarregar agora\",\"enableDangerous\":\"Este addon é perigoso e pode intencionalmente DESATIVAR funcionalidades. A maioria dos usuários NÃO DEVEM ativar este addon. Tem certeza que quer ativá-lo?\",\"export\":\"Exportar configurações\",\"groupDanger\":\"Perigosos ({number})\",\"groupNew\":\"Novos ({number})\",\"groupOthers\":\"Outros ({number})\",\"import\":\"Importar configurações\",\"noCompiler\":\"Esse addon apenas funciona com o compilador desligado, o que pode ser feito através do menu Avançado > Desligar Compilador ou usando o addon \\\"Desabilitar compilador no editor\\\".\",\"noResults\":\"Nenhum resultado.\",\"presets\":\"Predefinições\",\"reset\":\"Redefinir\",\"resetAll\":\"Redefinir todos\",\"search\":\"Buscar\",\"tagDanger\":\"Perigoso\",\"tagNew\":\"Novo!\",\"tagRecommended\":\"Recomendado\",\"tagTheme\":\"Tema\",\"title\":\"Configurações de Addon\",\"unsupported\":\"Alguns addons não estão disponíveis neste navegador:\"},\"pt-br\":{\"addonFeedback\":\"Dar Feedback sobre Addons\",\"confirmResetAll\":\"Tem certeza que quer restaurar todas as configurações de addons aos seus valores originais?\",\"credits\":\"Créditos:\",\"dirty\":\"Recarregue a página para aplicar as opções.\",\"dirtyButton\":\"Recarregar agora\",\"enableDangerous\":\"Este addon é perigoso e pode intencionalmente DESATIVAR funcionalidades. A maioria dos usuários NÃO DEVEM ativar este addon. Tem certeza que quer ativá-lo?\",\"export\":\"Exportar configurações\",\"groupDanger\":\"Perigosos ({number})\",\"groupNew\":\"Novos ({number})\",\"groupOthers\":\"Outros ({number})\",\"import\":\"Importar configurações\",\"noCompiler\":\"Esse addon apenas funciona com o compilador desligado, o que pode ser feito através do menu Avançado > Desligar Compilador ou usando o addon \\\"Desabilitar compilador no editor\\\".\",\"noResults\":\"Nenhum resultado.\",\"presets\":\"Predefinições\",\"reset\":\"Redefinir\",\"resetAll\":\"Redefinir todos\",\"search\":\"Buscar\",\"tagDanger\":\"Perigoso\",\"tagNew\":\"Novo!\",\"tagRecommended\":\"Recomendado\",\"tagTheme\":\"Tema\",\"title\":\"Configurações de Addon\",\"unsupported\":\"Alguns addons não estão disponíveis neste navegador:\"},\"ro\":{\"addonFeedback\":\"Spune-ți Părerea despre Extensii\",\"confirmResetAll\":\"Ești sigur că vrei să resetezi toate setările extensiilor la valorile lor implicite?\",\"credits\":\"Credite:\",\"dirtyButton\":\"Reîncarcă acum\",\"export\":\"Exportă setările\",\"import\":\"Importă setările\",\"noResults\":\"Niciun rezultat.\",\"presets\":\"Presetări\",\"reset\":\"Resetează\",\"resetAll\":\"Resetează toate\",\"search\":\"Caută\",\"tagBeta\":\"Beta\",\"tagRecommended\":\"Recomandat\",\"title\":\"Setările Addon-urilor\",\"unsupported\":\"Unele extensii nu sunt disponibile în acest browser:\"},\"ru\":{\"addonFeedback\":\"Отзывы о дополнениях\",\"confirmResetAll\":\"Вы уверены, что хотите сбросить настройки всех дополнений до значений по умолчанию?\",\"credits\":\"Благодарности:\",\"dirty\":\"Перезагрузите вкладки, чтобы применить настройки.\",\"dirtyButton\":\"Перезагрузить сейчас\",\"enableDangerous\":\"Этот аддон опасен и может намеренно ОТКЛЮЧИТЬ функции. Большинству пользователей НЕ СЛЕДУЕТ включать этот аддон. Вы уверены, что хотите его включить?\",\"export\":\"Экспорт настроек\",\"groupDanger\":\"Опасное ({number})\",\"groupNew\":\"Новое ({number})\",\"groupOthers\":\"Прочее ({number})\",\"import\":\"Импорт настроек\",\"noCompiler\":\"Этот аддон работает только когда компилятор отключен через меню Дополнительно > Отключить Компилятор или при помощи аддона \\\"Отключение компилятора в редакторе\\\"\",\"noResults\":\"Нет результатов.\",\"presets\":\"Предустановки\",\"reset\":\"Сбросить\",\"resetAll\":\"Сбросить всё\",\"search\":\"Поиск\",\"tagBeta\":\"Бета\",\"tagDanger\":\"Опасное\",\"tagNew\":\"Новое!\",\"tagRecommended\":\"Рекомендованно\",\"tagTheme\":\"Тема\",\"title\":\"Настройки аддонов\",\"unsupported\":\"Некоторые дополнения не доступны в данном браузере:\"},\"sl\":{\"addonFeedback\":\"Povratne informacije o dodatkih\",\"confirmResetAll\":\"Ste prepričani, da želite ponastaviti vse nastavitve dodatkov?\",\"credits\":\"Hvala:\",\"dirty\":\"Znova naložite zavihke, da uporabite spremenjene nastavitve.\",\"dirtyButton\":\"Znova naloži zdaj\",\"enableDangerous\":\"Ta dodatek je nevaren in morda namenoma ODSTRANI funkcije. Večina uporabnikov tega dodatka NE POTREBUJE. Ste prepričani, da ga želite vključiti?\",\"export\":\"Izvozi nastavitve\",\"groupDanger\":\"Nevarno ({number})\",\"groupNew\":\"Novo ({number})\",\"groupOthers\":\"Drugo ({number})\",\"import\":\"Uvozi nastavitve\",\"noCompiler\":\"Ta dodatek deluje samo, če je prevajalnik izključen v meniju Napredno > Onemogoči prevajalnik ali z dodatkom \\\"Disable compiler in editor\\\".\",\"noResults\":\"Ni rezultatov.\",\"presets\":\"Prednastavitve\",\"reset\":\"Ponastavi\",\"resetAll\":\"Ponastavi vse\",\"search\":\"Iskanje\",\"tagDanger\":\"Nevarno\",\"tagNew\":\"Novo!\",\"tagRecommended\":\"Priporočeno\",\"tagTheme\":\"Tema\",\"title\":\"Nastavitve dodatkov\",\"unsupported\":\"Nekateri dodatki v tem brskalniku niso na voljo:\"},\"sr\":{\"addonFeedback\":\"Повратне информације о додацима\",\"confirmResetAll\":\"Да ли сте сигурни да желите да ресетујете сва подешавања додатака?\",\"credits\":\"Заслуге:\",\"dirtyButton\":\"Понов учитај\",\"enableDangerous\":\"Овај додатак је опасан и може намерно ОНЕМОГУЋИТИ функције. Већина корисника НЕ ТРЕБА користити овај додатак. Да ли сте сигурни да га желите укључити?\",\"export\":\"Извези подешавања\",\"groupDanger\":\"Опасно ({number})\",\"groupNew\":\"Ново ({number})\",\"groupOthers\":\"Остало ({number})\",\"import\":\"Увези подешавања\",\"noCompiler\":\"Овај додатак ради само кад је преводилац кода онемогућен кроз мени Напредно > Онемогући преводилац кода или користећи додатак \\\"Онемогући преводилац кода у едитору\\\".\",\"noResults\":\"Нема резултата.\",\"presets\":\"Унапред подешена подешавања\",\"reset\":\"Ресетуј\",\"resetAll\":\"Ресетуј све\",\"search\":\"Претражи\",\"tagBeta\":\"Бета\",\"tagDanger\":\"Опасно\",\"tagNew\":\"Ново!\",\"tagRecommended\":\"Препоручено\",\"tagTheme\":\"Тема\",\"title\":\"Подешавања додатака\",\"unsupported\":\"Неки додаци нису доступни у овом прегледачу:\"},\"sv\":{\"addonFeedback\":\"Tilläggsrespons\",\"confirmResetAll\":\"Är du säker på att du vill återställa alla tilläggsinställningar till standardvärdena?\",\"credits\":\"kreditera:\",\"dirty\":\"Ladda om flikarna för att tillämpa ändringar\",\"dirtyButton\":\"Ladda om nu\",\"enableDangerous\":\"Detta tillägget är farligt och kommer att STÄNGA AV funktioner. De flesta användarna ska INTE aktivera detta tillägg. Är du säker att aktivera det?\",\"export\":\"Exportera inställningar\",\"groupDanger\":\"Farliga ({number})\",\"groupNew\":\"Nytt ({number})\",\"groupOthers\":\"Andra ({number})\",\"import\":\"Importera inställningar\",\"noCompiler\":\"Detta tillägg funkar bara om kompilatorn är av genom att gå till Avancerat > Stäng av kompilator eller att använda \\\"Stäng av kompilatorn i editorn\\\" tillägget\",\"noResults\":\"Inga resutat\",\"presets\":\"Förinställningar\",\"reset\":\"Starta om\",\"resetAll\":\"Starta om allt\",\"search\":\"Sök\",\"tagDanger\":\"Farliga\",\"tagNew\":\"Nytt!\",\"tagRecommended\":\"Rekomenderat\",\"tagTheme\":\"Tema\",\"title\":\"Tilläggsinställningar\",\"unsupported\":\"Vissa tillägg är inte tillgängliga i den här webbläsaren:\"},\"th\":{\"addonFeedback\":\"ความคิดเห็น Addon\",\"confirmResetAll\":\"คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตการตั้งค่า Addons กลับไปเป็นการตั้งค่าเริ่มต้น\",\"credits\":\"เครดิต :\",\"dirtyButton\":\"แตะเพื่อรีโหลด\",\"export\":\"Export การตั้งค่า\",\"import\":\"Import การตั้งค่า\",\"noResults\":\"ไม่พบข้อมูล\",\"presets\":\"Presets\",\"reset\":\"รีเซ็ต\",\"resetAll\":\"รีเซ็ตทั้งหมด\",\"search\":\"ค้นหา\",\"tagBeta\":\"อยู่ระหว่างการพัฒนาระบบ\",\"tagNew\":\"ใหม่\",\"tagRecommended\":\"คำแนะนำ\",\"tagTheme\":\"ธีม\",\"title\":\"การตั้งค่า Addons\",\"unsupported\":\"Addon บางอย่างยังไม่ได้รับการสนับสนุนในบราวเซอร์นี้\"},\"tr\":{\"addonFeedback\":\"Eklenti geribildirim\",\"confirmResetAll\":\"Bütün eklenti ayarlarını varsayılan değerlerine sıfırlamak istediğinizden emin misiniz?\",\"credits\":\"Krediler:\",\"dirty\":\"Ayarı uygulamak için sekmeleri yeniden yükleyin.\",\"dirtyButton\":\"Şimdi yeniden yükle\",\"enableDangerous\":\"Bu eklenti tehlikelidir ve bilerek özellikleri DEVRE DIŞI BIRAKABİLİR. Çoğu kullanıcı bu eklentiyi ETKİNLEŞTİRMEMELİDİR. Etkinleştirmek istediğinizden emin misiniz?\",\"export\":\"Dışarıya aktarmak ayarları\",\"groupDanger\":\"Tehlikeli ({number})\",\"groupNew\":\"Yeni ({number})\",\"groupOthers\":\"Diğerler ({number})\",\"import\":\"İçeri aktarmak ayarları\",\"noCompiler\":\"Bu eklenti sadece derleyiciyi Gelişmiş > Derlemeyi Kapat yada Derlemeyi editörde kapat eklenti ile kapatırsan\",\"noResults\":\"Sonuçlar yok.\",\"presets\":\"Varsayılan ayarları\",\"reset\":\"Sıfırla\",\"resetAll\":\"Her şeyi sıfırla\",\"search\":\"Arama\",\"tagDanger\":\"Tehlikeli\",\"tagNew\":\"Yeni!\",\"tagRecommended\":\"Önerildi\",\"tagTheme\":\"Tema\",\"title\":\"Eklenti Ayarları\",\"unsupported\":\"Bazı eklentiler bu tarayıcıda kullanılamıyor:\"},\"uk\":{\"addonFeedback\":\"Відгук про доповнення\",\"confirmResetAll\":\"Ви впевнені, що хочете скинути усі налаштування доповненнь до їхніх значеннь за замовчуванням?\",\"credits\":\"Подяка:\",\"dirty\":\"Перезавантажте вкладки щоб застосувати налаштування.\",\"dirtyButton\":\"Перезавантажити зараз\",\"enableDangerous\":\"Це доповнення небезпечне та може навмисно ВИМИКАТИ деякі функції. Деяким користувачам НЕ СЛІД вмикати цю функцію. Ви дійсно хочите увімкнути це?\",\"export\":\"Експортувати налаштування\",\"groupDanger\":\"Небезпечні ({number})\",\"groupNew\":\"Нове ({number})\",\"groupOthers\":\"Інші ({number})\",\"import\":\"Імпортувати налаштування\",\"noCompiler\":\"Це доповнення працює тільки тоді, коли компілятор вимкнено, вимкніть компілятор в меню \\\"Додатково\\\" або використовуйте доповнення \\\"Вимкнути компілятор в редакторі\\\".\",\"noResults\":\"Немає результатів.\",\"presets\":\"Попередні налаштування\",\"reset\":\"Скинути\",\"resetAll\":\"Скинути все\",\"search\":\"Пошук\",\"tagBeta\":\"Бета\",\"tagDanger\":\"Небезпечно\",\"tagNew\":\"Нове!\",\"tagRecommended\":\"Рекомендовано\",\"tagTheme\":\"Тема\",\"title\":\"Налаштування доповненнь\",\"unsupported\":\"Деякі доповнення не доступні у цьому браузері:\"},\"vi\":{\"addonFeedback\":\"Phản hồi\",\"confirmResetAll\":\"Bạn có chắc khi chỉnh lại tất cả các cài đặt addon về giá trị mặc định không?\",\"credits\":\"Tác giả:\",\"dirtyButton\":\"Tải lại ngay bây giờ\",\"enableDangerous\":\"Addon này nguy hiểm và có thể cố ý VÔ HIỆU HOÁ các tính năng. Hầu hết người dùng KHÔNG NÊN bật addon này. Bạn có chắc khi bật addon này chứ?\",\"export\":\"Xuất cài đặt\",\"groupDanger\":\"Nguy hiểm ({number})\",\"groupNew\":\"Mới ({number})\",\"groupOthers\":\"Còn lại ({number})\",\"import\":\"Tải lên cài đặt\",\"noResults\":\"Không có kết quả.\",\"presets\":\"Cài đặt cho trước\",\"reset\":\"Cài Đặt Lại\",\"resetAll\":\"Cài Đặt lại tất cả\",\"search\":\"Tìm kiếm\",\"tagDanger\":\"Nguy hiểm\",\"tagNew\":\"Mới!\",\"tagRecommended\":\"Khuyên dùng\",\"tagTheme\":\"Chủ đề\",\"title\":\"Cài Đặt Addon\",\"unsupported\":\"Một vài addons không khả dụng ở trong trình duệt này:\"},\"zh-cn\":{\"addonFeedback\":\"插件反馈\",\"confirmResetAll\":\"你确定要将所有插件设置重置为默认值吗？\",\"credits\":\"鸣谢：\",\"dirty\":\"重新加载选项卡以应用设置。\",\"dirtyButton\":\"重新加载\",\"enableDangerous\":\"此插件存在潜在的风险，可能会禁用某些功能。大多数用户不应启用此加载项。您确定要启用它吗？\",\"export\":\"导出设置\",\"groupDanger\":\"危险（{number}）\",\"groupNew\":\"最新（{number}）\",\"groupOthers\":\"其他（{number}）\",\"import\":\"导入设置\",\"noCompiler\":\"这个插件只有在通过高级 > 禁用编译器选项或使用\\\"在编辑器中禁用编译器\\\"插件禁用编译器的情况下才能工作。\",\"noResults\":\"没有相符的结果。\",\"presets\":\"预设\",\"reset\":\"重置\",\"resetAll\":\"全部重置\",\"search\":\"搜索\",\"tagBeta\":\"测试\",\"tagDanger\":\"危险\",\"tagNew\":\"最新\",\"tagRecommended\":\"推荐\",\"tagTheme\":\"外观\",\"title\":\"插件设置\",\"unsupported\":\"某些插件在此浏览器中不可用：\"},\"zh-tw\":{\"addonFeedback\":\"附加元件回饋\",\"confirmResetAll\":\"你確定要重設所有附件設定？\",\"credits\":\"感謝：\",\"dirtyButton\":\"重新載入\",\"export\":\"匯出設定\",\"groupDanger\":\"危險（{number}）\",\"groupNew\":\"全新（{number}）\",\"groupOthers\":\"其他（{number}）\",\"import\":\"匯入設定\",\"noResults\":\"沒有相符的結果。\",\"presets\":\"預設\",\"reset\":\"重設\",\"resetAll\":\"全部重設\",\"search\":\"搜尋……\",\"tagBeta\":\"測試\",\"tagDanger\":\"危險\",\"tagNew\":\"全新\",\"tagRecommended\":\"推薦\",\"tagTheme\":\"外觀\",\"title\":\"附件設定\",\"unsupported\":\"下列附加元件在此瀏覽器不可用：\"}}");
+
+/***/ }),
+
+/***/ "./src/components/button/button.css":
+/*!******************************************!*\
+  !*** ./src/components/button/button.css ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/cache-loader/dist/cjs.js??ref--5-1!../../../node_modules/css-loader??ref--5-2!../../../node_modules/postcss-loader/src??postcss!./button.css */ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/button/button.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/button/button.jsx":
+/*!******************************************!*\
+  !*** ./src/components/button/button.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _button_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./button.css */ "./src/components/button/button.css");
+/* harmony import */ var _button_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_button_css__WEBPACK_IMPORTED_MODULE_3__);
+const _excluded = ["className", "disabled", "iconClassName", "iconSrc", "iconWidth", "iconHeight", "onClick", "children"];
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
+function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
+
+
+
+
+const ButtonComponent = _ref => {
+  let className = _ref.className,
+    disabled = _ref.disabled,
+    iconClassName = _ref.iconClassName,
+    iconSrc = _ref.iconSrc,
+    iconWidth = _ref.iconWidth,
+    iconHeight = _ref.iconHeight,
+    onClick = _ref.onClick,
+    children = _ref.children,
+    props = _objectWithoutProperties(_ref, _excluded);
+  if (disabled) {
+    onClick = function onClick() {};
+  }
+  const icon = iconSrc && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(iconClassName, _button_css__WEBPACK_IMPORTED_MODULE_3___default.a.icon),
+    draggable: false,
+    src: iconSrc,
+    height: iconHeight,
+    width: iconWidth
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", _extends({
+    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_button_css__WEBPACK_IMPORTED_MODULE_3___default.a.outlinedButton, className),
+    role: "button",
+    onClick: onClick
+  }, props), icon, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: _button_css__WEBPACK_IMPORTED_MODULE_3___default.a.content
+  }, children));
+};
+ButtonComponent.propTypes = {
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node,
+  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  iconClassName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  iconSrc: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  iconHeight: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  iconWidth: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  onClick: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
+/* harmony default export */ __webpack_exports__["default"] = (ButtonComponent);
+
+/***/ }),
+
+/***/ "./src/components/tag-button/tag-button.css":
+/*!**************************************************!*\
+  !*** ./src/components/tag-button/tag-button.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/cache-loader/dist/cjs.js??ref--5-1!../../../node_modules/css-loader??ref--5-2!../../../node_modules/postcss-loader/src??postcss!./tag-button.css */ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tag-button/tag-button.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/tag-button/tag-button.jsx":
+/*!**************************************************!*\
+  !*** ./src/components/tag-button/tag-button.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var _button_button_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../button/button.jsx */ "./src/components/button/button.jsx");
+/* harmony import */ var _tag_button_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tag-button.css */ "./src/components/tag-button/tag-button.css");
+/* harmony import */ var _tag_button_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_tag_button_css__WEBPACK_IMPORTED_MODULE_5__);
+const _excluded = ["active", "iconClassName", "className", "tag", "intlLabel"];
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
+function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
+
+
+
+
+
+
+const TagButtonComponent = _ref => {
+  let active = _ref.active,
+    iconClassName = _ref.iconClassName,
+    className = _ref.className,
+    tag = _ref.tag,
+    intlLabel = _ref.intlLabel,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_button_button_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({
+    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_tag_button_css__WEBPACK_IMPORTED_MODULE_5___default.a.tagButton, className, {
+      [_tag_button_css__WEBPACK_IMPORTED_MODULE_5___default.a.active]: active
+    }),
+    iconClassName: classnames__WEBPACK_IMPORTED_MODULE_0___default()(_tag_button_css__WEBPACK_IMPORTED_MODULE_5___default.a.tagButtonIcon, iconClassName)
+  }, props), typeof intlLabel === 'string' ? intlLabel : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_intl__WEBPACK_IMPORTED_MODULE_3__["FormattedMessage"], intlLabel));
+};
+TagButtonComponent.propTypes = _objectSpread(_objectSpread({}, _button_button_jsx__WEBPACK_IMPORTED_MODULE_4__["default"].propTypes), {}, {
+  active: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  intlLabel: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    defaultMessage: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    id: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+  }), prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string]).isRequired,
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+});
+TagButtonComponent.defaultProps = {
+  active: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (TagButtonComponent);
+
+/***/ }),
+
+/***/ "./src/containers/tag-button.jsx":
+/*!***************************************!*\
+  !*** ./src/containers/tag-button.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash.bindall */ "./node_modules/lodash.bindall/index.js");
+/* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_bindall__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_tag_button_tag_button_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/tag-button/tag-button.jsx */ "./src/components/tag-button/tag-button.jsx");
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+
+
+
+
+class TagButton extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+  constructor(props) {
+    super(props);
+    lodash_bindall__WEBPACK_IMPORTED_MODULE_0___default()(this, ['handleClick']);
+  }
+  handleClick() {
+    this.props.onClick(this.props.tag);
+  }
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_tag_button_tag_button_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({}, this.props, {
+      onClick: this.handleClick
+    }));
+  }
+}
+TagButton.propTypes = _objectSpread(_objectSpread({}, _components_tag_button_tag_button_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].propTypes), {}, {
+  onClick: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+});
+/* harmony default export */ __webpack_exports__["default"] = (TagButton);
 
 /***/ }),
 
@@ -2443,6 +2456,274 @@ const notScratchDesktop = function notScratchDesktop() {
 
 /***/ }),
 
+/***/ "./src/lib/libraries/tag-messages.js":
+/*!*******************************************!*\
+  !*** ./src/lib/libraries/tag-messages.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_0__["defineMessages"])({
+  all: {
+    "id": "gui.libraryTags.all",
+    "defaultMessage": "All"
+  },
+  animals: {
+    "id": "gui.libraryTags.animals",
+    "defaultMessage": "Animals"
+  },
+  dance: {
+    "id": "gui.libraryTags.dance",
+    "defaultMessage": "Dance"
+  },
+  effects: {
+    "id": "gui.libraryTags.effects",
+    "defaultMessage": "Effects"
+  },
+  fantasy: {
+    "id": "gui.libraryTags.fantasy",
+    "defaultMessage": "Fantasy"
+  },
+  fashion: {
+    "id": "gui.libraryTags.fashion",
+    "defaultMessage": "Fashion"
+  },
+  food: {
+    "id": "gui.libraryTags.food",
+    "defaultMessage": "Food"
+  },
+  indoors: {
+    "id": "gui.libraryTags.indoors",
+    "defaultMessage": "Indoors"
+  },
+  loops: {
+    "id": "gui.libraryTags.loops",
+    "defaultMessage": "Loops"
+  },
+  themes: {
+    "id": "pm.libraryTags.themes",
+    "defaultMessage": "Themes"
+  },
+  music: {
+    "id": "gui.libraryTags.music",
+    "defaultMessage": "Music"
+  },
+  notes: {
+    "id": "gui.libraryTags.notes",
+    "defaultMessage": "Notes"
+  },
+  outdoors: {
+    "id": "gui.libraryTags.outdoors",
+    "defaultMessage": "Outdoors"
+  },
+  patterns: {
+    "id": "gui.libraryTags.patterns",
+    "defaultMessage": "Patterns"
+  },
+  people: {
+    "id": "gui.libraryTags.people",
+    "defaultMessage": "People"
+  },
+  percussion: {
+    "id": "gui.libraryTags.percussion",
+    "defaultMessage": "Percussion"
+  },
+  space: {
+    "id": "gui.libraryTags.space",
+    "defaultMessage": "Space"
+  },
+  sports: {
+    "id": "gui.libraryTags.sports",
+    "defaultMessage": "Sports"
+  },
+  underwater: {
+    "id": "gui.libraryTags.underwater",
+    "defaultMessage": "Underwater"
+  },
+  voice: {
+    "id": "gui.libraryTags.voice",
+    "defaultMessage": "Voice"
+  },
+  wacky: {
+    "id": "gui.libraryTags.wacky",
+    "defaultMessage": "Wacky"
+  },
+  animation: {
+    "id": "gui.libraryTags.animation",
+    "defaultMessage": "Animation"
+  },
+  art: {
+    "id": "gui.libraryTags.art",
+    "defaultMessage": "Art"
+  },
+  games: {
+    "id": "gui.libraryTags.games",
+    "defaultMessage": "Games"
+  },
+  stories: {
+    "id": "gui.libraryTags.stories",
+    "defaultMessage": "Stories"
+  },
+  letters: {
+    "id": "gui.libraryTags.letters",
+    "defaultMessage": "Letters"
+  },
+  swords: {
+    "id": "pm.libraryTags.swords",
+    "defaultMessage": "Swords"
+  },
+  guns: {
+    "id": "pm.libraryTags.guns",
+    "defaultMessage": "Guns"
+  },
+  penguinmod: {
+    "id": "pm.libraryTags.penguinmod",
+    "defaultMessage": "PenguinMod"
+  },
+  gaiamod: {
+    "id": "pm.libraryTags.gaiamod",
+    "defaultMessage": "GaiaMod"
+  },
+  electramod: {
+    "id": "pm.libraryTags.electramod",
+    "defaultMessage": "ElectraMod"
+  },
+  dinosaurmod: {
+    "id": "pm.libraryTags.dinosaurmod",
+    "defaultMessage": "DinosaurMod"
+  },
+  snailide: {
+    "id": "pm.libraryTags.snailide",
+    "defaultMessage": "Snail IDE"
+  },
+  arkide: {
+    "id": "pm.libraryTags.arkide",
+    "defaultMessage": "Ark IDE"
+  },
+  adacraft: {
+    "id": "pm.libraryTags.adacraft",
+    "defaultMessage": "Adacraft"
+  },
+  astraeditor: {
+    "id": "pm.libraryTags.astraeditor",
+    "defaultMessage": "Astra Editor"
+  },
+  gandiide: {
+    "id": "pm.libraryTags.gandiide",
+    "defaultMessage": "Cocrea/Gandi IDE"
+  },
+  zerotwoengine: {
+    "id": "pm.libraryTags.zerotwoengine",
+    "defaultMessage": "02Engine"
+  },
+  mistwarp: {
+    "id": "pm.libraryTags.mistwarp",
+    "defaultMessage": "MistWarp"
+  },
+  dash: {
+    "id": "pm.libraryTags.dash",
+    "defaultMessage": "Dash"
+  },
+  othermods: {
+    "id": "pm.libraryTags.othermods",
+    "defaultMessage": "Other Scratch Mods"
+  },
+  scratch: {
+    "id": "pm.libraryTags.scratch",
+    "defaultMessage": "Scratch"
+  },
+  turbowarp: {
+    "id": "pm.libraryTags.turbowarp",
+    "defaultMessage": "TurboWarp"
+  },
+  programminglanguage: {
+    "id": "pm.libraryTags.programminglanguage",
+    "defaultMessage": "Programming Languages"
+  },
+  categoryexpansion: {
+    "id": "pm.libraryTags.categoryexpansion",
+    "defaultMessage": "Category Expansions"
+  },
+  ai: {
+    "id": "pm.libraryTags.ai",
+    "defaultMessage": "AI"
+  },
+  jokes: {
+    "id": "pm.libraryTags.jokes",
+    "defaultMessage": "Jokes"
+  },
+  ui: {
+    "id": "pm.libraryTags.ui",
+    "defaultMessage": "Menu"
+  },
+  footsteps: {
+    "id": "pm.libraryTags.footsteps",
+    "defaultMessage": "Footsteps"
+  },
+  custom: {
+    "id": "pm.libraryTags.custom",
+    "defaultMessage": "Custom"
+  },
+  customextension: {
+    "id": "pm.libraryTags.customextension",
+    "defaultMessage": "Load Custom Extension"
+  },
+  hardware: {
+    "id": "pm.libraryTags.hardware",
+    "defaultMessage": "Hardware"
+  },
+  library: {
+    "id": "pm.libraryTags.library",
+    "defaultMessage": "Collections"
+  },
+  extcreate: {
+    "id": "pm.libraryTags.extcreate",
+    "defaultMessage": "Extension Creators"
+  },
+  new: {
+    "id": "gm.libraryTags.new",
+    "defaultMessage": "New"
+  },
+  disabled: {
+    "id": "gm.libraryTags.disabled",
+    "defaultMessage": "Disabled"
+  },
+  comingsoon: {
+    "id": "gm.libraryTags.comingsoon",
+    "defaultMessage": "Coming soon"
+  },
+  datamgmt: {
+    "id": "pm.libraryTags.datamgmt",
+    "defaultMessage": "Data Management"
+  },
+  graphics: {
+    "id": "pm.libraryTags.graphics",
+    "defaultMessage": "Graphics"
+  },
+  noisemaker: {
+    "id": "pm.libraryTags.noisemaker",
+    "defaultMessage": "Sound"
+  },
+  metal: {
+    "id": "pm.libraryTags.metal",
+    "defaultMessage": "Metal"
+  },
+  monsters: {
+    "id": "pm.libraryTags.monster",
+    "defaultMessage": "Monsters"
+  },
+  math: {
+    "id": "pm.libraryTags.math",
+    "defaultMessage": "Math"
+  }
+}));
+
+/***/ }),
+
 /***/ "./src/lib/normalize.css":
 /*!*******************************!*\
   !*** ./src/lib/normalize.css ***!
@@ -2451,7 +2732,7 @@ const notScratchDesktop = function notScratchDesktop() {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--5-1!../../node_modules/postcss-loader/src??postcss!./normalize.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/lib/normalize.css");
+var content = __webpack_require__(/*! !../../node_modules/cache-loader/dist/cjs.js??ref--5-1!../../node_modules/css-loader??ref--5-2!../../node_modules/postcss-loader/src??postcss!./normalize.css */ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/lib/normalize.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2610,7 +2891,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const onExportSettings = settings => {
   const blob = new Blob([JSON.stringify(settings)]);
-  Object(_lib_download_blob_js__WEBPACK_IMPORTED_MODULE_2__["default"])('penguinmod-addon-settings.json', blob);
+  Object(_lib_download_blob_js__WEBPACK_IMPORTED_MODULE_2__["default"])('turbowarp-addon-settings.json', blob);
 };
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_addons_settings_settings_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
   onExportSettings: onExportSettings
@@ -2635,6 +2916,39 @@ while (appTarget.firstChild) {
 }
 document.body.classList.add('tw-loaded');
 /* harmony default export */ __webpack_exports__["default"] = (appTarget);
+
+/***/ }),
+
+/***/ 0:
+/*!*****************************************!*\
+  !*** ../locale-data/index.js (ignored) ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 1:
+/*!*******************************!*\
+  !*** ./lib/locales (ignored) ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 2:
+/*!*******************************!*\
+  !*** ./lib/locales (ignored) ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 

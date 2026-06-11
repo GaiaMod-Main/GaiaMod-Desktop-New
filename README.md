@@ -1,5 +1,5 @@
 ![Icarus Frontend](/art/frontend.png)
-### ArkIDE Desktop Client: A Custom coded client for ArkIDE
+### GaiaMod Desktop Client: A Custom coded client for GaiaMod
 ## How to build:
 - Needed prerequisites
     #### npm

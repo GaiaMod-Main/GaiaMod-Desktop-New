@@ -1,0 +1,60 @@
+{
+  "app-id": "com.gaiamod.desktop",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "23.08",
+  "sdk": "org.freedesktop.Sdk",
+  "base": "org.electronjs.Electron2.BaseApp",
+  "base-version": "23.08",
+  "command": "gaiamod-wrapper",
+  "separate-locales": false,
+  "finish-args": [
+    "--share=network",
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--device=dri",
+    "--filesystem=xdg-download",
+    "--filesystem=xdg-run/discord-ipc-0:ro",
+    "--filesystem=xdg-run/discord-ipc-1:ro",
+    "--filesystem=xdg-run/app/com.discordapp.Discord:ro"
+  ],
+  "modules": [
+    {
+      "name": "gaiamod",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p /app/gaiamod",
+        "cp -r * /app/gaiamod/",
+        "chmod +x /app/gaiamod/gaiamod",
+        "install -Dm755 gaiamod-wrapper.sh /app/bin/gaiamod-wrapper",
+        "install -Dm644 com.gaiamod.desktop.desktop /app/share/applications/com.gaiamod.desktop.desktop",
+        "install -Dm644 icon.png /app/share/icons/hicolor/512x512/apps/com.gaiamod.desktop.png"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": "../build-input"
+        },
+        {
+          "type": "file",
+          "path": "com.gaiamod.desktop.desktop"
+        },
+        {
+          "type": "file",
+          "path": "../assets/icons/icon.png",
+          "dest-filename": "icon.png"
+        },
+        {
+          "type": "script",
+          "dest-filename": "gaiamod-wrapper.sh",
+          "commands": [
+            "#!/bin/bash",
+            "cd /app/gaiamod",
+            "exec /app/gaiamod/gaiamod --no-sandbox \"$@\""
+          ]
+        }
+      ]
+    }
+  ]
+}

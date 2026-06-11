@@ -29,15 +29,13 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   const vm = addon.tab.traps.vm;
   const loadExtensions = () => {
     if (addon.self.disabled) return;
     // IDs are taken from https://github.com/LLK/scratch-vm/blob/ffa78b91b8645b6a8c80f698a3637bb73abf2931/src/extension-support/extension-manager.js#L11
-    const EXTENSIONS = ["music", "pen", "text2speech", "translate"];
+    const EXTENSIONS = ["music", "pen", "text2speech", "translate", "appmaker", "chatgpt2scratch", "ml2scratch", "tm2scratch", "tmpose2scratch", "handpose2scratch", "posenet2scratch", "facemesh2scratch", "ic2scratch", "scratch2webserialapi", "tw"];
     for (let ext of EXTENSIONS) {
       // Check if setting enabled and it's not already loaded
       if (addon.settings.get(ext) && !vm.extensionManager.isExtensionLoaded(ext)) {

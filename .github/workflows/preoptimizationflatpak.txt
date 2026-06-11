@@ -39,38 +39,38 @@ jobs:
           
           echo "Downloading AppImage for version ${{ github.event.inputs.version }}..."
           
-          # Correct AppImage name format: Ark.IDE-x.x.x.AppImage
-          APPIMAGE_NAME="Ark.IDE-${{ github.event.inputs.version }}.AppImage"
+          # Correct AppImage name format: Gaia.Mod-x.x.x.AppImage
+          APPIMAGE_NAME="Gaia.Mod-${{ github.event.inputs.version }}.AppImage"
           DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${{ github.event.inputs.version }}/${APPIMAGE_NAME}"
           
           echo "Attempting to download from: ${DOWNLOAD_URL}"
           
-          if ! wget "${DOWNLOAD_URL}" -O arkide.AppImage; then
+          if ! wget "${DOWNLOAD_URL}" -O gaiamod.AppImage; then
             echo "Failed to download AppImage. Checking available assets..."
             gh release view "v${{ github.event.inputs.version }}" --json assets -q '.assets[].name'
             exit 1
           fi
           
           echo "AppImage downloaded successfully!"
-          ls -lh arkide.AppImage
+          ls -lh gaiamod.AppImage
           
           echo "Extracting AppImage..."
-          chmod +x arkide.AppImage
-          ./arkide.AppImage --appimage-extract
+          chmod +x gaiamod.AppImage
+          ./gaiamod.AppImage --appimage-extract
           
           echo "Moving contents..."
           mv squashfs-root/* .
-          rm -rf squashfs-root arkide.AppImage
+          rm -rf squashfs-root gaiamod.AppImage
           
-          echo "Verifying ark-ide executable exists..."
-          if [ ! -f "ark-ide" ]; then
-            echo "ERROR: ark-ide executable not found!"
+          echo "Verifying gaiamod executable exists..."
+          if [ ! -f "gaiamod" ]; then
+            echo "ERROR: gaiamod executable not found!"
             echo "Contents of build-input:"
             ls -la
             exit 1
           fi
           
-          chmod +x ark-ide
+          chmod +x gaiamod
           echo "Build input prepared successfully!"
           ls -la
         env:
@@ -78,13 +78,13 @@ jobs:
       
       - name: Verify Flatpak manifest exists
         run: |
-          if [ ! -f ".flatpak/com.arkide.desktop.json" ]; then
-            echo "ERROR: .flatpak/com.arkide.desktop.json not found!"
+          if [ ! -f ".flatpak/com.gaiamod.desktop.json" ]; then
+            echo "ERROR: .flatpak/com.gaiamod.desktop.json not found!"
             exit 1
           fi
           
-          if [ ! -f ".flatpak/com.arkide.desktop.desktop" ]; then
-            echo "ERROR: .flatpak/com.arkide.desktop.desktop not found!"
+          if [ ! -f ".flatpak/com.gaiamod.desktop.desktop" ]; then
+            echo "ERROR: .flatpak/com.gaiamod.desktop.desktop not found!"
             exit 1
           fi
           
@@ -93,7 +93,7 @@ jobs:
       - name: Build Flatpak
         run: |
           echo "Building Flatpak..."
-          flatpak-builder --user --force-clean --repo=repo build-dir .flatpak/com.arkide.desktop.json
+          flatpak-builder --user --force-clean --repo=repo build-dir .flatpak/com.gaiamod.desktop.json
           
           if [ $? -ne 0 ]; then
             echo "ERROR: Flatpak build failed!"
@@ -105,36 +105,36 @@ jobs:
       - name: Create bundle
         run: |
           echo "Creating Flatpak bundle..."
-          flatpak build-bundle repo com.arkide.desktop.flatpak com.arkide.desktop
+          flatpak build-bundle repo com.gaiamod.desktop.flatpak com.gaiamod.desktop
           
-          if [ ! -f "com.arkide.desktop.flatpak" ]; then
+          if [ ! -f "com.gaiamod.desktop.flatpak" ]; then
             echo "ERROR: Bundle creation failed!"
             exit 1
           fi
           
           echo "Bundle created successfully!"
-          ls -lh com.arkide.desktop.flatpak
+          ls -lh com.gaiamod.desktop.flatpak
       
       - name: Test Flatpak installation
         run: |
           echo "Testing Flatpak installation..."
-          flatpak install -y --user com.arkide.desktop.flatpak
+          flatpak install -y --user com.gaiamod.desktop.flatpak
           
           echo "Verifying installation..."
-          flatpak list --user | grep arkide
+          flatpak list --user | grep gaiamod
           
           echo "Checking installed files..."
-          flatpak run --command=sh com.arkide.desktop -c "ls -la /app/arkide/ | head -20"
+          flatpak run --command=sh com.gaiamod.desktop -c "ls -la /app/gaiamod/ | head -20"
           
-          echo "Verifying ark-ide executable..."
-          flatpak run --command=sh com.arkide.desktop -c "test -x /app/arkide/ark-ide && echo 'Executable found and is executable' || echo 'ERROR: Executable not found or not executable'"
+          echo "Verifying gaiamod executable..."
+          flatpak run --command=sh com.gaiamod.desktop -c "test -x /app/gaiamod/gaiamod && echo 'Executable found and is executable' || echo 'ERROR: Executable not found or not executable'"
           
           echo "Flatpak test completed successfully!"
       
       - name: Upload to Release
         uses: softprops/action-gh-release@v1
         with:
-          files: com.arkide.desktop.flatpak
+          files: com.gaiamod.desktop.flatpak
           tag_name: v${{ github.event.inputs.version }}
           fail_on_unmatched_files: true
         env:
@@ -144,5 +144,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: flatpak-bundle
-          path: com.arkide.desktop.flatpak
+          path: com.gaiamod.desktop.flatpak
           retention-days: 30

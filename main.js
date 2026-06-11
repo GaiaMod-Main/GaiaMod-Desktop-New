@@ -50,11 +50,11 @@ function updateDiscordPresence() {
   if (!discordClient || !discordConnected) return;
   
   discordClient.setActivity({
-    details: 'Coding On ArkIDE',
+    details: 'Coding On GaiaMod',
     state: 'Building something awesome',
     startTimestamp: Date.now(),
-    largeImageKey: 'arkide_logo',
-    largeImageText: 'ArkIDE',
+    largeImageKey: 'gaiamod_logo',
+    largeImageText: 'GaiaMod',
     instance: false,
   }).catch(err => {
     console.error('Failed to set Discord activity:', err);
@@ -95,7 +95,7 @@ function detectPlatformAndFile(version) {
   if (isFlatpak) {
     return {
       isFlatpak: true,
-      url: 'https://the-arkide-project.github.io/ArkIDE-Desktop/',
+      url: 'https://gaiamod-main.github.io/GaiaMod-Desktop-New/',
       fileName: null
     };
   }
@@ -103,25 +103,25 @@ function detectPlatformAndFile(version) {
   let fileName = '';
   
   if (platform === 'win32') {
-    fileName = `Ark.IDE.Setup.${version}.exe`;
+    fileName = `Gaia.Mod.Setup.${version}.exe`;
   } else if (platform === 'darwin') {
     if (arch === 'arm64') {
-      fileName = `Ark.IDE-${version}-arm64.dmg`;
+      fileName = `Gaia.Mod-${version}-arm64.dmg`;
     } else {
-      fileName = `Ark.IDE-${version}.dmg`;
+      fileName = `Gaia.Mod-${version}.dmg`;
     }
   } else if (platform === 'linux') {
     if (arch === 'arm64') {
-      fileName = `Ark.IDE-${version}-arm64.AppImage`;
+      fileName = `Gaia.Mod-${version}-arm64.AppImage`;
     } else {
-      fileName = `Ark.IDE-${version}.AppImage`;
+      fileName = `Gaia.Mod-${version}.AppImage`;
     }
   }
   
   return {
     isFlatpak: false,
     fileName: fileName,
-    url: `https://github.com/The-ArkIDE-Project/ArkIDE-Desktop/releases/download/v${version}/${fileName}`
+    url: `https://github.com/GaiaMod-Main/GaiaMod-Desktop-New/releases/download/v${version}/${fileName}`
   };
 }
 
@@ -356,7 +356,7 @@ function createUpdateWindow(latestVersion) {
       </div>
       <script>
         function downloadManual() {
-          window.electronAPI.openUrl('https://github.com/The-ArkIDE-Project/ArkIDE-Desktop/releases/tag/v${latestVersion}');
+          window.electronAPI.openUrl('https://github.com/GaiaMod-Main/GaiaMod-Desktop-New/releases/tag/v${latestVersion}');
         }
         
         async function autoDownload() {
@@ -421,13 +421,13 @@ function createWindow() {
     width: 1280,
     height: 800,
     frame: true,
-    title: 'ArkIDE Desktop v' + APP_VERSION, 
+    title: 'GaiaMod Desktop v' + APP_VERSION, 
     icon: path.join(__dirname, 'assets/icons/icon.png'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
       preload: path.join(__dirname, 'preload.js'),
-      partition: 'persist:arkide'
+      partition: 'persist:gaiamod'
     }
   });
 
@@ -503,7 +503,7 @@ function createWindow() {
       type: 'question',
       buttons: ['Close', 'Cancel'],
       defaultId: 1,
-      title: 'Close Ark IDE?',
+      title: 'Close GaiaMod?',
       message: 'Are you sure you want to close?',
       detail: 'Make sure you saved your work.'
     }).then((response) => {
@@ -548,10 +548,10 @@ function checkForUpdates() {
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.github.com',
-      path: '/repos/The-ArkIDE-Project/ArkIDE-Desktop/releases/latest',
+      path: '/repos/GaiaMod-Main/GaiaMod-Desktop-New/releases/latest',
       method: 'GET',
       headers: {
-        'User-Agent': 'ArkIDE-Desktop'
+        'User-Agent': 'GaiaMod-Desktop-New'
       }
     };
 

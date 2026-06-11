@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArkIDE - Settings</title>
+  <title>GaiaMod - Settings</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -325,7 +325,7 @@
   <div class="window-shell">
 
     <div class="modal-header">
-      <span class="modal-header-title">ArkIDE Settings</span>
+      <span class="modal-header-title">GaiaMod Settings</span>
       <button class="modal-close" onclick="window.close()"><img src="close.svg" width="14" height="14" draggable="false" style="display:block; rotate: 45deg" /></button>
     </div>
 
@@ -347,7 +347,7 @@
               <span>Status:</span>
               <span class="status-text disconnected" id="discord-status-text">Disconnected</span>
             </div>
-            <p class="hint">Show "Making projects on ArkIDE" on your Discord profile</p>
+            <p class="hint">Show "Making projects on GaiaMod" on your Discord profile</p>
             <button id="discord-toggle-btn" class="btn btn-full" onclick="toggleDiscord()">
               Enable Discord Presence
             </button>
@@ -375,18 +375,18 @@
           <div class="panel" id="panel-feedback">
             <p class="info-body">Please give us feedback on our editor here on our Github page:</p>
             <button class="btn btn-full"
-                    onclick="window.open('https://github.com/The-ArkIDE-Project/arkide-new', '_blank')">
+                    onclick="window.open('https://github.com/GaiaMod-Main/gaiamod-main.github.io', '_blank')">
               ➕ Give us feedback
             </button>
           </div>
 
           <div class="panel" id="panel-about">
             <p class="revinfo">
-              ArkIDE Desktop R41
+              GaiaMod Desktop R41
             </p>
             <div class="footer-note">
-              Made with &lt;3 by the ArkIDE Team<br>
-             ArkIDE Desktop Version: <span id="about-version">...</span> &nbsp;|&nbsp; Kronos Version: <span id="kronos-version">[GHCOMMIT]</span>
+              Made with &lt;3 a modification of Ark IDE Dsktop by GaiaWindWave90<br>
+             GaiaMod Desktop Version: <span id="about-version">...</span> &nbsp;|&nbsp; Kronos Version: <span id="kronos-version">[GHCOMMIT]</span>
             </div>
           </div>
 
@@ -532,7 +532,7 @@
     async function fetchLatestCommit() {
       const el = document.getElementById('kronos-version');
       try {
-        const response = await fetch('https://api.github.com/repos/The-ArkIDE-Project/arkide-new/commits/main', {
+        const response = await fetch('https://api.github.com/repos/GaiaMod-Main/gaiamod-main.github.io/commits/main', {
           headers: { 'Accept': 'application/vnd.github.v3+json' }
         });
         if (!response.ok) throw new Error('Failed');

@@ -29,17 +29,14 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console;
   var BlocklyInstance = await addon.tab.traps.getBlockly();
   (function (Blockly) {
     const BlockSvg = BlocklyInstance.BlockSvg;
     var vm = addon.tab.traps.vm;
-    const {
-      GRID_UNIT
-    } = BlockSvg;
+    const ogFieldImageInit = BlocklyInstance.FieldImage.prototype.init;
+    const GRID_UNIT = BlockSvg.GRID_UNIT;
     function path2SegmentList(path) {
       const cmds = structuredClone(BlockSvg.CUSTOM_NOTCH_UTIL.supportedCommands);
       cmds.z = 0;
@@ -105,9 +102,11 @@ __webpack_require__.r(__webpack_exports__);
       let paddingSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : addon.settings.get("paddingSize");
       let cornerSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : addon.settings.get("cornerSize");
       let notchSize = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : addon.settings.get("notchSize");
+      let iconSize = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : addon.settings.get("iconSize");
       let multiplier = paddingSize / 100;
       cornerSize = cornerSize / 100;
       notchSize = notchSize / 100;
+      iconSize = iconSize / 100;
       BlockSvg.SEP_SPACE_Y = 2 * GRID_UNIT * multiplier;
       BlockSvg.MIN_BLOCK_X = 16 * GRID_UNIT * multiplier;
       BlockSvg.MIN_BLOCK_X_OUTPUT = 12 * GRID_UNIT * multiplier;
@@ -121,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
       BlockSvg.NOTCH_WIDTH = 8 * GRID_UNIT * multiplier;
       BlockSvg.NOTCH_HEIGHT = 2 * GRID_UNIT * multiplier * notchSize;
       BlockSvg.NOTCH_START_PADDING = 3 * GRID_UNIT; //* multiplier
-      BlockSvg.ICON_SEPARATOR_HEIGHT = 10 * GRID_UNIT * multiplier;
+      BlockSvg.ICON_SEPARATOR_HEIGHT = 10 * GRID_UNIT * multiplier * iconSize;
       BlockSvg.NOTCH_PATH_LEFT = "c 2 0 3 ".concat(1 * notchSize, " 4 ").concat(2 * notchSize, " ") + "l ".concat(4 * multiplier * notchSize, " ").concat(4 * multiplier * notchSize, " ") + "c 1 ".concat(1 * notchSize, " 2 ").concat(2 * notchSize, " 4 ").concat(2 * notchSize, " ") + "h ".concat(24 * (multiplier - 0.5), " ") + "c 2 0 3 ".concat(-1 * notchSize, " 4 ").concat(-2 * notchSize, " ") + "l ".concat(4 * multiplier * notchSize, " ").concat(-4 * multiplier * notchSize, " ") + "c 1 ".concat(-1 * notchSize, " 2 ").concat(-2 * notchSize, " 4 ").concat(-2 * notchSize, " ");
       BlockSvg.NOTCH_PATH_RIGHT = "h ".concat(-4 * (cornerSize - 1) - 5 * (1 - notchSize), " ") + "c -2 0 -3 ".concat(1 * notchSize, " -4 ").concat(2 * notchSize, " ") + "l ".concat(-4 * multiplier * notchSize, " ").concat(4 * multiplier * notchSize, " ") + "c -1 ".concat(1 * notchSize, " -2 ").concat(2 * notchSize, " -4 ").concat(2 * notchSize, " ") + "h ".concat(-24 * (multiplier - 0.5), " ") + "c -2 0 -3 ".concat(-1 * notchSize, " -4 ").concat(-2 * notchSize, " ") + "l ".concat(-4 * multiplier * notchSize, " ").concat(-4 * multiplier * notchSize, " ") + "c -1 ".concat(-1 * notchSize, " -2 ").concat(-2 * notchSize, " -4 ").concat(-2 * notchSize, " ");
 
@@ -157,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
       BlockSvg.INPUT_SHAPE_LEAF_WIDTH = 12 * GRID_UNIT * multiplier;
       BlockSvg.INPUT_SHAPE_LEAF = "M ".concat(6 * GRID_UNIT * multiplier, " 0\n        l ").concat(2 * GRID_UNIT * multiplier, " 0\n        a ").concat(4 * GRID_UNIT * multiplier, " ").concat(4 * GRID_UNIT * multiplier, " 0 0 1 ").concat(4 * GRID_UNIT * multiplier, " ").concat(4 * GRID_UNIT * multiplier, "\n        l 0 ").concat(2.4 * GRID_UNIT * multiplier, "\n        a ").concat(1.6 * GRID_UNIT * multiplier, " ").concat(1.6 * GRID_UNIT * multiplier, " 0 0 1 -").concat(1.6 * GRID_UNIT * multiplier, " ").concat(1.6 * GRID_UNIT * multiplier, "\n        h -").concat(4 * GRID_UNIT * multiplier, "\n        l -").concat(2.4 * GRID_UNIT * multiplier, " 0\n        a ").concat(4 * GRID_UNIT * multiplier, " ").concat(4 * GRID_UNIT * multiplier, " 0 0 1 -").concat(4 * GRID_UNIT * multiplier, " -").concat(4 * GRID_UNIT * multiplier, "\n        l 0 -").concat(2.4 * GRID_UNIT * multiplier, "\n        a ").concat(1.6 * GRID_UNIT * multiplier, " ").concat(1.6 * GRID_UNIT * multiplier, " 0 0 1 ").concat(1.6 * GRID_UNIT * multiplier, " -").concat(1.6 * GRID_UNIT * multiplier, "\n        z");
       BlockSvg.INPUT_SHAPE_PLUS_WIDTH = 12 * GRID_UNIT * multiplier;
-      BlockSvg.INPUT_SHAPE_PLUS = "M ".concat(9 * GRID_UNIT * multiplier, " 0\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        l 0 2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        l 0 4\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 -").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 -").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        l 0 2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 -").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        h -").concat(6 * GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 -").concat(GRID_UNIT * multiplier, " -").concat(GRID_UNIT * multiplier, "\n        l 0 -2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 -").concat(GRID_UNIT * multiplier, " -").concat(GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 -").concat(GRID_UNIT * multiplier, " -").concat(GRID_UNIT * multiplier, "\n        l 0 -4\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " -").concat(GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 ").concat(GRID_UNIT * multiplier, " -").concat(GRID_UNIT * multiplier, "\n        l 0 -2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " -").concat(GRID_UNIT * multiplier, " \n        z");
+      BlockSvg.INPUT_SHAPE_PLUS = "M ".concat(9 * GRID_UNIT * multiplier, " 0\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        l 0 2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        l 0 ").concat(4 * (multiplier * multiplier), "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(-GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 ").concat(-GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        l 0 2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(-GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, "\n        h ").concat(-6 * GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(-GRID_UNIT * multiplier, " ").concat(-GRID_UNIT * multiplier, "\n        l 0 -2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 ").concat(-GRID_UNIT * multiplier, " ").concat(-GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(-GRID_UNIT * multiplier, " ").concat(-GRID_UNIT * multiplier, "\n        l 0 ").concat(-4 * (multiplier * multiplier), "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " ").concat(-GRID_UNIT * multiplier, "\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 0 ").concat(GRID_UNIT * multiplier, " ").concat(-GRID_UNIT * multiplier, "\n        l 0 -2\n        a ").concat(GRID_UNIT * multiplier, " ").concat(GRID_UNIT * multiplier, " 0 0 1 ").concat(GRID_UNIT * multiplier, " ").concat(-GRID_UNIT * multiplier, " \n        z");
       BlockSvg.INPUT_SHAPE_HEIGHT = 8 * GRID_UNIT * multiplier;
       BlockSvg.FIELD_HEIGHT = 8 * GRID_UNIT * multiplier; // NOTE: Determines string input heights
       BlockSvg.FIELD_WIDTH = 6 * GRID_UNIT * Math.min(multiplier, 1) + 10 * GRID_UNIT * Math.max(multiplier - 1, 0);
@@ -188,6 +187,16 @@ __webpack_require__.r(__webpack_exports__);
       BlockSvg.INNER_BOTTOM_LEFT_CORNER = "a " + BlockSvg.CORNER_RADIUS + "," + BlockSvg.CORNER_RADIUS + " 0 0,0 " + BlockSvg.CORNER_RADIUS + "," + BlockSvg.CORNER_RADIUS;
       BlockSvg.TOP_RIGHT_CORNER_DEFINE_HAT = "a " + BlockSvg.DEFINE_HAT_CORNER_RADIUS + "," + BlockSvg.DEFINE_HAT_CORNER_RADIUS + " 0 0,1 " + BlockSvg.DEFINE_HAT_CORNER_RADIUS + "," + BlockSvg.DEFINE_HAT_CORNER_RADIUS + " v " + (1 * GRID_UNIT - BlockSvg.CORNER_RADIUS);
       BlockSvg.STATEMENT_INPUT_INNER_SPACE = 2.8 * GRID_UNIT - 0.9 * GRID_UNIT * cornerSize;
+      BlocklyInstance.FieldImage.prototype.init = function () {
+        this.width_ *= iconSize;
+        this.height_ *= iconSize;
+        this.size_.width *= iconSize;
+        this.size_.height *= iconSize;
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+        ogFieldImageInit.call(this, ...args);
+      };
     }
     function applyAndUpdate() {
       applyChanges(...arguments);
@@ -196,7 +205,7 @@ __webpack_require__.r(__webpack_exports__);
     addon.settings.addEventListener("change", () => applyAndUpdate());
     addon.self.addEventListener("disabled", () => {
       // Scratch 3.0 blocks
-      applyAndUpdate(100, 100, 100);
+      applyAndUpdate(100, 100, 100, 100);
     });
     addon.self.addEventListener("reenabled", () => applyAndUpdate());
     applyAndUpdate();

@@ -2,7 +2,7 @@
 # Exit on any error
 set -e
 
-echo "Updating Ark IDE source code..."
+echo "Updating GaiaMod source code..."
 
 # Navigate to electron directory
 cd "$(dirname "$0")"
@@ -13,7 +13,7 @@ rm -rf source
 
 # Clone the repository at gh-pages branch
 echo "Cloning latest version from GitHub..."
-git clone --branch gh-pages --depth 1 https://github.com/arc360alt/arkide-new.git temp-source
+git clone --branch gh-pages --depth 1 https://github.com/GaiaMod-Main/gaiamod-main.github.io.git temp-source
 
 # Remove .git directory from cloned repo (optional, keeps things clean)
 rm -rf temp-source/.git
@@ -25,8 +25,8 @@ mv temp-source source
 # Create README.MD in the source folder
 echo "Creating README.MD..."
 cat > source/README.MD << 'EOF'
-![ArkIDE Desktop Frontend](../art/Backend.png)
-### ArkIDE Desktop Frontend: The frontend code for ArkIDE Desktop that is replaced every build.
+![GaiaMod Desktop Frontend](../art/Backend.png)
+### GaiaMod Desktop Frontend: The frontend code for GaiaMod Desktop that is replaced every build.
 # DO NOT EDIT. THIS FOLDER IS AUTOMATICLY REPLACED EVERY BUILD VIA ./update.sh
 EOF
 

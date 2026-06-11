@@ -29,11 +29,9 @@ const resources = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   function makeStyle() {
     let style = document.createElement("style");
     style.textContent = "\n    .blocklyText {\n        fill: #fff;\n        font-family: \"Helvetica Neue\", Helvetica, sans-serif;\n        font-size: 12pt;\n        font-weight: 500;\n    }\n    .blocklyNonEditableText>text, .blocklyEditableText>text {\n        fill: #575E75;\n    }\n    .blocklyDropdownText {\n        fill: #fff !important;\n    }\n    ";
@@ -204,10 +202,9 @@ __webpack_require__.r(__webpack_exports__);
     // iframe.style.display = "none"
     document.body.append(iframe);
     iframe.contentDocument.write(serializer.serializeToString(svg));
-    let {
-      width,
-      height
-    } = iframe.contentDocument.body.querySelector("svg g").getBoundingClientRect();
+    let _iframe$contentDocume = iframe.contentDocument.body.querySelector("svg g").getBoundingClientRect(),
+      width = _iframe$contentDocume.width,
+      height = _iframe$contentDocume.height;
     height = height + 20 * 2; //  hat block height restore
     svg.setAttribute("width", width + "px");
     svg.setAttribute("height", height + "px");

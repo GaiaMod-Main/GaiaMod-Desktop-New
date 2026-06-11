@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=2.4.0
+Type=Application
+Name=GaiaMod
+GenericName=IDE
+Comment=The completely offline desktop version of GaiaMod
+Exec=gaiamod-wrapper
+Icon=com.gaiamod.desktop
+Categories=Development;IDE;TextEditor;
+Terminal=false
+StartupNotify=true
+StartupWMClass=gaiamod
